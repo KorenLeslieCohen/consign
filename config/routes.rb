@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+
+  resources :neighborhoods
+
+  resources :boroughs
+
+  resources :photos
+
+  # tags
+  resources :designers, :only => [:show, :index]
+  resources :biztags, :only => [:show, :index]
+  resources :tags, :only => [:show, :index]
+
+  resources :businesses do 
+    resources :reviews, :only => [:new, :create, :destroy]
+  end
+
+  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +70,6 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  get "/:page" => "static#show"
 end

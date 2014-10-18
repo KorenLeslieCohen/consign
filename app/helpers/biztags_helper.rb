@@ -1,0 +1,2 @@
+module BiztagsHelper
+end

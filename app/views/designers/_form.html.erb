@@ -1,0 +1,21 @@
+<%= form_for(@designer) do |f| %>
+  <% if @designer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@designer.errors.count, "error") %> prohibited this designer from being saved:</h2>
+
+      <ul>
+      <% @designer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
