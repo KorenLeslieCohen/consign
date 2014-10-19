@@ -1,3 +1,23 @@
+<p id="notice"><%= notice %></p>
+
 <h1>user show page</h1>
 
-<%= link_to "Settings", edit_user_path %>
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @user.role %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @user.user_name %>
+</p>
+
+<!-- include businesses, etc. -->
+
+<%= link_to 'Edit Profile', edit_user_path(@user) %> |
+<%#= link_to "Settings", edit_user_path %>
