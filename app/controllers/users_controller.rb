@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  # before_action :set_user, only: [:show] # probably want to keep using this
+  before_action :set_user, only: [:show, :edit] # probably want to keep using this
 
   # GET /users
   # GET /users.json
@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   # # GET /users/1
   # # GET /users/1.json
   def show
+    
   end
 
   # # GET /users/new
@@ -18,9 +19,9 @@ class UsersController < ApplicationController
   #   @user = User.new
   # end
 
-  # # GET /users/1/edit
-  # def edit
-  # end
+  # GET /users/1/edit
+  def edit
+  end
 
   # # POST /users
   # # POST /users.json
@@ -62,15 +63,15 @@ class UsersController < ApplicationController
   #   end
   # end
 
-  # private
+  private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
     end
 
-  #   # Never trust parameters from the scary internet, only allow the white list through.
-  #   def user_params
-  #     params.require(:user).permit(:user_id, :neighborhood_id, :borough_id, :name, :address, :hours, :email, :terms)
-  #   end
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def user_params
+      params.require(:user).permit(:role, :user_name)
+    end
 
 end
