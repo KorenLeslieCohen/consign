@@ -16,7 +16,8 @@
 <!-- this needs to be set to a radio button -->
   <div class="field">
     <%= f.label :role %><br> 
-    <%= f.text_field :role %>
+    <%#= f.text_field :role %>
+    <%= f.collection_select(:role, Role.all, :id, :role_name ) %>
   </div>
   <div class="field">
     <%= f.label :user_name %><br>
