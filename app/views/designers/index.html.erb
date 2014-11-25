@@ -11,10 +11,10 @@
   <tbody>
     <% @designers.each do |designer| %>
       <tr>
-        <td><%= designer.name %></td>
-        <td><%= link_to 'Show', designer %></td>
-        <td><%= link_to 'Edit', edit_designer_path(designer) %></td>
-        <td><%= link_to 'Destroy', designer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to designer.name, designer %></td>
+        <td><%#= link_to 'Show', designer %></td>
+        <td><%#= link_to 'Edit', edit_designer_path(designer) %></td>
+        <td><%#= link_to 'Destroy', designer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

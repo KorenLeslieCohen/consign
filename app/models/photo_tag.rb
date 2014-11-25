@@ -1,6 +1,6 @@
 class PhotoTag < ActiveRecord::Base
 
   belongs_to :photo 
-  belings_to :tag 
+  belongs_to :tag 
   
 end

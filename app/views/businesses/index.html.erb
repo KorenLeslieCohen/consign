@@ -18,9 +18,9 @@
   <tbody>
     <% @businesses.each do |business| %>
       <tr>
-        <td><%= business.user_id %></td>
-        <td><%= business.neighborhood_id %></td>
-        <td><%= business.borough_id %></td>
+        <td><%= business.user.name %></td>
+        <td><%= business.neighborhood.name %></td>
+        <td><%= business.borough.name %></td>
         <td><%= business.name %></td>
         <td><%= business.address %></td>
         <td><%= business.hours %></td>

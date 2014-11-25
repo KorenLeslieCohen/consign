@@ -19,12 +19,12 @@
   <div class="field">
     <%= f.label :neighborhood_id %><br>
     <%#= f.number_field :neighborhood_id %>
-    <%= f.collection_select(:neighborhood_id, Neighborhood.all, :id, :neighborhood_name ) %>
+    <%= f.collection_select(:neighborhood_id, Neighborhood.all, :id, :name ) %>
   </div>
   <div class="field">
     <%= f.label :borough_id %><br>
     <%#= f.number_field :borough_id %>
-    <%= f.collection_select(:borough_id, Borough.all, :id, :borough_name ) %>
+    <%= f.collection_select(:borough_id, Borough.all, :id, :name ) %>
   </div>
   <div class="field">
     <%= f.label :name %><br>

@@ -5,5 +5,20 @@
   <%= @designer.name %>
 </p>
 
-<%= link_to 'Edit', edit_designer_path(@designer) %> |
+  <h3>Designer: <%= @designer.name %> </h3>
+  <h2>The following businesses carry the designer <%= @designer.name %>.</h2>
+  <% if @designer.businesses.empty? %>
+    <h4>Sorry! There are no businesses with the designer <%= @designer.name %>!</h4>
+  <% else %>
+    <% @designer.businesses.reverse.each do |business| %>
+      <h2><%= link_to business.name, business_path(business) %></h2>
+      <% if business.reviews.length == 1 %>
+        <h4><%= business.reviews.length %> review</h4>
+      <% else %>
+        <h4><%= business.reviews.length %> reviews</h4>
+      <% end %> 
+    <% end %>
+  <% end %>
+
+<%#= link_to 'Edit', edit_designer_path(@designer) %> |
 <%= link_to 'Back', designers_path %>

@@ -1,9 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @biztag.name %>
-</p>
 
-<%= link_to 'Edit', edit_biztag_path(@biztag) %> |
+  <h3>Biztag: <%= @biztag.name %> </h3>
+  <h2>The following businesses have the biztag <%= @biztag.name %>.</h2>
+  <% if @biztag.businesses.empty? %>
+    <h4>Sorry! There are no businesses with the biztag <%= @biztag.name %>!</h4>
+  <% else %>
+    <% @biztag.businesses.reverse.each do |business| %>
+      <h2><%= link_to business.name, business_path(business) %></h2>
+      <% if business.reviews.length == 1 %>
+        <h4><%= business.reviews.length %> review</h4>
+      <% else %>
+        <h4><%= business.reviews.length %> reviews</h4>
+      <% end %> 
+    <% end %>
+  <% end %>
+
+<%#= link_to 'Edit', edit_biztag_path(@biztag) %> |
 <%= link_to 'Back', biztags_path %>

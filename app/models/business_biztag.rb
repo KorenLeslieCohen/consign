@@ -1,6 +1,6 @@
 class BusinessBiztag < ActiveRecord::Base
 
   belongs_to :business 
-  belings_to :biztag 
+  belongs_to :biztag 
   
 end
