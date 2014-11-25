@@ -15,7 +15,7 @@
     <%#= f.label :user_id %><br>
     <%#= f.number_field :user_id %>
   <!-- </div> -->
-  <%= f.hidden_field :user_id, :value => session["user_id"] %>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
   <div class="field">
     <%= f.label :neighborhood_id %><br>
     <%#= f.number_field :neighborhood_id %>
@@ -46,6 +46,17 @@
     <%= f.label :terms %><br>
     <%= f.text_area :terms %>
   </div>
+
+  <div class="field">
+    <h4>Biztags</h4>
+    <%= f.collection_check_boxes :biztag_ids, Biztag.all, :id, :name, {:item_wrapper_class => 'checkbox_container'} %><br>
+  </div>
+
+  <div class="field">
+    <h4>Designers</h4>
+    <%= f.collection_check_boxes :designer_ids, Designer.all, :id, :name, {:item_wrapper_class => 'checkbox_container'} %><br>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

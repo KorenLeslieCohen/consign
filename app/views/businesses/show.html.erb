@@ -2,7 +2,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @business.user_id %>
+  <%= @business.user.name %>
 </p>
 
 <p>
@@ -39,6 +39,46 @@
   <strong>Terms:</strong>
   <%= @business.terms %>
 </p>
+
+<div class="reviews">
+      <h3>Reviews</h3>
+      <% if @business.reviews.empty? %>
+        <h4>There are no reviews for this business yet. Be the first!<h4>
+      <% else %>
+        <% @business.reviews.each do |review| %>
+          <h4><strong><%= review.user.name %>:</strong> <%= review.content %>
+          <% if (review.user == current_user) %>
+            | <%= link_to 'Delete', [@business, review], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
+            <% end %>
+        <% end %>
+      <% end %>
+    </div>
+      <% if current_user %>
+        <%= form_for [@business, Review.new] do |f| %>
+          <div class="field business-field">
+            <%= f.text_area :content, class: "form-control col-lg-8", placeholder: "Provide detailed review here." %>
+            <%= f.hidden_field :business_id, :value => @business.id %>
+            <%= f.hidden_field :user_id, :value => current_user.id %>
+          </div>
+          <div class="actions">
+            <%= f.submit "Review Business" %>
+          </div>
+          <% end %>
+          <% else %>
+            <p><%= link_to "Sign up to review this business", new_user_registration_path, :class => 'navbar-link'  %> |
+            <%= link_to "Log in to review this business", new_user_session_path, :class => 'navbar-link'  %></p>
+          <% end %>
+          <% if (@business.user == current_user) %>
+            <p><%= link_to 'Edit Business', edit_business_path(@business) %> | 
+            <%#= link_to 'Delete Business', @question, method: :delete, data: { confirm: 'Are you sure?' } %> | 
+            <%= link_to 'Back to Businesses', businesses_path %></p>
+        <% else %>
+          <p><%= link_to 'Back to Businesses', businesses_path %></p>
+        <% end %>
+        <br>
+        <br>
+        <br>
+      </div>
 
 <%= link_to 'Edit', edit_business_path(@business) %> |
 <%= link_to 'Back', businesses_path %>

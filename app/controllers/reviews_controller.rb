@@ -25,10 +25,11 @@ class ReviewsController < ApplicationController
   # POST /reviews.json
   def create
     @review = Review.new(review_params)
+    # @review.user_id = current_user.id
 
     respond_to do |format|
       if @review.save
-        format.html { redirect_to @review, notice: 'Review was successfully created.' }
+        format.html { redirect_to @review.business, notice: 'Review was successfully created.' }
         format.json { render :show, status: :created, location: @review }
       else
         format.html { render :new }
@@ -54,12 +55,23 @@ class ReviewsController < ApplicationController
   # DELETE /reviews/1
   # DELETE /reviews/1.json
   def destroy
+    
+    @review = Review.find(params[:id])
     @review.destroy
-    respond_to do |format|
-      format.html { redirect_to reviews_url, notice: 'Review was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to @review.business, notice: 'Your review has been deleted!' 
+
   end
+
+
+  # def destroy
+  #   @answer = Answer.find(params[:id])
+  #   if (logged_in? && answer_author?) || (current_user == User.find(1))
+  #     @answer.destroy
+  #     redirect_to @answer.question, notice: 'Your answer has been deleted!' 
+  #   else
+  #     redirect_to show_question_path(@question), :flash => { :error => "You can't delete someone else's answer!" }
+  #   end
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
