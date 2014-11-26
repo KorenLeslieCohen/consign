@@ -11,6 +11,8 @@
       <th>Hours</th>
       <th>Email</th>
       <th>Terms</th>
+      <th>Biztags</th>
+      <th>Designers</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,6 +28,12 @@
         <td><%= business.hours %></td>
         <td><%= business.email %></td>
         <td><%= business.terms %></td>
+        <td><% business.biztags.each do |biztag| %>
+          <%= link_to biztag.name, biztag %><%= "," unless biztag == business.biztags.last %>
+          <% end %></td>
+        <td><% business.designers.each do |designer| %>
+          <%= link_to designer.name, designer %><%= "," unless designer == business.designers.last %>
+          <% end %></td>
         <td><%= link_to 'Show', business %></td>
         <td><%= link_to 'Edit', edit_business_path(business) %></td>
         <td><%= link_to 'Destroy', business, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -33,6 +41,8 @@
     <% end %>
   </tbody>
 </table>
+
+
 
 <br>
 

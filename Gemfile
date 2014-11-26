@@ -31,7 +31,7 @@ gem 'aws-sdk'
 gem 'paperclip'
 
 # Manipulate images
-# gem 'rmagick'
+gem "mini_magick"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

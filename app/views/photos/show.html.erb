@@ -2,13 +2,25 @@
 
 <p>
   <strong>Business:</strong>
-  <%= @photo.business_id %>
+  <%= link_to @photo.business.name, @photo.business %>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @photo.user_id %>
+  <%= @photo.user.name %>
 </p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @photo.description %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @photo.business_photo %>
+</p>
+<%#= image_tag "#{@photo.path}", height: "200"%>
+<%#= image_tag "#{@business.photo.url}", width: "480"%>
 
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
 <%= link_to 'Back', photos_path %>

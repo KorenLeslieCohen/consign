@@ -5,6 +5,8 @@
     <tr>
       <th>Business</th>
       <th>User</th>
+      <th>Description</th>
+      <th>Image</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,8 +14,10 @@
   <tbody>
     <% @photos.each do |photo| %>
       <tr>
-        <td><%= photo.business_id %></td>
-        <td><%= photo.user_id %></td>
+        <td><%= photo.business.name %></td>
+        <td><%= photo.user.name %></td>
+        <td><%= photo.description %></td>
+        <td><%= photo.business_photo %></td>
         <td><%= link_to 'Show', photo %></td>
         <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
         <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -24,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Photo', new_photo_path %>
+<%#= link_to 'New Photo', new_photo_path %>

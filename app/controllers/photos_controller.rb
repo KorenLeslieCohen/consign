@@ -28,7 +28,7 @@ class PhotosController < ApplicationController
 
     respond_to do |format|
       if @photo.save
-        format.html { redirect_to @photo, notice: 'Photo was successfully created.' }
+        format.html { redirect_to @photo.business, notice: 'Photo was successfully created.' }
         format.json { render :show, status: :created, location: @photo }
       else
         format.html { render :new }
@@ -54,11 +54,9 @@ class PhotosController < ApplicationController
   # DELETE /photos/1
   # DELETE /photos/1.json
   def destroy
+    @photo = Photo.find(params[:id])
     @photo.destroy
-    respond_to do |format|
-      format.html { redirect_to photos_url, notice: 'Photo was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to @photo.business, notice: 'Your photo has been deleted!' 
   end
 
   private
@@ -69,6 +67,7 @@ class PhotosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_params
-      params.require(:photo).permit(:business_id, :user_id)
+      params.require(:photo).permit(:business_id, :user_id, :business_photo_file_name, :business_photo_content_type, :business_photo_file_size, :business_photo_updated_at, :description, :business_photo)
     end
+
 end
