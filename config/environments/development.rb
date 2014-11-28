@@ -38,4 +38,12 @@ Rails.application.configure do
 
   # Devise
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  config.paperclip_defaults = {
+  :storage => :s3,
+  # :s3_host_name => 'REMOVE_THIS_LINE_IF_UNNECESSARY',
+  :s3_credentials => {
+    :bucket => 'consignnyc'
+  }
+# }
 end

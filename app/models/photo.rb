@@ -11,7 +11,9 @@ class Photo < ActiveRecord::Base
     :hash_secret => "longSecretString", 
     :path => ":hash", 
     :bucket => "consignnyc",
-    # :s3_credentials => "#{Rails.root}/config/application.yml"
+    :s3_credentials => "#{Rails.root}/config/aws.yml",
+    # :s3_credentials => Proc.new{|a| a.instance.s3_credentials },
+    # :s3_credentials => S3_CREDENTIALS,
     # :styles => { :thumb => "1024x768"}, 
     # :default_style => :thumb, 
     :s3_protocol => "https"
@@ -21,7 +23,7 @@ class Photo < ActiveRecord::Base
   validates_attachment_content_type :business_photo, :content_type => /\Aimage\/.*\Z/
 
   def s3_credentials
-    { :access_key_id => AWS_ACCESS_KEY_ID, :secret_access_key => AWS_SECRET_ACCESS_KEY}
+    { :bucket => "consignnyc", :access_key_id => AWS_ACCESS_KEY_ID, :secret_access_key => AWS_SECRET_ACCESS_KEY}
   end
 
 end
