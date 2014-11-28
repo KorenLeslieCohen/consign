@@ -8,8 +8,8 @@ class Photo < ActiveRecord::Base
 
   has_attached_file :business_photo, 
     :storage => :s3, 
-    :hash_secret => "longSecretString", 
-    :path => ":hash", 
+    # :hash_secret => "longSecretString", 
+    # :path => ":hash", 
     :bucket => "consignnyc",
     :s3_credentials => "#{Rails.root}/config/aws.yml",
     # :s3_credentials => Proc.new{|a| a.instance.s3_credentials },
@@ -22,9 +22,9 @@ class Photo < ActiveRecord::Base
   validates_with AttachmentSizeValidator, :attributes => :business_photo, :less_than => 3.megabytes
   validates_attachment_content_type :business_photo, :content_type => /\Aimage\/.*\Z/
 
-  def s3_credentials
-    { :bucket => "consignnyc", :access_key_id => AWS_ACCESS_KEY_ID, :secret_access_key => AWS_SECRET_ACCESS_KEY}
-  end
+  # def s3_credentials
+  #   { :bucket => "consignnyc", :access_key_id => AWS_ACCESS_KEY_ID, :secret_access_key => AWS_SECRET_ACCESS_KEY}
+  # end
 
 end
 

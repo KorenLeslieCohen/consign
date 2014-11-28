@@ -17,7 +17,7 @@
         <td><%= photo.business.name %></td>
         <td><%= photo.user.name %></td>
         <td><%= photo.description %></td>
-        <td><%= photo.business_photo %></td>
+        <td><img src="<%= photo.business_photo %>" height="200"></td>
         <td><%= link_to 'Show', photo %></td>
         <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
         <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>

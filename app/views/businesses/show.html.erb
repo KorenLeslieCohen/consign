@@ -73,7 +73,7 @@
           <%#= image_tag "#{@business.photo.url}", width: "480"%> 
           <%#= image_tag "https://s3.amazonaws.com/FlatironPostcard/stripe.jpg", width: "480"%>
           <%= photo.description %>
-          <%= photo.business_photo %>
+          <img src="<%= photo.business_photo %>" height="200">
           <% if (photo.user == current_user) %>
             | <%= link_to 'Delete Photo', [@business, photo], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
             <% end %>
