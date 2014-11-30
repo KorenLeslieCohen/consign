@@ -12,17 +12,48 @@
   <%= @user.email %>
 </p>
 
-<p>
+<!-- <p>
   <strong>Role:</strong>
-  <%= @user.role %>
-</p>
+  <%#= @user.role %>
+</p> -->
 
 <p>
   <strong>Username:</strong>
   <%= @user.user_name %>
 </p>
 
-<!-- include businesses, etc. -->
 
+
+
+<% if @user.reviews.length == 0 %>
+    <h2>You have not reviewed any businesses.</h2>
+  <% elsif @user.reviews.length == 1 %>
+    <h2>You have reviewed <%= @user.reviews.length %> business:</h2>
+  <% else %>
+    <h2>You have reviewed <%= @user.reviews.length %> businesses:</h2>
+  <% end %>
+  <% @user.reviews.each do |review| %>
+    <h2><%=link_to review.business.name, review.business %></h2>
+    <h4><%= review.content %></h4>
+    <%= link_to 'Delete review', review, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <p>You'll want to eventually include more info about these businesses, maybe a photo.</p> 
+  <% end %>
+
+<% if @user.photos.length == 0 %>
+    <h2>You have not uploaded any photos.</h2>
+  <% elsif @user.photos.length == 1 %>
+    <h2>You have uploaded <%= @user.photos.length %> photos:</h2>
+  <% else %>
+    <h2>You have uploaded <%= @user.photos.length %> photos:</h2>
+  <% end %>
+  <% @user.photos.each do |photo| %>
+    <h2><%=link_to review.business.name, review.business %></h2>
+    <h4><%= review.content %></h4>
+    <%= link_to 'Delete review', review, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <p>You'll want to eventually include more info about these businesses, maybe a photo.</p> 
+  <% end %>
+
+<!-- include businesses, etc. -->
+<br>
 <%= link_to 'Edit Profile', edit_user_path(@user) %> |
 <%#= link_to "Settings", edit_user_path %>

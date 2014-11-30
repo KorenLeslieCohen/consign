@@ -9,9 +9,9 @@ Rails.application.routes.draw do
   resources :photos
 
   # tags
-  resources :designers, :only => [:show, :index]
-  resources :biztags, :only => [:show, :index]
-  resources :tags, :only => [:show, :index]
+  resources :designers #, :only => [:show, :index]
+  resources :biztags #, :only => [:show, :index]
+  resources :tags #, :only => [:show, :index]
 
   resources :businesses do 
     resources :reviews, :only => [:new, :create, :destroy]

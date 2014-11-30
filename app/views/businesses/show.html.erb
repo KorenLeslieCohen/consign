@@ -33,6 +33,16 @@
 </p>
 
 <p>
+  <strong>Website:</strong>
+  <%= @business.website %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @business.phone %>
+</p>
+
+<p>
   <strong>Address:</strong>
   <%= @business.address %>
 </p>
@@ -63,6 +73,7 @@
   <%= link_to designer.name, designer %><%= "," unless designer == @business.designers.last %>
 <% end %></p>
 
+<!-- DISPLAY PHOTOS  -->
     <div class="photos">
       <h3>Photos</h3>
       <% if @business.photos.empty? %>
@@ -73,7 +84,8 @@
           <%#= image_tag "#{@business.photo.url}", width: "480"%> 
           <%#= image_tag "https://s3.amazonaws.com/FlatironPostcard/stripe.jpg", width: "480"%>
           <%= photo.description %>
-          <img src="<%= photo.business_photo %>" height="200">
+          <!-- <img src="<%= photo.business_photo %>" height="200"> -->
+          <%= image_tag photo.business_photo, height: 200 %>
           <% if (photo.user == current_user) %>
             | <%= link_to 'Delete Photo', [@business, photo], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
             <% end %>
@@ -93,70 +105,112 @@
     t.datetime "updated_at"
   end -->
 
+<!-- put the user's review first? -->
 
-
+<!-- ADD PHOTOS -->
     <div>
 
       <% if current_user %>
-        <%= form_for [@business, Photo.new] do |f| %>
-          <div class="field business-field">
-            <%= f.text_area :description, class: "form-control col-lg-8", placeholder: "Photo description." %>
-            <p>Upload a photo:</p>
-            <%= f.file_field :business_photo, placeholder: "Upload Photo"%>
-            <%= f.hidden_field :business_id, :value => @business.id %>
-            <%= f.hidden_field :user_id, :value => current_user.id %>
-          </div>
-          <div class="actions">
-            <%= f.submit "submit photo" %>
-          </div>
+
+        <% if (current_user.user_name != nil && current_user.name != nil && current_user.user_name != "" && current_user.name != "" ) %>
+          <h1> name: <%= current_user.user_name %> </h1>
+          <%= form_for [@business, Photo.new] do |f| %>
+
+          <%#= form_for(review, html: {class: "form-horizontal"}, remote: true) do |f| %>
+
+
+            <div class="field business-field">
+              <%= f.text_area :description, class: "form-control col-lg-8", placeholder: "Photo description." %>
+              <p>Upload a photo:</p>
+              <%= f.file_field :business_photo, placeholder: "Upload Photo"%>
+              <%= f.hidden_field :business_id, :value => @business.id %>
+              <%= f.hidden_field :user_id, :value => current_user.id %>
+            </div>
+            <div class="actions">
+              <%= f.submit "submit photo" %>
+            </div>
+          <% end %>
+
+        <% elsif (current_user.user_name == nil || current_user.name == nil || current_user.user_name == "" || current_user.name == "") %>
+          <h1>There is no username or name in profile</h1>
+          <!-- need an elsif for if profile not complete and no reviews -->
+            <p><%= link_to "Complete your profile to upload a photo", edit_user_path(current_user), :class => 'navbar-link'  %> </p>
         <% end %>
+      
       <% else %>
         <p><%= link_to "Sign up to upload a photo", new_user_registration_path, :class => 'navbar-link'  %> |
-            <%= link_to "Log in to uploada photo", new_user_session_path, :class => 'navbar-link'  %></p>
+            <%= link_to "Log in to upload a photo", new_user_session_path, :class => 'navbar-link'  %></p>
       <% end %>
 
+<!-- DISPLAY REVIEWS -->
     <div class="reviews">
       <h3>Reviews</h3>
       <% if @business.reviews.empty? %>
         <h4>There are no reviews for this business yet. Be the first!<h4>
       <% else %>
         <% @business.reviews.each do |review| %>
-          <h4><strong><%= review.user.name %>:</strong> <%= review.rating %><%= review.content %>
+          <h4><strong><%= review.user.name %>:</strong> <%= review.rating %> Star<br><%= review.content %>
           <% if (review.user == current_user) %>
+            <%#= link_to 'Edit Review', [@business, review], method: :get, remote: true, data: { confirm: 'Are you sure?' } %>
             | <%= link_to 'Delete Review', [@business, review], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
             <% end %>
         <% end %>
       <% end %>
     </div>
 
+            <%#= button_to "Delete", review_path(review), method: :delete, remote: true, class: 'btn btn-danger btn-sm' %>
+
+<!-- REVIEW BUSINESS -->
+
+      <!-- IF CURRENT USER -->
       <% if current_user %>
-        <%= form_for [@business, Review.new] do |f| %>
-          <div class="field business-field">
-            <%= f.number_field :rating, class: "form-control col-lg-8", placeholder: "Rating." %>
-            <%= f.text_area :content, class: "form-control col-lg-8", placeholder: "Provide detailed review here." %>
-            <%= f.hidden_field :business_id, :value => @business.id %>
-            <%= f.hidden_field :user_id, :value => current_user.id %>
-          </div>
-          <div class="actions">
-            <%= f.submit "Review Business" %>
-          </div>
-        <% end %>
-      <% else %>
+
+        <!-- if current user profile complete -->
+        <% if (current_user.user_name != nil && current_user.name != nil && current_user.user_name != "" && current_user.name != "" ) %>
+
+          <!-- if current user has reviewed this business -->
+          <% if @business.reviews.any? { |review| review.user.name == current_user.name } %>
+            <h1>You have already reviewed this business</h1>
+            
+          <!-- if current user has not reviewed this business -->
+          <% else %>
+
+            <!-- form to review business -->
+            <%= form_for [@business, Review.new], :remote => true do |f| %>
+              <div class="field business-field">
+                <%= f.number_field :rating, class: "form-control col-lg-8", placeholder: "Rating." %>
+                <%= f.text_area :content, class: "form-control col-lg-8", placeholder: "Provide detailed review here." %>
+                <%= f.hidden_field :business_id, :value => @business.id %>
+                <%= f.hidden_field :user_id, :value => current_user.id %>
+              </div>
+              <div class="actions">
+                <%= f.submit "Review Business" %>
+              </div>
+            <% end %> 
+
+          <% end %> <!-- if current user has reviewed this business -->
+
+        <!-- if current user profile not complete -->
+        <% elsif (current_user.user_name == nil || current_user.name == nil || current_user.user_name == "" || current_user.name == "") %>
+          <h1>User has no username or no name - profile incomplete</h1>
+            <p><%= link_to "Complete your profile to review this business", edit_user_path(current_user), :class => 'navbar-link'  %> </p>
+        <% end %> 
+
+      <!-- if not current user -->
+      <% else %> 
         <p><%= link_to "Sign up to review this business", new_user_registration_path, :class => 'navbar-link'  %> |
             <%= link_to "Log in to review this business", new_user_session_path, :class => 'navbar-link'  %></p>
-      <% end %>
+      <% end %> 
 
+<!-- EDIT / DELETE BUSINESS -->
+      <!-- if business created by current user -->
       <% if (@business.user == current_user) %>
         <p><%= link_to 'Edit Business', edit_business_path(@business) %> | 
-            <%#= link_to 'Delete Business', @question, method: :delete, data: { confirm: 'Are you sure?' } %> | 
+        <%#= link_to 'Delete Business', @question, method: :delete, data: { confirm: 'Are you sure?' } %> | 
         <%= link_to 'Back to Businesses', businesses_path %></p>
       <% else %>
         <p><%= link_to 'Back to Businesses', businesses_path %></p>
-      <% end %>
-      <br>
-      <br>
-      <br>
-    </div>
+      <% end %> <!-- if business created by current user -->
 
-<%= link_to 'Edit', edit_business_path(@business) %> |
-<%= link_to 'Back', businesses_path %>
+<%#= link_to 'Edit', edit_business_path(@business) %> |
+<%#= link_to 'Back', businesses_path %>

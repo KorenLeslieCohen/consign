@@ -7,6 +7,8 @@
       <th>Neighborhood</th>
       <th>Borough</th>
       <th>Name</th>
+      <th>Website</th>
+      <th>Phone</th>
       <th>Address</th>
       <th>Hours</th>
       <th>Email</th>
@@ -23,7 +25,9 @@
         <td><%= business.user.name %></td>
         <td><%= business.neighborhood.name %></td>
         <td><%= business.borough.name %></td>
-        <td><%= business.name %></td>
+        <td><%= link_to business.name, business %></td>
+        <td><%= business.website %></td>
+        <td><%= business.phone %></td>
         <td><%= business.address %></td>
         <td><%= business.hours %></td>
         <td><%= business.email %></td>
@@ -34,16 +38,21 @@
         <td><% business.designers.each do |designer| %>
           <%= link_to designer.name, designer %><%= "," unless designer == business.designers.last %>
           <% end %></td>
-        <td><%= link_to 'Show', business %></td>
-        <td><%= link_to 'Edit', edit_business_path(business) %></td>
-        <td><%= link_to 'Destroy', business, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', business %></td> 
+        <% if user_signed_in? %>
+          <% if (current_user.email == "koren.cohen@gmail.com") %>
+            <td><%= link_to 'Edit', edit_business_path(business) %></td>
+            <td><%= link_to 'Destroy', business, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-
-
 <br>
-
-<%= link_to 'New Business', new_business_path %>
+<% if user_signed_in? %>
+  <% if (current_user.email == "koren.cohen@gmail.com") %>
+    <%= link_to 'New Business', new_business_path %>
+  <% end %>
+<% end %>

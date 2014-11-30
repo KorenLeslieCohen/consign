@@ -14,7 +14,8 @@
   <tbody>
     <% @photos.each do |photo| %>
       <tr>
-        <td><%= photo.business.name %></td>
+        <td><%= link_to photo.business.name, photo.business %></td>
+        <%#= link_to @photo.business.name, @photo.business %>
         <td><%= photo.user.name %></td>
         <td><%= photo.description %></td>
         <td><img src="<%= photo.business_photo %>" height="200"></td>
