@@ -22,9 +22,7 @@
   <%= @user.user_name %>
 </p>
 
-
-
-
+<!-- SHOW USER'S REVIEWS -->
 <% if @user.reviews.length == 0 %>
     <h2>You have not reviewed any businesses.</h2>
   <% elsif @user.reviews.length == 1 %>
@@ -35,21 +33,27 @@
   <% @user.reviews.each do |review| %>
     <h2><%=link_to review.business.name, review.business %></h2>
     <h4><%= review.content %></h4>
-    <%= link_to 'Delete review', review, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+
+    <!-- THIS DELETE LINK DOES NOT WORK PROPERLY YET -->
+    <%#= link_to 'Delete review', review, method: :delete, data: { confirm: 'Are you sure?' } %></p>
     <p>You'll want to eventually include more info about these businesses, maybe a photo.</p> 
   <% end %>
 
+<!-- SHOW USER'S PHOTOS -->
 <% if @user.photos.length == 0 %>
     <h2>You have not uploaded any photos.</h2>
   <% elsif @user.photos.length == 1 %>
-    <h2>You have uploaded <%= @user.photos.length %> photos:</h2>
+    <h2>You have uploaded <%= @user.photos.length %> photo:</h2>
   <% else %>
     <h2>You have uploaded <%= @user.photos.length %> photos:</h2>
   <% end %>
   <% @user.photos.each do |photo| %>
-    <h2><%=link_to review.business.name, review.business %></h2>
-    <h4><%= review.content %></h4>
-    <%= link_to 'Delete review', review, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <%= link_to photo.business.name, photo.business %>
+    <%= photo.description %>
+    <%= image_tag photo.business_photo, height: 200 %>
+
+    <!-- THIS DELETE LINK DOES NOT WORK PROPERLY YET -->
+    <%#= link_to 'Delete photo', photo, method: :delete, data: { confirm: 'Are you sure?' } %></p>
     <p>You'll want to eventually include more info about these businesses, maybe a photo.</p> 
   <% end %>
 
