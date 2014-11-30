@@ -62,7 +62,6 @@
   <%= @business.terms %>
 </p>
 
-
 <p><strong>Biztags:</strong>
 <% @business.biztags.each do |biztag| %> 
   <%= link_to biztag.name, biztag %><%= "," unless biztag == @business.biztags.last %>
@@ -80,7 +79,7 @@
         <h4>There are no photos for this business yet. Be the first!<h4>
       <% else %>
         <% @business.photos.each do |photo| %>
-          <h4><strong><%= photo.user.name %>:</strong>
+          <h4><strong><%= link_to photo.user.name, photo.user %>:</strong>
           <%#= image_tag "#{@business.photo.url}", width: "480"%> 
           <%#= image_tag "https://s3.amazonaws.com/FlatironPostcard/stripe.jpg", width: "480"%>
           <%= photo.description %>
@@ -149,7 +148,7 @@
         <h4>There are no reviews for this business yet. Be the first!<h4>
       <% else %>
         <% @business.reviews.each do |review| %>
-          <h4><strong><%= review.user.name %>:</strong> <%= review.rating %> Star<br><%= review.content %>
+          <h4><strong><%= link_to review.user.name, review.user %>:</strong> <%= review.rating %> Star<br><%= review.content %>
           <% if (review.user == current_user) %>
             <%#= link_to 'Edit Review', [@business, review], method: :get, remote: true, data: { confirm: 'Are you sure?' } %>
             | <%= link_to 'Delete Review', [@business, review], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
