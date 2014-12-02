@@ -1,6 +1,6 @@
 console.log("create.js.erb reviews called");
 
-$("#reviews").append("<h4><strong><%= @review.user.name %>:</strong> <%= @review.rating %> Star<br><%= @review.content %></h4>");
+$("#reviews").append("<h4><strong><a href=''><%= @review.user.name %></a>:</strong> <%= @review.rating %> Star<br><%= @review.content %></h4>");
 $("#reviews h4 span").html("");
 $(".review_form").html("<h1>You have already reviewed this business</h1>");
 
