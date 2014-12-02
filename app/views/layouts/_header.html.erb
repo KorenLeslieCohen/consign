@@ -1,9 +1,9 @@
 <%= link_to 'About ConsignNYC', "/about", :class => 'navbar-link' %> |
 <%= link_to 'Consignment Stores', businesses_path, :class => 'navbar-link' %> |
-<%= link_to 'Types of Stores', biztags_path, :class => 'navbar-link' %> |
-<%= link_to 'Browse Store Photos', photos_path, :class => 'navbar-link' %> |
-<%= link_to 'Browse Designers', designers_path, :class => 'navbar-link' %> | 
-<%= link_to 'Advanced Search', "/search", :class => 'navbar-link' %> | 
+<%= link_to 'Stores by Type', biztags_path, :class => 'navbar-link' %> |
+<%= link_to 'Photos', photos_path, :class => 'navbar-link' %> |
+<%= link_to 'Designers', designers_path, :class => 'navbar-link' %> | 
+<%= link_to 'Search', "/search", :class => 'navbar-link' %> | 
 <% if user_signed_in? %>
 
   <% if (current_user.name != nil && current_user.name != "" ) %>

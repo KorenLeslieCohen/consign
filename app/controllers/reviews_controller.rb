@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
+  respond_to :html, :js
 
   # GET /reviews
   # GET /reviews.json
@@ -25,11 +26,11 @@ class ReviewsController < ApplicationController
   # POST /reviews.json
   def create
     @review = Review.new(review_params)
-    # @review.user_id = current_user.id
 
     respond_to do |format|
       if @review.save
         format.html { redirect_to @review.business, notice: 'Review was successfully created.' }
+        format.js   { } 
         format.json { render :show, status: :created, location: @review }
       else
         format.html { render :new }

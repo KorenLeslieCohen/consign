@@ -73,7 +73,7 @@
 <% end %></p>
 
 <!-- DISPLAY PHOTOS  -->
-    <div class="photos">
+    <div id="photos">
       <h3>Photos</h3>
       <% if @business.photos.empty? %>
         <h4>There are no photos for this business yet. Be the first!<h4>
@@ -142,10 +142,10 @@
       <% end %>
 
 <!-- DISPLAY REVIEWS -->
-    <div class="reviews">
+    <div id="reviews">
       <h3>Reviews</h3>
       <% if @business.reviews.empty? %>
-        <h4>There are no reviews for this business yet. Be the first!<h4>
+        <h4><span>There are no reviews for this business yet. Be the first!</span><h4>
       <% else %>
         <% @business.reviews.each do |review| %>
           <h4><strong><%= link_to review.user.name, review.user %>:</strong> <%= review.rating %> Star<br><%= review.content %>
@@ -160,6 +160,7 @@
             <%#= button_to "Delete", review_path(review), method: :delete, remote: true, class: 'btn btn-danger btn-sm' %>
 
 <!-- REVIEW BUSINESS -->
+<%#= render 'reviews/review' %>
 
       <!-- IF CURRENT USER -->
       <% if current_user %>
@@ -175,17 +176,11 @@
           <% else %>
 
             <!-- form to review business -->
-            <%= form_for [@business, Review.new], :remote => true do |f| %>
-              <div class="field business-field">
-                <%= f.number_field :rating, class: "form-control col-lg-8", placeholder: "Rating." %>
-                <%= f.text_area :content, class: "form-control col-lg-8", placeholder: "Provide detailed review here." %>
-                <%= f.hidden_field :business_id, :value => @business.id %>
-                <%= f.hidden_field :user_id, :value => current_user.id %>
+            <div class="row">
+              <div class="col-sm-12">
+                <%= render 'reviews/new', review: Review.new(business_id: @business.id) %>
               </div>
-              <div class="actions">
-                <%= f.submit "Review Business" %>
-              </div>
-            <% end %> 
+            </div>
 
           <% end %> <!-- if current user has reviewed this business -->
 
