@@ -1,6 +1,5 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
-  respond_to :html, :js
 
   # GET /reviews
   # GET /reviews.json
