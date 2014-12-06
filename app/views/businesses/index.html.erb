@@ -26,7 +26,7 @@
         <td><%= business.neighborhood.name %></td>
         <td><%= business.borough.name %></td>
         <td><%= link_to business.name, business %></td>
-        <td><%= link_to business.website, business.website, :target => "_blank" %></td>
+        <td><%= link_to business.website.gsub("http://", ""), business.website, :target => "_blank" %></td>
         <td><%= business.phone %></td>
         <td><%= business.address %></td>
         <td><%= business.hours %></td>

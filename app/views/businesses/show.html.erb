@@ -51,7 +51,7 @@
 
 <p>
   <strong>Website:</strong>
-  <%= @business.website %>
+  <%= link_to @business.website.gsub("http://", ""), @business.website, :target => "_blank" %>
 </p>
 
 <p>
