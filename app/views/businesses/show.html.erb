@@ -101,25 +101,13 @@
           <%#= image_tag "https://s3.amazonaws.com/FlatironPostcard/stripe.jpg", width: "480"%>
           <%= photo.description %>
           <!-- <img src="<%= photo.business_photo %>" height="200"> -->
-          <%= image_tag photo.business_photo, height: 200 %>
+          <%= link_to image_tag(photo.business_photo), photo, height: 200 %>
           <% if (photo.user == current_user) %>
             | <%= link_to 'Delete Photo', [@business, photo], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
             <% end %>
         <% end %>
       <% end %>
     </div>
-
-<!--   create_table "photos", force: true do |t|
-    t.integer  "business_id"
-    t.integer  "user_id"
-    t.string   "business_photo_file_name"
-    t.string   "business_photo_content_type"
-    t.integer  "business_photo_file_size"
-    t.datetime "business_photo_updated_at"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end -->
 
 <!-- put the user's review first? -->
 
@@ -165,7 +153,10 @@
         <h4><span>There are no reviews for this business yet. Be the first!</span><h4>
       <% else %>
         <% @business.reviews.each do |review| %>
-          <h4><strong><%= link_to review.user.name, review.user %>:</strong> <%= review.rating %> Star<br><%= review.content %>
+          <h4><strong><%= link_to review.user.name, review.user %>:</strong> 
+          <%= image_tag review.user.user_profile_photo, height: 50 %>
+          <%= review.rating %> Star<br>
+          <%= review.content %>
           <% if (review.user == current_user) %>
             <%#= link_to 'Edit Review', [@business, review], method: :get, remote: true, data: { confirm: 'Are you sure?' } %>
             | <%= link_to 'Delete Review', [@business, review], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
