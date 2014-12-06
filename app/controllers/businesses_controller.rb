@@ -43,7 +43,7 @@ class BusinessesController < ApplicationController
   def update
     respond_to do |format|
       if @business.update(business_params)
-        format.html { redirect_to @business, notice: 'Business was successfully updated.' }
+        format.html { redirect_to @business, notice: 'Your store has been updated!' }
         format.json { render :show, status: :ok, location: @business }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class BusinessesController < ApplicationController
   def destroy
     @business.destroy
     respond_to do |format|
-      format.html { redirect_to businesses_url, notice: 'Business was successfully destroyed.' }
+      format.html { redirect_to businesses_url, notice: 'Your store was deleted.' }
       format.json { head :no_content }
     end
   end

@@ -4,6 +4,24 @@
 
   <h1>Your Profile</h1>
 
+<!-- display user profile photo if it exists, otherwise placeholder -->
+  <% if (@user.user_profile_photo == nil || @user.user_profile_photo == "") %>
+
+  <p>
+  <strong>Profile Photo:</strong>
+   <%= image_tag "placeholder-profile.png", height: 100 %>
+</p>
+
+  <% else %>
+
+<p>
+  <strong>Profile Photo Doesn't Exist Yet:</strong>
+   <%= image_tag @user.user_profile_photo, height: 100 %>
+</p>
+
+  <% end %>
+
+
   <p>
     <strong>Name:</strong>
     <%= @user.name %>
@@ -20,6 +38,25 @@
   </p>
 
 <% else %>
+
+
+<!-- display user profile photo if it exists, otherwise placeholder -->
+  <% if (@user.user_profile_photo == nil || @user.user_profile_photo == "") %>
+
+  <p>
+  <strong>Profile Photo Doesn't Exist Yet:</strong>
+   <%= image_tag "placeholder-profile.png", height: 100 %>
+</p>
+
+  <% else %>
+
+<p>
+  <strong>Profile Photo:</strong>
+   <%= image_tag @user.user_profile_photo, height: 100 %>
+</p>
+
+  <% end %>
+
 
   <h1><%= @user.user_name %>'s Profile</h1>
 
@@ -57,12 +94,14 @@
 
   <% end %>
 
+
   <% @user.reviews.each do |review| %>
-    <h2><%=link_to review.business.name, review.business %></h2>
-    <h4><%= review.content %></h4>
+    <%= link_to "doesn't matter name", review.business %>
+    <%= review.rating %>
+    <%= review.content %>
 
     <!-- THIS DELETE LINK DOES NOT WORK PROPERLY YET -->
-    <%#= link_to 'Delete review', review, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <%#= link_to 'Delete photo', photo, method: :delete, data: { confirm: 'Are you sure?' } %></p>
     <p>You'll want to eventually include more info about these businesses, maybe a photo.</p> 
   <% end %>
 

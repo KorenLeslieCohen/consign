@@ -12,6 +12,11 @@
   <%# end %> -->
 
   <div class="field">
+    <%= f.label :user_profile_photo %>
+    <%= f.file_field :user_profile_photo, placeholder: "Profile Photo"%>
+  </div>
+
+  <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>

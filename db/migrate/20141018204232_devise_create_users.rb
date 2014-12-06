@@ -34,6 +34,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :user_name
       t.string :name
 
+      t.attachment :user_profile_photo
+
       t.timestamps
     end
 
