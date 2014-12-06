@@ -95,12 +95,12 @@
 
 
   <% @user.reviews.each do |review| %>
-    <%= link_to "test", review.business %>
+    <%= link_to review.business.name, review.business %>
     <%= review.rating %>
     <%= review.content %>
 
     <!-- THIS DELETE LINK DOES NOT WORK PROPERLY YET -->
-    <%#= link_to 'Delete photo', photo, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <%#= link_to 'Delete review', photo, method: :delete, data: { confirm: 'Are you sure?' } %></p>
     <p>You'll want to eventually include more info about these businesses, maybe a photo.</p> 
   <% end %>
 
