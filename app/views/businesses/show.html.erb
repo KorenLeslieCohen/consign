@@ -11,10 +11,23 @@
       </ul>
     </div>
   <%# end %> -->
+
+<!-- display business profile photo if it exists, otherwise placeholder -->
+  <% if !@business.profile_photo? %>
+
+  <p>
+  <strong>No Business Photo:</strong>
+   <%= image_tag "placeholder-business.png", height: 200 %>
+</p>
+
+  <% else %>
+
 <p>
-  <strong>Profile Photo:</strong>
+  <strong>Business Photo:</strong>
    <%= image_tag @business.profile_photo, height: 200 %>
 </p>
+
+  <% end %>
 
 <p>
   <strong>User:</strong>

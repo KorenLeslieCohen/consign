@@ -5,17 +5,17 @@
   <h1>Your Profile</h1>
 
 <!-- display user profile photo if it exists, otherwise placeholder -->
-  <% if (@user.user_profile_photo == nil || @user.user_profile_photo == "") %>
+  <% if !@user.user_profile_photo? %>
 
   <p>
-  <strong>Profile Photo:</strong>
+  <strong>No Profile Photo:</strong>
    <%= image_tag "placeholder-profile.png", height: 100 %>
 </p>
 
   <% else %>
 
 <p>
-  <strong>Profile Photo Doesn't Exist Yet:</strong>
+  <strong>Profile Photo:</strong>
    <%= image_tag @user.user_profile_photo, height: 100 %>
 </p>
 
@@ -40,11 +40,13 @@
 <% else %>
 
 
-<!-- display user profile photo if it exists, otherwise placeholder -->
-  <% if (@user.user_profile_photo == nil || @user.user_profile_photo == "") %>
+  <h1><%= @user.user_name %>'s Profile</h1>
+
+  <!-- display user profile photo if it exists, otherwise placeholder -->
+  <% if !@user.user_profile_photo? %>
 
   <p>
-  <strong>Profile Photo Doesn't Exist Yet:</strong>
+  <strong>No Profile Photo:</strong>
    <%= image_tag "placeholder-profile.png", height: 100 %>
 </p>
 
@@ -55,10 +57,7 @@
    <%= image_tag @user.user_profile_photo, height: 100 %>
 </p>
 
-  <% end %>
-
-
-  <h1><%= @user.user_name %>'s Profile</h1>
+<% end %>
 
 <% end %>
 
