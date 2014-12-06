@@ -10,6 +10,13 @@
       </ul>
     </div>
   <% end %>
+ 
+ <div class="field business-field">
+
+              <%= f.label :profile_photo %>
+              <%= f.file_field :profile_photo, placeholder: "Profile Photo"%>
+            </div>
+
 
   <!-- <div class="field"> -->
     <%#= f.label :user_id %><br>
@@ -66,6 +73,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "submit info" %>
   </div>
 <% end %>
