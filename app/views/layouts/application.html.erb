@@ -6,6 +6,36 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <%= analytics_init if Rails.env.production? %>
+
+
+
+    <meta charset="utf-8">
+
+    <title>Delight - One Page Bootstrap 3 Parallax Retina Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="A Template by ThemeBang">
+    <meta name="keywords" content="Onepage, Responsive, Bootstrap 3, Parallax, Retina, HTML5, CSS3, Fast, Easy, Clean, Elegant, Minimalist">
+    <meta name="author" content="ThemeBang">
+    
+    <script src="js/modernizr.js"></script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/skrollr.ie.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">  
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/et-line/et-line.css">
+    <link rel="stylesheet" href="css/linecons/linecons.css">
+    <link rel="stylesheet" href="css/steadysets/steadysets.css">
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
+    <link rel="image_src" href="thumbnail.png">
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    
+    <script src="js/skrollr.js"></script>
+
+
 </head>
 <body>
 
@@ -14,6 +44,78 @@
 
 
 <%= yield %>
+
+  <!-- *** CONTACT START *** -->
+    <section id="contact-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+      <h1 class="header">Contact</h1>
+      <p class="header">
+        <!-- <span style="white-space:nowrap"> -->
+         <!--  <i class="fa fa-map-marker highlight"></i> 
+          <a href="https://www.google.com/maps/@34.101578,-118.333927,3a,90y,178h,90t/data=!3m4!1e1!3m2!1s_-aKDfmMy_CwRT6KCW66vQ!2e0?hl=pt-BR" target="_blank">New York, NY</a>
+        </span>
+        <span style="white-space:nowrap">
+          <i class="fa fa-phone highlight" style="padding-left: 15px"></i> 
+          <a href="skype:echo123?call">(301) 807-2885</a>
+        </span> -->
+        <span style="white-space:nowrap">
+          <i class="fa fa-envelope-o highlight" style="padding-left: 15px"></i> 
+          <a href="mailto:name@mail.com">consignnycity@mail.com</a>
+        </span>
+      </p>
+    </section>
+    <section id="contact">
+      <div class="container">
+        <div class="row divide">
+          <form action="js/sendmail.php" class="form-inline flowuplabels" role="form" method="post" id="contactForm">
+            <div class="form-group col-md-3 col-sm-6 fl_wrap">
+              <label class="fl_label" for="name">Name:</label>
+              <input type="text" name="name" value="" id="name" class="form-control fl_input">
+            </div>
+            <div class="form-group col-md-3 col-sm-6 fl_wrap">
+              <label class="fl_label" for="email">Email:</label>
+              <input type="text" name="email" value="" id="email" class="form-control fl_input">
+            </div>
+            <span class="honeypot form-group col-md-3 col-sm-6 fl_wrap">
+              <label class="fl_label" for="last">Honeypot:</label>
+              <input type="text" name="last" value="" id="last" class="form-control fl_input">
+            </span>
+            <div class="form-group col-md-3 col-sm-6 fl_wrap">
+              <label class="fl_label" for="message">Message:</label>
+              <input type="text" name="message" value="" id="message" class="form-control fl_input">
+            </div>
+            <div class="form-group col-md-3 col-sm-6">
+              <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">SEND</button>
+            </div>
+            <div class="form-group col-xs-12">
+              <div class="message">
+                <div class="alert"></div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  <!-- *** CONTACT END *** -->
+
+    <!-- *** SCRIPTS START *** -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/retina.js"></script>
+    <script src="js/jquery.scrollto.min.js"></script>
+    <script src="js/jquery.easing.js"></script>
+    <script src="js/jquery.fitvids.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/jquery.localscroll.min.js"></script>
+    <script src="js/smoothscroll.min.js"></script>
+    <script src="js/imagesloaded.min.js"></script>
+    <script src="js/ekko-lightbox.min.js"></script>
+    <script src="js/jquery.backstretch.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="js/jquery.gmap.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.flowuplabels.js"></script>
+    <script src="js/custom.js"></script>
 
 </body>
 </html>

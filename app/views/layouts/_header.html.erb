@@ -4,6 +4,7 @@
 <%= link_to 'Photos', photos_path, :class => 'navbar-link' %> |
 <%= link_to 'Designers', designers_path, :class => 'navbar-link' %> | 
 <%= link_to 'Search', "/search", :class => 'navbar-link' %> | 
+<%= link_to 'By Neighborhood', boroughs_path, :class => 'navbar-link' %> | 
 <% if user_signed_in? %>
 
   <% if (current_user.name != nil && current_user.name != "" ) %>
@@ -28,6 +29,35 @@
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 
 <% end %>
+
+<!-- *** NAVIGATION START *** -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation" data-start="background: rgba(0, 0, 0, .0); padding: 22px 0px; border-bottom: 0px hidden #000;" data-5p="background: rgba(0, 0, 0, 0.96); padding: 12px 0px; border-bottom: 1px solid #000;">
+      <div class="container-nav">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#home">
+  <!--          <div data-0="background-image:!url(img/logo_black.png);" data-5="background-image:!url(img/logo.png)"></div>-->
+            <img src="img/logo.png" alt="" class="img-responsive logo_align">
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav navbar-right menu_align">
+            <li><a href="#home" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">HOME</a></li>
+            <li><a href="#services-start" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">SERVICES</a></li>
+            <li><a href="#works-start" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">WORKS</a></li>
+            <li><a href="#gallery-start" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">GALLERY</a></li>
+            <li><a href="#team-start" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">TEAM</a></li>
+            <li><a href="#contact-start" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <!-- *** NAVIGATION END *** -->
 
 
 

@@ -12,42 +12,36 @@
     </div>
   <%# end %> -->
 
+<h1><%= @business.name %></h1>
+
+<p><%= @business.borough.name %>: <%= @business.neighborhood.name %></p>
+
 <!-- display business profile photo if it exists, otherwise placeholder -->
   <% if !@business.profile_photo? %>
 
   <p>
-  <strong>No Business Photo:</strong>
+  <!-- <strong>No Business Photo:</strong> -->
    <%= image_tag "placeholder-business.png", height: 200 %>
 </p>
 
   <% else %>
 
 <p>
-  <strong>Business Photo:</strong>
+  <!-- <strong>Business Photo:</strong> -->
    <%= image_tag @business.profile_photo, height: 200 %>
 </p>
 
   <% end %>
 
-<p>
+<iframe width="300" height="300" frameborder="0" style="border:0"
+src="<%= @business.map  %>AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94"></iframe>
+
+<!-- <p>
   <strong>User:</strong>
-  <%= @business.user.name %>
-</p>
+  <%#= @business.user.name %>
+</p> -->
 
-<p>
-  <strong>Neighborhood:</strong>
-  <%= @business.neighborhood.name %>
-</p>
 
-<p>
-  <strong>Borough:</strong>
-  <%= @business.borough.name %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @business.name %>
-</p>
 
 <p>
   <strong>Website:</strong>
@@ -136,7 +130,7 @@
           <% end %>
 
         <% elsif (current_user.user_name == nil || current_user.name == nil || current_user.user_name == "" || current_user.name == "") %>
-          <h1>There is no username or name in profile</h1>
+          <!-- <h1>There is no username or name in profile</h1> -->
           <!-- need an elsif for if profile not complete and no reviews -->
             <p><%= link_to "Complete your profile to upload a photo", edit_user_path(current_user), :class => 'navbar-link'  %> </p>
         <% end %>
@@ -198,7 +192,7 @@
 
         <!-- if current user profile not complete -->
         <% elsif (current_user.user_name == nil || current_user.name == nil || current_user.user_name == "" || current_user.name == "") %>
-          <h1>User has no username or no name - profile incomplete</h1>
+          <!-- <h1>User has no username or no name - profile incomplete</h1> -->
             <p><%= link_to "Complete your profile to review this business", edit_user_path(current_user), :class => 'navbar-link'  %> </p>
         <% end %> 
 

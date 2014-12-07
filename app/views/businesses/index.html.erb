@@ -3,10 +3,13 @@
 <table>
   <thead>
     <tr>
-      <th>User</th>
+      <th>Store</th>
+      <th>Photo</th>
+      <th>Map</th>
       <th>Neighborhood</th>
       <th>Borough</th>
-      <th>Name</th>
+    </tr>
+    <tr>
       <th>Website</th>
       <th>Phone</th>
       <th>Address</th>
@@ -22,10 +25,18 @@
   <tbody>
     <% @businesses.each do |business| %>
       <tr>
-        <td><%= business.user.name %></td>
+        <td><%= link_to business.name, business %></td>
+        <td><% if !business.profile_photo? %>
+              <p><%= image_tag "placeholder-business.png", height: 200 %></p>
+            <% else %>
+              <p><%= image_tag business.profile_photo, height: 200 %></p>
+            <% end %></td>
+        <td><iframe width="300" height="300" frameborder="0" style="border:0"
+src="<%= business.map  %>AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94"></iframe></td>
         <td><%= business.neighborhood.name %></td>
         <td><%= business.borough.name %></td>
-        <td><%= link_to business.name, business %></td>
+      </tr>
+      <tr>
         <td><%= link_to business.website.gsub("http://", ""), business.website, :target => "_blank" %></td>
         <td><%= business.phone %></td>
         <td><%= business.address %></td>

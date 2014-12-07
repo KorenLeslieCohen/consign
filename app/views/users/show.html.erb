@@ -161,9 +161,9 @@
 <!-- include businesses, etc. -->
 <br>
 <% if user_signed_in? %>
-<% if (current_user.email == @user.email) %>
-  <%= link_to 'Edit Profile', edit_user_path(@user) %> |
-  <%= link_to 'Edit Account Settings', edit_user_registration_path, :class => 'navbar-link' %>
-  <%#= link_to "Settings", edit_user_path %>
-<% end %>
+  <% if (current_user.email == @user.email) %>
+    <%= link_to 'Edit Profile', edit_user_path(@user) %> |
+    <%= link_to 'Edit Account Settings', edit_user_registration_path, :class => 'navbar-link' %>
+    <%#= link_to "Settings", edit_user_path %>
+  <% end %>
 <% end %>

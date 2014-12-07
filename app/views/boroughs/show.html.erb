@@ -6,12 +6,15 @@
 </p>
 
 <p>
-  <strong>Neighborhoods:</strong><br>
+  <strong>Stores by Neighborhood:</strong><br>
   <% @borough.neighborhoods.each do |neighborhood| %>
     <%= link_to neighborhood.name, neighborhood %><br>
+    <% neighborhood.businesses.each do |business| %>
+      -<%= link_to business.name, business %><br>
+    <% end %>
   <% end %>
 </p>
   
 
-<%= link_to 'Edit', edit_borough_path(@borough) %> |
+<!-- <%#= link_to 'Edit', edit_borough_path(@borough) %> | -->
 <%= link_to 'All Boroughs', boroughs_path %>
