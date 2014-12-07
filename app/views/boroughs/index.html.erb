@@ -22,4 +22,18 @@
 
 <br>
 
+<% @boroughs.each do |borough| %>
+  <% if borough.name == "Manhattan" %>
+    <%= link_to borough.name, borough %><br>
+    <% borough.neighborhoods.each do |neighborhood| %>
+      -<%= link_to neighborhood.name, neighborhood %><br>
+      <% neighborhood.businesses.each do |business| %>
+        --<%= link_to business.name, business %><br>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<br>
+<br>
 <%= link_to 'New Borough', new_borough_path %>
