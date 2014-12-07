@@ -4,28 +4,28 @@
 
 <!-- *** GALLERY START *** -->
     <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
-      <h1 class="header">Photos</h1>
-      <p class="header">Image Background Parallax</p>
+      <h1 class="header">GALLERY</h1>
+      <p class="header">Browse the Latest Photos</p>
     </section>
     <section id="gallery">
       <div class="container">
         <div class="row divide">
           <!-- <div class="col-sm-6 col-md-4 gallery-item"> -->
             <% @photos.each do |photo| %>
-            <div class="col-sm-6 col-md-4 gallery-item">
-              <%= link_to photo.business.name, photo.business %> |
-              By: <%= link_to photo.user.name, photo.user %><br>
-              <%= photo.description %>
-              <div class="thumbnail">
-                <a href="">
-                  <img src="<%= photo.business_photo %>" height="200" >
-                  <div class="gallery-overlay"></div>
-                </a>
+              <div class="col-sm-6 col-md-4 gallery-item">
+                <%= link_to photo.business.name, photo.business %> |
+                By: <%= link_to photo.user.name, photo.user %><br>
+                <%= photo.description %>
+                <div class="thumbnail">
+                  <a href="">
+                    <img src="<%= photo.business_photo %>" height="200" >
+                    <div class="gallery-overlay"></div>
+                  </a>
+                </div>
+                <%= link_to 'Show', photo %> |
+                <%= link_to 'Edit', edit_photo_path(photo) %> |
+                <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %><br>
               </div>
-            <%= link_to 'Show', photo %> |
-              <%= link_to 'Edit', edit_photo_path(photo) %> |
-              <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %><br>
-            </div>
             <% end %>
           <!-- </div> -->
 

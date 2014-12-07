@@ -4,8 +4,10 @@
 
   <% if (current_user.email == @user.email) %>
 
-    <h1>Your Profile</h1>
-
+    <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+      <h1 class="header"><%= current_user.user_name.upcase %></h1>
+      <p class="header">Profile</p>
+    </section>
 
     <%= link_to 'Edit Profile', edit_user_path(@user) %> |
     <%= link_to 'Edit Account Settings', edit_user_registration_path, :class => 'navbar-link' %>
@@ -48,8 +50,12 @@
 
 <% else %>
 
+    <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+      <h1 class="header"><%= @user.user_name.upcase %></h1>
+      <p class="header">Profile</p>
+    </section>
 
-  <h1><%= @user.user_name %>'s Profile</h1>
+
 
   <!-- display user profile photo if it exists, otherwise placeholder -->
   <% if !@user.user_profile_photo? %>

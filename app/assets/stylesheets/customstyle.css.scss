@@ -20,15 +20,26 @@ body {
 
 }
 
-.navbar-brand > a {
-  font-size: 13px;
+.navbar a {
+  font-size: 40px;
   
 }
 
 .navbar-brand {
   padding: 22px 0px;
+  /*font-size: 40px;*/
 }
 
 #footer {
   border-top: 1px solid white;
+}
+
+.business-photo-map {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.business-photo,
+.business-map {
+  float: left;
 }

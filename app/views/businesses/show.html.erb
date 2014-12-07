@@ -1,4 +1,9 @@
-<p id="notice"><%= notice %></p>
+    <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+      <h1 class="header"><%= @business.name.upcase %></h1>
+      <p class="header"><%= @business.neighborhood.name %></p>
+    </section>
+
+    <p id="notice"><%= notice %></p>
 
 <!-- <%# if @photo.errors.any? %>
     <div id="error_explanation">
@@ -12,29 +17,31 @@
     </div>
   <%# end %> -->
 
-<h1><%= @business.name %></h1>
+<!-- <div class="business-name">
+  <h1><%= @business.name %></h1>
+</div> -->
 
-<p><%= @business.borough.name %>: <%= @business.neighborhood.name %></p>
+<p><%= link_to @business.borough.name, @business.borough %>: <%= link_to @business.neighborhood.name, @business.neighborhood %></p>
 
-<!-- display business profile photo if it exists, otherwise placeholder -->
+<p><%= link_to "Browse other shops in this neighborgood.", @business.neighborhood %></p>
+
+<div class="business-photo-map">
+  <!-- display business profile photo if it exists, otherwise placeholder -->
+  <div class="business-photo">
   <% if !@business.profile_photo? %>
+    <!-- <strong>No Business Photo:</strong> -->
+     <%= image_tag "placeholder-business.png", height: 300, width: 300 %>
+    <% else %>
+    <!-- <strong>Business Photo:</strong> -->
+     <%= image_tag @business.profile_photo, height: 300, width: 300 %>
+    <% end %>
+  </div>
 
-  <p>
-  <!-- <strong>No Business Photo:</strong> -->
-   <%= image_tag "placeholder-business.png", height: 200 %>
-</p>
-
-  <% else %>
-
-<p>
-  <!-- <strong>Business Photo:</strong> -->
-   <%= image_tag @business.profile_photo, height: 200 %>
-</p>
-
-  <% end %>
-
-<iframe width="300" height="300" frameborder="0" style="border:0"
-src="<%= @business.map  %>AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94"></iframe>
+  <div class="business-map">
+    <iframe width="300" height="300" frameborder="0" style="border:0"
+    src="<%= @business.map  %>AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94"></iframe>
+  </div>
+</div>
 
 <!-- <p>
   <strong>User:</strong>
@@ -42,11 +49,12 @@ src="<%= @business.map  %>AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94"></iframe>
 </p> -->
 
 
-
+<div>
 <p>
   <strong>Website:</strong>
   <%= link_to @business.website.gsub("http://", ""), @business.website, :target => "_blank" %>
 </p>
+</div>
 
 <p>
   <strong>Phone:</strong>
