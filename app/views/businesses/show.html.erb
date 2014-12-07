@@ -152,10 +152,10 @@
       <% if @business.reviews.empty? %>
         <h4><span>There are no reviews for this business yet. Be the first!</span><h4>
       <% else %>
-        <% @business.reviews.each do |review| %>
+        <% @business.reviews.reverse.each do |review| %>
           <h4><strong><%= link_to review.user.name, review.user %>:</strong> 
           <%= image_tag review.user.user_profile_photo, height: 50 %>
-          <%= review.rating %> Star<br>
+          <%= review.rating %><br>
           <%= review.content %>
           <% if (review.user == current_user) %>
             <%#= link_to 'Edit Review', [@business, review], method: :get, remote: true, data: { confirm: 'Are you sure?' } %>
@@ -164,6 +164,10 @@
         <% end %>
       <% end %>
     </div>
+
+<script>
+    $('#reviews').raty('score'); 
+</script>
 
             <%#= button_to "Delete", review_path(review), method: :delete, remote: true, class: 'btn btn-danger btn-sm' %>
 

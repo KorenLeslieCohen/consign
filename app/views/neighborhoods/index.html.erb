@@ -12,8 +12,8 @@
   <tbody>
     <% @neighborhoods.each do |neighborhood| %>
       <tr>
-        <td><%= neighborhood.name %></td>
-        <td><%= neighborhood.borough_id %></td>
+        <td><%= link_to neighborhood.name, neighborhood %></td>
+        <td><%= link_to neighborhood.borough.name, neighborhood.borough %></td>
         <td><%= link_to 'Show', neighborhood %></td>
         <td><%= link_to 'Edit', edit_neighborhood_path(neighborhood) %></td>
         <td><%= link_to 'Destroy', neighborhood, method: :delete, data: { confirm: 'Are you sure?' } %></td>
