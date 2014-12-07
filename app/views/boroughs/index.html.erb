@@ -11,7 +11,7 @@
   <tbody>
     <% @boroughs.each do |borough| %>
       <tr>
-        <td><%= borough.name %></td>
+        <td><%= link_to borough.name, borough %></td>
         <td><%= link_to 'Show', borough %></td>
         <td><%= link_to 'Edit', edit_borough_path(borough) %></td>
         <td><%= link_to 'Destroy', borough, method: :delete, data: { confirm: 'Are you sure?' } %></td>

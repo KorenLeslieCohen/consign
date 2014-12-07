@@ -1,9 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Borough:</strong>
   <%= @borough.name %>
 </p>
 
+<p>
+  <strong>Neighborhoods:</strong><br>
+  <% @borough.neighborhoods.each do |neighborhood| %>
+    <%= link_to neighborhood.name, neighborhood %><br>
+  <% end %>
+</p>
+  
+
 <%= link_to 'Edit', edit_borough_path(@borough) %> |
-<%= link_to 'Back', boroughs_path %>
+<%= link_to 'All Boroughs', boroughs_path %>

@@ -2,12 +2,12 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @neighborhood.name %>
+  <%= link_to @neighborhood.name, @neighborhood %>
 </p>
 
 <p>
   <strong>Borough:</strong>
-  <%= @neighborhood.borough.name %>
+  <%= link_to @neighborhood.borough.name, @neighborhood.borough %>
 </p>
 
 <%= link_to 'Edit', edit_neighborhood_path(@neighborhood) %> |
