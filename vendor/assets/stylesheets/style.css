@@ -183,7 +183,7 @@ strong {
 
 #home {
 	min-height: 445px;
-	background: #000 url("header.jpg") no-repeat center center;
+	background: #000 url("../img/home_bg.jpg") no-repeat center center;
 	-webkit-background-size: cover;
 	background-size: cover;
 }

@@ -1,32 +1,68 @@
-<h1>Listing photos</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Business</th>
-      <th>User</th>
-      <th>Description</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @photos.each do |photo| %>
-      <tr>
-        <td><%= link_to photo.business.name, photo.business %></td>
-        <%#= link_to @photo.business.name, @photo.business %>
-        <td><%= photo.user.name %></td>
-        <td><%= photo.description %></td>
-        <td><img src="<%= photo.business_photo %>" height="200"></td>
-        <td><%= link_to 'Show', photo %></td>
-        <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-        <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
 
 <%#= link_to 'New Photo', new_photo_path %>
+
+<!-- *** GALLERY START *** -->
+    <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+      <h1 class="header">Photos</h1>
+      <p class="header">Image Background Parallax</p>
+    </section>
+    <section id="gallery">
+      <div class="container">
+        <div class="row divide">
+          <!-- <div class="col-sm-6 col-md-4 gallery-item"> -->
+            <% @photos.each do |photo| %>
+            <div class="col-sm-6 col-md-4 gallery-item">
+              <%= link_to photo.business.name, photo.business %> |
+              By: <%= link_to photo.user.name, photo.user %><br>
+              <%= photo.description %>
+              <div class="thumbnail">
+                <a href="">
+                  <img src="<%= photo.business_photo %>" height="200" >
+                  <div class="gallery-overlay"></div>
+                </a>
+              </div>
+            <%= link_to 'Show', photo %> |
+              <%= link_to 'Edit', edit_photo_path(photo) %> |
+              <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %><br>
+            </div>
+            <% end %>
+          <!-- </div> -->
+
+<!--           <div class="col-sm-6 col-md-4 gallery-item">
+            <div class="thumbnail">
+              <a href="img/works/works_5.jpg" data-toggle="lightbox">
+                <img src="img/works/works_5.jpg" alt="">
+                <div class="gallery-overlay"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 gallery-item">
+            <div class="thumbnail">
+              <a href="img/works/works_6.jpg" data-toggle="lightbox">
+                <img src="img/works/works_6.jpg" alt="">
+                <div class="gallery-overlay"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 gallery-item">
+            <div class="thumbnail">
+              <a href="img/works/works_7.jpg" data-toggle="lightbox">
+                <img src="img/works/works_7.jpg" alt="">
+                <div class="gallery-overlay"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 gallery-item">
+            <div class="thumbnail">
+              <a href="img/works/works_8.jpg" data-toggle="lightbox">
+                <img src="img/works/works_8.jpg" alt="">
+                <div class="gallery-overlay"></div>
+              </a>
+            </div>
+          </div> -->
+
+        </div>
+      </div>
+    </section>
+  <!-- *** GALLERY END *** -->

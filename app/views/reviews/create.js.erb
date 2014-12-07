@@ -3,12 +3,18 @@ console.log("create.js.erb reviews called");
 $("#reviews").append('<h4><strong><%= link_to @review.user.name, @review.user %>:</strong><%= image_tag @review.user.user_profile_photo, height: 50 %><%= @review.rating %> Star<br><%= @review.content %> | <%= link_to "Delete Review", method: :delete, data: { confirm: "Are you sure?" } %></h4>').fadeIn(3000);
 $("#reviews h4 span").html("");
 $(".review_form").html("<h1>Thanks for reviewing this store! Happy shopping!</h1>");
-$('#reviews').raty('score'); 
 
 console.log($(".review_form").html());
 console.log($('#reviews').html());
 console.log($('#reviews h4 span').html());
 console.log("end of file");
+
+
+// $('#reviews').append("<%= j render @review %>");
+// var $new_review = $('#new_review');
+// $new_review[0].reset();
+// $new_review.find('#star-rating-new').raty('score', 0);
+// $new_review.find('.error_explanation').remove();
 
 
          

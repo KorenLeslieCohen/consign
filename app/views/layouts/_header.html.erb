@@ -1,37 +1,8 @@
-<%= link_to 'About ConsignNYC', "/about", :class => 'navbar-link' %> |
-<%= link_to 'Consignment Stores', businesses_path, :class => 'navbar-link' %> |
-<%= link_to 'Stores by Type', biztags_path, :class => 'navbar-link' %> |
-<%= link_to 'Photos', photos_path, :class => 'navbar-link' %> |
-<%= link_to 'Designers', designers_path, :class => 'navbar-link' %> | 
-<%= link_to 'Search', "/search", :class => 'navbar-link' %> | 
-<%= link_to 'By Neighborhood', boroughs_path, :class => 'navbar-link' %> | 
-<% if user_signed_in? %>
 
-  <% if (current_user.name != nil && current_user.name != "" ) %>
-    Welcome, <strong><%= current_user.name %><%#= current_user.email %></strong>! |
-  <% else %>
-    Welcome! |
-  <% end %>
 
-  <!-- <%#= link_to 'Edit Settings', edit_user_registration_path, :class => 'navbar-link' %> | -->
-
-  <% if (current_user.user_name != nil && current_user.name != nil && current_user.user_name != "" && current_user.name != "") %> 
-    <%= link_to "Profile", current_user, :class => 'navbar-link' %> | 
-
-  <% else  %>
-    <%= link_to "Complete your profile", edit_user_path(current_user), :class => 'navbar-link'  %>
-  <% end %>
-
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'%>
-
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-
-<% end %>
 
 <!-- *** NAVIGATION START *** -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation" data-start="background: rgba(0, 0, 0, .0); padding: 22px 0px; border-bottom: 0px hidden #000;" data-5p="background: rgba(0, 0, 0, 0.96); padding: 12px 0px; border-bottom: 1px solid #000;">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation" data-start="background: rgba(0, 0, 0, 1); padding: 22px 0px; border-bottom: 0px hidden #000;" data-5p="background: rgba(0, 0, 0, 1); padding: 22px 0px; border-bottom: 1px solid #000;">
       <div class="container-nav">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
@@ -40,24 +11,59 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#home">
+          <a class="navbar-brand" href="/">CONSIGN.NYC</a>
   <!--          <div data-0="background-image:!url(img/logo_black.png);" data-5="background-image:!url(img/logo.png)"></div>-->
-            <img src="img/logo.png" alt="" class="img-responsive logo_align">
-          </a>
+          <!--   <img src="img/logo.png" alt="" class="img-responsive logo_align">
+          </a> -->
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav navbar-right menu_align">
-            <li><a href="#home" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">HOME</a></li>
-            <li><a href="#services-start" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">SERVICES</a></li>
-            <li><a href="#works-start" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">WORKS</a></li>
-            <li><a href="#gallery-start" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">GALLERY</a></li>
-            <li><a href="#team-start" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">TEAM</a></li>
-            <li><a href="#contact-start" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">CONTACT</a></li>
+          <!-- WHY IS THE FIRST ONE NOT SHOWING UP??? -->
+            <li><a href="/about" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">ABOUT</a></li>
+            <li><a href="/about" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">ABOUT</a></li>
+            <li><a href="/businesses" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">SHOPS</a></li>
+            <li><a href="/photos" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">PHOTOS</a></li>
+            <li><a href="search" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">SEARCH</a></li>
+            <li><a href="/boroughs" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">NEIGHBORHOODS</a></li>
+            <li><a href="/contact" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">CONTACT</a></li>
+
+            <% if user_signed_in? %>
+
+              <%# if (current_user.name != nil && current_user.name != "" ) %>
+                <!-- <li><a>WELCOME, <%#= current_user.name.upcase %><%#= current_user.email %>!</a></li> -->
+              <%# else %>
+                <!-- <li><a>WELCOME!</a></li> -->
+              <%# end %>
+
+              <% if (current_user.user_name != nil && current_user.name != nil && current_user.user_name != "" && current_user.name != "") %> 
+                <li><%= link_to "PROFILE", current_user %></li>
+              <% else  %>
+                <li><%= link_to "COMPLETE PROFILE", edit_user_path(current_user) %></li>
+              <% end %>
+
+              <li><%= link_to "LOGOUT", destroy_user_session_path, method: :delete%></li>
+
+              <% else %>
+                <li><%= link_to "SIGN UP", new_user_registration_path, :class => 'navbar-link'  %></li>
+                <li><%= link_to "LOGIN", new_user_session_path, :class => 'navbar-link'  %></li>
+
+              <% end %>
+
           </ul>
         </div>
       </div>
     </div>
   <!-- *** NAVIGATION END *** -->
+
+
+
+  
+
+  
+
+
+
+
 
 
 
