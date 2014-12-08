@@ -47,6 +47,14 @@ body {
 
 .thumbnail-gallery {
   height: 250px;
+  transition-duration: .5s;
+  transition-property: opacity;
+}
+
+.thumbnail-gallery:hover {
+  opacity: .75;
+  transition-duration: .5s;
+  transition-property: opacity;
 }
 
 .user-profile-photo img {
