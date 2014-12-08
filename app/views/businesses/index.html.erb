@@ -1,72 +1,57 @@
-    <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
-      <h1 class="header">SHOPS</h1>
-      <p class="header">This is a list of shops</p>
-    </section>
+<section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+  <h1 class="header">SHOPS</h1>
+  <p class="header">This is a list of shops</p>
+</section>
 
-<table>
-  <thead>
-    <tr>
-      <th>Store</th>
-      <th>Photo</th>
-      <th>Map</th>
-      <th>Neighborhood</th>
-      <th>Borough</th>
-    </tr>
-    <tr>
-      <th>Website</th>
-      <th>Phone</th>
-      <th>Address</th>
-      <th>Hours</th>
-      <th>Email</th>
-      <th>Terms</th>
-      <th>Biztags</th>
-      <th>Designers</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<section id="works">
 
-  <tbody>
-    <% @businesses.each do |business| %>
-      <tr>
-        <td><%= link_to business.name, business %></td>
-        <td><% if !business.profile_photo? %>
-              <p><%= image_tag "placeholder-business.png", height: 200 %></p>
-            <% else %>
-              <p><%= image_tag business.profile_photo, height: 200 %></p>
-            <% end %></td>
-        <td><iframe width="300" height="300" frameborder="0" style="border:0"
-src="<%= business.map  %>AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94"></iframe></td>
-        <td><%= business.neighborhood.name %></td>
-        <td><%= business.borough.name %></td>
-      </tr>
-      <tr>
-        <td><%= link_to business.website.gsub("http://", ""), business.website, :target => "_blank" %></td>
-        <td><%= business.phone %></td>
-        <td><%= business.address %></td>
-        <td><%= business.hours %></td>
-        <td><%= business.email %></td>
-        <td><%= business.terms %></td>
-        <td><% business.biztags.each do |biztag| %>
-          <%= link_to biztag.name, biztag %><%= "," unless biztag == business.biztags.last %>
-          <% end %></td>
-        <td><% business.designers.each do |designer| %>
-          <%= link_to designer.name, designer %><%= "," unless designer == business.designers.last %>
-          <% end %></td>
-        <td><%= link_to 'Show', business %></td> 
-        <% if user_signed_in? %>
-          <% if (current_user.email == "koren.cohen@gmail.com") %>
-            <td><%= link_to 'Edit', edit_business_path(business) %></td>
-            <td><%= link_to 'Destroy', business, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <% end %>
-        <% end %>
-      </tr>
+
+      <% @businesses.each do |business| %>
+        <div class="business-index">
+    <div class="row divide">
+        <div class="col-sm-6">
+          <div id="carousel-2" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="item active">
+
+                <% if !business.profile_photo? %>
+                  <%= image_tag "placeholder-business.png" %>
+                <% else %>
+                  <%= image_tag business.profile_photo %>
+                <% end %>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <h1><%= link_to business.name.upcase, business %></h1>
+          
+   <!--  <iframe width="200" height="200" frameborder="0" style="border:0"
+src="<%= business.map  %>AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94"></iframe> -->
+
+          <p><%= business.borough.name.upcase %>: <%= business.neighborhood.name.upcase %></p>
+          <p><%= link_to business.website.gsub("http://", ""), business.website, :target => "_blank" %></p>
+          <p>Biztags: <% business.biztags.each do |biztag| %>
+            <%= link_to biztag.name, biztag %><%= "," unless biztag == business.biztags.last %>
+            <% end %></p>
+          <p>Designers: <% business.designers.each do |designer| %>
+            <%= link_to designer.name, designer %><%= "," unless designer == business.designers.last %>
+            <% end %></p>
+          <div class="text-left"><a href="<%= business %>" class="btn btn-link">MORE INFO</a></div>
+        </div>
+
+      
+    </div>
+  </div>
+  <% end %> 
+
+  <br>
+  <% if user_signed_in? %>
+    <% if (current_user.email == "koren.cohen@gmail.com") %>
+      <%= link_to 'New Business', new_business_path %>
     <% end %>
-  </tbody>
-</table>
+  <% end %> 
 
-<br>
-<% if user_signed_in? %>
-  <% if (current_user.email == "koren.cohen@gmail.com") %>
-    <%= link_to 'New Business', new_business_path %>
-  <% end %>
-<% end %>
+</section>
+<!-- <div class="row divide"></div> -->
