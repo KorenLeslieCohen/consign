@@ -162,33 +162,27 @@
 
   
 
-
+    <section id="gallery">
+      <div class="container">
+        <div class="row divide">
+          <% @user.photos.each do |photo| %>
+            <div class="col-sm-6 col-md-4 gallery-item">
+              <%= link_to photo.business.name.upcase, photo.business %> |
+              BY: <%= link_to photo.user.user_name.upcase, photo.user %><br>
+              DESCRIPTION: <%= photo.description %>
+              <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" height="200">
+            
+              </div>
+              <%= link_to 'SHOW', photo %> |
+              <%= link_to 'EDIT', edit_photo_path(photo) %> |
+              <%= link_to 'DELETE', photo, method: :delete, data: { confirm: 'Are you sure?' } %><br>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </section>
 
   
 
 
-    <section id="gallery">
-      <div class="container">
-        <div class="row divide">
-          <!-- <div class="col-sm-6 col-md-4 gallery-item"> -->
-            <% @user.photos.each do |photo| %>
-              <div class="col-sm-6 col-md-4 gallery-item">
-                <%= link_to photo.business.name, photo.business %>
-                <%= photo.description %>
-                <div class="thumbnail">
-                  <a href="">
-                    <img src="<%= photo.business_photo %>" height="200" >
-                    <div class="gallery-overlay"></div>
-                  </a>
-                </div>
-                <%= link_to 'Show', photo %> |
-                <%= link_to 'Edit', edit_photo_path(photo) %> |
-                <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %><br>
-              </div>
-            <% end %>
-                </div>
-      </div>
-    </section>
 
-<!-- include businesses, etc. -->
-<br>

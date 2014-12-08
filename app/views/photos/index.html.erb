@@ -10,59 +10,36 @@
     <section id="gallery">
       <div class="container">
         <div class="row divide">
-          <!-- <div class="col-sm-6 col-md-4 gallery-item"> -->
-            <% @photos.each do |photo| %>
-              <div class="col-sm-6 col-md-4 gallery-item">
-                <%= link_to photo.business.name, photo.business %> |
-                By: <%= link_to photo.user.name, photo.user %><br>
-                <%= photo.description %>
-                <div class="thumbnail">
-                  <a href="">
-                    <img src="<%= photo.business_photo %>" height="200" >
-                    <div class="gallery-overlay"></div>
-                  </a>
-                </div>
-                <%= link_to 'Show', photo %> |
-                <%= link_to 'Edit', edit_photo_path(photo) %> |
-                <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %><br>
+          <% @photos.each do |photo| %>
+            <div class="col-sm-6 col-md-4 gallery-item">
+              <%= link_to photo.business.name.upcase, photo.business %> |
+              BY: <%= link_to photo.user.user_name.upcase, photo.user %><br>
+              DESCRIPTION: <%= photo.description %>
+              <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" height="200">
+            
               </div>
-            <% end %>
-          <!-- </div> -->
-
-<!--           <div class="col-sm-6 col-md-4 gallery-item">
-            <div class="thumbnail">
-              <a href="img/works/works_5.jpg" data-toggle="lightbox">
-                <img src="img/works/works_5.jpg" alt="">
-                <div class="gallery-overlay"></div>
-              </a>
+              <%= link_to 'SHOW', photo %> |
+              <%= link_to 'EDIT', edit_photo_path(photo) %> |
+              <%= link_to 'DELETE', photo, method: :delete, data: { confirm: 'Are you sure?' } %><br>
             </div>
-          </div>
-          <div class="col-sm-6 col-md-4 gallery-item">
-            <div class="thumbnail">
-              <a href="img/works/works_6.jpg" data-toggle="lightbox">
-                <img src="img/works/works_6.jpg" alt="">
-                <div class="gallery-overlay"></div>
-              </a>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 gallery-item">
-            <div class="thumbnail">
-              <a href="img/works/works_7.jpg" data-toggle="lightbox">
-                <img src="img/works/works_7.jpg" alt="">
-                <div class="gallery-overlay"></div>
-              </a>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 gallery-item">
-            <div class="thumbnail">
-              <a href="img/works/works_8.jpg" data-toggle="lightbox">
-                <img src="img/works/works_8.jpg" alt="">
-                <div class="gallery-overlay"></div>
-              </a>
-            </div>
-          </div> -->
-
+          <% end %>
         </div>
       </div>
     </section>
   <!-- *** GALLERY END *** -->
+
+<!--   <div id="carousel-3" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="active item">
+        <img src="img/works/works_6.jpg" alt="">
+      </div>
+      <div class="inactive item">
+        <img src="img/works/works_7.jpg" alt="">
+      </div>
+      <div class="inactive item">
+        <img src="img/works/works_8.jpg" alt="">
+      </div>
+    </div>
+    <button class="left carousel-control" href="#carousel-3" data-slide="prev"><i class="fa fa-angle-left"></i></button>
+    <button class="right carousel-control" href="#carousel-3" data-slide="next"><i class="fa fa-angle-right"></i></button>
+  </div> -->
