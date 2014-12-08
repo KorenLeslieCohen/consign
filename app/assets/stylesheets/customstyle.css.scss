@@ -80,19 +80,23 @@ body {
   padding-top: 20px;
 }
 
-.designer-index a {
+.col-sm-3 a {
   color: black;
   font-size: 20px;
   transition-duration: .5s;
   transition-property: color;
 }
 
-.designer-index a:hover {
+.col-sm-3 a:hover {
   color: #efa48d;
   transition-duration: .5s;
   transition-property: color;
 }
 
-.designer-index #services {
+.row {
+  width: 100%;
+}
+
+.search-results {
   background: white;
 }
