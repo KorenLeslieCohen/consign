@@ -1,20 +1,20 @@
 <!-- DESIGNERS -->
 <section id="services">
-      <div class="container">
-        <div class="row">
-          <% @designers.each do |designer| %>
-            <div class="col-sm-3">
-              <div class="thumbnail">
-                <div class="delight-icon-services">
-                  <i class="icon-heart"></i>
-                </div>
-                <div class="caption">
-                  <h2><%= link_to designer.name.upcase, designer %></h2>
-                </div>
-              </div>
+  <!-- <div class="container"> -->
+    <!-- <div class="row"> -->
+      <%# @designers.each do |designer| %>
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <div class="delight-icon-services">
+              <i class="icon-heart"></i>
             </div>
-          <% end %>
+            <div class="caption">
+              <h2><%= link_to designer.name.upcase, designer %></h2>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-  <!-- *** DESIGNERS END *** -->
+      <%# end %>
+    <!-- </div> -->
+  <!-- </div> -->
+</section>
+<!-- *** DESIGNERS END *** -->
