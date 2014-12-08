@@ -1,12 +1,10 @@
+<section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+  <h1 class="header"><%= @designer.name.upcase %></h1>
+  <p class="header">Shops Carrying <%= @designer.name.upcase %></p>
+</section>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @designer.name %>
-</p>
-
-  <h3>Designer: <%= @designer.name %> </h3>
-  <h2>The following businesses carry the designer <%= @designer.name %>.</h2>
   <% if @designer.businesses.empty? %>
     <h4>Sorry! There are no businesses with the designer <%= @designer.name %>!</h4>
   <% else %>
@@ -16,6 +14,11 @@
         <h4><%= business.reviews.length %> review</h4>
       <% else %>
         <h4><%= business.reviews.length %> reviews</h4>
+      <% end %> 
+      <% if business.photos.length == 1 %>
+        <h4><%= business.photos.length %> photo</h4>
+      <% else %>
+        <h4><%= business.photos.length %> photos</h4>
       <% end %> 
     <% end %>
   <% end %>

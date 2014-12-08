@@ -1,26 +1,32 @@
-<h1>Listing designers</h1>
+<div class="designer-index">
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @designers.each do |designer| %>
-      <tr>
-        <td><%= link_to designer.name, designer %></td>
-        <td><%#= link_to 'Show', designer %></td>
-        <td><%#= link_to 'Edit', edit_designer_path(designer) %></td>
-        <td><%#= link_to 'Destroy', designer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+  <h1 class="header">DESIGNERS</h1>
+  <p class="header">Shops By Designer</p>
+</section>
 
 
-<%#= link_to 'New Designer', new_designer_path %>
+
+
+<!-- DESIGNERS -->
+<section id="services">
+      <div class="container">
+        <div class="row">
+          <% @designers.each do |designer| %>
+            <div class="col-sm-3">
+              <div class="thumbnail">
+                <div class="delight-icon-services">
+                  <i class="icon-heart"></i>
+                </div>
+                <div class="caption">
+                  <h2><%= link_to designer.name.upcase, designer %></h2>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </section>
+  <!-- *** DESIGNERS END *** -->
+
+</div>

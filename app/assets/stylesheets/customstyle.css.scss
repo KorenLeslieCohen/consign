@@ -75,7 +75,24 @@ body {
   margin-top: 10px;
 }
 
-.business-index .col-sm-6 h1 {
+.col-sm-6 h1 {
   font-size: 40px;
-  margin-top: 10px;
+  padding-top: 20px;
+}
+
+.designer-index a {
+  color: black;
+  font-size: 20px;
+  transition-duration: .5s;
+  transition-property: color;
+}
+
+.designer-index a:hover {
+  color: #efa48d;
+  transition-duration: .5s;
+  transition-property: color;
+}
+
+.designer-index #services {
+  background: white;
 }
