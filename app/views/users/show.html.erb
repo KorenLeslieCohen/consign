@@ -199,13 +199,12 @@
             <div class="col-sm-6 col-md-4 gallery-item">
               <%= link_to photo.business.name.upcase, photo.business %> |
               BY: <%= link_to photo.user.user_name.upcase, photo.user %><br>
-              DESCRIPTION: <%= photo.description %>
-              <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" height="200">
-            
-              </div>
               <%= link_to 'SHOW', photo %> |
               <%= link_to 'EDIT', edit_photo_path(photo) %> |
               <%= link_to 'DELETE', photo, method: :delete, data: { confirm: 'Are you sure?' } %><br>
+              <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" height="200">
+              </div>
+              DESCRIPTION: <%= photo.description[0..30] %>
             </div>
           <% end %>
         </div>
@@ -213,6 +212,9 @@
     </section>
 
 </div>
+
+
+
 
   
 

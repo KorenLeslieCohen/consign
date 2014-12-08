@@ -92,24 +92,30 @@
 <% end %></p>
 
 <!-- DISPLAY PHOTOS  -->
-    <div id="photos">
-      <h3>Photos</h3>
-      <% if @business.photos.empty? %>
-        <h4>There are no photos for this business yet. Be the first!<h4>
-      <% else %>
-        <% @business.photos.each do |photo| %>
-          <h4><strong><%= link_to photo.user.name, photo.user %>:</strong>
-          <%#= image_tag "#{@business.photo.url}", width: "480"%> 
-          <%#= image_tag "https://s3.amazonaws.com/FlatironPostcard/stripe.jpg", width: "480"%>
-          <%= photo.description %>
-          <!-- <img src="<%= photo.business_photo %>" height="200"> -->
-          <%= image_tag photo.business_photo, height: 200 %>
-          <% if (photo.user == current_user) %>
-            | <%= link_to 'Delete Photo', [@business, photo], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
+
+
+    <section id="gallery photos">
+      <div class="container">
+        <div class="row divide">
+          <% if @business.photos.empty? %>
+            <h4>There are no photos for this business yet. Be the first!<h4>
+          <% else %>
+            <% @business.photos.reverse.each do |photo| %>
+              <div class="col-sm-6 col-md-4 gallery-item">
+              BY: <%= link_to photo.user.name.upcase, photo.user %> 
+              
+              <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" height="200">
+              </div>
+              DESCRIPTION: <%= photo.description[0..30] %>
+              <% if (photo.user == current_user) %>
+                <%= link_to 'Delete Photo', [@business, photo], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
+              <% end %>
+            </div>
             <% end %>
-        <% end %>
-      <% end %>
-    </div>
+          <% end %>
+        </div>
+      </div>
+    </section>
 
 <!-- put the user's review first? -->
 
