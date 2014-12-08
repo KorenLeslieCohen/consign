@@ -4,7 +4,7 @@ body {
 }
 
 .navbar-default .navbar-nav > li > a {
-  font-size: 13px;
+  font-size: 15px;
   /*padding: 0 10px;*/
   font-family: "Playfair Display";
   /*background: none;*/
@@ -99,4 +99,18 @@ body {
 
 .search-results {
   background: white;
+}
+
+#services .thumbnail p {
+  font-size: 17px;
+  font-family: "Arial";
+  /*color: white;*/
+}
+
+#services {
+  background: white;
+}
+
+#services .thumbnail h3 {
+  color: black;
 }

@@ -1,17 +1,12 @@
+  <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+    <h1 class="header"><%= @neighborhood.name.upcase %></h1>
+    <p class="header"><%= @neighborhood.borough.name %></p>
+  </section>
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Neighborhood:</strong>
-  <%= link_to @neighborhood.name, @neighborhood %>
-</p>
-
-<p>
-  <strong>Borough:</strong>
-  <%= link_to @neighborhood.borough.name, @neighborhood.borough %>
-</p>
-
-<p>
-  <strong>Stores in <%= @neighborhood.name %>:</strong><br>
+  <!-- <strong>Stores in <%#= @neighborhood.name %>:</strong><br> -->
   <% @neighborhood.businesses.each do |business| %>
     <%= link_to business.name, business %><br>
   <% end %>
