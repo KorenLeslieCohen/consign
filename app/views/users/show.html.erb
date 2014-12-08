@@ -1,80 +1,96 @@
-<p id="notice"><%= notice %></p>
 
+<div class="users-page">
+<!-- IF USER SIGNED IN -->
 <% if user_signed_in? %>
 
+  <!-- IF VIEWING YOUR OWN PROFILE -->
   <% if (current_user.email == @user.email) %>
 
     <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
-      <h1 class="header"><%= current_user.user_name.upcase %></h1>
-      <p class="header">Profile</p>
+      <h1 class="header user-profile-photo"><%= image_tag current_user.user_profile_photo %></h1>
+      <p class="header"><%= current_user.user_name.upcase %></p>
     </section>
-
     <%= link_to 'Edit Profile', edit_user_path(@user) %> |
     <%= link_to 'Edit Account Settings', edit_user_registration_path, :class => 'navbar-link' %>
     <%#= link_to "Settings", edit_user_path %>
 
+    <!-- DISPLAY PROFILE PHOTO OR PLACEHOLDER -->
+<!--     <%# if !@user.user_profile_photo? %>
+      <p>
+        <strong>No Profile Photo:</strong>
+         <%#= image_tag "placeholder-profile.png", height: 100 %>
+      </p>  
+    <%# else %>
+      <p>
+        <strong>Profile Photo:</strong>
+         <%#= image_tag @user.user_profile_photo, height: 100 %>
+      </p>
+    <%# end %> -->
 
-  <!-- display user profile photo if it exists, otherwise placeholder -->
-    <% if !@user.user_profile_photo? %>
-
+    <p>These are your current account settings:</p>
     <p>
-      <strong>No Profile Photo:</strong>
-       <%= image_tag "placeholder-profile.png", height: 100 %>
+      <strong>Name:</strong>
+      <%= @user.name %>
+    </p>
+    <p>
+      <strong>Email:</strong>
+      <%= @user.email %>
+    </p>
+    <p>
+      <strong>Username:</strong>
+      <%= @user.user_name %>
     </p>
 
+  <!-- IF SIGNED IN BUT VIEWING ANOTHER USER'S PROFILE -->
   <% else %>
 
-    <p>
-      <strong>Profile Photo:</strong>
-       <%= image_tag @user.user_profile_photo, height: 100 %>
-    </p>
+    <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+      <h1 class="header user-profile-photo"><%= image_tag @user.user_profile_photo %></h1>
+      <p class="header"><%= @user.user_name.upcase %></p>
+    </section>
 
-  <% end %>
+    <!-- DISPLAY PROFILE PHOTO OR PLACEHOLDER -->
+<!--     <%# if !@user.user_profile_photo? %>
+      <p>
+        <strong>No Profile Photo:</strong>
+         <%#= image_tag "placeholder-profile.png", height: 100 %>
+      </p>  
+    <%# else %>
+      <p>
+        <strong>Profile Photo:</strong>
+         <%#= image_tag @user.user_profile_photo, height: 100 %>
+      </p>
+    <%# end %> -->
 
-  <p>
-    <strong>Name:</strong>
-    <%= @user.name %>
-  </p>
-
-  <p>
-    <strong>Email:</strong>
-    <%= @user.email %>
-  </p>
-
-  <p>
-    <strong>Username:</strong>
-    <%= @user.user_name %>
-  </p>
+<!--     <p>
+      <strong>Username:</strong>
+      <%#= @user.user_name %>
+    </p> -->
 
   <% end %>
 
 <% else %>
 
     <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
-      <h1 class="header"><%= @user.user_name.upcase %></h1>
-      <p class="header">Profile</p>
+      <h1 class="header user-profile-photo"><%= image_tag @user.user_profile_photo %></h1>
+      <p class="header"><%= @user.user_name.upcase %></p>
     </section>
 
+    <!-- display user profile photo if it exists, otherwise placeholder -->
+<!--     <%# if !@user.user_profile_photo? %>
+      <p>
+        <strong>No Profile Photo:</strong>
+       <%#= image_tag "placeholder-profile.png", height: 100 %>
+      </p>
+    <%# else %>
+      <p> 
+        <strong>Profile Photo:</strong>
+         <%#= image_tag @user.user_profile_photo, height: 100 %>
+      </p>
+    <%# end %> -->
 
-
-  <!-- display user profile photo if it exists, otherwise placeholder -->
-  <% if !@user.user_profile_photo? %>
-
-  <p>
-  <strong>No Profile Photo:</strong>
-   <%= image_tag "placeholder-profile.png", height: 100 %>
-</p>
-
-  <% else %>
-
-<p>
-  <strong>Profile Photo:</strong>
-   <%= image_tag @user.user_profile_photo, height: 100 %>
-</p>
-
-<% end %>
-
-<% end %>
+  <% end %>
+<p id="notice"><%= notice %></p>
 
 <!-- <p>
   <strong>Role:</strong>
@@ -84,11 +100,7 @@
 <!-- SHOW USER'S REVIEWS - modify wording based on owner of profile -->
 <% if user_signed_in? %>
 
-<% if @user.reviews.length == 0 %>
-  
-
-
-  
+  <% if @user.reviews.length == 0 %>
 
     <% if (current_user.email == @user.email) %>
       <h2>You have not reviewed any businesses.</h2>
@@ -111,11 +123,20 @@
     <% else %>
       <h2> <%= @user.user_name %> has reviewed <%= @user.reviews.length %> businesses:</h2>
     <% end %>
-   <% end %>
-   <% else %>
-   <h4>Reviews:</h4>
 
   <% end %>
+
+<% else %>
+
+  <% if @user.reviews.length == 0 %>
+    <h2> <%= @user.user_name %> has not reviewed any businesses.</h2>
+  <% elsif @user.reviews.length == 1 %>
+    <h2> <%= @user.user_name %> has reviewed <%= @user.reviews.length %> business:</h2>
+  <% else %>
+    <h2> <%= @user.user_name %> has reviewed <%= @user.reviews.length %> businesses:</h2>
+  <% end %>
+
+<% end %>
 
 
   <% @user.reviews.each do |review| %>
@@ -131,9 +152,9 @@
 <!-- SHOW USER'S PHOTOS - modify wording based on owner of profile -->
 <% if user_signed_in? %>
 
-<% if @user.photos.length == 0 %> 
+  <% if @user.photos.length == 0 %> 
 
-   <% if (current_user.email == @user.email) %>
+    <% if (current_user.email == @user.email) %>
       <h2>You have not uploaded any photos.</h2>
     <% else %>
       <h2> <%= @user.user_name %> has not uploaded any photos.</h2>
@@ -156,8 +177,17 @@
     <% end %>
 
   <% end %>
-   <% else %>
-   <h4>Photos:</h4>
+
+<% else %>
+
+  <% if @user.photos.length == 0 %>
+    <h2> <%= @user.user_name %> has not uploaded any photos.</h2>
+  <% elsif @user.photos.length == 1 %>
+    <h2> <%= @user.user_name %> has uploaded <%= @user.photos.length %> photo:</h2>
+  <% else %>
+    <h2> <%= @user.user_name %> has uploaded <%= @user.photos.length %> photos:</h2>
+  <% end %>
+
 <% end %>
 
   
@@ -165,7 +195,7 @@
     <section id="gallery">
       <div class="container">
         <div class="row divide">
-          <% @user.photos.each do |photo| %>
+          <% @user.photos.reverse.each do |photo| %>
             <div class="col-sm-6 col-md-4 gallery-item">
               <%= link_to photo.business.name.upcase, photo.business %> |
               BY: <%= link_to photo.user.user_name.upcase, photo.user %><br>
@@ -181,6 +211,8 @@
         </div>
       </div>
     </section>
+
+</div>
 
   
 

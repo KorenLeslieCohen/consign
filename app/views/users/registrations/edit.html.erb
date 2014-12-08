@@ -1,4 +1,8 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+    <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+      <h1 class="header user-profile-photo">ACCOUNT SETTINGS</h1>
+      <p class="header">Edit <%= resource_name.to_s.humanize %></p>
+    </section>
+  
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>

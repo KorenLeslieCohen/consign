@@ -10,7 +10,7 @@
     <section id="gallery">
       <div class="container">
         <div class="row divide">
-          <% @photos.each do |photo| %>
+          <% @photos.reverse.each do |photo| %>
             <div class="col-sm-6 col-md-4 gallery-item">
               <%= link_to photo.business.name.upcase, photo.business %> |
               BY: <%= link_to photo.user.user_name.upcase, photo.user %><br>

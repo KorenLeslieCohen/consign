@@ -1,4 +1,7 @@
-<h2>Change your password</h2>
+    <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+      <h1 class="header">ACCOUNT SETTINGS</h1>
+      <p class="header">UPDATE YOUR PASSWORD</p>
+    </section>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>

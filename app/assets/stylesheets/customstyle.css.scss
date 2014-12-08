@@ -1,5 +1,6 @@
 body {
   /*background: pink;*/
+  padding-bottom: 0;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -46,4 +47,17 @@ body {
 
 .thumbnail-gallery {
   height: 250px;
+}
+
+.user-profile-photo img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+}
+
+.users-page #gallery-start {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
