@@ -4,7 +4,12 @@ class BusinessesController < ApplicationController
   # GET /businesses
   # GET /businesses.json
   def index
-    @businesses = Business.all.order('name ASC')
+    @businesses = Business.all
+    if params[:search]
+      @businesses = Business.search(params[:search]).order("name ASC")
+    else
+      @businesses = Business.all.order('name ASC')
+    end
   end
 
   # GET /businesses/1

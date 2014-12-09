@@ -1,7 +1,31 @@
 <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
-  <h1 class="header">SHOPS</h1>
-  <p class="header">This is a list of shops</p>
+  <h1 class="header">CONSIGNMENT SHOPS</h1>
+  <p class="header">CURATED LIST</p>
 </section>
+
+  <form>
+    <%= form_tag(businesses_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], class: "form-control col-lg-8", id: "autocompete", placeholder: "SEARCH SHOPS" %>  
+    <% end %>
+  </form>
+
+  <div class="row">
+
+  <section id="services">
+
+   <div class="search-results">
+    <% if @businesses.present? %>
+      <%= render @businesses %>
+      <!-- <p><%#= link_to 'SEE ALL DESIGNERS', designers_path %></p> -->
+    <% else %>
+      <h5>There are no shops by the name <%= params[:search] %>.</h5>
+      <p><%= link_to 'SEE ALL SHOPS', businesses_path %></p>
+    <% end %>
+  </div>
+
+  </section>
+
+  </div>
 
 
 

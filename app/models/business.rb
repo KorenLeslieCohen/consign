@@ -28,4 +28,7 @@ class Business < ActiveRecord::Base
   validates_with AttachmentSizeValidator, :attributes => :profile_photo, :less_than => 3.megabytes
   validates_attachment_content_type :profile_photo, :content_type => /\Aimage\/.*\Z/
  
+  def self.search(search)
+    Business.where("name LIKE ?", "%#{search.upcase}%")
+  end
 end
