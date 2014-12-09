@@ -28,8 +28,8 @@
               <% end %>
 
 
-              <%= link_to business.name.upcase, business %>
-              <p><%= link_to business.borough.name.upcase, business.borough %> <i class="fa fa-heart"></i> <%= link_to business.neighborhood.name.upcase, business.neighborhood %></p>
+              <span class="span"><%= link_to business.name.upcase, business %><span><br>
+              <%= link_to business.borough.name.upcase, business.borough %> <i class="fa fa-heart"></i> <%= link_to business.neighborhood.name.upcase, business.neighborhood %>
    <!--            <p>Biztags: <%# business.biztags.each do |biztag| %>
                 <%#= link_to biztag.name, biztag %><%#= "," unless biztag == business.biztags.last %>
               <%# end %></p>

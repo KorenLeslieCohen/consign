@@ -3,7 +3,7 @@
       <p class="header"><%= link_to @business.neighborhood.name %> <i class="fa fa-heart"></i> <%= link_to @business.borough.name %></p>
     </section>
 
-    <p id="notice"><%= notice %></p>
+    
 
 <!-- <%# if @photo.errors.any? %>
     <div id="error_explanation">
@@ -41,6 +41,8 @@
     <iframe height="200" frameborder="0" style="border:0"
     src="<%= @business.map  %>AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94"></iframe>
   </div>
+
+  <p id="notice"><%= notice %></p>
 
   <p><%= link_to "SHOP THIS NEIGHBORHOOD", @business.neighborhood %></p>
 <!-- </div> -->
