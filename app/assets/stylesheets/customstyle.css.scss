@@ -115,7 +115,7 @@ body {
 }
 
 .row {
-  width: 100%;
+  /*width: 100%;*/
 }
 
 .search-results {
@@ -140,6 +140,8 @@ body {
   height: 50px;
 /*  padding-left: 43.5%;
   padding-right: auto;*/
+  margin-bottom: 10px;
+  /*background: #efa48d;*/
 }
 
 .business-map {
