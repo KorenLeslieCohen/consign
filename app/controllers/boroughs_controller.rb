@@ -4,7 +4,7 @@ class BoroughsController < ApplicationController
   # GET /boroughs
   # GET /boroughs.json
   def index
-    @boroughs = Borough.all
+    @boroughs = Borough.all.order('name ASC')
   end
 
   # GET /boroughs/1

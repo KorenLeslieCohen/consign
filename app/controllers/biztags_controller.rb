@@ -4,7 +4,7 @@ class BiztagsController < ApplicationController
   # GET /biztags
   # GET /biztags.json
   def index
-    @biztags = Biztag.all
+    @biztags = Biztag.all.order('name ASC')
   end
 
   # GET /biztags/1
