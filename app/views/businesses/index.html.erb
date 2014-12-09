@@ -3,48 +3,55 @@
   <p class="header">This is a list of shops</p>
 </section>
 
-<section id="works">
 
 
-      <% @businesses.each do |business| %>
-        <div class="business-index">
-    <div class="row divide">
-        <div class="col-sm-6">
-          <div id="carousel-2" class="carousel slide">
-            <div class="carousel-inner">
-              <div class="item active">
+    <section id="gallery">
+      <div class="container">
+        <div class="row divide">
+          <% @businesses.each do |business| %>
+            <div class="col-sm-6 col-md-4 gallery-item">
 
-                <% if !business.profile_photo? %>
-                  <%= image_tag "placeholder-business.png" %>
-                <% else %>
-                  <%= image_tag business.profile_photo %>
-                <% end %>
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <h1><%= link_to business.name.upcase, business %></h1>
-          
-   <!--  <iframe width="200" height="200" frameborder="0" style="border:0"
-src="<%= business.map  %>AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94"></iframe> -->
-
-          <p><%= business.borough.name.upcase %>: <%= business.neighborhood.name.upcase %></p>
-          <p><%= link_to business.website.gsub("http://", ""), business.website, :target => "_blank" %></p>
-          <p>Biztags: <% business.biztags.each do |biztag| %>
+              <% if !business.profile_photo? %>
+  
+                <div class="thumbnail-gallery" style="background-image:url('placeholder-business.png'); background-size:cover" height="200">
+                </div>
+              <% else %>
+                <div class="thumbnail-gallery" style="background-image:url('<%= business.profile_photo %>'); background-size:cover" height="200">
+                </div>
+              <% end %>
+              <%= link_to business.name.upcase, business %>
+              <p><%= business.borough.name.upcase %>: <%= business.neighborhood.name.upcase %></p>
+                        <p>Biztags: <% business.biztags.each do |biztag| %>
             <%= link_to biztag.name, biztag %><%= "," unless biztag == business.biztags.last %>
             <% end %></p>
           <p>Designers: <% business.designers.each do |designer| %>
             <%= link_to designer.name, designer %><%= "," unless designer == business.designers.last %>
             <% end %></p>
-          <div class="text-left"><a href="<%= business %>" class="btn btn-link">MORE INFO</a></div>
+
+
+             
+    
+            </div>
+          <% end %>
         </div>
+      </div>
+    </section>
+
+<section id="works">
 
       
-    </div>
-  </div>
-  <% end %> 
+    
+          
+   <!--  <iframe width="200" height="200" frameborder="0" style="border:0"
+src="<%#= business.map  %>AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94"></iframe> -->
+
+
+          <p><%#= link_to business.website.gsub("http://", ""), business.website, :target => "_blank" %></p>
+
+      
+
+      
+
 
   <br>
   <% if user_signed_in? %>
