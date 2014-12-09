@@ -29,13 +29,13 @@
 
 
               <%= link_to business.name.upcase, business %>
-              <p><%= business.borough.name.upcase %>: <%= business.neighborhood.name.upcase %></p>
-              <p>Biztags: <% business.biztags.each do |biztag| %>
-                <%= link_to biztag.name, biztag %><%= "," unless biztag == business.biztags.last %>
-              <% end %></p>
-              <p>Designers: <% business.designers.each do |designer| %>
-                <%= link_to designer.name, designer %><%= "," unless designer == business.designers.last %>
-              <% end %></p>
+              <p><%= link_to business.borough.name.upcase, business.borough %> <i class="fa fa-heart"></i> <%= link_to business.neighborhood.name.upcase, business.neighborhood %></p>
+   <!--            <p>Biztags: <%# business.biztags.each do |biztag| %>
+                <%#= link_to biztag.name, biztag %><%#= "," unless biztag == business.biztags.last %>
+              <%# end %></p>
+              <p>Designers: <%# business.designers.each do |designer| %>
+                <%#= link_to designer.name, designer %><%#= "," unless designer == business.designers.last %>
+              <%# end %></p> -->
 
 
              

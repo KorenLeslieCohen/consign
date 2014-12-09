@@ -1,6 +1,6 @@
     <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
       <h1 class="header"><%= @business.name.upcase %></h1>
-      <p class="header"><%= link_to @business.neighborhood.name %>, <%= link_to @business.borough.name %></p>
+      <p class="header"><%= link_to @business.neighborhood.name %> <i class="fa fa-heart"></i> <%= link_to @business.borough.name %></p>
     </section>
 
     <p id="notice"><%= notice %></p>
@@ -38,11 +38,11 @@
   <!-- </div> -->
 
   <div class="business-map">
-    <iframe width="400" height="200" frameborder="0" style="border:0"
+    <iframe height="200" frameborder="0" style="border:0"
     src="<%= @business.map  %>AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94"></iframe>
   </div>
 
-  <p><%= link_to "Browse other shops in this neighborgood.", @business.neighborhood %></p>
+  <p><%= link_to "SHOP THIS NEIGHBORHOOD", @business.neighborhood %></p>
 <!-- </div> -->
 
 <!-- <p>
