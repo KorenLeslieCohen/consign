@@ -29,14 +29,23 @@
 
 
               <span class="span"><%= link_to business.name.upcase, business %><span><br>
-              <%= link_to business.borough.name.upcase, business.borough %> <i class="fa fa-heart"></i> <%= link_to business.neighborhood.name.upcase, business.neighborhood %>
+              <%= link_to business.borough.name.upcase, business.borough %> <i class="fa fa-heart"></i> <%= link_to business.neighborhood.name.upcase, business.neighborhood %><br>
    <!--            <p>Biztags: <%# business.biztags.each do |biztag| %>
                 <%#= link_to biztag.name, biztag %><%#= "," unless biztag == business.biztags.last %>
               <%# end %></p>
               <p>Designers: <%# business.designers.each do |designer| %>
                 <%#= link_to designer.name, designer %><%#= "," unless designer == business.designers.last %>
               <%# end %></p> -->
-
+<% if business.reviews.length == 1 %>
+        <%= business.reviews.length %> REVIEW <i class="fa fa-heart"></i>
+      <% else %>
+        <%= business.reviews.length %> REVIEWS <i class="fa fa-heart"></i> 
+      <% end %> 
+      <% if business.photos.length == 1 %>
+        <%= business.photos.length %> PHOTO
+      <% else %>
+        <%= business.photos.length %> PHOTOS
+      <% end %>
 
              
     

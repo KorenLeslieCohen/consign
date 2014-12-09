@@ -3,14 +3,70 @@
     <p class="header"><%= @neighborhood.borough.name %></p>
   </section>
 
+  <div class="business-map-neighborhood">
+    <iframe height="300" frameborder="0" style="border:0"
+    src="AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94"></iframe>
+  </div>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <!-- <strong>Stores in <%#= @neighborhood.name %>:</strong><br> -->
-  <% @neighborhood.businesses.each do |business| %>
-    <%= link_to business.name, business %><br>
-  <% end %>
-</p>
 
-<%= link_to 'Edit', edit_neighborhood_path(@neighborhood) %> |
-<%= link_to 'All Neighborhoods', neighborhoods_path %>
+
+<%#= link_to 'Edit', edit_neighborhood_path(@neighborhood) %> 
+
+
+  <section id="services">
+<div class="container">
+  <div class="row">
+
+<!-- <section id="gallery">
+      <div class="container">
+        <div class="row divide"> -->
+          <% @neighborhood.businesses.each do |business| %>
+            <div class="col-sm-4 col-md-3 ">
+
+              <% if !business.profile_photo? %>
+  
+                <div class="thumbnail-gallery" style="background-image:url('https://s3.amazonaws.com/consignnyc/placeholder-business.png'); background-size:cover" height="200">
+                </div>
+
+              <% else %>
+
+                <div class="thumbnail-gallery" style="background-image:url('<%= business.profile_photo %>'); background-size:cover" height="200">
+                </div>
+              <% end %>
+
+
+              <span class="span"><%= link_to business.name.upcase, business %><span><br>
+              <%#= link_to business.borough.name.upcase, business.borough %> <!-- <i class="fa fa-heart"></i> --> <%#= link_to business.neighborhood.name.upcase, business.neighborhood %>
+
+   <!--            <p>Biztags: <%# business.biztags.each do |biztag| %>
+                <%#= link_to biztag.name, biztag %><%#= "," unless biztag == business.biztags.last %>
+              <%# end %></p>
+              <p>Designers: <%# business.designers.each do |designer| %>
+                <%#= link_to designer.name, designer %><%#= "," unless designer == business.designers.last %>
+              <%# end %></p> -->
+<% if business.reviews.length == 1 %>
+        <%= business.reviews.length %> REVIEW <i class="fa fa-heart"></i>
+      <% else %>
+        <%= business.reviews.length %> REVIEWS <i class="fa fa-heart"></i> 
+      <% end %> 
+      <% if business.photos.length == 1 %>
+        <%= business.photos.length %> PHOTO
+      <% else %>
+        <%= business.photos.length %> PHOTOS
+      <% end %>
+
+             
+    
+            </div>
+          <% end %>
+  <!--       </div>
+      </div>
+    </section> -->
+
+  </div>
+</div>
+  </section>
+
+  <%= link_to 'See All Neighborhoods', neighborhoods_path %>

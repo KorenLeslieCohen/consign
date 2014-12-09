@@ -33,6 +33,7 @@ body {
 
 #footer {
   border-top: 1px solid white;
+  /*height: 200px;*/
 }
 
 #footer p {
@@ -65,6 +66,8 @@ body {
 .business-map {
   float: left;
 }
+
+
 
 .thumbnail-gallery {
   height: 250px;
@@ -149,11 +152,25 @@ body {
   width: 100%;
 }
 
+
+
 .business-map iframe {
   margin-right: auto;
   margin-left: auto;
   display: block;
   width: 700px;
+  margin-top: 10px;
+}
+
+.business-map-neighborhood {
+  width: 100%;
+}
+
+.business-map-neighborhood iframe {
+    margin-right: auto;
+  margin-left: auto;
+  display: block;
+  width: 800px;
   margin-top: 10px;
 }
 
@@ -173,7 +190,8 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
 /*  background: yellow;
-*/  width: 313px;
+*/  width: 323px;
+
 }
 
 .faq-link h4 a {
@@ -184,6 +202,9 @@ a:hover {
     transition-duration: .5s;
   transition-property: color;
   background: #efa48d;
+  padding: 5px;
+
+border-radius: 5px;
 }
 
 .faq-link h4 a:hover {
@@ -194,4 +215,11 @@ a:hover {
 
 .divide_services {
   margin-bottom: 10px;
+}
+
+#gallery-start,
+#services-start,
+#contact-start {
+  background-image: url('header-dark.jpg');
+  background-size: cover;
 }
