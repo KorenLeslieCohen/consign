@@ -6,9 +6,9 @@ class DesignersController < ApplicationController
   def index
     @designers = Designer.all
     if params[:search]
-      @designers = Designer.search(params[:search]).order("created_at ASC")
+      @designers = Designer.search(params[:search]).order("name ASC")
     else
-      @designers = Designer.all.order('created_at ASC')
+      @designers = Designer.all.order('name ASC')
     end
   end
 

@@ -1,4 +1,7 @@
-
+  <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+    <h1 class="header">ADMIN PAGE</h1>
+    <p class="header">USERS LIST</p>
+  </section>
 <div class="users-page">
 <!-- IF USER SIGNED IN -->
 <% if user_signed_in? %>
@@ -27,7 +30,7 @@
       </p>
     <%# end %> -->
 
-    <p>These are your current account settings:</p>
+    <p>Current profile settings (name and email are only visible to you):</p>
     <p>
       <strong>Name:</strong>
       <%= @user.name %>
