@@ -1,31 +1,47 @@
-<section id="gallery">
+<!--         <div class="col-sm-3">
+          <div class="thumbnail">
+            <div class="delight-icon-services">
+              <i class="icon-heart"></i>
+            </div>
+            <div class="caption">
+              <h2><%#= link_to designer.name.upcase, designer %></h2>
+            </div>
+          </div>
+        </div> -->
+
+
+<!-- <section id="gallery">
       <div class="container">
-        <div class="row divide">
-          <% @businesses.each do |business| %>
-            <div class="col-sm-6 col-md-4 gallery-item">
+        <div class="row divide"> -->
+          <%# @businesses.each do |business| %>
+            <div class="col-sm-4 col-md-3 ">
 
               <% if !business.profile_photo? %>
   
-                <div class="thumbnail-gallery" style="background-image:url('placeholder-business.png'); background-size:cover" height="200">
+                <div class="thumbnail-gallery" style="background-image:url('https://s3.amazonaws.com/consignnyc/placeholder-business.png'); background-size:cover" height="200">
                 </div>
+
               <% else %>
+
                 <div class="thumbnail-gallery" style="background-image:url('<%= business.profile_photo %>'); background-size:cover" height="200">
                 </div>
               <% end %>
+
+
               <%= link_to business.name.upcase, business %>
               <p><%= business.borough.name.upcase %>: <%= business.neighborhood.name.upcase %></p>
-                        <p>Biztags: <% business.biztags.each do |biztag| %>
-            <%= link_to biztag.name, biztag %><%= "," unless biztag == business.biztags.last %>
-            <% end %></p>
-          <p>Designers: <% business.designers.each do |designer| %>
-            <%= link_to designer.name, designer %><%= "," unless designer == business.designers.last %>
-            <% end %></p>
+              <p>Biztags: <% business.biztags.each do |biztag| %>
+                <%= link_to biztag.name, biztag %><%= "," unless biztag == business.biztags.last %>
+              <% end %></p>
+              <p>Designers: <% business.designers.each do |designer| %>
+                <%= link_to designer.name, designer %><%= "," unless designer == business.designers.last %>
+              <% end %></p>
 
 
              
     
             </div>
-          <% end %>
-        </div>
+          <%# end %>
+  <!--       </div>
       </div>
-    </section>
+    </section> -->

@@ -1,6 +1,6 @@
     <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
       <h1 class="header"><%= @business.name.upcase %></h1>
-      <p class="header"><%= @business.neighborhood.name %></p>
+      <p class="header"><%= link_to @business.neighborhood.name %>, <%= link_to @business.borough.name %></p>
     </section>
 
     <p id="notice"><%= notice %></p>
@@ -21,27 +21,29 @@
   <h1><%= @business.name %></h1>
 </div> -->
 
-<p><%= link_to @business.borough.name, @business.borough %>: <%= link_to @business.neighborhood.name, @business.neighborhood %></p>
+<!-- <p><%#= link_to @business.borough.name, @business.borough %>: <%#= link_to @business.neighborhood.name, @business.neighborhood %></p> -->
 
-<p><%= link_to "Browse other shops in this neighborgood.", @business.neighborhood %></p>
 
-<div class="business-photo-map">
+
+<!-- <div class="business-photo-map"> -->
   <!-- display business profile photo if it exists, otherwise placeholder -->
-  <div class="business-photo">
-  <% if !@business.profile_photo? %>
+  <!-- <div class="business-photo"> -->
+  <%# if !@business.profile_photo? %>
     <!-- <strong>No Business Photo:</strong> -->
-     <%= image_tag "placeholder-business.png", height: 300, width: 300 %>
-    <% else %>
+     <%#= image_tag "placeholder-business.png", height: 300, width: 300 %>
+    <%# else %>
     <!-- <strong>Business Photo:</strong> -->
-     <%= image_tag @business.profile_photo, height: 300, width: 300 %>
-    <% end %>
-  </div>
+     <%#= image_tag @business.profile_photo, height: 300, width: 300 %>
+    <%# end %>
+  <!-- </div> -->
 
   <div class="business-map">
-    <iframe width="300" height="300" frameborder="0" style="border:0"
+    <iframe width="400" height="200" frameborder="0" style="border:0"
     src="<%= @business.map  %>AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94"></iframe>
   </div>
-</div>
+
+  <p><%= link_to "Browse other shops in this neighborgood.", @business.neighborhood %></p>
+<!-- </div> -->
 
 <!-- <p>
   <strong>User:</strong>

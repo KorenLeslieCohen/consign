@@ -29,39 +29,8 @@
 
 
 
-    <section id="gallery">
-      <div class="container">
-        <div class="row divide">
-          <% @businesses.each do |business| %>
-            <div class="col-sm-6 col-md-4 gallery-item">
-
-              <% if !business.profile_photo? %>
-  
-                <div class="thumbnail-gallery" style="background-image:url('placeholder-business.png'); background-size:cover" height="200">
-                </div>
-              <% else %>
-                <div class="thumbnail-gallery" style="background-image:url('<%= business.profile_photo %>'); background-size:cover" height="200">
-                </div>
-              <% end %>
-              <%= link_to business.name.upcase, business %>
-              <p><%= business.borough.name.upcase %>: <%= business.neighborhood.name.upcase %></p>
-                        <p>Biztags: <% business.biztags.each do |biztag| %>
-            <%= link_to biztag.name, biztag %><%= "," unless biztag == business.biztags.last %>
-            <% end %></p>
-          <p>Designers: <% business.designers.each do |designer| %>
-            <%= link_to designer.name, designer %><%= "," unless designer == business.designers.last %>
-            <% end %></p>
-
-
-             
     
-            </div>
-          <% end %>
-        </div>
-      </div>
-    </section>
-
-<section id="works">
+<!-- <section id="works"> -->
 
       
     
@@ -70,7 +39,7 @@
 src="<%#= business.map  %>AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94"></iframe> -->
 
 
-          <p><%#= link_to business.website.gsub("http://", ""), business.website, :target => "_blank" %></p>
+          <!-- <p><%#= link_to business.website.gsub("http://", ""), business.website, :target => "_blank" %></p> -->
 
       
 
@@ -84,5 +53,5 @@ src="<%#= business.map  %>AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94"></iframe> -->
     <% end %>
   <% end %> 
 
-</section>
+<!-- </section> -->
 <!-- <div class="row divide"></div> -->
