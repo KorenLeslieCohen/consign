@@ -3,54 +3,48 @@
   <p class="header">Browse the Latest Photos</p>
 </section>
 
-<a href="/businesses" data-toggle="lightbox">lightbox</a>
 
-    <section id="works">
+<!--     <section id="works">
       <div class="container">
         <div class="row divide">
-          <div class="col-xs-12">
+          <div class="col-xs-12"> -->
      <!--        <div class="text-center"><h1>ALL IMAGES</h1></div> -->
-            <div id="carousel-1" class="carousel slide">
-              <div class="carousel-inner">
+           <!--  <div id="carousel-1" class="carousel slide">
+              <div class="carousel-inner"> -->
 
               <!-- NEED TO CODE ACTIVE ITEM -->
-                <div class="item active slider-item">
+          <!--       <div class="item active slider-item">
                   <div class="thumbnail-gallery slider-img" style="background-image:url('http://www.citygalonthego.com/wp-content/uploads/2012/07/DSC_0723-1024x678.jpg'); background-size:cover" >
                   </div>
-                </div>
+                </div> -->
 
-                <% @photos.reverse.each do |photo| %>
+                <%# @photos.reverse.each do |photo| %>
 
-                  <div class="item slider-item">
-
-                  
+              <!--     <div class="item slider-item">
 
                     <div class="thumbnail-gallery slider-img" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" >
-                    </div>
+                    </div> -->
 
-                 
-
-                    <%= link_to photo.business.name.upcase, photo.business %><br>
+                    <!-- <%#= link_to photo.business.name.upcase, photo.business %><br> -->
                     
                     <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br>
+<!-- 
+                    "<%#= photo.description[0..25].upcase %>" BY: <%#= link_to photo.user.user_name.upcase, photo.user %><br> -->
 
-                    "<%= photo.description[0..25].upcase %>" BY: <%= link_to photo.user.user_name.upcase, photo.user %><br>
-
-                    <% if (photo.user == current_user) %>
-                        <%= link_to 'DELETE PHOTO', [@business, photo], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
-                      <% end %><br>
+               <!--      <%# if (photo.user == current_user) %>
+                        <%#= link_to 'DELETE PHOTO', [@business, photo], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
+                      <%# end %><br> -->
                     
-                    
-                  </div>
-                <% end %>
-              </div>
+                  <!-- </div> -->
+                <%# end %>
+<!--               </div>
               <button class="left carousel-control" href="#carousel-1" data-slide="prev"><i class="fa fa-angle-left"></i></button>
               <button class="right carousel-control" href="#carousel-1" data-slide="next"><i class="fa fa-angle-right"></i></button>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
 <%#= link_to 'New Photo', new_photo_path %>
 
@@ -77,7 +71,7 @@
               </div>
 
               </a>
-              
+
               DESCRIPTION: <%= photo.description[0..30] %>
             </div>
           <% end %>
