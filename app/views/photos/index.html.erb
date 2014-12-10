@@ -19,15 +19,15 @@
                 </div> -->
 
                 <%# @photos.reverse.each do |photo| %>
+<!-- 
+                  <div class="item slider-item">
 
-              <!--     <div class="item slider-item">
-
-                    <div class="thumbnail-gallery slider-img" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" >
+                    <div class="thumbnail-gallery slider-img" style="background-image:url('<%#= photo.business_photo %>'); background-size:cover" >
                     </div> -->
 
                     <!-- <%#= link_to photo.business.name.upcase, photo.business %><br> -->
                     
-                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br>
+               <!--      <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br> -->
 <!-- 
                     "<%#= photo.description[0..25].upcase %>" BY: <%#= link_to photo.user.user_name.upcase, photo.user %><br> -->
 
@@ -61,9 +61,9 @@
               <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br>
 
 
-              <%= link_to 'SHOW', photo %> |
-              <%= link_to 'EDIT', edit_photo_path(photo) %> |
-              <%= link_to 'DELETE', photo, method: :delete, data: { confirm: 'Are you sure?' } %><br>
+        <!--       <%#= link_to 'SHOW', photo %> |
+              <%#= link_to 'EDIT', edit_photo_path(photo) %> |
+              <%#= link_to 'DELETE', photo, method: :delete, data: { confirm: 'Are you sure?' } %><br> -->
 
               <a href="<%= photo.business_photo %>" data-toggle="lightbox">
 

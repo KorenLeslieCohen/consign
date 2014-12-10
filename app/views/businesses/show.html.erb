@@ -53,8 +53,6 @@
   <%#= @business.user.name %>
 </p> -->
 
-<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br>
-
 
 <div>
 <p>
@@ -120,7 +118,7 @@
                   <%# @business.photos.reverse.each do |photo| %>
                     <div class="item slider-item">
                       
-                      <div class="thumbnail-gallery slider-img" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" >
+                      <div class="thumbnail-gallery slider-img" style="background-image:url('<%#= photo.business_photo %>'); background-size:cover" >
                       </div>
 
                       "<%#= photo.description[0..25].upcase %>" BY: <%#= link_to photo.user.user_name.upcase, photo.user %><br>
