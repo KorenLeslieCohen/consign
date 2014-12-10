@@ -202,8 +202,14 @@
               <%= link_to 'SHOW', photo %> |
               <%= link_to 'EDIT', edit_photo_path(photo) %> |
               <%= link_to 'DELETE', photo, method: :delete, data: { confirm: 'Are you sure?' } %><br>
+
+              <a href="<%= photo.business_photo %>" data-toggle="lightbox">
+
               <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" height="200">
               </div>
+
+              </a>
+              
               DESCRIPTION: <%= photo.description[0..30] %>
             </div>
           <% end %>

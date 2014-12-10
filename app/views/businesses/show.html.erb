@@ -151,8 +151,13 @@
               <div class="col-sm-6 col-md-4 gallery-item">
               BY: <%= link_to photo.user.name.upcase, photo.user %> 
               
+              <a href="<%= photo.business_photo %>" data-toggle="lightbox">
+
               <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" height="200">
               </div>
+
+              </a>
+              
               DESCRIPTION: <%= photo.description[0..30] %>
               <% if (photo.user == current_user) %>
                 <%= link_to 'Delete Photo', [@business, photo], method: :delete, data: { confirm: 'Are you sure?' } %></h4>

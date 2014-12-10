@@ -3,11 +3,13 @@
   <p class="header">Browse the Latest Photos</p>
 </section>
 
+<a href="/businesses" data-toggle="lightbox">lightbox</a>
+
     <section id="works">
       <div class="container">
         <div class="row divide">
           <div class="col-xs-12">
-            <div class="text-center"><h1>ALL IMAGES</h1></div>
+     <!--        <div class="text-center"><h1>ALL IMAGES</h1></div> -->
             <div id="carousel-1" class="carousel slide">
               <div class="carousel-inner">
 
@@ -18,9 +20,16 @@
                 </div>
 
                 <% @photos.reverse.each do |photo| %>
+
                   <div class="item slider-item">
+
+                  
+
                     <div class="thumbnail-gallery slider-img" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" >
                     </div>
+
+                 
+
                     <%= link_to photo.business.name.upcase, photo.business %><br>
                     
                     <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br>
@@ -61,8 +70,14 @@
               <%= link_to 'SHOW', photo %> |
               <%= link_to 'EDIT', edit_photo_path(photo) %> |
               <%= link_to 'DELETE', photo, method: :delete, data: { confirm: 'Are you sure?' } %><br>
+
+              <a href="<%= photo.business_photo %>" data-toggle="lightbox">
+
               <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" height="200">
               </div>
+
+              </a>
+              
               DESCRIPTION: <%= photo.description[0..30] %>
             </div>
           <% end %>
