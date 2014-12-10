@@ -1,6 +1,7 @@
     <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
       <h1 class="header"><%= @business.name.upcase %></h1>
       <p class="header"><%= link_to @business.neighborhood.name %> <i class="fa fa-heart"></i> <%= link_to @business.borough.name %></p>
+      <p class="header"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
     </section>
 
     
@@ -51,6 +52,8 @@
   <strong>User:</strong>
   <%#= @business.user.name %>
 </p> -->
+
+<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br>
 
 
 <div>
@@ -159,8 +162,9 @@
       <% end %>
 
 <!-- DISPLAY REVIEWS -->
+<h3>Reviews</h3>
     <div id="reviews">
-      <h3>Reviews</h3>
+      
       <% if @business.reviews.empty? %>
         <h4><span>There are no reviews for this business yet. Be the first!</span><h4>
       <% else %>

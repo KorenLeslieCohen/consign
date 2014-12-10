@@ -9,12 +9,12 @@
           </div>
         </div> -->
 
-
+<!-- col-md-3 -->
 <!-- <section id="gallery">
       <div class="container">
         <div class="row divide"> -->
           <%# @businesses.each do |business| %>
-            <div class="col-sm-4 col-md-3 ">
+            <div class="col-sm-4 biz">
 
               <% if !business.profile_photo? %>
   
@@ -27,7 +27,7 @@
                 </div>
               <% end %>
 
-
+              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br>
               <span class="span"><%= link_to business.name.upcase, business %><span><br>
               <%= link_to business.borough.name.upcase, business.borough %> <i class="fa fa-heart"></i> <%= link_to business.neighborhood.name.upcase, business.neighborhood %><br>
    <!--            <p>Biztags: <%# business.biztags.each do |biztag| %>

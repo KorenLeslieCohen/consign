@@ -14,6 +14,10 @@
             <div class="col-sm-6 col-md-4 gallery-item">
               <%= link_to photo.business.name.upcase, photo.business %> |
               BY: <%= link_to photo.user.user_name.upcase, photo.user %><br>
+
+              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br>
+
+              
               <%= link_to 'SHOW', photo %> |
               <%= link_to 'EDIT', edit_photo_path(photo) %> |
               <%= link_to 'DELETE', photo, method: :delete, data: { confirm: 'Are you sure?' } %><br>
