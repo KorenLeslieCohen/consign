@@ -100,37 +100,37 @@
 
 <!-- DISPLAY PHOTOS  -->
 
-    <section id="works">
+<!--     <section id="works">
       <div class="container">
         <div class="row divide">
           <div class="col-xs-12">
             <div class="text-center"><h1>ALL IMAGES</h1></div>
             <div id="carousel-1" class="carousel slide">
-              <div class="carousel-inner">
+              <div class="carousel-inner"> -->
 
               <!-- NEED TO CODE ACTIVE ITEM -->
-                <div class="item active slider-item">
+<!--                 <div class="item active slider-item">
                   <div class="thumbnail-gallery slider-img" style="background-image:url('http://www.citygalonthego.com/wp-content/uploads/2012/07/DSC_0723-1024x678.jpg'); background-size:cover" >
                   </div>
                 </div>
                 
-                <% if @business.photos.empty? %>
+                <%# if @business.photos.empty? %>
                   <h4>There are no photos for this business yet. Be the first!<h4>
-                <% else %>
-                  <% @business.photos.reverse.each do |photo| %>
+                <%# else %>
+                  <%# @business.photos.reverse.each do |photo| %>
                     <div class="item slider-item">
                       
                       <div class="thumbnail-gallery slider-img" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" >
                       </div>
 
-                      "<%= photo.description[0..25].upcase %>" BY: <%= link_to photo.user.user_name.upcase, photo.user %><br>
+                      "<%#= photo.description[0..25].upcase %>" BY: <%#= link_to photo.user.user_name.upcase, photo.user %><br>
 
-                      <% if (photo.user == current_user) %>
-                        <%= link_to 'DELETE PHOTO', [@business, photo], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
-                      <% end %>
+                      <%# if (photo.user == current_user) %>
+                        <%#= link_to 'DELETE PHOTO', [@business, photo], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
+                      <%# end %>
                     </div>
-                  <% end %>
-                <% end %>
+                  <%# end %>
+                <%# end %>
               </div>
               <button class="left carousel-control" href="#carousel-1" data-slide="prev"><i class="fa fa-angle-left"></i></button>
               <button class="right carousel-control" href="#carousel-1" data-slide="next"><i class="fa fa-angle-right"></i></button>
@@ -138,7 +138,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
 
     <section id="gallery photos">
@@ -157,7 +157,7 @@
               </div>
 
               </a>
-              
+
               DESCRIPTION: <%= photo.description[0..30] %>
               <% if (photo.user == current_user) %>
                 <%= link_to 'Delete Photo', [@business, photo], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
