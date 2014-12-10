@@ -109,8 +109,8 @@
               <div class="carousel-inner">
 
               <!-- NEED TO CODE ACTIVE ITEM -->
-                <div class="item active">
-                  <div class="thumbnail-gallery" style="background-image:url('http://www.citygalonthego.com/wp-content/uploads/2012/07/DSC_0723-1024x678.jpg'); background-size:cover" >
+                <div class="item active slider-item">
+                  <div class="thumbnail-gallery slider-img" style="background-image:url('http://www.citygalonthego.com/wp-content/uploads/2012/07/DSC_0723-1024x678.jpg'); background-size:cover" >
                   </div>
                 </div>
                 
@@ -118,16 +118,16 @@
                   <h4>There are no photos for this business yet. Be the first!<h4>
                 <% else %>
                   <% @business.photos.reverse.each do |photo| %>
-                    <div class="item">
-                      BY: <%= link_to photo.user.name.upcase, photo.user %>
+                    <div class="item slider-item">
                       
-                      <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" >
+                      <div class="thumbnail-gallery slider-img" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" >
                       </div>
-                      
-                      DESCRIPTION: <%= photo.description[0..30] %>
+
+                      "<%= photo.description[0..25].upcase %>" BY: <%= link_to photo.user.user_name.upcase, photo.user %><br>
+
                       <% if (photo.user == current_user) %>
-                        <%= link_to 'Delete Photo', [@business, photo], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
-                        <% end %>
+                        <%= link_to 'DELETE PHOTO', [@business, photo], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
+                      <% end %>
                     </div>
                   <% end %>
                 <% end %>
