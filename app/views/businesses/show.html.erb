@@ -1,6 +1,6 @@
     <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
       <h1 class="header"><%= @business.name.upcase %></h1>
-      <p class="header"><%= link_to @business.neighborhood.name %> <i class="fa fa-heart"></i> <%= link_to @business.borough.name %></p>
+      <p class="header"><%= link_to @business.neighborhood.name, @business.neighborhood %> <i class="fa fa-heart"></i> <%= link_to @business.borough.name, @business.borough %></p>
       <p class="header"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
     </section>
 
