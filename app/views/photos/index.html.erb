@@ -55,8 +55,8 @@
         <div class="row divide">
           <% @photos.reverse.each do |photo| %>
             <div class="col-sm-6 col-md-4 gallery-item">
-              <%= link_to photo.business.name.upcase, photo.business %> |
-              BY: <%= link_to photo.user.user_name.upcase, photo.user %><br>
+              <%= link_to photo.business.name.upcase, photo.business %><br>
+              
 
               <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br>
 
@@ -72,7 +72,7 @@
 
               </a>
 
-              DESCRIPTION: <%= photo.description[0..30] %>
+              "<%= photo.description[0..30].upcase %>" BY: <%= link_to photo.user.user_name.upcase, photo.user %> 
             </div>
           <% end %>
         </div>
