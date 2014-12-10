@@ -1,12 +1,47 @@
+<section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+  <h1 class="header">GALLERY</h1>
+  <p class="header">Browse the Latest Photos</p>
+</section>
 
+    <section id="works">
+      <div class="container">
+        <div class="row divide">
+          <div class="col-xs-12">
+            <div class="text-center"><h1>ALL IMAGES</h1></div>
+            <div id="carousel-1" class="carousel slide">
+              <div class="carousel-inner">
+
+              <!-- NEED TO CODE ACTIVE ITEM -->
+                <div class="item active">
+                  <div class="thumbnail-gallery" style="background-image:url('http://www.citygalonthego.com/wp-content/uploads/2012/07/DSC_0723-1024x678.jpg'); background-size:cover" >
+                  </div>
+                </div>
+                
+                <% @photos.reverse.each do |photo| %>
+                  <div class="item">
+                    <%= link_to photo.business.name.upcase, photo.business %> |
+                    BY: <%= link_to photo.user.user_name.upcase, photo.user %><br>
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br>
+                    <%= link_to 'SHOW', photo %> | <%= link_to 'EDIT', edit_photo_path(photo) %> |
+                    <%= link_to 'DELETE', photo, method: :delete, data: { confirm: 'Are you sure?' } %><br>
+                    <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" >
+                    </div>
+                    DESCRIPTION: <%= photo.description[0..30] %>
+                  </div>
+                <% end %>
+              </div>
+              <button class="left carousel-control" href="#carousel-1" data-slide="prev"><i class="fa fa-angle-left"></i></button>
+              <button class="right carousel-control" href="#carousel-1" data-slide="next"><i class="fa fa-angle-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 <%#= link_to 'New Photo', new_photo_path %>
 
 <!-- *** GALLERY START *** -->
-    <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
-      <h1 class="header">GALLERY</h1>
-      <p class="header">Browse the Latest Photos</p>
-    </section>
+
     <section id="gallery">
       <div class="container">
         <div class="row divide">
@@ -17,7 +52,7 @@
 
               <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br>
 
-              
+
               <%= link_to 'SHOW', photo %> |
               <%= link_to 'EDIT', edit_photo_path(photo) %> |
               <%= link_to 'DELETE', photo, method: :delete, data: { confirm: 'Are you sure?' } %><br>

@@ -231,3 +231,28 @@ border-radius: 5px;
   padding-bottom: 5px;
   margin-bottom: 5px;
 }
+
+.biz a,
+.biz a:visited {
+  color: black;
+  font-size: 15px;
+  transition-duration: .5s;
+  transition-property: color;
+}
+
+.biz a:hover {
+  color: #efa48d;
+  transition-duration: .5s;
+  transition-property: color;
+}
+
+.designers {
+  min-height: 240px;
+}
+
+.item {
+  margin-left: auto;
+  margin-right: auto;
+  width: 450px;
+  height: 350px;
+}
