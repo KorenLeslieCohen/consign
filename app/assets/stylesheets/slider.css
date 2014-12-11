@@ -7,7 +7,7 @@
     -moz-border-radius: 3px;
     border-radius: 3px;
     text-align: center;
-      height: 400px;
+      height: 350px;
   /*width: 30px;*/
 }
 
@@ -22,7 +22,12 @@ div.owl-item {
   /*margin-left: 0px;*/
   color: black;
   /*bottom: 0;*/
+  font-family: "Playfair Display";
 
+}
+
+.owlitem p a:hover {
+  color: #efa48d;
 }
 
 .owlitem p {
@@ -31,6 +36,7 @@ div.owl-item {
   margin: 0;
     width: 100%;
     color: black;
+    font-family: "Playfair Display";
 }
 
 .owlitem .fa-star {

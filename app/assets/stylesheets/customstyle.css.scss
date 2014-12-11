@@ -17,7 +17,7 @@ body {
 
 .navbar,
 .navbar-default .navbar-nav {
-  background: none;
+  /*background: none;*/
 
 }
 
@@ -27,7 +27,7 @@ body {
 }
 
 .navbar-brand {
-  padding: 22px 0px;
+  /*padding: 22px 0px;*/
   /*font-size: 40px;*/
 }
 
@@ -92,6 +92,11 @@ body {
 
 .users-page #gallery-start {
   padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#gallery-start {
+    padding-top: 10px;
   padding-bottom: 30px;
 }
 
