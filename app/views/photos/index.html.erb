@@ -53,7 +53,7 @@
     <section id="gallery">
       <div class="container">
         <div class="row divide">
-          <% @photos.reverse.each do |photo| %>
+          <% @photos[0..5].reverse.each do |photo| %>
             <div class="col-sm-6 col-md-4 gallery-item">
               <%= link_to photo.business.name.upcase, photo.business %><br>
               
@@ -78,6 +78,24 @@
         </div>
       </div>
     </section>
+
+<div id="owl-demo" class="owl-carousel owl-theme">
+
+<% @photos.reverse.each do |photo| %>
+
+
+  <div class="owlitem"style="background-image:url('<%= photo.business_photo %>'); background-size:cover">
+  <p><%= link_to photo.business.name.upcase, photo.business %><br>
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br>
+  "<%= photo.description[0..25].upcase %>" BY: <%= link_to photo.user.user_name.upcase, photo.user %> </p>
+  </div>
+
+  
+
+
+<% end %>
+</div>
+ 
   <!-- *** GALLERY END *** -->
 
 <!--   <div id="carousel-3" class="carousel slide">

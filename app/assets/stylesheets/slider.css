@@ -1,0 +1,38 @@
+#owl-demo .owlitem{
+    /*background: #42bdc2;*/
+    /*padding: 0px 10px;*/
+    margin: 5px;
+    color: #FFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+      height: 400px;
+  /*width: 30px;*/
+}
+
+div.owl-item {
+  /*height: 300px;*/
+/*  width: 300px;*/
+}
+
+.owlitem p a {
+  /*background: black;*/
+  /*opacity: .6;*/
+  /*margin-left: 0px;*/
+  color: black;
+  /*bottom: 0;*/
+
+}
+
+.owlitem p {
+  /*bottom: 0;*/
+  background: white;
+  margin: 0;
+    width: 100%;
+    color: black;
+}
+
+.owlitem .fa-star {
+  color: black;
+}
