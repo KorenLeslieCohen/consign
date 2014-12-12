@@ -8,5 +8,16 @@ class Review < ActiveRecord::Base
                                                 #  message: "Rating must be between 1 and 5 stars."
                                                 # }
   # validates :content, presence: true, length: {minimum: 10}
+
+  after_create :send_review_email
+  after_create :send_admin_review_email
+
+  def send_review_email
+    Mailer.new_review_email(user, business).deliver
+  end
+
+  def send_admin_review_email
+    Mailer.admin_review_email(user, business).deliver
+  end
   
 end
