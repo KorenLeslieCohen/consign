@@ -162,6 +162,16 @@ h1 {
   /*background: #efa48d;*/
 }
 
+#contact .form-control {
+  background: none;
+  
+}
+
+#contact input,
+#contact textarea {
+  border-bottom: 1px solid #777;
+}
+
 /*BUSINESS MAP */
 
 .business-map {
