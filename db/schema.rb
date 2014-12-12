@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141207180923) do
+ActiveRecord::Schema.define(version: 20141212003521) do
 
   create_table "biztags", force: true do |t|
     t.string   "name"

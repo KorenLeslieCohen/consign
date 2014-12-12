@@ -38,7 +38,10 @@ Rails.application.configure do
 
   # Devise
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {:address => "localhost", :port => 1025}
 
+  # Amazon Web Services - S3
   config.paperclip_defaults = {
     :storage => :s3,
     # :s3_host_name => 'REMOVE_THIS_LINE_IF_UNNECESSARY',

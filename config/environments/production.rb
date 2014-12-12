@@ -81,6 +81,16 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  # Devise 
+  config.action_mailer.default_url_options = {:host => 'consign.nyc'}
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address => "127.0.0.1",
+    :port    => 25,
+    :domain  => 'consign.nyc'
+  }
+
+  # Amazon Web Services S3
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
