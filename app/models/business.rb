@@ -29,6 +29,6 @@ class Business < ActiveRecord::Base
   validates_attachment_content_type :profile_photo, :content_type => /\Aimage\/.*\Z/
  
   def self.search(search)
-    Business.where("name LIKE ?", "%#{search.upcase}%")
+    Business.where("name LIKE ?", "%#{search.upcase}%") #|| Business.where("business.neighborhood LIKE ?", "%#{search.capitalize}%")
   end
 end
