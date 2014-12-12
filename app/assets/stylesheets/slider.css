@@ -42,3 +42,12 @@ div.owl-item {
 .owlitem .fa-star {
   color: black;
 }
+
+.owl-theme .owl-controls {
+  margin-top: 0px;
+}
+
+.owl-theme .owl-controls .owl-buttons div {
+  background: #000;
+  border-radius: 0;
+}

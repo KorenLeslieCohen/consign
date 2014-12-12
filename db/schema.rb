@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141212003521) do
+ActiveRecord::Schema.define(version: 20141207180923) do
 
   create_table "biztags", force: true do |t|
     t.string   "name"
@@ -117,6 +117,10 @@ ActiveRecord::Schema.define(version: 20141212003521) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
     t.string   "role"
     t.string   "user_name"
     t.string   "name"
