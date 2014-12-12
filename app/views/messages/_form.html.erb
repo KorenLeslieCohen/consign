@@ -1,3 +1,16 @@
+<%= form_for(@message) do |f| %>
+  <% if @message.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@message.errors.count, "error") %> prohibited this message from being saved:</h2>
+
+      <ul>
+      <% @message.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <!-- *** CONTACT START *** -->
     <section id="contact-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
       <h1 class="header">CONTACT</h1>
@@ -21,23 +34,31 @@
         <div class="row divide">
           <form action="js/sendmail.php" class="form-inline flowuplabels" role="form" method="post" id="contactForm">
             <div class="form-group col-md-3 col-sm-6 fl_wrap">
-              <label class="fl_label" for="name">Name:</label>
-              <input type="text" name="name" value="" id="name" class="form-control fl_input">
+<label class="fl_label" for="name">Name:</label>
+                <%#= f.label :name, :class => "fl_label" %><br>
+    <%= f.text_field :name, :id => "name", :class => "form-control fl_input" %>
+              
+      <!--         <input type="text" name="name" value="" id="name" class="form-control fl_input"> -->
             </div>
             <div class="form-group col-md-3 col-sm-6 fl_wrap">
-              <label class="fl_label" for="email">Email:</label>
-              <input type="text" name="email" value="" id="email" class="form-control fl_input">
+            <label class="fl_label" for="name">Email:</label>
+              <%#= f.label :email, :class => "fl_label" %>
+              <%= f.text_field :email, :id => "email", :class => "form-control fl_input" %>
+       
             </div>
-<!--             <span class="honeypot form-group col-md-3 col-sm-6 fl_wrap">
+     <!--        <span class="honeypot form-group col-md-3 col-sm-6 fl_wrap">
               <label class="fl_label" for="last">Honeypot:</label>
               <input type="text" name="last" value="" id="last" class="form-control fl_input">
             </span> -->
             <div class="form-group col-md-3 col-sm-6 fl_wrap">
               <label class="fl_label" for="message">Message:</label>
-              <input type="text" name="message" value="" id="message" class="form-control fl_input">
+              <!-- <input type="text" name="message" value="" id="message" class="form-control fl_input"> -->
+               <%= f.text_area :body, :id => "message", :class => "form-control fl_input"%>
+                  <!-- <input type="text" name="message" value="" id="message" class="form-control fl_input"> -->
             </div>
             <div class="form-group col-md-3 col-sm-6">
-              <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">SEND</button>
+              <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block"><%= f.submit %></button>
+              <%#= f.submit, :id => "submit", :class => "btn btn-fancy btn-block" %>
             </div>
             <div class="form-group col-xs-12">
               <div class="message">
@@ -49,3 +70,4 @@
       </div>
     </section>
   <!-- *** CONTACT END *** -->
+<% end %>

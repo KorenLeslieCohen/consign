@@ -23,6 +23,13 @@ class Mailer < ActionMailer::Base
     @user = user
     @business = business
     mail(:to => "consigndotnyc@gmail.com", :subject => "New Photo on Consign.NYC")
-   end
+  end
+
+  def message_email(name, email, body)
+    @name = name
+    @email = email
+    @body = body
+    mail(:to => "consigndotnyc@gmail.com", :subject => "New Message from Consign.NYC")
+  end
 
 end

@@ -210,7 +210,7 @@ margin-bottom: 20px;
 }
 
 .faq-link h4 a {
-    color: black;
+  color: #FFF;
   margin-left: auto;
   margin-right: auto;
   font-size: 20px;
@@ -224,7 +224,7 @@ border-radius: 5px;
 }
 
 .faq-link h4 a:hover {
-  color: white;
+  color: #777;
     transition-duration: .5s;
   transition-property: color;
 }
@@ -312,19 +312,24 @@ border-radius: 5px;
   width: 56px;
   height: 56px;
   margin: 3px;
-  transition-duration: .5s;
-  transition-property: background;
 }
 
 #footer .btn-default:hover {
-  background: #777;
-  transition-duration: .5s;
-  transition-property: background;
+  background: #efa48d;
 }
 
 .fa-facebook,
 .fa-twitter,
 .fa-google-plus {
-  color: white
-  ;
+  color: #FFF;
+  transition-duration: .5s;
+  transition-property: color;
+}
+
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-google-plus:hover {
+  color: #777;
+  transition-duration: .5s;
+  transition-property: color;
 }
