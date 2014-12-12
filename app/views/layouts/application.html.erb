@@ -7,49 +7,34 @@
   <%= csrf_meta_tags %>
   <%= analytics_init if Rails.env.production? %>
 
+  <meta charset="utf-8">
 
+  <title>CONSIGN.NYC: High End Consignment in New York City</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="CONSIGN.NYC: High End Consignment Stores in New York City, Upper East Side, East Village, West Village, Lower East Side.">
+  <meta name="keywords" content="">
+  <meta name="author" content="ThemeBang">
+  
+  <script src="js/modernizr.js"></script>
+  
+  <!--[if lt IE 9]>
+    <script src="js/skrollr.ie.min.js"></script>
+  <![endif]-->
 
-    <meta charset="utf-8">
-
-    <title>Delight - One Page Bootstrap 3 Parallax Retina Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="A Template by ThemeBang">
-    <meta name="keywords" content="Onepage, Responsive, Bootstrap 3, Parallax, Retina, HTML5, CSS3, Fast, Easy, Clean, Elegant, Minimalist">
-    <meta name="author" content="ThemeBang">
-    
-    <script src="js/modernizr.js"></script>
-    
-    <!--[if lt IE 9]>
-      <script src="js/skrollr.ie.min.js"></script>
-    <![endif]-->
-
-<!--     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css"> -->  
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
-<!--     <link rel="stylesheet" href="css/et-line/et-line.css">
-    <link rel="stylesheet" href="css/linecons/linecons.css">
-    <link rel="stylesheet" href="css/steadysets/steadysets.css"> -->
-    <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
-    <link rel="image_src" href="thumbnail.png">
-    <link rel="icon" type="image/ico" href="favicon.ico">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
+  <link rel="image_src" href="thumbnail.png">
+  <link rel="icon" type="image/ico" href="favicon.ico">
 
 </head>
 <body>
 
+  <%= render 'layouts/header' %>
+  <%= yield %>
+  <%= render 'layouts/footer' %>
 
-
-<%= render 'layouts/header' %>
-
-
-<%= yield %>
-
-<%= render 'layouts/footer' %>
-
-
-    <!-- *** SCRIPTS START *** -->
-
-    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-
+  <!-- *** SCRIPTS START *** -->
+  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
 </body>
 </html>

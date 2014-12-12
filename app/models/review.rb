@@ -9,6 +9,7 @@ class Review < ActiveRecord::Base
                                                 # }
   # validates :content, presence: true, length: {minimum: 10}
 
+  # Action Mailer
   after_create :send_review_email
   after_create :send_admin_review_email
 

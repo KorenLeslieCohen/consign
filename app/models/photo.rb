@@ -26,6 +26,7 @@ class Photo < ActiveRecord::Base
   #   { :bucket => "consignnyc", :access_key_id => AWS_ACCESS_KEY_ID, :secret_access_key => AWS_SECRET_ACCESS_KEY}
   # end
 
+  # Action Mailer 
   after_create :send_photo_email
   after_create :send_admin_photo_email
 
