@@ -1,8 +1,15 @@
 body {
   /*background: pink;*/
   padding-bottom: 0;
+  padding-top: 50px;
 }
 
+/*TEXT*/
+h1 {
+  background: none;
+}
+
+/*NAVBAR*/
 .navbar-default .navbar-nav > li > a {
   font-size: 15px;
   /*padding: 0 10px;*/
@@ -18,6 +25,7 @@ body {
 .navbar,
 .navbar-default .navbar-nav {
   /*background: none;*/
+  margin-bottom: 0;
 
 }
 
@@ -29,33 +37,18 @@ body {
 .navbar-brand {
   /*padding: 22px 0px;*/
   /*font-size: 40px;*/
+  /*padding-top: 10px;*/
 }
 
-#footer {
-  border-top: 1px solid white;
-  /*height: 200px;*/
-}
+/*.navbar,
+.navbar-default,
+.navbar-fixed-top,
+.skrollable,
+.skrollable-between {
+    margin-bottom: 0;
+}*/
 
-#footer p {
-  font-family: "Playfair Display";
-}
 
-#footer p span {
-  font-size: 15px;
-  line-height: 1.3;
-}
-
-#footer a {
-  color: #efa48d;
-  transition-duration: .5s;
-  transition-property: color;
-}
-
-#footer a:hover {
-  color: #777;
-  transition-duration: .5s;
-  transition-property: color;
-}
 
 .business-photo-map {
   margin-left: auto;
@@ -96,17 +89,28 @@ body {
 }
 
 #gallery-start,
-#services-start {
+#services-start,
+#contact-start {
     padding-top: 10px;
   padding-bottom: 30px;
 }
 
+
+/*DIVIDE*/
+
 .business-index .divide,
 #works .divide,
-#gallery .divide {
+#gallery .divide,
+#footer .divide {
   margin-bottom: 10px;
   margin-top: 10px;
 }
+
+.divide_services {
+  margin-bottom: 10px;
+}
+
+/*BOOTSTRAP*/
 
 .col-sm-6 h1 {
   font-size: 40px;
@@ -134,6 +138,8 @@ body {
   background: white;
 }*/
 
+/*SERVICES*/
+
 #services .thumbnail p {
   font-size: 17px;
   font-family: "Arial";
@@ -156,11 +162,11 @@ body {
   /*background: #efa48d;*/
 }
 
+/*BUSINESS MAP */
+
 .business-map {
   width: 100%;
 }
-
-
 
 .business-map iframe {
   margin-right: auto;
@@ -223,9 +229,7 @@ border-radius: 5px;
   transition-property: color;
 }
 
-.divide_services {
-  margin-bottom: 10px;
-}
+
 
 #gallery-start,
 #services-start,
@@ -262,6 +266,8 @@ border-radius: 5px;
   font-size: 15px;
 }*/
 
+/*SLIDER*/
+
 .item {
   margin-left: auto;
   margin-right: auto;
@@ -271,4 +277,54 @@ border-radius: 5px;
 
 .slider-img {
   height: 400px;
+}
+
+/*FOOTER*/
+
+#footer {
+  border-top: 1px solid white;
+  /*height: 200px;*/
+}
+
+#footer p {
+  font-family: "Playfair Display";
+}
+
+#footer p span {
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+#footer a {
+  color: #efa48d;
+  transition-duration: .5s;
+  transition-property: color;
+}
+
+#footer a:hover {
+  color: #777;
+  transition-duration: .5s;
+  transition-property: color;
+}
+#footer .btn-default {
+  background: #efa48d;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  margin: 3px;
+  transition-duration: .5s;
+  transition-property: background;
+}
+
+#footer .btn-default:hover {
+  background: #777;
+  transition-duration: .5s;
+  transition-property: background;
+}
+
+.fa-facebook,
+.fa-twitter,
+.fa-google-plus {
+  color: white
+  ;
 }
