@@ -6,10 +6,10 @@ Rails.application.routes.draw do
   root 'application#index'
 
   resources :neighborhoods
-
   resources :boroughs
 
   resources :photos
+  resources :reviews
 
   # tags
   resources :designers #, :only => [:show, :index]

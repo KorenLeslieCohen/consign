@@ -96,6 +96,7 @@ h1 {
   transition-duration: .5s;
   transition-property: opacity;
   /*border: 2px solid #777;*/
+  border: 5px solid #000;
 }
 
 .thumbnail-gallery:hover {
@@ -335,6 +336,10 @@ a:hover {
   background: #FD8698;
   transition-duration: .5s;
   transition-property: background;
+}
+
+#footer .btn-group {
+  margin-bottom: 0;
 }
 
 .fa-facebook,

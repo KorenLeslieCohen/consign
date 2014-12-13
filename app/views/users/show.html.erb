@@ -98,45 +98,15 @@
 </p> -->
 
 <!-- SHOW USER'S REVIEWS - modify wording based on owner of profile -->
-<% if user_signed_in? %>
 
-  <% if @user.reviews.length == 0 %>
 
-    <% if (current_user.email == @user.email) %>
-      <h2>You have not reviewed any businesses.</h2>
-    <% else %>
-      <h2> <%= @user.user_name %> has not reviewed any businesses.</h2>
-    <% end %>
-
-  <% elsif @user.reviews.length == 1 %>
-
-    <% if (current_user.email == @user.email) %>
-      <h2>You have reviewed <%= @user.reviews.length %> business:</h2>
-    <% else %>
-      <h2> <%= @user.user_name %> has reviewed <%= @user.reviews.length %> business:</h2>
-    <% end %>
-
+  <% if @user.reviews.length == 1 %>
+    <h2><%= @user.reviews.length %> REVIEW</h2>
   <% else %>
-
-    <% if (current_user.email == @user.email) %>
-      <h2>You have reviewed <%= @user.reviews.length %> businesses:</h2>
-    <% else %>
-      <h2> <%= @user.user_name %> has reviewed <%= @user.reviews.length %> businesses:</h2>
-    <% end %>
-
+    <h2><%= @user.reviews.length %> REVIEWS</h2>
   <% end %>
 
-<% else %>
 
-  <% if @user.reviews.length == 0 %>
-    <h2> <%= @user.user_name %> has not reviewed any businesses.</h2>
-  <% elsif @user.reviews.length == 1 %>
-    <h2> <%= @user.user_name %> has reviewed <%= @user.reviews.length %> business:</h2>
-  <% else %>
-    <h2> <%= @user.user_name %> has reviewed <%= @user.reviews.length %> businesses:</h2>
-  <% end %>
-
-<% end %>
 
 
   <% @user.reviews.each do |review| %>
@@ -145,50 +115,21 @@
     <%= review.content %>
 
     <!-- THIS DELETE LINK DOES NOT WORK PROPERLY YET -->
-    <%#= link_to 'Delete review', photo, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <%= link_to 'Delete review', review, method: :delete, data: { confirm: 'Are you sure?' } %></p>
     <p>You'll want to eventually include more info about these businesses, maybe a photo.</p> 
   <% end %>
 
 <!-- SHOW USER'S PHOTOS - modify wording based on owner of profile -->
-<% if user_signed_in? %>
 
-  <% if @user.photos.length == 0 %> 
 
-    <% if (current_user.email == @user.email) %>
-      <h2>You have not uploaded any photos.</h2>
-    <% else %>
-      <h2> <%= @user.user_name %> has not uploaded any photos.</h2>
-    <% end %>
 
-  <% elsif @user.photos.length == 1 %>
-
-    <% if (current_user.email == @user.email) %>
-      <h2>You have uploaded <%= @user.photos.length %> photo:</h2>
-    <% else %>
-      <h2> <%= @user.user_name %> has uploaded <%= @user.photos.length %> photo:</h2>
-    <% end %>
-
+  <% if @user.photos.length == 1 %>
+    <h2><%= @user.photos.length %> PHOTO</h2>
   <% else %>
-
-    <% if (current_user.email == @user.email) %>
-      <h2>You have uploaded <%= @user.photos.length %> photos:</h2>
-    <% else %>
-      <h2> <%= @user.user_name %> has uploaded <%= @user.photos.length %> photos:</h2>
-    <% end %>
-
+    <h2><%= @user.photos.length %> PHOTOS</h2>
   <% end %>
 
-<% else %>
 
-  <% if @user.photos.length == 0 %>
-    <h2> <%= @user.user_name %> has not uploaded any photos.</h2>
-  <% elsif @user.photos.length == 1 %>
-    <h2> <%= @user.user_name %> has uploaded <%= @user.photos.length %> photo:</h2>
-  <% else %>
-    <h2> <%= @user.user_name %> has uploaded <%= @user.photos.length %> photos:</h2>
-  <% end %>
-
-<% end %>
 
   
 
