@@ -109,7 +109,7 @@ a {
 }
 
 a:hover {
-	color: #efa48d;
+	color: #FD8698;
 	text-decoration: none;
 	-ms-transition: 0.2s;
 	-webkit-transition: 0.2s;
@@ -119,7 +119,7 @@ a:hover {
 }
 
 a:focus {
-	color: #efa48d;
+	color: #FD8698;
 }
 
 textarea:focus,
@@ -140,7 +140,7 @@ strong {
 }
 
 .highlight {
-	color: #efa48d;
+	color: #FD8698;
 }
 
 .text-center h1 {
@@ -183,7 +183,7 @@ strong {
 
 #home {
 	min-height: 445px;
-	background: #000 url("header.jpg") no-repeat center center;
+	background: #000 url("header-small.png") no-repeat center center;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
@@ -253,11 +253,11 @@ strong {
 }
 
 .nav a:hover {
-	color: #efa48d !important;
+	color: #FD8698 !important;
 }
 
 .nav .active a {
-	color: #efa48d !important;
+	color: #FD8698 !important;
 }
 
 .navbar a {
@@ -452,7 +452,7 @@ p.header {
 }
 
 #services .thumbnail i {
-	color: #efa48d;
+	color: #FD8698;
 	font-size: 40px;
 }
 
@@ -811,10 +811,10 @@ form .btn {
 }
 
 form .btn:hover {
-	background: #efa48d;
+	background: #FD8698;
 	color: #fff;
 	outline: 1px solid;
-	outline-color: #efa48d;
+	outline-color: #FD8698;
 }
 
 form .btn:focus {
@@ -874,7 +874,7 @@ form .btn:focus {
 }
 
 .flowuplabels .fl_wrap.focused .fl_label {
-	color: #efa48d;
+	color: #FD8698;
 }
 
 .message {
@@ -931,7 +931,7 @@ form .btn:focus {
 .btn-default.active,
 .open .dropdown-toggle.btn-default {
 	background-color: #000;
-	color: #efa48d;
+	color: #FD8698;
 }
 
 #footer .divide {
@@ -945,7 +945,7 @@ form .btn:focus {
 }
 
 .fa-heart {
-	color: #efa48d;
+	color: #FD8698;
 }
 
 #footer p {
@@ -1037,7 +1037,7 @@ form .btn:focus {
 .btn-default.active,
 .open .dropdown-toggle.btn-default {
 	border: none;
-	color: #efa48d;
+	color: #FD8698;
 	background-color: #fff;
 }
 
@@ -1056,10 +1056,10 @@ form .btn:focus {
 }
 
 .btn.btn-link:hover {
-	background-color:  #efa48d;
+	background-color:  #FD8698;
 	color: #fff;
 	outline: 1px solid;
-	outline-color: #efa48d;
+	outline-color: #FD8698;
 }
 
 /* Back to Top Button */

@@ -30,8 +30,12 @@ h1 {
 }
 
 .navbar a {
-  font-size: 40px;
+  font-size: 30px;
   
+}
+
+.navbar-header {
+  padding-top: 10px;
 }
 
 .navbar-brand {
@@ -122,7 +126,7 @@ h1 {
 #gallery-start,
 #services-start,
 #contact-start {
-  padding-top: 10px;
+  padding-top: 30px;
   padding-bottom: 30px;
 }
 
@@ -153,7 +157,7 @@ h1 {
 }
 
 .col-sm-3 a:hover {
-  color: #efa48d;
+  color: #FD8698;
   transition-duration: .5s;
   transition-property: color;
 }
@@ -199,7 +203,7 @@ h1 {
 /*HEART ICON*/
 
 .icon-heart {
-  color: #efa48d;
+  color: #FD8698;
 }
 
 span a {
@@ -226,7 +230,7 @@ a:hover {
   font-size: 20px;
   transition-duration: .5s;
   transition-property: color;
-  background: #efa48d;
+  background: #FD8698;
   padding: 5px;
   border-radius: 5px;
 }
@@ -240,7 +244,7 @@ a:hover {
 #gallery-start,
 #services-start,
 #contact-start {
-  background-image: url('header-dark.jpg');
+  background-image: url('header-shadow.png');
   background-size: cover;
 }
 
@@ -261,7 +265,7 @@ a:hover {
 }
 
 .biz a:hover {
-  color: #efa48d;
+  color: #FD8698;
   transition-duration: .5s;
   transition-property: color;
 }
@@ -302,7 +306,7 @@ a:hover {
 }
 
 #footer a {
-  color: #efa48d;
+  color: #FD8698;
   transition-duration: .5s;
   transition-property: color;
 }
@@ -313,29 +317,33 @@ a:hover {
   transition-property: color;
 }
 #footer .btn-default {
-  background: #efa48d;
+  border: 2px solid #FD8698;
   border-radius: 50%;
   width: 56px;
   height: 56px;
   margin: 3px;
+  transition-duration: .5s;
+  transition-property: background;
 }
 
 #footer .btn-default:hover {
-  background: #efa48d;
+  background: #FD8698;
+  transition-duration: .5s;
+  transition-property: background;
 }
 
 .fa-facebook,
 .fa-twitter,
 .fa-google-plus {
   color: #FFF;
-  transition-duration: .5s;
-  transition-property: color;
+/*  transition-duration: .5s;
+  transition-property: color;*/
 }
 
-.fa-facebook:hover,
+/*.fa-facebook:hover,
 .fa-twitter:hover,
 .fa-google-plus:hover {
   color: #777;
   transition-duration: .5s;
   transition-property: color;
-}
+}*/
