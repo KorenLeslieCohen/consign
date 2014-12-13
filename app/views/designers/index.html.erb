@@ -1,41 +1,27 @@
-<!-- <div class="designer-index"> -->
-  <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
-    <h1 class="header">DESIGNERS</h1>
-    <p class="header">Shops By Designer</p>
-  </section>
-
-  <form>
-    <%= form_tag(designers_path, :method => "get", id: "search-form") do %>
-      <%= text_field_tag :search, params[:search], class: "form-control col-lg-8", id: "autocompete", placeholder: "SEARCH DESIGNERS BY NAME" %>  
-    <% end %>
-  </form>
-
-<section id="services">
-
-  <div class="container">
-
-<div class="row">
-
-<section id="services">
-
-  <div class="search-results">
-    <% if @designers.present? %>
-      <%= render @designers %>
-      <!-- <p><%#= link_to 'SEE ALL DESIGNERS', designers_path %></p> -->
-    <% else %>
-      <h5>There are no designers by the name <%= params[:search] %>.</h5>
-      <p><%= link_to 'SEE ALL DESIGNERS', designers_path %></p>
-    <% end %>
-  </div>
-  <!-- </div> -->
-
-
-  </div>
-
-</div>
-
+<section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+  <h1 class="header">DESIGNERS</h1>
+  <p class="header">Shops By Designer</p>
 </section>
 
+<form>
+  <%= form_tag(designers_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], class: "form-control col-lg-8", id: "autocompete", placeholder: "SEARCH DESIGNERS" %>  
+  <% end %>
+</form>
 
-
-<!-- <div class="row"></div> -->
+<section id="services">
+  <div class="container">
+    <div class="row">
+      <section id="services">
+        <div class="search-results">
+          <% if @designers.present? %>
+            <%= render @designers %>
+            <!-- <p><%#= link_to 'SEE ALL DESIGNERS', designers_path %></p> -->
+          <% else %>
+            <h5>There are no designers by the name <%= params[:search] %>.</h5>
+            <p><%= link_to 'SEE ALL DESIGNERS', designers_path %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+</section>

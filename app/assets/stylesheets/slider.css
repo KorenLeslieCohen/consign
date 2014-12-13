@@ -1,11 +1,13 @@
 #owl-demo .owlitem{
     /*background: #42bdc2;*/
     /*padding: 0px 10px;*/
-    margin: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 20px;
     color: #FFF;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
-    border-radius: 3px;
+    border-radius: 0px;
     text-align: center;
       height: 350px;
   /*width: 30px;*/
@@ -14,6 +16,10 @@
 div.owl-item {
   /*height: 300px;*/
 /*  width: 300px;*/
+}
+
+.owlitem {
+  border-top: 2px solid black;
 }
 
 .owlitem p a {
