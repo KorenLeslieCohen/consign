@@ -4,6 +4,9 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1><%= link_to @user.name, @user %> has uploaded a photo to <%= link_to @business.name, @business %>.</h1>
+    <img src="https://s3.amazonaws.com/consignnyc/consign-banner.png" width="100%">
+    <h1>NEW PHOTO</h1>
+    <h1>BUSINESS: <%= link_to @business.name, @business %></h1>
+    <h1>UPLOADED BY: <%= link_to @user.name, @user %></h1>
   </body>
 </html>

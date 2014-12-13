@@ -11,8 +11,9 @@ class Mailer < ActionMailer::Base
   end
 
   # sends me email following user review
-  def admin_review_email(user, business)
+  def admin_review_email(user, content, business)
     @user = user
+    @content = content
     @business = business
     mail(:to => "consigndotnyc@gmail.com", :subject => "New Review on Consign.NYC")
   end

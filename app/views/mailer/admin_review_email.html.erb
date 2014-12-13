@@ -4,6 +4,11 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1><%= link_to @user.name, @user %> has reviewed <%= link_to @business.name, @business %>.</h1>
+    <img src="https://s3.amazonaws.com/consignnyc/consign-banner.png" width="100%">
+    <h1>NEW REVIEW</h1>
+    <h1>BUSINESS: <%= link_to @business.name, @business %></h1>
+    <h1>USER: <%= link_to @user.name, @user %></h1>
+    <h1>REVIEW:</h1>
+    <p><%= @content %></p>
   </body>
 </html>

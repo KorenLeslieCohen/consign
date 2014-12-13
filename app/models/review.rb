@@ -18,7 +18,7 @@ class Review < ActiveRecord::Base
   end
 
   def send_admin_review_email
-    Mailer.admin_review_email(user, business).deliver
+    Mailer.admin_review_email(user, content, business).deliver
   end
   
 end
