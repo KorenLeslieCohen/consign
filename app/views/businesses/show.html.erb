@@ -212,13 +212,15 @@
         <h4><span>There are no reviews for this business yet. Be the first!</span><h4>
       <% else %>
         <% @business.reviews.reverse.each do |review| %>
-          <h4><strong><%= link_to review.user.name, review.user %>:</strong> 
-          <%= image_tag review.user.user_profile_photo, height: 50 %>
+          <div id="review" class="col-md-4">
+          <%= image_tag review.user.user_profile_photo %>
+          <h4>BY: <%= link_to review.user.user_name, review.user %></h4>
           <%= review.rating %><br>
           <%= review.content %>
           <% if (review.user == current_user) %>
             <%#= link_to 'Edit Review', [@business, review], method: :get, remote: true, data: { confirm: 'Are you sure?' } %>
             | <%= link_to 'Delete Review', [@business, review], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
+          </div>
           <% end %>
         <% end %>
       <% end %>

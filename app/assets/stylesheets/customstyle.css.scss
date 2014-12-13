@@ -88,6 +88,22 @@ h1 {
   margin-top: 10px;
 }
 
+/*REVIEWS*/
+
+#reviews img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  float: left;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#review {
+  border-top: 1px solid #000;
+}
+
 
 /*GALLERY*/
 
@@ -222,14 +238,36 @@ a:hover {
 
 /*FAQ*/
 
-.faq-link {
+.faq-link,
+.user-account-header,
+.user-profile-editor
+/*.user-profile-header*/ {
   margin-left: auto;
   margin-right: auto;
   width: 323px;
   margin-bottom: 20px;
 }
 
-.faq-link h4 a {
+.faq-link {
+  width: 323px;
+}
+
+.user-account-header {
+  width: 278px;
+}
+
+.user-profile-editor {
+  width: 302px;
+}
+
+/*.user-profile-header {
+  width: 93px;
+}*/
+
+.faq-link h4 a,
+.user-account-header h4 a,
+.user-profile-editor h4 a {
+/*.user-profile-header h4 a {*/
   color: #FFF;
   margin-left: auto;
   margin-right: auto;
@@ -241,7 +279,14 @@ a:hover {
   border-radius: 5px;
 }
 
-.faq-link h4 a:hover {
+/*.user-profile-header h4 a {
+  background: #FD8698;
+}*/
+
+.faq-link h4 a:hover,
+/*.user-account-header h4 a:hover,*/
+.user-profile-editor h4 a:hover
+/*.user-profile-header h4 a:hover*/  {
   background: #FD8698;
   transition-duration: .5s;
   transition-property: background;
