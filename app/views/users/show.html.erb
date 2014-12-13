@@ -41,6 +41,12 @@
       <%= @user.user_name %>
     </p>
 
+    <p>
+      <strong>Bio:</strong>
+      <%= @user.bio %>
+    </p>
+
+
   <!-- IF SIGNED IN BUT VIEWING ANOTHER USER'S PROFILE -->
   <% else %>
 
@@ -66,6 +72,10 @@
       <strong>Username:</strong>
       <%#= @user.user_name %>
     </p> -->
+    <p>
+      <strong>Bio:</strong>
+      <%= @user.bio %>
+    </p>
 
   <% end %>
 
@@ -88,6 +98,11 @@
          <%#= image_tag @user.user_profile_photo, height: 100 %>
       </p>
     <%# end %> -->
+
+    <p>
+      <strong>Bio:</strong>
+      <%= @user.bio %>
+    </p>
 
   <% end %>
 <p id="notice"><%= notice %></p>
