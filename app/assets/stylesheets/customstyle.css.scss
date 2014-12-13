@@ -171,9 +171,10 @@ h1 {
 /*SERVICES*/
 
 #services .thumbnail p {
-  font-size: 17px;
-  font-family: "Arial";
+  font-size: 15px;
+  font-family: "Playfair Display";
   /*color: white;*/
+  color: black;
 }
 
 #services {
@@ -199,6 +200,10 @@ h1 {
 #contact textarea {
   border-bottom: 1px solid #777;
 }*/
+
+.delight-icon-services {
+  width: 80px;
+}
 
 /*HEART ICON*/
 
@@ -317,7 +322,7 @@ a:hover {
   transition-property: color;
 }
 #footer .btn-default {
-  border: 2px solid #FD8698;
+  border: 1px solid #FD8698;
   border-radius: 50%;
   width: 56px;
   height: 56px;
