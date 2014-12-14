@@ -111,6 +111,13 @@ h1 {
   max-width: 1000px;
 }
 
+#review_rating,
+#review_content {
+  max-width: 800px;
+}
+
+
+
 #review-content,
 #user-review-content {
   overflow: auto;
@@ -262,6 +269,35 @@ h1 {
 .contact-thanks h2 {
   text-align: center;
   font-size: 30px;
+}
+
+#review-form {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#new-review h5 {
+  text-align: center;
+  font-size: 20px;
+}
+
+.review-button {
+  width: 131px;
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+.review-button button {
+    background: #FD8698;
+    color: white;
+    outline: 0px;
+}
+
+.review-button button:hover {
+    background: #000;
 }
 
 /*HEART ICON*/

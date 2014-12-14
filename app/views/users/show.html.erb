@@ -140,7 +140,18 @@
   <% @user.reviews.reverse.each do |review| %>
       <div class="col-md-12">
         <div id="user-review">
-<%= image_tag @user.user_profile_photo %>
+
+        <% if !review.business.profile_photo? %>
+  
+              <img src="https://s3.amazonaws.com/consignnyc/placeholder-business.png">
+
+
+
+              <% else %>
+
+<%= image_tag review.business.profile_photo, :height => "100" %>
+<% end %>
+<%= review.created_at.strftime("%b %d, %Y") %>
 <%= link_to review.business.name, review.business %>
           <%= review.rating %><br>
           <div id="user-review-content">

@@ -6,17 +6,9 @@
 
     
 
-<!-- <%# if @photo.errors.any? %>
-    <div id="error_explanation">
-      <h2><%#= pluralize(@photo.errors.count, "error") %> prohibited this photo from being saved:</h2>
 
-      <ul>
-      <%# @photo.errors.full_messages.each do |message| %>
-        <li><%#= message %></li>
-      <%# end %>
-      </ul>
-    </div>
-  <%# end %> -->
+
+
 
 <!-- <div class="business-name">
   <h1><%= @business.name %></h1>
@@ -157,6 +149,7 @@
             <div class="col-md-12">
               <div id="review">
                 <%= image_tag review.user.user_profile_photo %>
+                <%= review.created_at.strftime("%b %d, %Y") %>
                 <p>BY: <%= link_to review.user.user_name, review.user %></p>
                 <%= review.rating %><br>
                 <div id="review-content">
