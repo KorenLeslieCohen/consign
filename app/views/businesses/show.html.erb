@@ -151,7 +151,7 @@
                 <%= image_tag review.user.user_profile_photo %>
                 <%= review.created_at.strftime("%b %d, %Y") %>
                 <p>BY: <%= link_to review.user.user_name, review.user %></p>
-                <%= review.rating %><br>
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
                 <div id="review-content">
                   <%= review.content %>
                 </div>
@@ -184,7 +184,7 @@
 
         <% if (current_user.user_name != nil && current_user.name != nil && current_user.user_name != "" && current_user.name != "" ) %>
                       <div id="new-photo">
-    <h5>Upload photos of this shop's clothing and accessories!</h5>
+    <h5>Upload photos of <%= @business.name %>.</h5>
   </div>
 
           <%= form_for [@business, Photo.new] do |f| %>
@@ -291,7 +291,7 @@
           <% else %>
             <% @business.photos.reverse.each do |photo| %>
               <div class="col-sm-6 col-md-4 gallery-item">
-              BY: <%= link_to photo.user.name.upcase, photo.user %> 
+              
               
               <a href="<%= photo.business_photo %>" data-toggle="lightbox">
 
@@ -300,9 +300,9 @@
 
               </a>
 
-              DESCRIPTION: <%= photo.description[0..30] %>
+              <%= photo.description[0..15].upcase %> BY: <%= link_to photo.user.user_name.upcase, photo.user %> 
               <% if (photo.user == current_user) %>
-                <%= link_to 'DELETE PHOTO', [@business, photo], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
+                 | <%= link_to 'DELETE PHOTO', [@business, photo], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
               <% end %>
             </div>
             <% end %>
