@@ -25,28 +25,25 @@
          <%#= image_tag @user.user_profile_photo, height: 100 %>
       </p>
     <%# end %> -->
-     <li><%= link_to "LOGOUT", destroy_user_session_path, method: :delete%></li>
 
     <div class="user-account-header">
       <h4><a>PRIVATE PROFILE SETTINGS</a></h4>
     </div>
-      <strong>Name:</strong>
-      <%= @user.name %>
-    </p>
-    <p>
-      <strong>Email:</strong>
-      <%= @user.email %>
-    </p>
-    <p>
-      <strong>Username:</strong>
-      <%= @user.user_name %>
-    </p>
+    <div id="private-profile">
+      <h5><strong>Name:</strong> <%= @user.name %></h5>
+      <h5><strong>Email:</strong> <%= @user.email %></h5>
+      <h5><strong>Username:</strong> <%= @user.user_name %></h5>
+    </div><br>
 
 
     <div class="user-profile-editor">
     <h4><%= link_to 'EDIT PROFILE', edit_user_path(@user) %> 
     <%= link_to 'EDIT ACCOUNT', edit_user_registration_path, :class => 'navbar-link' %></h4>
     </div>
+
+    <div class="user-profile-logout">
+    <h4><%= link_to "LOGOUT", destroy_user_session_path, method: :delete%></h4>
+</div>
 
  <!--    <div class="user-profile-header">
       <h4><a>PROFILE</a></h4>
@@ -125,35 +122,50 @@
 
 <!-- SHOW USER'S REVIEWS - modify wording based on owner of profile -->
 
-
+<div class="user-header">
   <% if @user.reviews.length == 1 %>
     <h2><%= @user.reviews.length %> REVIEW</h2>
+  <% elsif @user.reviews.length == 0 %>
   <% else %>
     <h2><%= @user.reviews.length %> REVIEWS</h2>
   <% end %>
+  </div>
 
 
 
 
-  <% @user.reviews.each do |review| %>
-    <%= link_to review.business.name, review.business %>
-    <%= review.rating %>
-    <%= review.content %>
 
-    <!-- THIS DELETE LINK DOES NOT WORK PROPERLY YET -->
-    <%= link_to 'Delete review', review, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-    <p>You'll want to eventually include more info about these businesses, maybe a photo.</p> 
+
+<div id="user-reviews">
+  <% @user.reviews.reverse.each do |review| %>
+      <div class="col-md-12">
+        <div id="user-review">
+<%= image_tag @user.user_profile_photo %>
+<%= link_to review.business.name, review.business %>
+          <%= review.rating %><br>
+          <div id="user-review-content">
+            <%= review.content %>
+          </div>
+          <% if (review.user == current_user) %>
+            <%#= link_to 'Edit Review', [@business, review], method: :get, data: { confirm: 'Are you sure?' } %>
+            | <%= link_to 'DELETE REVIEW', review, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </div>
+      </div>
   <% end %>
+</div>
 
 <!-- SHOW USER'S PHOTOS - modify wording based on owner of profile -->
 
 
-
+<div class="user-header">
   <% if @user.photos.length == 1 %>
     <h2><%= @user.photos.length %> PHOTO</h2>
+  <% elsif @user.photos.length == 0 %>
   <% else %>
     <h2><%= @user.photos.length %> PHOTOS</h2>
   <% end %>
+  </div>
 
 
 

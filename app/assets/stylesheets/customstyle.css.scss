@@ -90,7 +90,8 @@ h1 {
 
 /*REVIEWS*/
 
-#reviews img {
+#reviews img,
+#user-reviews img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -100,18 +101,24 @@ h1 {
   margin-right: auto;
 }
 
-#review {
+#review,
+#user-review {
   border-top: 1px solid #000;
   height: 160px;
   /*overflow: auto;*/
   margin-left: auto;
   margin-right: auto;
-  width: 700px;
+  max-width: 1000px;
 }
 
-#review-content {
+#review-content,
+#user-review-content {
   overflow: auto;
   height: 60px;
+}
+
+.you-reviewed h3 {
+  text-align: center;
 }
 
 
@@ -145,6 +152,26 @@ h1 {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
+#private-profile {
+/*  width: 300px;
+  margin-left: auto;
+  margin-right: auto;*/
+}
+
+#private-profile h5 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.user-header h2 {
+  text-align: center;
+  width: 100%;
+  background: #000;
+  color: #FFF;
+}
+
+/*font-family: "Playfair Display";*/
 
 
 
@@ -251,6 +278,7 @@ a:hover {
 .faq-link,
 .user-account-header,
 .user-profile-editor,
+.user-profile-logout,
 .business-login-to-review,
 .business-login-to-upload,
 .business-signup-to-review,
@@ -260,6 +288,13 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
+}
+
+.business-signup-to-review,
+.business-signup-to-upload,
+.business-complete-to-review,
+.business-complete-to-upload {
+  margin-top: 20px;
 }
 
 .faq-link {
@@ -272,6 +307,10 @@ a:hover {
 
 .user-profile-editor {
   width: 302px;
+}
+
+.user-profile-logout {
+  width: 92px;
 }
 
 .business-login-to-review {
@@ -301,6 +340,7 @@ a:hover {
 .faq-link h4 a,
 .user-account-header h4 a,
 .user-profile-editor h4 a,
+.user-profile-logout h4 a,
 .business-login-to-review h4 a,
 .business-login-to-upload h4 a,
 .business-signup-to-review h4 a,
@@ -320,6 +360,7 @@ a:hover {
 
 .faq-link h4 a:hover,
 .user-profile-editor h4 a:hover,
+.user-profile-logout h4 a:hover,
 .business-login-to-review h4 a:hover,
 .business-login-to-upload h4 a:hover,
 .business-signup-to-review h4 a:hover,
@@ -358,6 +399,19 @@ a:hover {
   color: #FD8698;
   transition-duration: .5s;
   transition-property: color;
+}
+
+.biz-header h2 {
+  text-align: center;
+  width: 100%;
+  background: #000;
+  color: #FFF;
+}
+
+/*.biz-header h2*/
+
+.col-md-12 {
+  background: #FFF;
 }
 
 /*DESIGNERS*/

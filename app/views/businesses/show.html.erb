@@ -101,8 +101,9 @@
 <!-- put the user's review first? -->
 <!-- REVIEW BUSINESS -->
 <%#= render 'reviews/review' %>
-<h1><span>REVIEWS</span></h1>
-
+<div class="biz-header">
+<h2>REVIEWS</h2>
+</div>
       <!-- IF CURRENT USER -->
       <% if current_user %>
 
@@ -111,7 +112,9 @@
 
           <!-- if current user has reviewed this business -->
           <% if @business.reviews.any? { |review| review.user.name == current_user.name } %>
+          <div class="you-reviewed">
             <h3>Thank you for reviewing <%= @business.name %>!</h3>
+          </div>
             
           <!-- if current user has not reviewed this business -->
           <% else %>
@@ -178,6 +181,10 @@
 
 
 <!-- ADD PHOTOS -->
+
+<div class="biz-header">
+<h2>PHOTOS</h2>
+</div>
     <div>
 
       <% if current_user %>
@@ -263,7 +270,7 @@
 
     <section id="gallery photos">
       <div class="container">
-        <div class="row divide">
+        <div class="row">
           <% if @business.photos.empty? %>
             <h4>There are no photos for this business yet. Be the first!<h4>
           <% else %>
