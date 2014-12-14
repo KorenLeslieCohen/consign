@@ -12,8 +12,8 @@ hermes = Designer.create(:name => "Hermes")
 highend = Biztag.create(:name => "High End")
 boutique = Biztag.create(:name => "Boutique")
 
-chanel_photo = Tag.create(:name => "Chanel")
-hermes_photo = Tag.create(:name => "Hermes")
+# chanel_photo = Tag.create(:name => "Chanel")
+# hermes_photo = Tag.create(:name => "Hermes")
 
 manhattan = Borough.create(:name => "Manhattan")
 bronx = Borough.create(:name => "The Bronx")

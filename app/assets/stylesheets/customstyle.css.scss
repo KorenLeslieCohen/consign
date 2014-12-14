@@ -102,6 +102,16 @@ h1 {
 
 #review {
   border-top: 1px solid #000;
+  height: 160px;
+  /*overflow: auto;*/
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+}
+
+#review-content {
+  overflow: auto;
+  height: 60px;
 }
 
 
@@ -236,15 +246,19 @@ a:hover {
   background: none;
 }
 
-/*FAQ*/
+/*LINK BUTTONS*/
 
 .faq-link,
 .user-account-header,
-.user-profile-editor
-/*.user-profile-header*/ {
+.user-profile-editor,
+.business-login-to-review,
+.business-login-to-upload,
+.business-signup-to-review,
+.business-signup-to-upload,
+.business-complete-to-review,
+.business-complete-to-upload {
   margin-left: auto;
   margin-right: auto;
-  width: 323px;
   margin-bottom: 20px;
 }
 
@@ -260,14 +274,39 @@ a:hover {
   width: 302px;
 }
 
-/*.user-profile-header {
-  width: 93px;
-}*/
+.business-login-to-review {
+  width: 184px;
+}
+
+.business-login-to-upload {
+  width: 263px;
+}
+
+.business-signup-to-review {
+  width: 200px;
+}
+
+.business-signup-to-upload {
+  width: 279px;
+}
+
+.business-complete-to-review {
+  width: 315px;
+}
+
+.business-complete-to-upload {
+  width: 320px;
+}
 
 .faq-link h4 a,
 .user-account-header h4 a,
-.user-profile-editor h4 a {
-/*.user-profile-header h4 a {*/
+.user-profile-editor h4 a,
+.business-login-to-review h4 a,
+.business-login-to-upload h4 a,
+.business-signup-to-review h4 a,
+.business-signup-to-upload h4 a,
+.business-complete-to-review h4 a,
+.business-complete-to-upload h4 a {
   color: #FFF;
   margin-left: auto;
   margin-right: auto;
@@ -279,14 +318,14 @@ a:hover {
   border-radius: 5px;
 }
 
-/*.user-profile-header h4 a {
-  background: #FD8698;
-}*/
-
 .faq-link h4 a:hover,
-/*.user-account-header h4 a:hover,*/
-.user-profile-editor h4 a:hover
-/*.user-profile-header h4 a:hover*/  {
+.user-profile-editor h4 a:hover,
+.business-login-to-review h4 a:hover,
+.business-login-to-upload h4 a:hover,
+.business-signup-to-review h4 a:hover,
+.business-signup-to-upload h4 a:hover,
+.business-complete-to-review h4 a:hover,
+.business-complete-to-upload h4 a:hover {
   background: #FD8698;
   transition-duration: .5s;
   transition-property: background;
