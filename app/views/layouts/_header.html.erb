@@ -21,7 +21,8 @@
             <li><a href="/businesses" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">SHOPS</a></li>
             <li><a href="/photos" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">GALLERY</a></li>
             <li><a href="/boroughs" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">LOCAL</a></li>
-            <li><a href="/designers" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">DESIGNERS</a></li>
+            <!-- <li><a href="/designers" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">DESIGNERS</a></li> -->
+            <li><a href="/blogs" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">BLOG</a></li>
             <li><a href="/messages/new" data-start="color: rgb(255, 255, 255);" data-1p="color: rgb(255, 255, 255);">CONTACT</a></li>
 
             <% if user_signed_in? %>
@@ -38,10 +39,10 @@
                 <li><%= link_to "PROFILE", edit_user_path(current_user) %></li>
               <% end %>
 
-              <li><%= link_to "LOGOUT", destroy_user_session_path, method: :delete%></li>
+             
 
               <% else %>
-                <li><%= link_to "SIGN UP", new_user_registration_path, :class => 'navbar-link'  %></li>
+               
                 <li><%= link_to "LOGIN", new_user_session_path, :class => 'navbar-link'  %></li>
 
               <% end %>

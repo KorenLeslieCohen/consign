@@ -1,7 +1,11 @@
     <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
       <h1 class="header">SIGN IN</h1>
-      <p class="header">WELCOME BACK TO CONSIGN.NYC</p>
+      <p class="header">WELCOME TO CONSIGN.NYC</p>
     </section>
+
+    DONT HAVE AN ACCOUNT?
+
+<%= link_to "SIGN UP", new_user_registration_path, :class => 'navbar-link'  %>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div><%= f.label :email %><br />
@@ -18,3 +22,5 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+

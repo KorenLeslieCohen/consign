@@ -5,6 +5,8 @@
       <p class="header">Complete Your Profile to Review Shops and Upload Photos</p>
     </section>
 
+     <li><%= link_to "LOGOUT", destroy_user_session_path, method: :delete%></li>
+
 <%= render 'form' %>
 
 <%= link_to 'Show', @user %> |

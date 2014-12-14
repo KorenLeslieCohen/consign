@@ -25,6 +25,7 @@
          <%#= image_tag @user.user_profile_photo, height: 100 %>
       </p>
     <%# end %> -->
+     <li><%= link_to "LOGOUT", destroy_user_session_path, method: :delete%></li>
 
     <div class="user-account-header">
       <h4><a>PRIVATE PROFILE SETTINGS</a></h4>
