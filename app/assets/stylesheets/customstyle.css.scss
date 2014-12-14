@@ -4,12 +4,12 @@ body {
   padding-top: 50px;
 }
 
-/*TEXT*/
+/*--------------TEXT--------------*/
 h1 {
   background: none;
 }
 
-/*NAVBAR*/
+/*--------------NAVBAR--------------*/
 .navbar-default .navbar-nav > li > a {
   font-size: 15px;
   /*padding: 0 10px;*/
@@ -52,7 +52,7 @@ h1 {
     margin-bottom: 0;
 }*/
 
-/*BUSINESS MAP */
+/*--------------BUSINESS MAP--------------*/
 
 .business-photo-map {
   margin-left: auto;
@@ -88,7 +88,7 @@ h1 {
   margin-top: 10px;
 }
 
-/*REVIEWS*/
+/*--------------REVIEWS--------------*/
 
 #reviews img,
 #user-reviews img {
@@ -129,7 +129,7 @@ h1 {
 }
 
 
-/*GALLERY*/
+/*--------------GALLERY--------------*/
 
 .thumbnail-gallery {
   height: 250px;
@@ -145,7 +145,7 @@ h1 {
   transition-property: opacity;
 }
 
-/*USER*/
+/*--------------USER--------------*/
 
 .user-profile-photo img {
   height: 120px;
@@ -182,7 +182,7 @@ h1 {
 
 
 
-/*DIVIDE*/
+/*--------------DIVIDE--------------*/
 
 #gallery-start,
 #services-start,
@@ -203,7 +203,7 @@ h1 {
   margin-bottom: 10px;
 }
 
-/*BOOTSTRAP*/
+/*--------------BOOTSTRAP--------------*/
 
 .col-sm-6 h1 {
   font-size: 40px;
@@ -229,7 +229,7 @@ h1 {
 
 
 
-/*SERVICES*/
+/*--------------SERVICES--------------*/
 
 #services .thumbnail p {
   font-size: 15px;
@@ -246,7 +246,7 @@ h1 {
   color: black;
 }
 
-/*FORM*/
+/*--------------FORM----------------------------*/
 
 .form-control {
   height: 50px;
@@ -333,7 +333,7 @@ h1 {
   height: 52px;
 }
 
-/*HEART ICON*/
+/*--------------HEART ICON--------------*/
 
 .icon-heart {
   color: #FD8698;
@@ -347,7 +347,7 @@ a:hover {
   background: none;
 }
 
-/*LINK BUTTONS*/
+/*--------------LINK BUTTONS--------------*/
 
 .faq-link,
 .user-account-header,
@@ -454,7 +454,7 @@ a:hover {
 }
 
 
-/*BUSINESS*/
+/*--------------BUSINESS--------------*/
 
 .biz {
   padding-bottom: 5px;
@@ -488,13 +488,13 @@ a:hover {
   background: #FFF;
 }
 
-/*DESIGNERS*/
+/*--------------DESIGNERS--------------*/
 
 .designers {
   min-height: 240px;
 }
 
-/*SLIDER*/
+/*--------------SLIDER--------------*/
 
 .item {
   margin-left: auto;
@@ -507,7 +507,7 @@ a:hover {
   height: 400px;
 }
 
-/*FOOTER*/
+/*--------------FOOTER--------------*/
 
 #footer {
   border-top: 1px solid white;
