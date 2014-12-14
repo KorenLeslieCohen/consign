@@ -605,11 +605,7 @@
                         <td valign="top" class="mcnTextContent" style="padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;">
 
 
-    <h1>NEW MESSAGE</h1> 
-    <h1>NAMW: <%= @name %></h1>name
-    <h1>EMAIL: <%= @email %>:</h1>
-    <h1>MESSAGE</h1>
-    <p><%= @body %><br></p>
+   <h3><%= link_to @user.name, @user %> uploaded a photo to <%= link_to @business.name, @business %>.</h3><br>
 
                         
                         </td>

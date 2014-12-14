@@ -183,22 +183,44 @@
       <% if current_user %>
 
         <% if (current_user.user_name != nil && current_user.name != nil && current_user.user_name != "" && current_user.name != "" ) %>
-          <h1> name: <%= current_user.user_name %> </h1>
+                      <div id="new-photo">
+    <h5>Upload photos of this shop's clothing and accessories!</h5>
+  </div>
+
           <%= form_for [@business, Photo.new] do |f| %>
+
+<!-- PHOTO ERRORS DO NOT SHOW -->
+            <% if Photo.new.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@review.errors.count, "error") %> prohibited this photo from being saved:</h2>
+
+      <ul>
+      <% Photo.new.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
 
           <%#= form_for(review, html: {class: "form-horizontal"}, remote: true) do |f| %>
 
 
             <div class="field business-field">
+               <div id="photo-form">
+
+               <%= f.file_field :business_photo, placeholder: "UPLOAD PHOTO"%>
               <%= f.text_area :description, class: "form-control col-lg-8", placeholder: "WHAT IS THIS A PHOTO OF?" %>
-              <p>Upload a photo:</p>
-              <%= f.file_field :business_photo, placeholder: "UPLOAD PHOTO"%>
+              
               <%= f.hidden_field :business_id, :value => @business.id %>
               <%= f.hidden_field :user_id, :value => current_user.id %>
             </div>
-            <div class="actions">
-              <%= f.submit "UPLOAD PHOTO" %>
             </div>
+<div class="photo-button">
+    <div class="form-group form">
+      <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">UPLOAD PHOTO</button>
+    </div>
+  </div>
           <% end %>
         <% elsif (current_user.user_name == nil || current_user.name == nil || current_user.user_name == "" || current_user.name == "") %>
           <!-- <h1>There is no username or name in profile</h1> -->
