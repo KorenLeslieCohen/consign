@@ -1,61 +1,54 @@
-
 <div class="users-page">
-<!-- IF USER SIGNED IN -->
-<% if user_signed_in? %>
 
-  <!-- IF VIEWING YOUR OWN PROFILE -->
-  <% if (current_user.email == @user.email) %>
+  <!-- IF USER SIGNED IN -->
+  <% if user_signed_in? %>
 
-    <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
-      <h1 class="header user-profile-photo"><%= image_tag current_user.user_profile_photo %></h1>
-      <p class="header"><%= current_user.user_name.upcase %></p>
-    </section>
-    
-    <%#= link_to "Settings", edit_user_path %>
+    <!-- IF VIEWING YOUR OWN PROFILE -->
+    <% if (current_user.email == @user.email) %>
 
-    <!-- DISPLAY PROFILE PHOTO OR PLACEHOLDER -->
-<!--     <%# if !@user.user_profile_photo? %>
+      <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+        <h1 class="header user-profile-photo"><%= image_tag current_user.user_profile_photo %></h1>
+        <p class="header"><%= current_user.user_name.upcase %></p>
+      </section>
+
+      <div class="user-account-header">
+        <h4><a>PRIVATE PROFILE SETTINGS</a></h4>
+      </div>
+      <div id="private-profile">
+        <h5><strong>Name:</strong> <%= @user.name %></h5>
+        <h5><strong>Email:</strong> <%= @user.email %></h5>
+        <h5><strong>Username:</strong> <%= @user.user_name %></h5>
+      </div><br>
+
+      <div class="user-profile-editor">
+        <h4><%= link_to 'EDIT PROFILE', edit_user_path(@user) %> 
+        <%= link_to 'EDIT ACCOUNT', edit_user_registration_path, :class => 'navbar-link' %></h4>
+      </div>
+
+      <div class="user-profile-logout">
+        <h4><%= link_to "LOGOUT", destroy_user_session_path, method: :delete%></h4>
+      </div>
+
       <p>
-        <strong>No Profile Photo:</strong>
-         <%#= image_tag "placeholder-profile.png", height: 100 %>
-      </p>  
-    <%# else %>
-      <p>
-        <strong>Profile Photo:</strong>
-         <%#= image_tag @user.user_profile_photo, height: 100 %>
+        <strong>Bio:</strong>
+        <%= @user.bio %>
       </p>
-    <%# end %> -->
 
-    <div class="user-account-header">
-      <h4><a>PRIVATE PROFILE SETTINGS</a></h4>
-    </div>
-    <div id="private-profile">
-      <h5><strong>Name:</strong> <%= @user.name %></h5>
-      <h5><strong>Email:</strong> <%= @user.email %></h5>
-      <h5><strong>Username:</strong> <%= @user.user_name %></h5>
-    </div><br>
+    <!-- IF SIGNED IN BUT VIEWING ANOTHER USER'S PROFILE -->
+    <% else %>
 
+      <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+        <h1 class="header user-profile-photo"><%= image_tag @user.user_profile_photo %></h1>
+        <p class="header"><%= @user.user_name.upcase %></p>
+      </section>
 
-    <div class="user-profile-editor">
-    <h4><%= link_to 'EDIT PROFILE', edit_user_path(@user) %> 
-    <%= link_to 'EDIT ACCOUNT', edit_user_registration_path, :class => 'navbar-link' %></h4>
-    </div>
+      <p>
+        <strong>Bio:</strong>
+        <%= @user.bio %>
+      </p>
 
-    <div class="user-profile-logout">
-    <h4><%= link_to "LOGOUT", destroy_user_session_path, method: :delete%></h4>
-</div>
+    <% end %>
 
- <!--    <div class="user-profile-header">
-      <h4><a>PROFILE</a></h4>
-    </div> -->
-
-    <p>
-      <strong>Bio:</strong>
-      <%= @user.bio %>
-    </p>
-
-
-  <!-- IF SIGNED IN BUT VIEWING ANOTHER USER'S PROFILE -->
   <% else %>
 
     <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
@@ -63,23 +56,6 @@
       <p class="header"><%= @user.user_name.upcase %></p>
     </section>
 
-    <!-- DISPLAY PROFILE PHOTO OR PLACEHOLDER -->
-<!--     <%# if !@user.user_profile_photo? %>
-      <p>
-        <strong>No Profile Photo:</strong>
-         <%#= image_tag "placeholder-profile.png", height: 100 %>
-      </p>  
-    <%# else %>
-      <p>
-        <strong>Profile Photo:</strong>
-         <%#= image_tag @user.user_profile_photo, height: 100 %>
-      </p>
-    <%# end %> -->
-
-<!--     <p>
-      <strong>Username:</strong>
-      <%#= @user.user_name %>
-    </p> -->
     <p>
       <strong>Bio:</strong>
       <%= @user.bio %>
@@ -87,72 +63,29 @@
 
   <% end %>
 
-<% else %>
+  <p id="notice"><%= notice %></p>
 
-    <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
-      <h1 class="header user-profile-photo"><%= image_tag @user.user_profile_photo %></h1>
-      <p class="header"><%= @user.user_name.upcase %></p>
-    </section>
-
-    <!-- display user profile photo if it exists, otherwise placeholder -->
-<!--     <%# if !@user.user_profile_photo? %>
-      <p>
-        <strong>No Profile Photo:</strong>
-       <%#= image_tag "placeholder-profile.png", height: 100 %>
-      </p>
-    <%# else %>
-      <p> 
-        <strong>Profile Photo:</strong>
-         <%#= image_tag @user.user_profile_photo, height: 100 %>
-      </p>
-    <%# end %> -->
-
-    <p>
-      <strong>Bio:</strong>
-      <%= @user.bio %>
-    </p>
-
-  <% end %>
-<p id="notice"><%= notice %></p>
-
-<!-- <p>
-  <strong>Role:</strong>
-  <%#= @user.role %>
-</p> -->
-
-<!-- SHOW USER'S REVIEWS - modify wording based on owner of profile -->
-
-<div class="user-header">
-  <% if @user.reviews.length == 1 %>
-    <h2><%= @user.reviews.length %> REVIEW</h2>
-  <% elsif @user.reviews.length == 0 %>
-  <% else %>
-    <h2><%= @user.reviews.length %> REVIEWS</h2>
-  <% end %>
+  <!-- SHOW USER'S REVIEWS -->
+  <div class="user-header">
+    <% if @user.reviews.length == 1 %>
+      <h2><%= @user.reviews.length %> REVIEW</h2>
+    <% elsif @user.reviews.length == 0 %>
+    <% else %>
+      <h2><%= @user.reviews.length %> REVIEWS</h2>
+    <% end %>
   </div>
 
-
-
-
-
-
-<div id="user-reviews">
-  <% @user.reviews.reverse.each do |review| %>
+  <div id="user-reviews">
+    <% @user.reviews.reverse.each do |review| %>
       <div class="col-md-12">
         <div id="user-review">
-
-        <% if !review.business.profile_photo? %>
-  
-              <img src="https://s3.amazonaws.com/consignnyc/placeholder-business.png">
-
-
-
-              <% else %>
-
-<%= image_tag review.business.profile_photo, :height => "100" %>
-<% end %>
-<%= review.created_at.strftime("%b %d, %Y") %>
-<%= link_to review.business.name, review.business %>
+          <% if !review.business.profile_photo? %>
+            <img src="https://s3.amazonaws.com/consignnyc/placeholder-business.png">
+          <% else %>
+            <%= image_tag review.business.profile_photo, :height => "100" %>
+          <% end %>
+          <%= review.created_at.strftime("%b %d, %Y") %>
+          <%= link_to review.business.name, review.business %>
           <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
           <div id="user-review-content">
             <%= review.content %>
@@ -163,56 +96,41 @@
           <% end %>
         </div>
       </div>
-  <% end %>
-</div>
-
-<!-- SHOW USER'S PHOTOS - modify wording based on owner of profile -->
-
-
-<div class="user-header">
-  <% if @user.photos.length == 1 %>
-    <h2><%= @user.photos.length %> PHOTO</h2>
-  <% elsif @user.photos.length == 0 %>
-  <% else %>
-    <h2><%= @user.photos.length %> PHOTOS</h2>
-  <% end %>
+    <% end %>
   </div>
 
+  <!-- SHOW USER'S PHOTOS - modify wording based on owner of profile -->
+  <div class="user-header">
+    <% if @user.photos.length == 1 %>
+      <h2><%= @user.photos.length %> PHOTO</h2>
+    <% elsif @user.photos.length == 0 %>
+    <% else %>
+      <h2><%= @user.photos.length %> PHOTOS</h2>
+    <% end %>
+  </div>
 
-
-  
-
-    <section id="gallery">
-      <div class="container">
-        <div class="row divide">
-          <% @user.photos.reverse.each do |photo| %>
-            <div class="col-sm-6 col-md-4 gallery-item">
-              <%= link_to photo.business.name.upcase, photo.business %> |
-              BY: <%= link_to photo.user.user_name.upcase, photo.user %><br>
-              <%= link_to 'SHOW', photo %> |
-              <%= link_to 'EDIT', edit_photo_path(photo) %> |
-              <%= link_to 'DELETE', photo, method: :delete, data: { confirm: 'Are you sure?' } %><br>
-
-              <a href="<%= photo.business_photo %>" data-toggle="lightbox">
-
+  <section id="gallery">
+    <div class="container">
+      <div class="row divide">
+        <% @user.photos.reverse.each do |photo| %>
+          <div class="col-sm-6 col-md-4 gallery-item">
+            <%= link_to photo.business.name.upcase, photo.business %> |
+            BY: <%= link_to photo.user.user_name.upcase, photo.user %><br>
+            <%= link_to 'SHOW', photo %> |
+            <%= link_to 'EDIT', edit_photo_path(photo) %> |
+            <%= link_to 'DELETE', photo, method: :delete, data: { confirm: 'Are you sure?' } %><br>
+            <a href="<%= photo.business_photo %>" data-toggle="lightbox">
               <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" height="200">
               </div>
-
-              </a>
-              
-              DESCRIPTION: <%= photo.description[0..30] %>
-            </div>
-          <% end %>
-        </div>
+            </a>
+            DESCRIPTION: <%= photo.description[0..30] %>
+          </div>
+        <% end %>
       </div>
-    </section>
+    </div>
+  </section>
 
 </div>
-
-
-
-
-  
 
 
 
