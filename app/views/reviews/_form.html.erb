@@ -17,7 +17,24 @@
 
   <div class="field review-field">
     <div id="review-form">
-      <%= f.number_field :rating, class: "form-control col-lg-8", placeholder: "RATING (FROM 1-5)" %>
+      <%#= f.number_field :rating, class: "form-control col-lg-8", placeholder: "sdafs (FROM 1-5)" %>
+      <div id="review-form-stars">
+        <%= f.radio_button :rating, 1,  placeholder: "RATING 1" %> 
+        <span><i class="fa fa-star"></i></span><!-- <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>  --><br>
+
+        <%= f.radio_button :rating, 2,  placeholder: "RATING 2" %> 
+        <span><i class="fa fa-star"></i><i class="fa fa-star"></i></span><!-- <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>  --><br>
+
+        <%= f.radio_button :rating, 3,  placeholder: "RATING 3" %>
+        <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span><!-- <i class="fa fa-star"></i><i class="fa fa-star"></i> --><br>
+
+        <%= f.radio_button :rating, 4,  placeholder: "RATING 4" %>
+        <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span><!-- <i class="fa fa-star"></i> --><br>
+
+        <%= f.radio_button :rating, 5,  placeholder: "RATING 5" %>
+        <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+      </div>
+
       <%= f.text_area :content, class: "form-control col-lg-8", placeholder: "DETAILED REVIEW (30 CHARACTERS MIN)" %>
       <%= f.hidden_field :business_id, :value => @business.id %>
       <%= f.hidden_field :user_id, :value => current_user.id %>

@@ -1,3 +1,4 @@
+
 <div class="users-page">
 
   <!-- IF USER SIGNED IN -->
@@ -10,6 +11,8 @@
         <h1 class="header user-profile-photo"><%= image_tag current_user.user_profile_photo %></h1>
         <p class="header"><%= current_user.user_name.upcase %></p>
       </section>
+
+      <p id="notice"><%= notice %></p>
 
       <div class="user-account-header">
         <h4><a>PRIVATE PROFILE SETTINGS</a></h4>
@@ -28,7 +31,6 @@
       <div class="user-profile-logout">
         <h4><%= link_to "LOGOUT", destroy_user_session_path, method: :delete%></h4>
       </div>
-
       <p>
         <strong>Bio:</strong>
         <%= @user.bio %>
@@ -41,6 +43,8 @@
         <h1 class="header user-profile-photo"><%= image_tag @user.user_profile_photo %></h1>
         <p class="header"><%= @user.user_name.upcase %></p>
       </section>
+
+      <p id="notice"><%= notice %></p>
 
       <p>
         <strong>Bio:</strong>
@@ -56,6 +60,8 @@
       <p class="header"><%= @user.user_name.upcase %></p>
     </section>
 
+    <p id="notice"><%= notice %></p>
+
     <p>
       <strong>Bio:</strong>
       <%= @user.bio %>
@@ -63,7 +69,7 @@
 
   <% end %>
 
-  <p id="notice"><%= notice %></p>
+  
 
   <!-- SHOW USER'S REVIEWS -->
   <div class="user-header">
@@ -114,16 +120,19 @@
       <div class="row divide">
         <% @user.photos.reverse.each do |photo| %>
           <div class="col-sm-6 col-md-4 gallery-item">
-            <%= link_to photo.business.name.upcase, photo.business %> |
-            BY: <%= link_to photo.user.user_name.upcase, photo.user %><br>
-            <%= link_to 'SHOW', photo %> |
-            <%= link_to 'EDIT', edit_photo_path(photo) %> |
-            <%= link_to 'DELETE', photo, method: :delete, data: { confirm: 'Are you sure?' } %><br>
+            <%= link_to photo.business.name.upcase, photo.business %>  | <%= photo.created_at.strftime("%b %d, %Y") %>
+            <!-- BY: <%#= link_to photo.user.user_name.upcase, photo.user %><br> -->
+            
             <a href="<%= photo.business_photo %>" data-toggle="lightbox">
               <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" height="200">
               </div>
             </a>
-            DESCRIPTION: <%= photo.description[0..30] %>
+            "<%= photo.description[0..20].upcase %>" 
+            <% if (photo.user == current_user) %>
+            <%#= link_to 'Edit Review', [@business, review], method: :get, data: { confirm: 'Are you sure?' } %>
+            | <%= link_to 'DELETE PHOTO', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+                <% end %>           
+    
           </div>
         <% end %>
       </div>

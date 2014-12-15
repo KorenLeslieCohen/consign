@@ -58,7 +58,7 @@ class ReviewsController < ApplicationController
     
     @review = Review.find(params[:id])
     @review.destroy
-    redirect_to @review.business, notice: 'Your review has been deleted!' 
+    redirect_to @review.user, notice: 'Your review has been deleted!' 
 
   end
 

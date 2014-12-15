@@ -4,7 +4,7 @@
       <p class="header"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
     </section>
 
-    
+ <p id="notice"><%= notice %></p>    
 
 
 
@@ -35,7 +35,7 @@
     src="<%= @business.map  %>AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94"></iframe>
   </div>
 
-  <p id="notice"><%= notice %></p>
+ 
 
   <p><%= link_to "SHOP THIS NEIGHBORHOOD", @business.neighborhood %></p>
 <!-- </div> -->
@@ -112,11 +112,11 @@
           <% else %>
 
             <!-- form to review business -->
-            <div class="row">
-              <div class="col-sm-12">
+         <!--    <div class="row">
+              <div class="col-sm-12"> -->
                 <%= render 'reviews/new', review: Review.new(business_id: @business.id) %>
-              </div>
-            </div>
+          <!--     </div>
+            </div> -->
 
           <% end %> <!-- if current user has reviewed this business -->
 
@@ -130,9 +130,9 @@
 
       <!-- if not current user -->
       <% else %>
-      <div class="business-signup-to-review"> 
-        <h4><%= link_to "SIGN UP TO REVIEW", new_user_registration_path, :class => 'navbar-link'  %></h4>
-        </div>
+ <!--      <div class="business-signup-to-review"> 
+        <h4><%#= link_to "SIGN UP TO REVIEW", new_user_registration_path, :class => 'navbar-link'  %></h4>
+        </div> -->
         <div class="business-login-to-review"> 
             <h4><%= link_to "LOGIN TO REVIEW", new_user_session_path, :class => 'navbar-link'  %></h4>
           </div>
@@ -141,16 +141,23 @@
 
 <!-- DISPLAY REVIEWS -->
  
+
+    <!--  <section id="gallery photos">
+      <div class="container">
+        <div class="row"> -->
+
+
       <div id="reviews">
-        <% @business.reviews.reverse.each do |review| %>
-          <% if @business.reviews.length == 0 %>
-            <h3>There are no reviews for this shop yet. Be the first!</h3>
-          <% else %>
+        <% if @business.reviews.length == 0 %>
+          <h3>There are no reviews for <%= @business.name %>.</h3>
+        <% else %>
+          <% @business.reviews.reverse.each do |review| %>
             <div class="col-md-12">
               <div id="review">
                 <%= image_tag review.user.user_profile_photo %>
                 <%= review.created_at.strftime("%b %d, %Y") %>
                 <p>BY: <%= link_to review.user.user_name, review.user %></p>
+                <%= review.rating %>
                 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
                 <div id="review-content">
                   <%= review.content %>
@@ -164,6 +171,10 @@
           <% end %>
         <% end %>
       </div>
+<!-- 
+      </div>
+      </div>
+      </section> -->
 
 <script>
     $('#reviews').raty('score'); 
@@ -231,9 +242,9 @@
         <% end %>
       
       <% else %>
-      <div class="business-signup-to-upload">
-        <h4><%= link_to "SIGN UP TO UPLOAD PHOTO", new_user_registration_path, :class => 'navbar-link'  %></h4>
-        </div>
+<!--       <div class="business-signup-to-upload">
+        <h4><%#= link_to "SIGN UP TO UPLOAD PHOTO", new_user_registration_path, :class => 'navbar-link'  %></h4>
+        </div> -->
         <div class="business-login-to-upload">
             <h4><%= link_to "LOGIN TO UPLOAD PHOTO", new_user_session_path, :class => 'navbar-link'  %></h4>
             </div>
@@ -287,24 +298,19 @@
       <div class="container">
         <div class="row">
           <% if @business.photos.empty? %>
-            <h4>There are no photos for this business yet. Be the first!<h4>
+            <h3>There are no photos of <%= @business.name %>.</h3>
           <% else %>
             <% @business.photos.reverse.each do |photo| %>
               <div class="col-sm-6 col-md-4 gallery-item">
-              
-              
-              <a href="<%= photo.business_photo %>" data-toggle="lightbox">
-
-              <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" height="200">
+                <a href="<%= photo.business_photo %>" data-toggle="lightbox">
+                  <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" height="200">
+                  </div>
+                </a>
+                <%= photo.description[0..15].upcase %> | <%= photo.created_at.strftime("%b %d, %Y") %> | <%= link_to photo.user.user_name.upcase, photo.user %> 
+        <!--         <%# if (photo.user == current_user) %>
+                   | <%#= link_to 'DELETE PHOTO', [@business, photo], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
+                <%# end %> -->
               </div>
-
-              </a>
-
-              <%= photo.description[0..15].upcase %> BY: <%= link_to photo.user.user_name.upcase, photo.user %> 
-              <% if (photo.user == current_user) %>
-                 | <%= link_to 'DELETE PHOTO', [@business, photo], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
-              <% end %>
-            </div>
             <% end %>
           <% end %>
         </div>
@@ -313,13 +319,16 @@
 
 <!-- EDIT / DELETE BUSINESS -->
       <!-- if business created by current user -->
+      <div id="all-businesses">
       <% if (@business.user == current_user) %>
-        <p><%= link_to 'EDIT BUSINESS', edit_business_path(@business) %> | 
+         
         <%#= link_to 'Delete Business', @question, method: :delete, data: { confirm: 'Are you sure?' } %> | 
-        <%= link_to 'SEE ALL BUSINESSES', businesses_path %></p>
+        <p><%= link_to 'SEE ALL SHOPS', businesses_path %></p>
+        <p><%= link_to 'EDIT SHOP', edit_business_path(@business) %></p>
       <% else %>
-        <p><%= link_to 'SEE ALL BUSINESSES', businesses_path %></p>
+        <p><%= link_to 'SEE ALL SHOPS', businesses_path %></p>
       <% end %> <!-- if business created by current user -->
+    </div>
 
-<%#= link_to 'Edit', edit_business_path(@business) %> |
+<%#= link_to 'Edit', edit_business_path(@business) %> 
 <%#= link_to 'Back', businesses_path %>

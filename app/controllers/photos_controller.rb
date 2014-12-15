@@ -57,7 +57,7 @@ class PhotosController < ApplicationController
   def destroy
     @photo = Photo.find(params[:id])
     @photo.destroy
-    redirect_to @photo.business, notice: 'Your photo has been deleted!' 
+    redirect_to @photo.user, notice: 'Your photo has been deleted!' 
   end
 
   private
