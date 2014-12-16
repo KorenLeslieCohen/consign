@@ -198,6 +198,32 @@ h1 {
   color: #FFF;
 }
 
+#new_user,
+.devise-link,
+#edit_user,
+.button_to {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
+
+.devise-link p {
+  width: 300px;
+}
+
+#user_email,
+#user_password,
+#user_password_confirmation,
+#user_current_password {
+  border: 1px solid #CCC;
+  width: 300px;
+  padding: 5px;
+}
+
+.user-divide {
+  height: 75px;
+}
+
 /*font-family: "Playfair Display";*/
 
 
@@ -319,8 +345,9 @@ h1 {
 }
 
 .review-button,
-.photo-button {
-  width: 131px;
+.photo-button,
+.signin-button,
+.signup-button {
   margin-top: 0;
   margin-right: auto;
   margin-left: auto;
@@ -334,15 +361,27 @@ h1 {
   width: 148px;
 }
 
+.signin-button {
+  width: 82px;
+}
+
+.signup-button {
+  width: 88px;
+}
+
 .review-button button,
-.photo-button button  {
+.photo-button button,
+.signin-button button,
+.signup-button button  {
     background: #FD8698;
     color: white;
     outline: 0px;
 }
 
 .review-button button:hover,
-.photo-button button:hover {
+.photo-button button:hover,
+.signin-button button:hover,
+.signup-button button:hover {
     background: #000;
 }
 
@@ -404,7 +443,9 @@ a:hover {
 /*.business-signup-to-review,
 .business-signup-to-upload,*/
 .business-complete-to-review,
-.business-complete-to-upload {
+.business-complete-to-upload,
+.create-account-link,
+.logout-link {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
@@ -413,6 +454,10 @@ a:hover {
 .business-login-to-review,
 .business-login-to-upload {
   margin-top: 15px;
+}
+
+.create-account-link {
+  margin-top: 75px;
 }
 
 .business-complete-to-review,
@@ -467,6 +512,14 @@ a:hover {
   width: 320px;
 }
 
+.create-account-link {
+  width: 188px;
+}
+
+.logout-link {
+  width: 300px;
+}
+
 .faq-link h4 a,
 .user-account-header h4 a,
 .user-profile-editor h4 a,
@@ -476,7 +529,9 @@ a:hover {
 /*.business-signup-to-review h4 a,
 .business-signup-to-upload h4 a,*/
 .business-complete-to-review h4 a,
-.business-complete-to-upload h4 a {
+.business-complete-to-upload h4 a,
+.create-account-link h4 a,
+.logout-link h4 a {
   color: #FFF;
   margin-left: auto;
   margin-right: auto;
@@ -496,7 +551,9 @@ a:hover {
 /*.business-signup-to-review h4 a:hover,
 .business-signup-to-upload h4 a:hover,*/
 .business-complete-to-review h4 a:hover,
-.business-complete-to-upload h4 a:hover {
+.business-complete-to-upload h4 a:hover,
+.create-account-link h4 a:hover,
+.logout-link h4 a:hover {
   background: #FD8698;
   transition-duration: .5s;
   transition-property: background;

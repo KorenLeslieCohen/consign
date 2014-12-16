@@ -1,11 +1,11 @@
-    <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
-      <h1 class="header">SIGN IN</h1>
-      <p class="header">WELCOME TO CONSIGN.NYC</p>
-    </section>
+<section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+  <h1 class="header">SIGN IN</h1>
+  <p class="header">WELCOME TO CONSIGN.NYC</p>
+</section>
 
-    DONT HAVE AN ACCOUNT?
-
-<%= link_to "SIGN UP", new_user_registration_path, :class => 'navbar-link'  %>
+<div class="create-account-link">
+  <h4><%= link_to "CREATE ACCOUNT", new_user_registration_path %></h4>
+</div>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div><%= f.label :email %><br />
@@ -18,9 +18,16 @@
     <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
   <% end -%>
 
-  <div><%= f.submit "Sign in" %></div>
+  <div class="signin-button">
+    <div class="form-group form">
+      <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">SIGN IN</button>
+    </div>
+  </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+<div class="user-divide">
+</div>
 
 

@@ -1,11 +1,11 @@
-<!-- <h1 class="header">EDIT PROFILE</h1> -->
+<section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+  <h1 class="header">EDIT PROFILE</h1>
+  <p class="header">Complete Your Profile to Review Shops and Upload Photos</p>
+</section>
 
-    <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
-      <h1 class="header">EDIT PROFILE</h1>
-      <p class="header">Complete Your Profile to Review Shops and Upload Photos</p>
-    </section>
-
-     <li><%= link_to "LOGOUT", destroy_user_session_path, method: :delete%></li>
+<div class="create-account-link">
+  <h4><%= link_to "LOGOUT", destroy_user_session_path, method: :delete%></h4>
+</div>
 
 <%= render 'form' %>
 

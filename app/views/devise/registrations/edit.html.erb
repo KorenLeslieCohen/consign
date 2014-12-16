@@ -1,8 +1,10 @@
-    <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
-      <h1 class="header user-profile-photo">ACCOUNT SETTINGS</h1>
-      <p class="header">Edit <%= resource_name.to_s.humanize %></p>
-    </section>
+<section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+  <h1 class="header user-profile-photo">ACCOUNT SETTINGS</h1>
+  <p class="header">Edit <%= resource_name.to_s.humanize %></p>
+</section>
 
+<div class="user-divide">
+</div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
@@ -23,11 +25,22 @@
   <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %></div>
 
-  <div><%= f.submit "Update" %></div>
+  <div class="signup-button">
+    <div class="form-group form">
+      <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">UPDATE</button>
+    </div>
+  </div>
 <% end %>
 
-<h3>Cancel my account</h3>
-<p>Note that cancelling your account will permanently delete any photos or reviews you have created.</p>
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<div class="devise-link">
+  <p>Unhappy? Note that you cancel your account, all information, reviews and photos will be permanently deleted.</p>
+</div>
 
-<%= link_to "Back", :back %>
+<p><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+<div class="devise-link">
+  <%= link_to "Back to Profile", :back %>
+</div>
+
+<div class="user-divide">
+</div>
