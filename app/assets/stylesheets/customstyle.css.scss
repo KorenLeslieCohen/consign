@@ -9,6 +9,28 @@ h1 {
   background: none;
 }
 
+.faq h2 {
+  font-size: 25px;
+  color: #FD8698;
+}
+
+.faq p {
+  font-family: "Playfair Display";
+  font-size: 15px;
+}
+
+.faq a {
+  color: #FD8698;
+  transition-duration: .5s;
+  transition-property: color;
+}
+
+.faq a:hover {
+  color: #000;
+  transition-duration: .5s;
+  transition-property: color;
+}
+
 /*--------------NOTICES--------------*/
 
 #notice {
@@ -124,7 +146,7 @@ h1 {
 #review,
 #user-review {
   border-top: 1px solid #000;
-  height: 160px;
+  min-height: 160px;
   /*overflow: auto;*/
   margin-left: auto;
   margin-right: auto;
@@ -652,6 +674,14 @@ a:hover {
 
 .slider-img {
   height: 400px;
+}
+
+/*--------------FAQ--------------*/
+
+.faq {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*--------------FOOTER--------------*/
