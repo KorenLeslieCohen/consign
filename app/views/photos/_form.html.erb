@@ -1,28 +1,15 @@
-<%= form_for(@photo) do |f| %>
-  <% if @photo.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@photo.errors.count, "error") %> prohibited this photo from being saved:</h2>
-
-      <ul>
-      <% @photo.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_for [@business, Photo.new] do |f| %>
+  <div class="field business-field">
+    <div id="photo-form">
+      <%= f.file_field :business_photo, placeholder: "UPLOAD PHOTO"%>
+      <%= f.text_area :description, class: "form-control col-lg-8", placeholder: "DESCRIPTION (20 CHAR. MAX)" %>
+      <%= f.hidden_field :business_id, :value => @business.id %>
+      <%= f.hidden_field :user_id, :value => current_user.id %>
     </div>
-  <% end %>
-
-   <p>create a link to back button</p>
-
-  <!-- <div class="field"> -->
-    <%#= f.label :business_id %><br>
-    <%#= f.number_field :business_id %>
-  <!-- </div> -->
-  <!-- <div class="field"> -->
-    <%#= f.label :user_id %><br>
-    <%#= f.number_field :user_id %>
-  <!-- </div> -->
-  <%#= f.hidden_field :user_id, :value => current_user.id %>
-  <!-- <div class="actions"> -->
-    <%#= f.submit %>
-  <!-- </div> -->
+  </div>
+  <div class="photo-button">
+    <div class="form-group form">
+      <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">UPLOAD PHOTO</button>
+    </div>
+  </div>
 <% end %>

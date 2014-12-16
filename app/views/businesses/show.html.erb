@@ -1,56 +1,23 @@
-    <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
-      <h1 class="header"><%= @business.name.upcase %></h1>
-      <p class="header"><%= link_to @business.neighborhood.name, @business.neighborhood %> <i class="fa fa-heart"></i> <%= link_to @business.borough.name, @business.borough %></p>
-      <p class="header"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
-    </section>
+<section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+  <h1 class="header"><%= @business.name.upcase %></h1>
+  <p class="header"><%= link_to @business.neighborhood.name, @business.neighborhood %> <i class="fa fa-heart"></i> <%= link_to @business.borough.name, @business.borough %></p>
+  <p class="header"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
+</section>
 
- <p id="notice"><%= notice %></p>    
+<p id="notice"><%= notice %></p>    
 
+<div class="business-map">
+  <iframe height="200" frameborder="0" style="border:0"
+  src="<%= @business.map  %>AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94"></iframe>
+</div>
 
-
-
-
-<!-- <div class="business-name">
-  <h1><%= @business.name %></h1>
-</div> -->
-
-<!-- <p><%#= link_to @business.borough.name, @business.borough %>: <%#= link_to @business.neighborhood.name, @business.neighborhood %></p> -->
-
-
-
-<!-- <div class="business-photo-map"> -->
-  <!-- display business profile photo if it exists, otherwise placeholder -->
-  <!-- <div class="business-photo"> -->
-  <%# if !@business.profile_photo? %>
-    <!-- <strong>No Business Photo:</strong> -->
-     <%#= image_tag "placeholder-business.png", height: 300, width: 300 %>
-    <%# else %>
-    <!-- <strong>Business Photo:</strong> -->
-     <%#= image_tag @business.profile_photo, height: 300, width: 300 %>
-    <%# end %>
-  <!-- </div> -->
-
-  <div class="business-map">
-    <iframe height="200" frameborder="0" style="border:0"
-    src="<%= @business.map  %>AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94"></iframe>
-  </div>
-
- 
-
-  <p><%= link_to "SHOP THIS NEIGHBORHOOD", @business.neighborhood %></p>
-<!-- </div> -->
-
-<!-- <p>
-  <strong>User:</strong>
-  <%#= @business.user.name %>
-</p> -->
-
+<p><%= link_to "SHOP THIS NEIGHBORHOOD", @business.neighborhood %></p>
 
 <div>
-<p>
-  <strong>Website:</strong>
-  <%= link_to @business.website.gsub("http://", ""), @business.website, :target => "_blank" %>
-</p>
+  <p>
+    <strong>Website:</strong>
+    <%= link_to @business.website.gsub("http://", ""), @business.website, :target => "_blank" %>
+  </p>
 </div>
 
 <p>
@@ -88,247 +55,126 @@
   <%= link_to designer.name, designer %><%= "," unless designer == @business.designers.last %>
 <% end %></p>
 
-
-
-<!-- put the user's review first? -->
-<!-- REVIEW BUSINESS -->
-<%#= render 'reviews/review' %>
+<!-- PHOTO FORM -->
 <div class="biz-header">
-<h2>REVIEWS</h2>
+  <h2>PHOTOS</h2>
 </div>
-      <!-- IF CURRENT USER -->
-      <% if current_user %>
 
-        <!-- if current user profile complete -->
-        <% if (current_user.user_name != nil && current_user.name != nil && current_user.user_name != "" && current_user.name != "" ) %>
-
-          <!-- if current user has reviewed this business -->
-          <% if @business.reviews.any? { |review| review.user.name == current_user.name } %>
-          <div class="you-reviewed">
-            <h3>Thank you for reviewing <%= @business.name %>!</h3>
-          </div>
-            
-          <!-- if current user has not reviewed this business -->
-          <% else %>
-
-            <!-- form to review business -->
-         <!--    <div class="row">
-              <div class="col-sm-12"> -->
-                <%= render 'reviews/new', review: Review.new(business_id: @business.id) %>
-          <!--     </div>
-            </div> -->
-
-          <% end %> <!-- if current user has reviewed this business -->
-
-        <!-- if current user profile not complete -->
-        <% elsif (current_user.user_name == nil || current_user.name == nil || current_user.user_name == "" || current_user.name == "") %>
-          <!-- <h1>User has no username or no name - profile incomplete</h1> -->
-          <div class="business-complete-to-review">
-            <h4><%= link_to "COMPLETE PROFILE TO REVIEW", edit_user_path(current_user), :class => 'navbar-link'  %> </h4>
-          </div>
-        <% end %> 
-
-      <!-- if not current user -->
-      <% else %>
- <!--      <div class="business-signup-to-review"> 
-        <h4><%#= link_to "SIGN UP TO REVIEW", new_user_registration_path, :class => 'navbar-link'  %></h4>
-        </div> -->
-        <div class="business-login-to-review"> 
-            <h4><%= link_to "LOGIN TO REVIEW", new_user_session_path, :class => 'navbar-link'  %></h4>
-          </div>
-      <% end %>
-
-
-<!-- DISPLAY REVIEWS -->
- 
-
-    <!--  <section id="gallery photos">
-      <div class="container">
-        <div class="row"> -->
-
-
-      <div id="reviews">
-        <% if @business.reviews.length == 0 %>
-          <h3>There are no reviews for <%= @business.name %>.</h3>
-        <% else %>
-          <% @business.reviews.reverse.each do |review| %>
-            <div class="col-md-12">
-              <div id="review">
-                <%= image_tag review.user.user_profile_photo %>
-                <%= review.created_at.strftime("%b %d, %Y") %>
-                <p>BY: <%= link_to review.user.user_name, review.user %></p>
-                <%= review.rating %>
-                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                <div id="review-content">
-                  <%= review.content %>
-                </div>
-                <% if (review.user == current_user) %>
-                  <%#= link_to 'Edit Review', [@business, review], method: :get, data: { confirm: 'Are you sure?' } %>
-                  | <%= link_to 'DELETE REVIEW', [@business, review], method: :delete, data: { confirm: 'Are you sure?' } %>
-                <% end %>
-              </div>
-            </div>
-          <% end %>
-        <% end %>
+<div>
+  <% if current_user %>
+    <% if (current_user.user_name != nil && current_user.name != nil && current_user.user_name != "" && current_user.name != "" ) %>
+      <div id="new-photo">
+        <h5>Upload a photo of <%= @business.name %>.</h5>
+      </div>  
+      <%= render 'photos/new', photo: Photo.new(business_id: @business.id) %>
+    <% elsif (current_user.user_name == nil || current_user.name == nil || current_user.user_name == "" || current_user.name == "") %>
+      <div class="business-complete-to-upload">
+        <h4><%= link_to "COMPLETE PROFILE TO UPLOAD", edit_user_path(current_user), :class => 'navbar-link'  %> </h4>
       </div>
-<!-- 
-      </div>
-      </div>
-      </section> -->
-
-<script>
-    $('#reviews').raty('score'); 
-</script>
-
-            <%#= button_to "Delete", review_path(review), method: :delete, remote: true, class: 'btn btn-danger btn-sm' %>
-
-
-
-<!-- ADD PHOTOS -->
-
-<div class="biz-header">
-<h2>PHOTOS</h2>
-</div>
-    <div>
-
-      <% if current_user %>
-
-        <% if (current_user.user_name != nil && current_user.name != nil && current_user.user_name != "" && current_user.name != "" ) %>
-                      <div id="new-photo">
-    <h5>Upload photos of <%= @business.name %>.</h5>
-  </div>
-
-          <%= form_for [@business, Photo.new] do |f| %>
-
-<!-- PHOTO ERRORS DO NOT SHOW -->
-            <% if Photo.new.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@review.errors.count, "error") %> prohibited this photo from being saved:</h2>
-
-      <ul>
-      <% Photo.new.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+    <% end %>
+  <% else %>
+    <div class="business-login-to-upload">
+      <h4><%= link_to "LOGIN TO UPLOAD PHOTOS", new_user_session_path, :class => 'navbar-link'  %></h4>
     </div>
   <% end %>
 
-
-          <%#= form_for(review, html: {class: "form-horizontal"}, remote: true) do |f| %>
-
-
-            <div class="field business-field">
-               <div id="photo-form">
-
-               <%= f.file_field :business_photo, placeholder: "UPLOAD PHOTO"%>
-              <%= f.text_area :description, class: "form-control col-lg-8", placeholder: "WHAT IS THIS A PHOTO OF?" %>
-              
-              <%= f.hidden_field :business_id, :value => @business.id %>
-              <%= f.hidden_field :user_id, :value => current_user.id %>
-            </div>
-            </div>
-<div class="photo-button">
-    <div class="form-group form">
-      <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">UPLOAD PHOTO</button>
-    </div>
-  </div>
-          <% end %>
-        <% elsif (current_user.user_name == nil || current_user.name == nil || current_user.user_name == "" || current_user.name == "") %>
-          <!-- <h1>There is no username or name in profile</h1> -->
-          <!-- need an elsif for if profile not complete and no reviews -->
-          <div class="business-complete-to-upload">
-            <h4><%= link_to "COMPLETE PROFILE TO UPLOAD", edit_user_path(current_user), :class => 'navbar-link'  %> </h4>
+<!-- DISPLAY PHOTOS -->
+<section id="gallery photos">
+  <div class="container">
+    <div class="row">
+      <% if @business.photos.empty? %>
+        <h3>There are no photos of <%= @business.name %>.</h3>
+      <% else %>
+        <% @business.photos.reverse.each do |photo| %>
+          <div class="col-sm-6 col-md-4 gallery-item">
+            <a href="<%= photo.business_photo %>" data-toggle="lightbox">
+              <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" height="200">
+              </div>
+            </a>
+            <%= photo.description[0..15].upcase %> | <%= photo.created_at.strftime("%b %d, %Y") %> | <%= link_to photo.user.user_name.upcase, photo.user %> 
+    <!--         <%# if (photo.user == current_user) %>
+               | <%#= link_to 'DELETE PHOTO', [@business, photo], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
+            <%# end %> -->
           </div>
         <% end %>
-      
-      <% else %>
-<!--       <div class="business-signup-to-upload">
-        <h4><%#= link_to "SIGN UP TO UPLOAD PHOTO", new_user_registration_path, :class => 'navbar-link'  %></h4>
-        </div> -->
-        <div class="business-login-to-upload">
-            <h4><%= link_to "LOGIN TO UPLOAD PHOTO", new_user_session_path, :class => 'navbar-link'  %></h4>
-            </div>
       <% end %>
-
-
-<!-- DISPLAY PHOTOS  -->
-
-<!--     <section id="works">
-      <div class="container">
-        <div class="row divide">
-          <div class="col-xs-12">
-            <div class="text-center"><h1>ALL IMAGES</h1></div>
-            <div id="carousel-1" class="carousel slide">
-              <div class="carousel-inner"> -->
-
-              <!-- NEED TO CODE ACTIVE ITEM -->
-<!--                 <div class="item active slider-item">
-                  <div class="thumbnail-gallery slider-img" style="background-image:url('http://www.citygalonthego.com/wp-content/uploads/2012/07/DSC_0723-1024x678.jpg'); background-size:cover" >
-                  </div>
-                </div>
-                
-                <%# if @business.photos.empty? %>
-                  <h4>There are no photos for this business yet. Be the first!<h4>
-                <%# else %>
-                  <%# @business.photos.reverse.each do |photo| %>
-                    <div class="item slider-item">
-                      
-                      <div class="thumbnail-gallery slider-img" style="background-image:url('<%#= photo.business_photo %>'); background-size:cover" >
-                      </div>
-
-                      "<%#= photo.description[0..25].upcase %>" BY: <%#= link_to photo.user.user_name.upcase, photo.user %><br>
-
-                      <%# if (photo.user == current_user) %>
-                        <%#= link_to 'DELETE PHOTO', [@business, photo], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
-                      <%# end %>
-                    </div>
-                  <%# end %>
-                <%# end %>
-              </div>
-              <button class="left carousel-control" href="#carousel-1" data-slide="prev"><i class="fa fa-angle-left"></i></button>
-              <button class="right carousel-control" href="#carousel-1" data-slide="next"><i class="fa fa-angle-right"></i></button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-
-    <section id="gallery photos">
-      <div class="container">
-        <div class="row">
-          <% if @business.photos.empty? %>
-            <h3>There are no photos of <%= @business.name %>.</h3>
-          <% else %>
-            <% @business.photos.reverse.each do |photo| %>
-              <div class="col-sm-6 col-md-4 gallery-item">
-                <a href="<%= photo.business_photo %>" data-toggle="lightbox">
-                  <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" height="200">
-                  </div>
-                </a>
-                <%= photo.description[0..15].upcase %> | <%= photo.created_at.strftime("%b %d, %Y") %> | <%= link_to photo.user.user_name.upcase, photo.user %> 
-        <!--         <%# if (photo.user == current_user) %>
-                   | <%#= link_to 'DELETE PHOTO', [@business, photo], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
-                <%# end %> -->
-              </div>
-            <% end %>
-          <% end %>
-        </div>
-      </div>
-    </section>     
-
-<!-- EDIT / DELETE BUSINESS -->
-      <!-- if business created by current user -->
-      <div id="all-businesses">
-      <% if (@business.user == current_user) %>
-         
-        <%#= link_to 'Delete Business', @question, method: :delete, data: { confirm: 'Are you sure?' } %> | 
-        <p><%= link_to 'SEE ALL SHOPS', businesses_path %></p>
-        <p><%= link_to 'EDIT SHOP', edit_business_path(@business) %></p>
-      <% else %>
-        <p><%= link_to 'SEE ALL SHOPS', businesses_path %></p>
-      <% end %> <!-- if business created by current user -->
     </div>
+  </div>
+</section> 
 
-<%#= link_to 'Edit', edit_business_path(@business) %> 
-<%#= link_to 'Back', businesses_path %>
+<!-- REVIEW FORM -->
+<div class="biz-header">
+  <h2>REVIEWS</h2>
+</div>
+
+<!-- IF CURRENT USER -->
+<% if current_user %>
+
+  <!-- IF PROFILE COMPLETE -->
+  <% if (current_user.user_name != nil && current_user.name != nil && current_user.user_name != "" && current_user.name != "" ) %>
+
+    <!-- IF ALREADY REVIEWED -->
+    <% if @business.reviews.any? { |review| review.user.name == current_user.name } %>
+      <div class="you-reviewed">
+        <h3>Thank you for reviewing <%= @business.name %>!</h3>
+      </div>
+            
+    <!-- IF HASN'T ALREADY REVIEWED -->
+    <% else %>
+
+      <!-- FORM TO REVIEW -->
+      <%= render 'reviews/new', review: Review.new(business_id: @business.id) %>
+    <% end %> 
+
+  <!-- IF PROFILE NOT COMPLETE -->
+  <% elsif (current_user.user_name == nil || current_user.name == nil || current_user.user_name == "" || current_user.name == "") %>
+    <div class="business-complete-to-review">
+      <h4><%= link_to "COMPLETE PROFILE TO REVIEW", edit_user_path(current_user), :class => 'navbar-link'  %> </h4>
+    </div>
+  <% end %> 
+
+<!-- IF NOT CURRENT USER -->
+<% else %>
+  <div class="business-login-to-review"> 
+    <h4><%= link_to "LOGIN TO REVIEW", new_user_session_path, :class => 'navbar-link'  %></h4>
+  </div>
+<% end %>
+
+
+<!-- DISPLAY REVIEWS -->
+<div id="reviews">
+  <% if @business.reviews.length == 0 %>
+    <h3>There are no reviews for <%= @business.name %>.</h3>
+  <% else %>
+    <% @business.reviews.reverse.each do |review| %>
+      <div class="col-md-12">
+        <div id="review">
+          <%= image_tag review.user.user_profile_photo %>
+          <%= review.created_at.strftime("%b %d, %Y") %>
+          <p>BY: <%= link_to review.user.user_name, review.user %></p>
+          <%= review.rating %>
+          <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+          <div id="review-content">
+            <%= review.content %>
+          </div>
+<!--           <%# if (review.user == current_user) %>
+            <%#= link_to 'Edit Review', [@business, review], method: :get, data: { confirm: 'Are you sure?' } %>
+            | <%#= link_to 'DELETE REVIEW', [@business, review], method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%# end %> -->
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<!-- $('#reviews').raty('score');  -->
+
+<!-- ADMIN LINKS -->
+<div id="all-businesses">
+  <% if (@business.user == current_user) %>
+    <%#= link_to 'Delete Business', @business, method: :delete, data: { confirm: 'Are you sure?' } %>  
+    <p><%= link_to 'EDIT SHOP', edit_business_path(@business) %></p>
+  <% end %> 
+</div>
+
+

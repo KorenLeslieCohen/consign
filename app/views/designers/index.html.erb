@@ -16,7 +16,6 @@
         <div class="search-results">
           <% if @designers.present? %>
             <%= render @designers %>
-            <!-- <p><%#= link_to 'SEE ALL DESIGNERS', designers_path %></p> -->
           <% else %>
             <h5>There are no designers by the name <%= params[:search] %>.</h5>
             <p><%= link_to 'SEE ALL DESIGNERS', designers_path %></p>
