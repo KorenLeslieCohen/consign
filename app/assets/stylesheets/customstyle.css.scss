@@ -10,7 +10,7 @@ h1 {
 }
 
 .faq h2 {
-  font-size: 25px;
+  font-size: 20px;
   color: #FD8698;
 }
 
@@ -19,7 +19,8 @@ h1 {
   font-size: 15px;
 }
 
-.faq a {
+.faq a,
+.caption a {
   color: #FD8698;
   transition-duration: .5s;
   transition-property: color;
@@ -376,7 +377,8 @@ h1 {
 .review-button,
 .photo-button,
 .signin-button,
-.signup-button {
+.signup-button,
+.reset-button {
   margin-top: 0;
   margin-right: auto;
   margin-left: auto;
@@ -401,7 +403,8 @@ h1 {
 .review-button button,
 .photo-button button,
 .signin-button button,
-.signup-button button  {
+.signup-button button,
+.reset-button button  {
     background: #FD8698;
     color: white;
     outline: 0px;
@@ -410,7 +413,8 @@ h1 {
 .review-button button:hover,
 .photo-button button:hover,
 .signin-button button:hover,
-.signup-button button:hover {
+.signup-button button:hover,
+.reset-button button:hover {
     background: #000;
 }
 
@@ -682,6 +686,8 @@ a:hover {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /*--------------FOOTER--------------*/
@@ -689,7 +695,7 @@ a:hover {
 #footer {
   border-top: 1px solid white;
   /*height: 200px;*/
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 }
 
 #footer p {
