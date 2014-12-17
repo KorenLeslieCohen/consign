@@ -104,18 +104,20 @@ h1 {
 
 .business-photo,
 .business-map {
-  float: left;
+  /*float: left;*/
 }
 
 .business-map {
-  width: 100%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .business-map iframe {
   margin-right: auto;
   margin-left: auto;
   display: block;
-  width: 320px;
+  width: 100%;
   margin-top: 10px;
 }
 
