@@ -151,7 +151,8 @@
         <div id="review">
           <%= image_tag review.user.user_profile_photo %>
           <%= review.created_at.strftime("%b %d, %Y") %>
-          <p>BY: <%= link_to review.user.user_name, review.user %></p>
+          <p>BY: <%= link_to review.user.user_name.upcase, review.user %></p>
+          <%= review.role.upcase %>
           <%= review.rating %>
           <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
           <div id="review-content">

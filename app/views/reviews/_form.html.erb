@@ -23,6 +23,10 @@
       <%= f.text_area :content, class: "form-control col-lg-8", placeholder: "DETAILED REVIEW (30 CHAR. MIN)" %>
       <%= f.hidden_field :business_id, :value => @business.id %>
       <%= f.hidden_field :user_id, :value => current_user.id %>
+
+      <%= f.radio_button :role, "Shopper",  placeholder: "SHOPPER" %>SHOPPER
+      <%= f.radio_button :role, "Consignor",  placeholder: "SELLER" %>CONSIGNOR
+
     </div>
   </div>
 
