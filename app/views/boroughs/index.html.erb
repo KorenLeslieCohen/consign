@@ -28,7 +28,7 @@
       </div>
     </section> -->
 
-
+<!-- EAST VILLAGE MAP -->
 
 <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94&sensor=false&extension=.js'></script> 
  
@@ -188,6 +188,8 @@ link = '';            bindInfoWindow(marker, map, locations[i][0], description, 
     }
 </style>
 
+<!-- UPPER EAST SIDE MAP -->
+
 <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94&sensor=false&extension=.js'></script> 
  
 <script> 
@@ -318,52 +320,48 @@ link = '';     }
     }
 </style>
 
-<h2>POPULAR NEIGHBORHOODS</h2>
+<!-- MAPS -->
+<div class="local col-md-12">
+  <h2>POPULAR NEIGHBORHOODS</h2>
 
-<h3>EAST VILLAGE</h3>
-<div class="google-maps">
+  <!-- GOOGLE MAPS -->
+  <h3><a href="/neighborhoods/2" target="_blank" alt="EAST VILLAGE">EAST VILLAGE</a></h3>
+  <div class="google-maps">
+    <div id='EastVillage'></div>
+  </div>
+  <h3><a href="/neighborhoods/1" target="_blank" alt="EAST VILLAGE">UPPER EAST SIDE</a></h3>
+  <div class="google-maps">
+    <div id='UpperEastSide'></div>
+  </div>
 
-<div id='EastVillage'></div>
-
-</div>
-
-<h3>UPPER EAST SIDE</h3>
-<div class="google-maps">
-
-<div id='UpperEastSide'></div>
-
-</div>
-
-<h2>ALL NEIGHBORHOODS</h2>
-
-
-
-
-
-
-
-
-
-
-<br>
-Popular Neighborhoods<br>
-Walking Maps<br>
-
-<% @boroughs.each do |borough| %>
-  <% if borough.name == "Manhattan" %>
-    <%= link_to borough.name, borough %><br>
-    <% borough.neighborhoods.each do |neighborhood| %>
-      -<%= link_to neighborhood.name, neighborhood %><br>
-      <% neighborhood.businesses.each do |business| %>
-        --<%= link_to business.name, business %><br>
+  <!-- COMPLETE NEIGHBORHOOD LIST -->
+  <h2>ALL NEIGHBORHOODS</h2>
+  <div class="col-md-6">
+    <% @boroughs.each do |borough| %>
+      <% if borough.name == "Manhattan" %>
+        <h3><%= link_to borough.name.upcase, borough %></h3>
+        <% borough.neighborhoods.sort{|a,b| a.name <=> b.name }.each do |neighborhood| %>
+          <h4><%= link_to neighborhood.name.upcase, neighborhood %></h4>
+        <% end %>
       <% end %>
     <% end %>
-  <% end %>
-<% end %>
+  </div>
+  <div class="col-md-6">
+    <% @boroughs.each do |borough| %>
+      <% if borough.name == "Brooklyn" %>
+        <h3><%= link_to borough.name.upcase, borough %></h3>
+        <% borough.neighborhoods.sort{|a,b| a.name <=> b.name }.each do |neighborhood| %>
+          <h4><%= link_to neighborhood.name.upcase, neighborhood %></h4>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
 
-<br>
+<!-- ADMIN PANEL -->
+<div class="admin">
 <% if user_signed_in? %>
-  <% if (current_user.email == "koren.cohen@gmail.com") %>
+  <% if (current_user.email == "koren.cohen@gmail.com") ||  (current_user.email == "consigndotnyc@gmail.com")%>
     <p>Admin</p>
     <table>
       <thead>
@@ -387,3 +385,4 @@ Walking Maps<br>
     <%= link_to 'New Borough', new_borough_path %>
   <% end %>
 <% end %>
+</div>

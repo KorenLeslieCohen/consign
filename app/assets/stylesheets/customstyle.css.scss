@@ -126,12 +126,35 @@ h1 {
 }
 
 .business-map-neighborhood iframe {
-    margin-right: auto;
+  margin-right: auto;
   margin-left: auto;
   display: block;
   width: 800px;
   margin-top: 10px;
 }
+
+/*--------------LOCAL--------------*/
+
+.local h2,
+.local h3,
+.local h4 {
+  text-align: center;
+}
+
+.local h3 a {
+  color: #FD8698;
+  text-align: center;
+  transition-duration: .5s;
+  transition-property: color;
+
+}
+
+.local h3 a:hover {
+  color: #000;
+  transition-duration: .5s;
+  transition-property: color;
+}
+
 
 /*--------------REVIEWS--------------*/
 
