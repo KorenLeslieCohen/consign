@@ -1,5 +1,4 @@
 body {
-  /*background: pink;*/
   padding-bottom: 0;
   padding-top: 50px;
 }
@@ -42,8 +41,6 @@ h1 {
   margin-bottom: 15px;
   font-family: "Playfair Display";
   font-size: 18px;
-/*padding-top: 5px;
-  padding-bottom: 5px;*/
 }
 
 #notice p {
@@ -55,10 +52,7 @@ h1 {
 /*--------------NAVBAR--------------*/
 .navbar-default .navbar-nav > li > a {
   font-size: 15px;
-  /*padding: 0 10px;*/
   font-family: "Playfair Display";
-  /*background: none;*/
-  /*color: ;*/
 }
 
 .navbar {
@@ -67,7 +61,6 @@ h1 {
 
 .navbar,
 .navbar-default .navbar-nav {
-  /*background: none;*/
   margin-bottom: 0;
 
 }
@@ -81,30 +74,11 @@ h1 {
   padding-top: 10px;
 }
 
-.navbar-brand {
-  /*padding: 22px 0px;*/
-  /*font-size: 40px;*/
-  /*padding-top: 10px;*/
-}
-
-/*.navbar,
-.navbar-default,
-.navbar-fixed-top,
-.skrollable,
-.skrollable-between {
-    margin-bottom: 0;
-}*/
-
 /*--------------BUSINESS MAP--------------*/
 
 .business-photo-map {
   margin-left: auto;
   margin-right: auto;
-}
-
-.business-photo,
-.business-map {
-  /*float: left;*/
 }
 
 .business-map {
@@ -155,7 +129,6 @@ h1 {
   transition-property: color;
 }
 
-
 /*--------------REVIEWS--------------*/
 
 #reviews img,
@@ -184,8 +157,6 @@ h1 {
   max-width: 800px;
 }
 
-
-
 #review-content,
 #user-review-content {
   overflow: auto;
@@ -195,7 +166,6 @@ h1 {
 .you-reviewed h3 {
   text-align: center;
 }
-
 
 /*--------------GALLERY--------------*/
 
@@ -213,7 +183,7 @@ h1 {
   transition-property: opacity;
 }
 
-/*--------------USER--------------*/
+/*--------------USER PROFILE & LOGIN--------------*/
 
 .user-profile-photo img {
   height: 120px;
@@ -226,12 +196,6 @@ h1 {
 .users-page #gallery-start {
   padding-top: 30px;
   padding-bottom: 30px;
-}
-
-#private-profile {
-/*  width: 300px;
-  margin-left: auto;
-  margin-right: auto;*/
 }
 
 #private-profile h5 {
@@ -264,6 +228,23 @@ h1 {
 
 .instructions p {
   background: #FD8698;
+  font-family: "Playfair Display";
+  font-size: 15px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.instructions p a {
+  color: white;
+  font-size: 15px;
+}
+
+.instructions {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #user_email,
@@ -278,10 +259,6 @@ h1 {
 .user-divide {
   height: 75px;
 }
-
-/*font-family: "Playfair Display";*/
-
-
 
 /*--------------DIVIDE--------------*/
 
@@ -324,18 +301,11 @@ h1 {
   transition-property: color;
 }
 
-.row {
-
-}
-
-
-
 /*--------------SERVICES--------------*/
 
 #services .thumbnail p {
   font-size: 15px;
   font-family: "Playfair Display";
-  /*color: white;*/
   color: black;
 }
 
@@ -357,11 +327,6 @@ h1 {
 #contact .form-control {
   background: none;
 }
-
-/*#contact input,
-#contact textarea {
-  border-bottom: 1px solid #777;
-}*/
 
 .delight-icon-services {
   width: 80px;
@@ -472,9 +437,6 @@ h3 {
 #reviews h3 {
   margin-bottom: 30px;
 }
-/*input[type="radio"] {
-  margin-left: 10px;
-}*/
 
 /*--------------HEART ICON--------------*/
 
@@ -498,8 +460,6 @@ a:hover {
 .user-profile-logout,
 .business-login-to-review,
 .business-login-to-upload,
-/*.business-signup-to-review,
-.business-signup-to-upload,*/
 .business-complete-to-review,
 .business-complete-to-upload,
 .create-account-link,
@@ -523,8 +483,6 @@ a:hover {
   margin-bottom: 40px;
 }
 
-/*.business-signup-to-review,
-.business-signup-to-upload,*/
 .business-complete-to-review,
 .business-complete-to-upload {
   margin-top: 20px;
@@ -554,14 +512,6 @@ a:hover {
   width: 274px;
 }
 
-/*.business-signup-to-review {
-  width: 200px;
-}
-
-.business-signup-to-upload {
-  width: 279px;
-}*/
-
 .business-complete-to-review {
   width: 315px;
 }
@@ -584,8 +534,6 @@ a:hover {
 .user-profile-logout h4 a,
 .business-login-to-review h4 a,
 .business-login-to-upload h4 a,
-/*.business-signup-to-review h4 a,
-.business-signup-to-upload h4 a,*/
 .business-complete-to-review h4 a,
 .business-complete-to-upload h4 a,
 .create-account-link h4 a,
@@ -598,7 +546,6 @@ a:hover {
   transition-property: background;
   background: #000;
   padding: 5px;
-  /*border-radius: 5px;*/
 }
 
 .faq-link h4 a:hover,
@@ -606,8 +553,6 @@ a:hover {
 .user-profile-logout h4 a:hover,
 .business-login-to-review h4 a:hover,
 .business-login-to-upload h4 a:hover,
-/*.business-signup-to-review h4 a:hover,
-.business-signup-to-upload h4 a:hover,*/
 .business-complete-to-review h4 a:hover,
 .business-complete-to-upload h4 a:hover,
 .create-account-link h4 a:hover,
@@ -628,9 +573,6 @@ a:hover {
   text-align: center;
   margin-bottom: 10px;
   font-size: 15px;
-    /*padding: 5px;*/
-  /*margin-top: 5px;*/
-  /*background: #FD8698;*/
 }
 
 #all-businesses p a {
@@ -639,8 +581,6 @@ a:hover {
   color: #FFF;
   padding-left: 5px;
   padding-right: 5px;
-/*  padding: 5px;
-  margin-top: 5px;*/
   transition-duration: .5s;
   transition-property: background;
 }
@@ -650,7 +590,6 @@ a:hover {
   transition-duration: .5s;
   transition-property: background;  
 }
-
 
 /*--------------BUSINESS--------------*/
 
@@ -679,8 +618,6 @@ a:hover {
   background: #000;
   color: #FFF;
 }
-
-/*.biz-header h2*/
 
 .col-md-12 {
   background: #FFF;
@@ -719,7 +656,6 @@ a:hover {
 
 #footer {
   border-top: 1px solid white;
-  /*height: 200px;*/
   padding-bottom: 50px;
 }
 
