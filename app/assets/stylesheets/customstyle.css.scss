@@ -157,6 +157,10 @@ h1 {
   max-width: 800px;
 }
 
+#review_content {
+  height: 75px;
+}
+
 #review-content,
 #user-review-content {
   overflow: auto;
@@ -317,7 +321,7 @@ h1 {
   color: black;
 }
 
-/*--------------FORM----------------------------*/
+/*--------------CONTACT, REVIEWS, PHOTOS FORMS-----------*/
 
 .form-control {
   height: 50px;
@@ -427,6 +431,18 @@ h1 {
   width: 82px;
   margin-left: auto;
   margin-right: auto;
+}
+
+#review_role_consignor,
+#review_role_shopper {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+#review-form-role p {
+  font-family: "Playfair Display";
+  text-align: center;
+  margin: 0;
 }
 
 #reviews h3, 

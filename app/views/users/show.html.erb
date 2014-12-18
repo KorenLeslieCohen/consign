@@ -90,9 +90,9 @@
           <% else %>
             <%= image_tag review.business.profile_photo, :height => "100" %>
           <% end %>
-          <%= review.created_at.strftime("%b %d, %Y") %>
-          <%= link_to review.business.name.upcase, review.business %>
-          <%= review.role.upcase %>
+          <%= review.created_at.strftime("%b %d, %Y") %><br>
+          <%= link_to review.business.name.upcase, review.business %><br>
+          <%= review.role.upcase %><br>
           <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
           <div id="user-review-content">
             <%= review.content %>
