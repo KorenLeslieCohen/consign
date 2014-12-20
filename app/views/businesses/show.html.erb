@@ -153,8 +153,17 @@
           <%= review.created_at.strftime("%b %d, %Y") %>
           <p>BY: <%= link_to review.user.user_name.upcase, review.user %></p>
           <%= review.role.upcase %><br>
-          <%= review.rating %>
-          <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+          <% if review.rating == 1 %>
+            <i class="fa fa-star"></i>
+          <% elsif review.rating == 2 %>
+            <i class="fa fa-star"></i><i class="fa fa-star"></i>
+          <% elsif review.rating == 3 %>
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+          <% elsif review.rating == 4 %>
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+          <% else %>
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+          <% end %>
           <div id="review-content">
             <%= review.content %>
           </div>
