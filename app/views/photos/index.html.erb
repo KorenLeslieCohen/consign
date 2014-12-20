@@ -3,120 +3,37 @@
   <p class="header">Browse the Latest Photos</p>
 </section>
 
-
-<!--     <section id="works">
-      <div class="container">
-        <div class="row divide">
-          <div class="col-xs-12"> -->
-     <!--        <div class="text-center"><h1>ALL IMAGES</h1></div> -->
-           <!--  <div id="carousel-1" class="carousel slide">
-              <div class="carousel-inner"> -->
-
-              <!-- NEED TO CODE ACTIVE ITEM -->
-          <!--       <div class="item active slider-item">
-                  <div class="thumbnail-gallery slider-img" style="background-image:url('http://www.citygalonthego.com/wp-content/uploads/2012/07/DSC_0723-1024x678.jpg'); background-size:cover" >
-                  </div>
-                </div> -->
-
-                <%# @photos.reverse.each do |photo| %>
-<!-- 
-                  <div class="item slider-item">
-
-                    <div class="thumbnail-gallery slider-img" style="background-image:url('<%#= photo.business_photo %>'); background-size:cover" >
-                    </div> -->
-
-                    <!-- <%#= link_to photo.business.name.upcase, photo.business %><br> -->
-                    
-               <!--      <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br> -->
-<!-- 
-                    "<%#= photo.description[0..25].upcase %>" BY: <%#= link_to photo.user.user_name.upcase, photo.user %><br> -->
-
-               <!--      <%# if (photo.user == current_user) %>
-                        <%#= link_to 'DELETE PHOTO', [@business, photo], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
-                      <%# end %><br> -->
-                    
-                  <!-- </div> -->
-                <%# end %>
-<!--               </div>
-              <button class="left carousel-control" href="#carousel-1" data-slide="prev"><i class="fa fa-angle-left"></i></button>
-              <button class="right carousel-control" href="#carousel-1" data-slide="next"><i class="fa fa-angle-right"></i></button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-<%#= link_to 'New Photo', new_photo_path %>
-
-<!-- *** GALLERY START *** -->
-
-  <!--   <section id="gallery">
-      <div class="container">
-        <div class="row divide">
-          <%# @photos[0..5].reverse.each do |photo| %>
-            <div class="col-sm-6 col-md-4 gallery-item">
-              <%#= link_to photo.business.name.upcase, photo.business %><br>
-              
-
-              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br> -->
-
-
-       <!--        <%#= link_to 'SHOW', photo %> |
-              <%#= link_to 'EDIT', edit_photo_path(photo) %> |
-              <%#= link_to 'DELETE', photo, method: :delete, data: { confirm: 'Are you sure?' } %><br> -->
-
-<!--               <a href="<%#= photo.business_photo %>" data-toggle="lightbox">
-
-              <div class="thumbnail-gallery" style="background-image:url('<%#= photo.business_photo %>'); background-size:cover" height="200">
-              </div>
-
-              </a>
-
-              "<%#= photo.description[0..30].upcase %>" BY: <%#= link_to photo.user.user_name.upcase, photo.user %> 
-            </div>
-          <%# end %>
-        </div>
-      </div>
-    </section> -->
-
-
 <section id="gallery">
-     <!--  <div class="container">
-        <div class="row divide"> -->
-<div id="owl-demo" class="owl-carousel owl-theme">
-
-<% @photos.reverse.each do |photo| %>
-
-
-  <div class="owlitem"style="background-image:url('<%= photo.business_photo %>'); background-size:cover">
-  <p><%= link_to photo.business.name.upcase, photo.business %><br>
-  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br>
-  "<%= photo.description[0..25].upcase %>" BY: <%= link_to photo.user.user_name.upcase, photo.user %> </p>
+  <div id="owl-demo" class="owl-carousel owl-theme">
+    <% @photos.reverse.each do |photo| %>
+      <div class="owlitem"style="background-image:url('<%= photo.business_photo %>'); background-size:cover">
+      <p><%= link_to photo.business.name.upcase, photo.business %><br>
+        <% if photo.business.reviews.length == 0 %>
+        (NO REVIEWS YET)
+        <% else %>
+          <% total_rating = 0 %>
+          <% num_of_ratings = 0 %>
+          <% overall_rating = 0 %>
+          <% photo.business.reviews.each do |review| %>
+            <% total_rating += review.rating %>
+            <% num_of_ratings += 1 %>
+          <% end %>
+          <% overall_rating = (total_rating / num_of_ratings) %>
+          <% if overall_rating == 1 %>
+            <i class="fa fa-star"></i>
+          <% elsif overall_rating == 2 %>
+            <i class="fa fa-star"></i><i class="fa fa-star"></i>
+          <% elsif overall_rating == 3 %>
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+          <% elsif overall_rating == 4 %>
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+          <% else %>
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+          <% end %>
+        <% end %><br>
+      "<%= photo.description[0..25].upcase %>" BY: <%= link_to photo.user.user_name.upcase, photo.user %> </p>
+      </div>
+    <% end %>
   </div>
-
-  
-
-
-<% end %>
-<!-- </div>
-</div> -->
-</div>
 </section>
- 
-  <!-- *** GALLERY END *** -->
 
-<!--   <div id="carousel-3" class="carousel slide">
-    <div class="carousel-inner">
-      <div class="active item">
-        <img src="img/works/works_6.jpg" alt="">
-      </div>
-      <div class="inactive item">
-        <img src="img/works/works_7.jpg" alt="">
-      </div>
-      <div class="inactive item">
-        <img src="img/works/works_8.jpg" alt="">
-      </div>
-    </div>
-    <button class="left carousel-control" href="#carousel-3" data-slide="prev"><i class="fa fa-angle-left"></i></button>
-    <button class="right carousel-control" href="#carousel-3" data-slide="next"><i class="fa fa-angle-right"></i></button>
-  </div> -->

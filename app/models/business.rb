@@ -31,4 +31,17 @@ class Business < ActiveRecord::Base
   def self.search(search)
     Business.where("name LIKE ?", "%#{search.upcase}%") #|| Business.where("business.neighborhood LIKE ?", "%#{search.capitalize}%")
   end
+
+  # def overall_rating
+  #   total_rating = 0
+  #   num_of_ratings = 0
+  #   reviews.each do |review|
+  #     review.each do |rating|
+  #       total_rating += rating
+  #       num_of_ratings += 1
+  #     end
+  #   end
+  #   return total_rating / num_of_ratings
+  # end
+
 end

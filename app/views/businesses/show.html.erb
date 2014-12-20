@@ -1,7 +1,31 @@
 <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
   <h1 class="header"><%= @business.name.upcase %></h1>
   <p class="header"><%= link_to @business.neighborhood.name, @business.neighborhood %> <i class="fa fa-heart"></i> <%= link_to @business.borough.name, @business.borough %></p>
-  <p class="header"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
+  <p class="header">
+    <% if @business.reviews.length == 0 %>
+     
+    <% else %>
+      <% total_rating = 0 %>
+      <% num_of_ratings = 0 %>
+      <% overall_rating = 0 %>
+      <% @business.reviews.each do |review| %>
+        <% total_rating += review.rating %>
+        <% num_of_ratings += 1 %>
+      <% end %>
+      <% overall_rating = (total_rating / num_of_ratings) %>
+      <% if overall_rating == 1 %>
+        <i class="fa fa-star"></i>
+      <% elsif overall_rating == 2 %>
+        <i class="fa fa-star"></i><i class="fa fa-star"></i>
+      <% elsif overall_rating == 3 %>
+        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+      <% elsif overall_rating == 4 %>
+        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+      <% else %>
+        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+      <% end %>
+    <% end %>
+  </p>
 </section>
 
 <p id="notice"><%= notice %></p>    
@@ -10,8 +34,6 @@
   <iframe height="200" frameborder="0" style="border:0"
   src="<%= @business.map  %>AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94"></iframe>
 </div>
-
-<!-- <p><%#= link_to "SHOP THIS NEIGHBORHOOD", @business.neighborhood %></p> -->
 
 <div>
   <p>
@@ -140,7 +162,6 @@
   </div>
 <% end %>
 
-
 <!-- DISPLAY REVIEWS -->
 <div id="reviews">
   <% if @business.reviews.length == 0 %>
@@ -186,5 +207,4 @@
     <p><%= link_to 'EDIT SHOP', edit_business_path(@business) %></p>
   <% end %> 
 </div>
-
 
