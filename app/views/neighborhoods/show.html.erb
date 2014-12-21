@@ -25,11 +25,33 @@
             </div>
           <% end %>
           
-          <!-- RATING -->
-          <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br>
-
           <!-- STORE INFO -->
-          <span class="span"><%= link_to business.name.upcase, business %><span><br>
+          <span class="span"><%= link_to business.name.upcase, business %><span>
+
+          <!-- RATING -->
+          <% if business.reviews.length == 0 %>
+          <% else %>
+            <% total_rating = 0 %>
+            <% num_of_ratings = 0 %>
+            <% overall_rating = 0 %>
+            <% business.reviews.each do |review| %>
+              <% total_rating += review.rating %>
+              <% num_of_ratings += 1 %>
+            <% end %>
+            <% overall_rating = (total_rating / num_of_ratings) %>
+            <%#= overall_rating %>
+            <% if overall_rating == 1 %>
+              <i class="fa fa-star"></i>
+            <% elsif overall_rating == 2 %>
+              <i class="fa fa-star"></i><i class="fa fa-star"></i>
+            <% elsif overall_rating == 3 %>
+              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            <% elsif overall_rating == 4 %>
+              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            <% else %>
+              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            <% end %>
+          <% end %><br>
 
           <!-- REVIEW & PHOTO COUNT -->
           <% if business.reviews.length == 1 %>
