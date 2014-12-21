@@ -13,8 +13,9 @@
     </div>
   <% end %>
 
-Required:
-(name and email address will not be shared with other users)
+<div class="edit-profile">
+
+  <h6>REQUIRED</h6>
 
   <div class="field">
     <%= f.label :user_profile_photo %>
@@ -33,18 +34,21 @@ Required:
     <%#= f.collection_select(:role, Role.all, :id, :role_name ) %>
   </div> -->
   <div class="field">
-   Last name (other users will not see your last name):<br>
+   Last name (kept private):<br>
     <%= f.text_field :user_name %>
   </div>
 
-Optional:
+  <h6>OPTIONAL</h6>
 
   <div class="field">
     <%= f.label :bio %><br>
     <%= f.text_field :bio %>
   </div>
-
-  <div class="actions">
-    <%= f.submit %>
+</div>
+  <div class="update-profile-button">
+    <div class="form-group form">
+      <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">UPDATE PROFILE</button>
+    </div>
   </div>
+
 <% end %>

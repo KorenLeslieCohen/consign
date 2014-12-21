@@ -51,6 +51,8 @@ h1 {
 
 #error_explanation {
   border: 2px solid #FD8698;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .field_with_errors,
@@ -236,13 +238,20 @@ h1 {
 #new_user,
 .devise-link,
 #edit_user,
-.button_to {
+.button_to,
+.edit-profile {
   margin-left: auto;
   margin-right: auto;
   width: 300px;
 }
 
-.devise-link p {
+.edit-profile h6 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.devise-link p,
+.edit-profile p {
   width: 300px;
   font-family: "Playfair Display";
   font-size: 15px;
@@ -273,7 +282,8 @@ h1 {
 #user_email,
 #user_password,
 #user_password_confirmation,
-#user_current_password {
+#user_current_password,
+.edit-profile input {
   border: 1px solid #CCC;
   width: 300px;
   padding: 5px;
@@ -391,7 +401,8 @@ h1 {
 .photo-button,
 .signin-button,
 .signup-button,
-.reset-button {
+.reset-button,
+.update-profile-button {
   margin-top: 0;
   margin-right: auto;
   margin-left: auto;
@@ -413,11 +424,16 @@ h1 {
   width: 88px;
 }
 
+.update-profile-button {
+  width: 156px;
+}
+
 .review-button button,
 .photo-button button,
 .signin-button button,
 .signup-button button,
-.reset-button button  {
+.reset-button button,
+.update-profile-button button  {
     background: #FD8698;
     color: white;
     outline: 0px;
@@ -427,7 +443,8 @@ h1 {
 .photo-button button:hover,
 .signin-button button:hover,
 .signup-button button:hover,
-.reset-button button:hover {
+.reset-button button:hover,
+.update-profile-button button:hover {
     background: #000;
 }
 
@@ -560,7 +577,7 @@ a:hover {
 }
 
 .logout-link {
-  width: 300px;
+  width: 92px;
 }
 
 .faq-link h4 a,
