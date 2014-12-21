@@ -1,4 +1,3 @@
-
 <div class="users-page">
 
   <!-- IF USER SIGNED IN -->
@@ -90,9 +89,9 @@
           <% else %>
             <%= image_tag review.business.profile_photo, :height => "100" %>
           <% end %>
-          <%= review.created_at.strftime("%b %d, %Y") %><br>
-          <%= link_to review.business.name.upcase, review.business %><br>
-          <%= review.role.upcase %><br>
+          <%= review.created_at.strftime("%b %d, %Y") %> 
+
+
           <% if review.rating == 1 %>
             <i class="fa fa-star"></i>
           <% elsif review.rating == 2 %>
@@ -103,14 +102,19 @@
             <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
           <% else %>
             <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-          <% end %>
+          <% end %><br>
+
+          <%= link_to review.business.name.upcase, review.business %> | 
+          <%= review.role.upcase %> 
+          <% if (review.user == current_user) %>
+            | <%= link_to 'EDIT REVIEW', edit_review_path(review), method: :get %> |
+            <%= link_to 'DELETE REVIEW', review, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %><br>
+
           <div id="user-review-content">
             <%= review.content %>
           </div>
-          <% if (review.user == current_user) %>
-            <%#= link_to 'Edit Review', [@business, review], method: :get, data: { confirm: 'Are you sure?' } %>
-            | <%= link_to 'DELETE REVIEW', review, method: :delete, data: { confirm: 'Are you sure?' } %>
-          <% end %>
+          
         </div>
       </div>
     <% end %>

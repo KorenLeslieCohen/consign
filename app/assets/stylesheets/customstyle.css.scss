@@ -384,9 +384,17 @@ h1 {
 }
 
 #photo-form {
-  max-width: 300px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 620px;
+}
+
+#photo-form input,
+#photo-form textarea {
+  float: left;
+  width: 300px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 #new-review h5,
@@ -455,7 +463,6 @@ h1 {
   width: 300px;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 20px;
   background: #EEE;
   color: #555;
   padding: 10px;
