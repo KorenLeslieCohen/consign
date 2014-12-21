@@ -1,6 +1,4 @@
 #owl-demo .owlitem{
-    /*background: #42bdc2;*/
-    /*padding: 0px 10px;*/
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 20px;
@@ -10,12 +8,9 @@
     border-radius: 0px;
     text-align: center;
     height: 450px;
-  /*width: 30px;*/
 }
 
 div.owl-item {
-  /*height: 300px;*/
-/*  width: 300px;*/
 }
 
 .owlitem {
@@ -23,26 +18,20 @@ div.owl-item {
 }
 
 .owlitem p a {
-  /*background: black;*/
-  /*opacity: .6;*/
-  /*margin-left: 0px;*/
-  color: black;
-  /*bottom: 0;*/
+  color: #FD8698;
   font-family: "Playfair Display";
-
 }
 
 .owlitem p a:hover {
-  color: #FD8698;
+  color: #000;
 }
 
 .owlitem p {
-  /*bottom: 0;*/
   background: white;
   margin: 0;
-    width: 100%;
-    color: black;
-    font-family: "Playfair Display";
+  width: 100%;
+  color: black;
+  font-family: "Playfair Display";
 }
 
 .owlitem .fa-star {

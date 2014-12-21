@@ -133,23 +133,37 @@ h1 {
 
 #reviews img,
 #user-reviews img {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
+  margin-right: 10px;
   border-radius: 50%;
   float: left;
   margin-top: 5px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 #review,
 #user-review {
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-top: 1px solid #000;
-  min-height: 160px;
-  /*overflow: auto;*/
+  min-height: 150px;
   margin-left: auto;
   margin-right: auto;
   max-width: 1000px;
+}
+
+#review a,
+#user-review a {
+  color: #FD8698;
+  transition-duration: .5s;
+  transition-property: color;
+}
+
+#review a:hover,
+#user-review a:hover {
+  color: #777;
+  transition-duration: .5s;
+  transition-property: color;
 }
 
 #review_rating,
@@ -161,10 +175,8 @@ h1 {
   height: 75px;
 }
 
-#review-content,
-#user-review-content {
-  overflow: auto;
-  height: 60px;
+#review-content {
+  text-align: justify;
 }
 
 .you-reviewed h3 {
@@ -177,8 +189,6 @@ h1 {
   height: 250px;
   transition-duration: .5s;
   transition-property: opacity;
-  /*border: 2px solid #777;*/
-  /*border: 5px solid #000;*/
 }
 
 .thumbnail-gallery:hover {
@@ -722,14 +732,6 @@ a:hover {
 /*  transition-duration: .5s;
   transition-property: color;*/
 }
-
-/*.fa-facebook:hover,
-.fa-twitter:hover,
-.fa-google-plus:hover {
-  color: #777;
-  transition-duration: .5s;
-  transition-property: color;
-}*/
 
  
 

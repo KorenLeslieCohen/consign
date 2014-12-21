@@ -13,6 +13,7 @@
         <% num_of_ratings += 1 %>
       <% end %>
       <% overall_rating = (total_rating / num_of_ratings) %>
+      <%#= overall_rating %>
       <% if overall_rating == 1 %>
         <i class="fa fa-star"></i>
       <% elsif overall_rating == 2 %>
@@ -113,7 +114,7 @@
               <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" height="200">
               </div>
             </a>
-            <%= photo.description[0..15].upcase %> | <%= photo.created_at.strftime("%b %d, %Y") %> | <%= link_to photo.user.user_name.upcase, photo.user %> 
+            <%= photo.description[0..15].upcase %> | <%= photo.created_at.strftime("%b %d, %Y") %> | <%= link_to photo.user.name.upcase, photo.user %> 
     <!--         <%# if (photo.user == current_user) %>
                | <%#= link_to 'DELETE PHOTO', [@business, photo], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
             <%# end %> -->
@@ -171,9 +172,7 @@
       <div class="col-md-12">
         <div id="review">
           <%= image_tag review.user.user_profile_photo %>
-          <%= review.created_at.strftime("%b %d, %Y") %>
-          <p>BY: <%= link_to review.user.user_name.upcase, review.user %></p>
-          <%= review.role.upcase %><br>
+          <%= review.created_at.strftime("%b %d, %Y").upcase %>
           <% if review.rating == 1 %>
             <i class="fa fa-star"></i>
           <% elsif review.rating == 2 %>
@@ -184,7 +183,9 @@
             <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
           <% else %>
             <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-          <% end %>
+          <% end %><br>
+          <%= link_to review.user.name.upcase, review.user %> 
+          | <%= review.role.upcase %> 
           <div id="review-content">
             <%= review.content %>
           </div>
