@@ -5,69 +5,71 @@
 
 <p id="notice"><%= notice %></p>
 
-  <section id="services">
-<div class="container">
-  <div class="row">
+<section id="services">
+  <div class="container">
+    <div class="row">
 
-<!-- <section id="gallery">
-      <div class="container">
-        <div class="row divide"> -->
-           <% if @designer.businesses.empty? %>
-    <h4>Sorry! There are no businesses with the designer <%= @designer.name %>!</h4>
-  <% else %>
+      <% if @designer.businesses.empty? %>
+        <h4>Sorry! There are no businesses with the designer <%= @designer.name %>!</h4>
+      <% else %>
+        <% @designer.businesses.each do |business| %>
+          <div class="col-sm-6 col-md-4 gallery-item biz">
 
-    <% @designer.businesses.each do |business| %>
-            <div class="col-sm-6 col-md-4 gallery-item biz">
+            <% if !business.profile_photo? %>
 
-              <% if !business.profile_photo? %>
-  
-                <div class="thumbnail-gallery" style="background-image:url('https://s3.amazonaws.com/consignnyc/placeholder-business.png'); background-size:cover" height="200">
-                </div>
+              <div class="thumbnail-gallery" style="background-image:url('https://s3.amazonaws.com/consignnyc/placeholder-business.png'); background-size:cover" height="200">
+              </div>
 
-              <% else %>
+            <% else %>
 
-                <div class="thumbnail-gallery" style="background-image:url('<%= business.profile_photo %>'); background-size:cover" height="200">
-                </div>
+              <div class="thumbnail-gallery" style="background-image:url('<%= business.profile_photo %>'); background-size:cover" height="200">
+              </div>
+            <% end %>
+                
+            <span class="span"><%= link_to business.name.upcase, business %><span>
+
+            <!-- RATING -->
+            <% if business.reviews.length == 0 %>
+            <% else %>
+              <% total_rating = 0 %>
+              <% num_of_ratings = 0 %>
+              <% overall_rating = 0 %>
+              <% business.reviews.each do |review| %>
+                <% total_rating += review.rating %>
+                <% num_of_ratings += 1 %>
               <% end %>
+              <% overall_rating = (total_rating / num_of_ratings) %>
+              <% if overall_rating == 1 %>
+                <i class="fa fa-star"></i>
+              <% elsif overall_rating == 2 %>
+                <i class="fa fa-star"></i><i class="fa fa-star"></i>
+              <% elsif overall_rating == 3 %>
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+              <% elsif overall_rating == 4 %>
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+              <% else %>
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+              <% end %>
+            <% end %><br>
+                
+            <%= link_to business.borough.name.upcase, business.borough %> <i class="fa fa-heart"></i> <%= link_to business.neighborhood.name.upcase, business.neighborhood %><br>
 
-              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br>
-
-              
-              <span class="span"><%= link_to business.name.upcase, business %><span><br>
-              <%= link_to business.borough.name.upcase, business.borough %> <i class="fa fa-heart"></i> <%= link_to business.neighborhood.name.upcase, business.neighborhood %><br>
-
-   <!--            <p>Biztags: <%# business.biztags.each do |biztag| %>
-                <%#= link_to biztag.name, biztag %><%#= "," unless biztag == business.biztags.last %>
-              <%# end %></p>
-              <p>Designers: <%# business.designers.each do |designer| %>
-                <%#= link_to designer.name, designer %><%#= "," unless designer == business.designers.last %>
-              <%# end %></p> -->
-
-<% if business.reviews.length == 1 %>
-        <%= business.reviews.length %> REVIEW <i class="fa fa-heart"></i>
-      <% else %>
-        <%= business.reviews.length %> REVIEWS <i class="fa fa-heart"></i> 
-      <% end %> 
-      <% if business.photos.length == 1 %>
-        <%= business.photos.length %> PHOTO
-      <% else %>
-        <%= business.photos.length %> PHOTOS
-      <% end %> 
-             
-    
-            </div>
-          <% end %>
-          <% end %>
-  <!--       </div>
-      </div>
-    </section> -->
-
+            <% if business.reviews.length == 1 %>
+              <%= business.reviews.length %> REVIEW <i class="fa fa-heart"></i>
+            <% else %>
+              <%= business.reviews.length %> REVIEWS <i class="fa fa-heart"></i> 
+            <% end %> 
+            <% if business.photos.length == 1 %>
+              <%= business.photos.length %> PHOTO
+            <% else %>
+              <%= business.photos.length %> PHOTOS
+            <% end %> 
+          </div>
+        <% end %>
+      <% end %>
+    </div>
   </div>
-</div>
-  </section>
-
- 
-
+</section>
 
 <%#= link_to 'Edit', edit_designer_path(@designer) %> |
 <%= link_to 'See all designers', designers_path %>
