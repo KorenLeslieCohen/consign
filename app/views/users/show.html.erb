@@ -8,7 +8,7 @@
 
       <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
         <h1 class="header user-profile-photo"><%= image_tag current_user.user_profile_photo %></h1>
-        <p class="header"><%= current_user.name.upcase %> <%= current_user.user_name[0].upcase %>.</p>
+        <p class="header"><%= current_user.first_name.upcase %> <%= current_user.last_name[0].upcase %>.</p>
       </section>
 
       <p id="notice"><%= notice %></p>
@@ -17,9 +17,9 @@
         <h4><a>PRIVATE PROFILE SETTINGS</a></h4>
       </div> -->
       <div id="private-profile">
-        <h5><strong>Name:</strong> <%= @user.name %> <%= @user.user_name %></h5>
+        <h5><strong>Name:</strong> <%= @user.first_name %> <%= @user.last_name %></h5>
         <h5><strong>Email:</strong> <%= @user.email %></h5>
-        <!-- <h5><strong>Username:</strong> <%#= @user.user_name %></h5> -->
+        <!-- <h5><strong>Username:</strong> <%#= @user.last_name %></h5> -->
       </div><br>
 
       <div class="user-profile-editor">
@@ -40,7 +40,7 @@
 
       <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
         <h1 class="header user-profile-photo"><%= image_tag @user.user_profile_photo %></h1>
-        <p class="header"><%= @user.name.upcase %> <%= @user.user_name[0].upcase %>.</p>
+        <p class="header"><%= @user.first_name.upcase %> <%= @user.last_name[0].upcase %>.</p>
       </section>
 
       <p id="notice"><%= notice %></p>
@@ -56,7 +56,7 @@
 
     <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
       <h1 class="header user-profile-photo"><%= image_tag @user.user_profile_photo %></h1>
-      <p class="header"><%= @user.name.upcase %> <%= @user.user_name[0].upcase %>.</p>
+      <p class="header"><%= @user.first_name.upcase %> <%= @user.last_name[0].upcase %>.</p>
     </section>
 
     <p id="notice"><%= notice %></p>
@@ -136,7 +136,7 @@
         <% @user.photos.reverse.each do |photo| %>
           <div class="col-sm-6 col-md-4 gallery-item">
             <%= link_to photo.business.name.upcase, photo.business %>  | <%= photo.created_at.strftime("%b %d, %Y") %>
-            <!-- BY: <%#= link_to photo.user.user_name.upcase, photo.user %><br> -->
+            <!-- BY: <%#= link_to photo.user.last_name.upcase, photo.user %><br> -->
             
             <a href="<%= photo.business_photo %>" data-toggle="lightbox">
               <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" height="200">

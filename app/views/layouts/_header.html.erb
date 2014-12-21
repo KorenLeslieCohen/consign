@@ -33,7 +33,7 @@
                 <!-- <li><a>WELCOME!</a></li> -->
               <%# end %>
 
-              <% if (current_user.user_name != nil && current_user.name != nil && current_user.user_name != "" && current_user.name != "") %> 
+              <% if (current_user.last_name != nil && current_user.first_name != nil && current_user.last_name != "" && current_user.first_name != "") %> 
                 <li><%= link_to "PROFILE", current_user %></li>
               <% else  %>
                 <li><%= link_to "PROFILE", edit_user_path(current_user) %></li>

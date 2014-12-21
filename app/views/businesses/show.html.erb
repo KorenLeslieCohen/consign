@@ -85,12 +85,12 @@
 
 <div>
   <% if current_user %>
-    <% if (current_user.user_name != nil && current_user.name != nil && current_user.user_name != "" && current_user.name != "" ) %>
+    <% if (current_user.first_name != nil && current_user.last_name != nil && current_user.first_name != "" && current_user.last_name != "" ) %>
       <div id="new-photo">
         <h5>Upload a photo of <%= @business.name %>.</h5>
       </div>  
       <%= render 'photos/new', photo: Photo.new(business_id: @business.id) %>
-    <% elsif (current_user.user_name == nil || current_user.name == nil || current_user.user_name == "" || current_user.name == "") %>
+    <% elsif (current_user.last_name == nil || current_user.first_name == nil || current_user.last_name == "" || current_user.first_name == "") %>
       <div class="business-complete-to-upload">
         <h4><%= link_to "COMPLETE PROFILE TO UPLOAD", edit_user_path(current_user), :class => 'navbar-link'  %> </h4>
       </div>
@@ -114,7 +114,7 @@
               <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" height="200">
               </div>
             </a>
-            <%= photo.description[0..15].upcase %> | <%= photo.created_at.strftime("%b %d, %Y") %> | <%= link_to photo.user.name.upcase, photo.user %> 
+            <%= photo.description[0..15].upcase %> | <%= photo.created_at.strftime("%b %d, %Y") %> | <%= link_to photo.user.first_name.upcase, photo.user %> 
     <!--         <%# if (photo.user == current_user) %>
                | <%#= link_to 'DELETE PHOTO', [@business, photo], method: :delete, data: { confirm: 'Are you sure?' } %></h4>
             <%# end %> -->
@@ -134,10 +134,10 @@
 <% if current_user %>
 
   <!-- IF PROFILE COMPLETE -->
-  <% if (current_user.user_name != nil && current_user.name != nil && current_user.user_name != "" && current_user.name != "" ) %>
+  <% if (current_user.last_name != nil && current_user.first_name != nil && current_user.last_name != "" && current_user.first_name != "" ) %>
 
     <!-- IF ALREADY REVIEWED -->
-    <% if @business.reviews.any? { |review| review.user.name == current_user.name } %>
+    <% if @business.reviews.any? { |review| review.user.email == current_user.email } %>
       <div class="you-reviewed">
         <h3>Thank you for reviewing <%= @business.name %>!</h3>
       </div>
@@ -150,7 +150,7 @@
     <% end %> 
 
   <!-- IF PROFILE NOT COMPLETE -->
-  <% elsif (current_user.user_name == nil || current_user.name == nil || current_user.user_name == "" || current_user.name == "") %>
+  <% elsif (current_user.last_name == nil || current_user.first_name == nil || current_user.last_name == "" || current_user.first_name == "") %>
     <div class="business-complete-to-review">
       <h4><%= link_to "COMPLETE PROFILE TO REVIEW", edit_user_path(current_user), :class => 'navbar-link'  %> </h4>
     </div>
@@ -184,7 +184,7 @@
           <% else %>
             <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
           <% end %><br>
-          <%= link_to review.user.name.upcase, review.user %> 
+          <%= link_to review.user.first_name.upcase, review.user %> 
           | <%= review.role.upcase %> 
           <div id="review-content">
             <%= review.content %>
