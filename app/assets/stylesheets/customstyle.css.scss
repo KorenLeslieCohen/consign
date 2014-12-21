@@ -49,6 +49,15 @@ h1 {
   font-size: 17px;
 }
 
+#error_explanation {
+  border: 2px solid #FD8698;
+}
+
+.field_with_errors,
+#error_explanation h2 {
+  background-color: #FD8698;
+}
+
 /*--------------NAVBAR--------------*/
 .navbar-default .navbar-nav > li > a {
   font-size: 15px;

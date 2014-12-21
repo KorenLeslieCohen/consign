@@ -18,8 +18,8 @@ class Photo < ActiveRecord::Base
     # :default_style => :thumb, 
     :s3_protocol => "https"
 
-    validates :description, presence: true, length: {maximum: 20}
-  # validates :business_photo, :attachment_presence => true
+  validates :description, presence: true, length: {maximum: 20}
+  validates :business_photo, :attachment_presence => true
   validates_with AttachmentSizeValidator, :attributes => :business_photo, :less_than => 3.megabytes
   validates_attachment_content_type :business_photo, :content_type => /\Aimage\/.*\Z/
 

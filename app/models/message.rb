@@ -1,8 +1,7 @@
 class Message < ActiveRecord::Base
 
-  validates :name, presence: true # min characters?
-  validates :email, presence: true # use an email validation
-  validates :body, presence: true # min characters
+  validates_presence_of :email, :name, :body
+  validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
 
   after_create :send_message_email
 

@@ -24,24 +24,15 @@ class Business < ActiveRecord::Base
     # :default_style => :thumb, 
     :s3_protocol => "https"
 
-  # validates :profile_photo, :attachment_presence => true
+  validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
+
+
+  validates :profile_photo, :attachment_presence => true
   validates_with AttachmentSizeValidator, :attributes => :profile_photo, :less_than => 3.megabytes
   validates_attachment_content_type :profile_photo, :content_type => /\Aimage\/.*\Z/
  
   def self.search(search)
     Business.where("name LIKE ?", "%#{search.upcase}%") #|| Business.where("business.neighborhood LIKE ?", "%#{search.capitalize}%")
   end
-
-  # def overall_rating
-  #   total_rating = 0
-  #   num_of_ratings = 0
-  #   reviews.each do |review|
-  #     review.each do |rating|
-  #       total_rating += rating
-  #       num_of_ratings += 1
-  #     end
-  #   end
-  #   return total_rating / num_of_ratings
-  # end
 
 end

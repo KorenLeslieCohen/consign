@@ -3,59 +3,25 @@
   <p class="header">CURATED LIST OF HIGH END CONSIGNMENT SHOPS</p>
 </section>
 
-  <form>
-    <%= form_tag(businesses_path, :method => "get", id: "search-form") do %>
-      <%= text_field_tag :search, params[:search], class: "form-control col-lg-8", id: "autocompete", placeholder: "SEARCH SHOPS BY NAME" %>  
-    <% end %>
-  </form>
+<form>
+  <%= form_tag(businesses_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], class: "form-control col-lg-8", id: "autocompete", placeholder: "SEARCH SHOPS BY NAME" %>  
+  <% end %>
+</form>
 
-  
-
-  <section id="services">
-<div class="container">
-  <div class="row">
-
-   <div class="search-results">
-    <% if @businesses.present? %>
-      <%= render @businesses %>
-      <!-- <p><%#= link_to 'SEE ALL DESIGNERS', designers_path %></p> -->
-    <% else %>
-      <h5>There are no shops by the name <%= params[:search] %>.</h5>
-      <p><%= link_to 'SEE ALL SHOPS', businesses_path %></p>
-    <% end %>
+<section id="services">
+  <div class="container">
+    <div class="row">
+     <div class="search-results">
+      <% if @businesses.present? %>
+        <%= render @businesses %>
+        <!-- <p><%#= link_to 'SEE ALL DESIGNERS', designers_path %></p> -->
+      <% else %>
+        <h5>There are no shops by the name <%= params[:search] %>.</h5>
+        <p><%= link_to 'SEE ALL SHOPS', businesses_path %></p>
+      <% end %>
+      </div>
+    </div>
   </div>
+</section>
 
-  </div>
-</div>
-  </section>
-
-  
-
-
-
-    
-<!-- <section id="works"> -->
-
-      
-    
-          
-   <!--  <iframe width="200" height="200" frameborder="0" style="border:0"
-src="<%#= business.map  %>AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94"></iframe> -->
-
-
-          <!-- <p><%#= link_to business.website.gsub("http://", ""), business.website, :target => "_blank" %></p> -->
-
-      
-
-      
-
-
-  <!-- <br> -->
-  <%# if user_signed_in? %>
-    <%# if (current_user.email == "koren.cohen@gmail.com") %>
-      <%#= link_to 'New Business', new_business_path %>
-    <%# end %>
-  <%# end %> 
-
-<!-- </section> -->
-<!-- <div class="row divide"></div> -->
