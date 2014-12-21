@@ -31,7 +31,7 @@
             <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
           <% end %>
         <% end %><br>
-      "<%= photo.description[0..25].upcase %>" BY: <%= link_to photo.user.name.upcase, photo.user %> </p>
+      "<%= photo.description[0..25].upcase %>" BY: <%= link_to photo.user.first_name.upcase, photo.user %> </p>
       </div>
     <% end %>
   </div>
