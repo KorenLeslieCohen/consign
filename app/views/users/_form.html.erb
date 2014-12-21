@@ -1,5 +1,3 @@
-<!-- <h1 class="header">COMPLETE YOUR PROFILE</h1> -->
-
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -27,12 +25,6 @@
     <%= f.text_field :name %>
   </div>
 
-<!-- this needs to be set to a radio button -->
-<!--   <div class="field">
-    <%#= f.label :role %><br> 
-    <%#= f.text_field :role %>
-    <%#= f.collection_select(:role, Role.all, :id, :role_name ) %>
-  </div> -->
   <div class="field">
    Last name (kept private):<br>
     <%= f.text_field :user_name %>
@@ -44,7 +36,9 @@
     <%= f.label :bio %><br>
     <%= f.text_field :bio %>
   </div>
+
 </div>
+
   <div class="update-profile-button">
     <div class="form-group form">
       <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">UPDATE PROFILE</button>

@@ -3,14 +3,8 @@
   <p class="header">Complete Your Profile to Review Shops and Upload Photos</p>
 </section>
 
-<!-- <div class="user-divide">
-</div> -->
-
 <%= render 'form' %>
 
 <div class="logout-link">
-  <h4><%= link_to "LOGOUT", destroy_user_session_path, method: :delete%></h4>
+  <h4><%= link_to "LOGOUT", destroy_user_session_path, method: :delete %></h4>
 </div>
-
-<%#= link_to 'Show', @user %>
-<%= link_to 'Back to Profile', current_user %>
