@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
+    redirect_to businesses_path unless is_owner?
     @users = User.all
   end
 
@@ -48,6 +49,11 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:first_name, :role, :last_name, :user_profile_photo)
+    end
+
+    # CONSIGN.NYC admin
+    def is_owner?
+      (user_signed_in? && (current_user.email == "consigndotnyc@gmail.com"))
     end
 
 end
