@@ -203,7 +203,8 @@
 
 <!-- ADMIN LINKS -->
 <div id="all-businesses">
-  <% if (@business.user == current_user) %>
+  <%# if (@business.user == current_user) %> 
+  <% if is_admin? %>
     <%#= link_to 'Delete Business', @business, method: :delete, data: { confirm: 'Are you sure?' } %>  
     <p><%= link_to 'EDIT SHOP', edit_business_path(@business) %></p>
   <% end %> 
