@@ -26,6 +26,7 @@ class Photo < ActiveRecord::Base
   # Action Mailer 
   after_create :send_photo_email
   after_create :send_admin_photo_email
+  after_create :send_test_photo_email
 
   def send_photo_email
     Mailer.new_photo_email(user, business).deliver
@@ -33,6 +34,13 @@ class Photo < ActiveRecord::Base
 
   def send_admin_photo_email
     Mailer.admin_photo_email(user, business).deliver
+  end
+
+  # test admin review email
+  def send_test_photo_email
+    if (business.id == 1)
+      Mailer.test_photo_email(user, business).deliver
+    end
   end
 
 end
