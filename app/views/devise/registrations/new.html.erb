@@ -26,6 +26,16 @@
   <div><%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 
+  <div >
+    First name:<br>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div>
+   Last name (kept private):<br>
+    <%= f.text_field :last_name %>
+  </div>
+
   <div class="signup-button">
     <div class="form-group form">
       <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">SIGN UP</button>

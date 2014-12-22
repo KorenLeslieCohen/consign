@@ -76,6 +76,6 @@ class TagsController < ApplicationController
 
     # CONSIGN.NYC admin
     def is_owner?
-      (user_signed_in? && (current_user.email == "koren.cohen@gmail.com"))
+      (user_signed_in? && (current_user.email == "consigndotnyc@gmail.com"))
     end
 end

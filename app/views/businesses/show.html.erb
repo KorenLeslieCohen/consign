@@ -171,7 +171,12 @@
     <% @business.reviews.reverse.each do |review| %>
       <div class="col-md-12">
         <div id="review">
-          <%= image_tag review.user.user_profile_photo %>
+          <% if !review.user.user_profile_photo? %>
+            <img src="https://s3.amazonaws.com/consignnyc/placeholder-profile.png">
+          <% else %>
+            <%= image_tag review.user.user_profile_photo %></h1>
+          <% end %>
+          <%#= image_tag review.user.user_profile_photo %>
           <%= review.created_at.strftime("%b %d, %Y").upcase %>
           <% if review.rating == 1 %>
             <i class="fa fa-star"></i>

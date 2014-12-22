@@ -20,11 +20,13 @@ class DesignersController < ApplicationController
 
   # GET /designers/new
   def new
+    redirect_to businesses_path unless is_owner?
     @designer = Designer.new
   end
 
   # GET /designers/1/edit
   def edit
+    redirect_to businesses_path unless is_owner?
   end
 
   # POST /designers
@@ -76,5 +78,10 @@ class DesignersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def designer_params
       params.require(:designer).permit(:name)
+    end
+
+    # CONSIGN.NYC admin
+    def is_owner?
+      (user_signed_in? && (current_user.email == "consigndotnyc@gmail.com"))
     end
 end

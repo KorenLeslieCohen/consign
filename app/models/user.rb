@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
 
   validates :first_name, :presence => { :message => "cannot be blank" }
   validates :last_name, :presence => { :message => "cannot be blank" }
-  validates :user_profile_photo, :attachment_presence => { :message => "You must include a profile photo" }
+  # validates :user_profile_photo, :attachment_presence => { :message => "You must include a profile photo" }
   validates_with AttachmentSizeValidator, :attributes => :user_profile_photo, :less_than => 3.megabytes
   validates_attachment_content_type :user_profile_photo, :content_type => /\Aimage\/.*\Z/
   

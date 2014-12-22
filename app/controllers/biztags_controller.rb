@@ -15,11 +15,13 @@ class BiztagsController < ApplicationController
 
   # GET /biztags/new
   def new
+    redirect_to businesses_path unless is_owner?
     @biztag = Biztag.new
   end
 
   # GET /biztags/1/edit
   def edit
+    redirect_to businesses_path unless is_owner?
   end
 
   # POST /biztags
@@ -71,5 +73,10 @@ class BiztagsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def biztag_params
       params.require(:biztag).permit(:name)
+    end
+
+    # CONSIGN.NYC admin
+    def is_owner?
+      (user_signed_in? && (current_user.email == "consigndotnyc@gmail.com"))
     end
 end
