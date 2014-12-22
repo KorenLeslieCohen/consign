@@ -19,11 +19,14 @@ class BusinessesController < ApplicationController
 
   # GET /businesses/new
   def new
+    redirect_to businesses_path unless is_owner?
     @business = Business.new
   end
 
   # GET /businesses/1/edit
+  # Admin access for businesses
   def edit
+    redirect_to businesses_path unless is_admin?
   end
 
   # POST /businesses
@@ -42,13 +45,6 @@ class BusinessesController < ApplicationController
       end
     end
   end
-
-  # GET /questions/1/edit
-  # Admin access for businesses
-  def edit
-    redirect_to businesses_path unless is_admin?
-  end
-
 
   # PATCH/PUT /businesses/1
   # PATCH/PUT /businesses/1.json
@@ -90,4 +86,10 @@ class BusinessesController < ApplicationController
       (user_signed_in? && (current_user.email == "koren.cohen@gmail.com"))
       # ((@business.id == 2) && (current_user.email == "test@test.com"))
     end
+
+    # CONSIGN.NYC admin
+    def is_owner?
+      (user_signed_in? && (current_user.email == "koren.cohen@gmail.com"))
+    end
+
 end

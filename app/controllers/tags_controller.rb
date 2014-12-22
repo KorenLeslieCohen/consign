@@ -14,11 +14,13 @@ class TagsController < ApplicationController
 
   # GET /tags/new
   def new
+    redirect_to businesses_path unless is_owner?
     @tag = Tag.new
   end
 
   # GET /tags/1/edit
   def edit
+    redirect_to businesses_path unless is_owner?
   end
 
   # POST /tags
@@ -70,5 +72,10 @@ class TagsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def tag_params
       params.require(:tag).permit(:name)
+    end
+
+    # CONSIGN.NYC admin
+    def is_owner?
+      (user_signed_in? && (current_user.email == "koren.cohen@gmail.com"))
     end
 end

@@ -6,12 +6,13 @@ class MessagesController < ApplicationController
    # should only be for admin for most of these
 
   def index
-
+    redirect_to businesses_path unless is_owner?
     @messages = Message.all
   end
 
   def show
     # respond_with(@message)
+    redirect_to businesses_path unless is_owner?
   end
 
   def new
@@ -20,6 +21,7 @@ class MessagesController < ApplicationController
   end
 
   def edit
+    redirect_to businesses_path unless is_owner?
   end
 
   # POST /messages
@@ -71,5 +73,10 @@ class MessagesController < ApplicationController
 
     def message_params
       params.require(:message).permit(:name, :email, :body)
+    end
+
+    # CONSIGN.NYC admin
+    def is_owner?
+      (user_signed_in? && (current_user.email == "koren.cohen@gmail.com"))
     end
 end
