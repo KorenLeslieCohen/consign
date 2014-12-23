@@ -9,14 +9,14 @@ class Mailer < ActionMailer::Base
   def new_review_email(user, business)
     @user = user
     @business = business
-    mail(:to => @user.email, :subject => "Your review has been posted on Consign.NYC")
+    mail(:to => @user.email, :subject => "Your review has been posted on CONSIGN.NYC")
   end
 
   # USER confirmation email following PHOTO
   def new_photo_email(user, business)
     @user = user
     @business = business
-    mail(:to => @user.email, :subject => "Your photo has been uploaded on Consign.NYC")
+    mail(:to => @user.email, :subject => "Your photo has been uploaded on CONSIGN.NYC")
   end
 
   # CONSIGN.NYC EMAILS
@@ -26,14 +26,14 @@ class Mailer < ActionMailer::Base
     @user = user
     @content = content
     @business = business
-    mail(:to => "consigndotnyc@gmail.com", :subject => "New Review on Consign.NYC")
+    mail(:to => "consigndotnyc@gmail.com", :subject => "New Review on CONSIGN.NYC")
   end
 
   # CONSIGN.NYC email following user PHOTO
   def admin_photo_email(user, business)
     @user = user
     @business = business
-    mail(:to => "consigndotnyc@gmail.com", :subject => "New Photo on Consign.NYC")
+    mail(:to => "consigndotnyc@gmail.com", :subject => "New Photo on CONSIGN.NYC")
   end
 
   # STORE ADMIN ACCESS TEMPLATE EMAILS
@@ -43,14 +43,14 @@ class Mailer < ActionMailer::Base
     @user = user
     @content = content
     @business = business
-    mail(:to => @business.admin_email, :subject => "#{@business.name} has received a new review on Consign.NYC")
+    mail(:to => @business.admin_email, :subject => "#{@business.name} has received a new review on CONSIGN.NYC")
   end
 
   # STORE ADMIN confirmation email following PHOTO
   def store_photo_email(user, business)
     @user = user
     @business = business
-    mail(:to => @business.admin_email, :subject => "#{@business.name} has a new photo on Consign.NYC")
+    mail(:to => @business.admin_email, :subject => "#{@business.name} has a new photo on CONSIGN.NYC")
   end
 
   # NEW MESSAGE EMAIL
@@ -60,7 +60,7 @@ class Mailer < ActionMailer::Base
     @name = name
     @email = email
     @body = body
-    mail(:to => "consigndotnyc@gmail.com", :subject => "New Message from Consign.NYC")
+    mail(:to => "consigndotnyc@gmail.com", :subject => "New Message from CONSIGN.NYC")
   end
 
 end
