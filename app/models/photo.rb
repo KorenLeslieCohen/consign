@@ -28,15 +28,17 @@ class Photo < ActiveRecord::Base
   after_create :send_admin_photo_email
   after_create :send_store_photo_email
 
+  # user photo email
   def send_photo_email
     Mailer.new_photo_email(user, business).deliver
   end
 
+  # consign admin photo email
   def send_admin_photo_email
     Mailer.admin_photo_email(user, business).deliver
   end
 
-  # test admin review email
+  # store admin review email
   def send_store_photo_email
     if (business.admin_email != nil && business.admin_email != "")
       Mailer.store_photo_email(user, business).deliver
@@ -44,10 +46,3 @@ class Photo < ActiveRecord::Base
   end
 
 end
-
-# models/photo.rb
-# has_attached_file :image,
-#   :styles => { :thumbnail => "100x100>" },
-#   :storage => :s3,
-#   :s3_credentials => "#{Rails.root}/config/s3.yml",
-#   :bucket => "your_unique_s3_bucket";

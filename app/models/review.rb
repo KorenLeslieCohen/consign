@@ -13,10 +13,12 @@ class Review < ActiveRecord::Base
   after_create :send_admin_review_email
   after_create :send_store_review_email
 
+  # user review email
   def send_review_email
     Mailer.new_review_email(user, business).deliver
   end
 
+  # consign admin review email
   def send_admin_review_email
     Mailer.admin_review_email(user, content, business).deliver
   end
