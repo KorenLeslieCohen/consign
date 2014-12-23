@@ -78,13 +78,12 @@ class BusinessesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def business_params
-      params.require(:business).permit(:user_id, :neighborhood_id, :borough_id, :name, :address, :hours, :email, :terms, :website, :phone, :profile_photo, :map, :biztag_ids => [], :biztags_attributes => [:id, :name], :designer_ids => [], :designers_attributes => [:id, :name], :reviews_attributes => [:content, :rating, :user_id], :photos_attributes => [:business_photo_file_name, :business_photo_content_type, :business_photo_file_size, :business_photo_updated_at, :description, :user_id, :business_photo])
+      params.require(:business).permit(:user_id, :neighborhood_id, :borough_id, :name, :address, :hours, :email, :terms, :website, :phone, :profile_photo, :map, :admin_email, :biztag_ids => [], :biztags_attributes => [:id, :name], :designer_ids => [], :designers_attributes => [:id, :name], :reviews_attributes => [:content, :rating, :user_id], :photos_attributes => [:business_photo_file_name, :business_photo_content_type, :business_photo_file_size, :business_photo_updated_at, :description, :user_id, :business_photo])
     end
 
     # Individual admin access for businesses
     def is_admin?
-      (user_signed_in? && (current_user.email == "consigndotnyc@gmail.com"))
-      # ((@business.id == 2) && (current_user.email == "test@test.com"))
+      (user_signed_in? && (current_user.email == "consigndotnyc@gmail.com") || (current_user.email == @business.admin_email))
     end
 
     # CONSIGN.NYC admin
