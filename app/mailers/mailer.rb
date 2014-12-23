@@ -43,14 +43,14 @@ class Mailer < ActionMailer::Base
     @user = user
     @content = content
     @business = business
-    mail(:to => @business.admin_email, :subject => "Your store has received a new review on Consign.NYC")
+    mail(:to => @business.admin_email, :subject => "#{@business.name} has received a new review on Consign.NYC")
   end
 
   # STORE ADMIN confirmation email following PHOTO
   def store_photo_email(user, business)
     @user = user
     @business = business
-    mail(:to => @business.admin_email, :subject => "Your store has a new photo on Consign.NYC")
+    mail(:to => @business.admin_email, :subject => "#{@business.name} has a new photo on Consign.NYC")
   end
 
   # NEW MESSAGE EMAIL
