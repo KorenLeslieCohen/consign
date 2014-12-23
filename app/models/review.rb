@@ -11,7 +11,7 @@ class Review < ActiveRecord::Base
   # Action Mailer
   after_create :send_review_email
   after_create :send_admin_review_email
-  after_create :send_test_review_email
+  after_create :send_store_review_email
 
   def send_review_email
     Mailer.new_review_email(user, business).deliver
@@ -21,10 +21,10 @@ class Review < ActiveRecord::Base
     Mailer.admin_review_email(user, content, business).deliver
   end
 
-  # test admin review email
-  def send_test_review_email
-    if (business.id == 1)
-      Mailer.test_review_email(user, content, business).deliver
+  # store admin review email
+  def send_store_review_email
+    if (business.admin_email != nil && business.admin_email != "")
+      Mailer.store_review_email(user, content, business).deliver
     end
   end
 

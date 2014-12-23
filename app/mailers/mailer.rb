@@ -36,21 +36,21 @@ class Mailer < ActionMailer::Base
     mail(:to => "consigndotnyc@gmail.com", :subject => "New Photo on Consign.NYC")
   end
 
-  # ADMIN ACCESS TEMPLATE EMAILS
+  # STORE ADMIN ACCESS TEMPLATE EMAILS
 
-  # TEST ADMIN confirmation email following REVIEW
-  def test_review_email(user, content, business)
+  # STORE ADMIN confirmation email following REVIEW
+  def store_review_email(user, content, business)
     @user = user
     @content = content
     @business = business
-    mail(:to => "test@test.com", :subject => "Your store has received a new review on Consign.NYC")
+    mail(:to => @business.admin_email, :subject => "Your store has received a new review on Consign.NYC")
   end
 
-  # TEST ADMIN confirmation email following PHOTO
-  def test_photo_email(user, business)
+  # STORE ADMIN confirmation email following PHOTO
+  def store_photo_email(user, business)
     @user = user
     @business = business
-    mail(:to => "test@test.com", :subject => "Your store has a new photo on Consign.NYC")
+    mail(:to => @business.admin_email, :subject => "Your store has a new photo on Consign.NYC")
   end
 
   # NEW MESSAGE EMAIL
