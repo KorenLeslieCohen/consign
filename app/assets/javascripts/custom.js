@@ -1,7 +1,4 @@
 /*
----------------------------------------------------
-Made with love by ThemeBang | http://themebang.com
----------------------------------------------------
 1) CONTACT FORM
 2) HOME SECTION HEIGHT
 3) CAROUSELS

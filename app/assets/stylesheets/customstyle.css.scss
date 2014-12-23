@@ -676,6 +676,15 @@ a:hover {
   transition-property: color;
 }
 
+.biz img {
+  border: 1px solid #CCC;
+}
+
+.biz-info {
+  border: 1px solid #CCC;
+  padding: 10px;
+}
+
 .biz-header h2 {
   text-align: center;
   width: 100%;
@@ -706,7 +715,7 @@ a:hover {
   height: 400px;
 }
 
-/*--------------FAQ & STORE INFO--------------*/
+/*--------------FAQ & FOR STORES--------------*/
 
 .faq {
   max-width: 800px;
@@ -720,7 +729,6 @@ a:hover {
   max-width: 800px;
   width: 100%;
   margin-top: 20px;
-  /*margin-bottom: 20px;*/
 }
 
 .faq p {
@@ -765,11 +773,11 @@ a:hover {
   transition-property: color;
 }
 #footer .btn-default {
-  border: 1px solid #FD8698;
+  /*border: 1px solid #FD8698;*/
   border-radius: 50%;
   width: 56px;
   height: 56px;
-  margin: 3px;
+  /*margin: 3px;*/
   transition-duration: .5s;
   transition-property: background;
 }
@@ -792,7 +800,59 @@ a:hover {
   transition-property: color;*/
 }
 
+/*--------------EAST VILLAGE--------------*/
+
+#EastVillage {
+    height:300px;
+    width:100%;
+    margin-top: 20px;
+}
+
+.gm-style-iw * {
+    display: block;
+    width: 100%;
+}
+
+.gm-style-iw h4, .gm-style-iw p {
+    margin: 0;
+    padding: 0;
+}
+
+.gm-style-iw a {
+    color: #4272db;
+}
+
+.google-maps {
+  width: 85%;
+  min-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*--------------UPPER EAST SIDE--------------*/
  
+#UpperEastSide {
+   height:300px;
+    width:100%;
+    margin-top: 20px;
+}
+.gm-style-iw * {
+    display: block;
+    width: 100%;
+}
+.gm-style-iw h4, .gm-style-iw p {
+    margin: 0;
+    padding: 0;
+}
+.gm-style-iw a {
+    color: #4272db;
+}
+    .google-maps {
+  width: 85%;
+  min-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* Smaller Screens - Breakpoint -------> */
 /*@media screen and (max-width : 1200px) {
