@@ -18,13 +18,9 @@
 
       <p id="notice"><%= notice %></p>
 
-     <!--  <div class="user-account-header">
-        <h4><a>PRIVATE PROFILE SETTINGS</a></h4>
-      </div> -->
       <div id="private-profile">
         <h5><strong>Name:</strong> <%= @user.first_name %> <%= @user.last_name %></h5>
         <h5><strong>Email:</strong> <%= @user.email %></h5>
-        <!-- <h5><strong>Username:</strong> <%#= @user.last_name %></h5> -->
       </div><br>
 
       <div class="user-profile-editor">
@@ -83,8 +79,6 @@
 
   <% end %>
 
-  
-
   <!-- SHOW USER'S REVIEWS -->
   <div class="user-header">
     <% if @user.reviews.length == 1 %>
@@ -105,7 +99,6 @@
             <%= image_tag review.business.profile_photo, :height => "100" %>
           <% end %>
           <%= review.created_at.strftime("%b %d, %Y") %> 
-
           <% if review.rating == 1 %>
             <i class="fa fa-star"></i>
           <% elsif review.rating == 2 %>
@@ -117,18 +110,15 @@
           <% else %>
             <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
           <% end %><br>
-
           <%= link_to review.business.name.upcase, review.business %> | 
           <%= review.role.upcase %> 
           <% if (review.user == current_user) %>
             | <%= link_to 'EDIT REVIEW', edit_review_path(review), method: :get %> |
             <%= link_to 'DELETE REVIEW', review, method: :delete, data: { confirm: 'Are you sure?' } %>
           <% end %><br>
-
           <div id="user-review-content">
             <%= review.content %>
           </div>
-          
         </div>
       </div>
     <% end %>
@@ -150,24 +140,20 @@
         <% @user.photos.reverse.each do |photo| %>
           <div class="col-sm-6 col-md-4 gallery-item">
             <%= link_to photo.business.name.upcase, photo.business %>  | <%= photo.created_at.strftime("%b %d, %Y") %>
-            <!-- BY: <%#= link_to photo.user.last_name.upcase, photo.user %><br> -->
-            
             <a href="<%= photo.business_photo %>" data-toggle="lightbox">
               <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" height="200">
               </div>
             </a>
             "<%= photo.description[0..20].upcase %>" 
             <% if (photo.user == current_user) %>
-            <%#= link_to 'Edit Review', [@business, review], method: :get, data: { confirm: 'Are you sure?' } %>
-            | <%= link_to 'DELETE PHOTO', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
-                <% end %>           
-    
+              <%#= link_to 'Edit Review', [@business, review], method: :get, data: { confirm: 'Are you sure?' } %>
+              | <%= link_to 'DELETE PHOTO', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>           
           </div>
         <% end %>
       </div>
     </div>
   </section>
-
 </div>
 
 

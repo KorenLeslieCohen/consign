@@ -1,8 +1,9 @@
-    <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
-      <h1 class="header"><%= @borough.name.upcase %></h1>
-      <p class="header">BROWSE SHOPS</p>
-    </section>
-    <p id="notice"><%= notice %></p>
+<section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+  <h1 class="header"><%= @borough.name.upcase %></h1>
+  <p class="header">BROWSE SHOPS</p>
+</section>
+
+<p id="notice"><%= notice %></p>
 
 <p>
   <strong>Borough:</strong>
@@ -18,7 +19,6 @@
     <% end %>
   <% end %>
 </p>
-  
 
 <!-- <%#= link_to 'Edit', edit_borough_path(@borough) %> | -->
 <%= link_to 'All Boroughs', boroughs_path %>
