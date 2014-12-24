@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141224020425) do
+ActiveRecord::Schema.define(version: 20141224020629) do
 
   create_table "biztags", force: true do |t|
     t.string   "name"
@@ -45,9 +45,7 @@ ActiveRecord::Schema.define(version: 20141224020425) do
     t.integer  "borough_id"
     t.string   "name"
     t.text     "street_address"
-    t.text     "hours"
     t.string   "email"
-    t.text     "terms"
     t.string   "profile_photo_file_name"
     t.string   "profile_photo_content_type"
     t.integer  "profile_photo_file_size"
