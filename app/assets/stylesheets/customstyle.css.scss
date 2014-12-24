@@ -270,10 +270,12 @@ h1 {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  color: #FFF;
+  padding: 5px;
 }
 
 .instructions p a {
-  color: white;
+  color: #777;
   font-size: 15px;
 }
 
@@ -288,7 +290,9 @@ h1 {
 #user_password,
 #user_password_confirmation,
 #user_current_password,
-.edit-profile input {
+.edit-profile input,
+#user_first_name,
+#user_last_name {
   border: 1px solid #CCC;
   width: 300px;
   padding: 5px;
