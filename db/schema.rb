@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141223225848) do
+ActiveRecord::Schema.define(version: 20141224015355) do
 
   create_table "biztags", force: true do |t|
     t.string   "name"
@@ -58,6 +58,30 @@ ActiveRecord::Schema.define(version: 20141223225848) do
     t.string   "phone"
     t.text     "map"
     t.string   "admin_email"
+    t.text     "percent_to_client"
+    t.text     "markdown_info"
+    t.text     "consignment_period"
+    t.text     "return_policy"
+    t.text     "appointment_info"
+    t.text     "special_offers"
+    t.string   "ecommerce_site"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "sunday_opening"
+    t.string   "sunday_closing"
+    t.string   "monday_opening"
+    t.string   "monday_closing"
+    t.string   "tuesday_opening"
+    t.string   "tuesday_closing"
+    t.string   "wednesday_opening"
+    t.string   "wednesday_closing"
+    t.string   "thursday_opening"
+    t.string   "thursday_closing"
+    t.string   "friday_opening"
+    t.string   "friday_closing"
+    t.string   "saturday_opening"
+    t.string   "saturday_closing"
   end
 
   create_table "designers", force: true do |t|
