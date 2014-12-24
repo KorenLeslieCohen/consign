@@ -11,21 +11,23 @@
     </div>
   <% end %>
  
+ <!-- PROFILE PHOTO -->
  <div class="field business-field">
     <%= f.label :profile_photo %>
     <%= f.file_field :profile_photo, placeholder: "Profile Photo"%>
   </div>
 
+  <!-- MAIN INFO -->
   <div class="field">
-    <%= f.label :admin_email %><br>
-    <%= f.text_field :admin_email, placeholder: "Admin Email"%>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :website %><br>
+    <%= f.text_field :website %>
   </div>
 
-  <!-- <div class="field"> -->
-    <%#= f.label :user_id %><br>
-    <%#= f.number_field :user_id %>
-  <!-- </div> -->
-  <%= f.hidden_field :user_id, :value => current_user.id %>
+  <!-- BOROUGH / NEIGHBORHOOD -->
   <div class="field">
     <%= f.label :neighborhood_id %><br>
     <%#= f.number_field :neighborhood_id %>
@@ -37,39 +39,144 @@
     <%= f.collection_select(:borough_id, Borough.all, :id, :name ) %>
   </div>
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
     <%= f.label :map %><br>
     <%= f.text_field :map %>
   </div>
+
+  <!-- FOR SELLERS -->
   <div class="field">
-    <%= f.label :website %><br>
-    <%= f.text_field :website %>
+    <%= f.label :percent_to_client %><br>
+    <%= f.text_field :percent_to_client %>
+  </div>
+  <div class="field">
+    <%= f.label :markdown_info %><br>
+    <%= f.text_field :markdown_info %>
+  </div>
+  <div class="field">
+    <%= f.label :consignment_period %><br>
+    <%= f.text_field :consignment_period %>
+  </div>
+  <div class="field">
+    <%= f.label :appointment_info %><br>
+    <%= f.text_field :appointment_info %>
+  </div>
+  <div class="field">
+    <%= f.label :special_offers %><br>
+    <%= f.text_field :special_offers %>
+  </div>
+
+  <!-- FOR SHOPPERS -->
+  <div class="field">
+    <%= f.label :return_policy %><br>
+    <%= f.text_field :return_policy %>
+  </div>
+  <div class="field">
+    <%= f.label :ecommerce_site %><br>
+    <%= f.text_field :ecommerce_site %>
+  </div>
+
+  <!-- HOURS OF OPERATION -->
+  <div class="field">
+    <%= f.label :sunday_opening %><br>
+    <%= f.text_field :sunday_opening %>
+  </div>
+  <div class="field">
+    <%= f.label :sunday_closing %><br>
+    <%= f.text_field :sunday_closing %>
+  </div>
+  <div class="field">
+    <%= f.label :monday_opening %><br>
+    <%= f.text_field :monday_opening %>
+  </div>
+  <div class="field">
+    <%= f.label :monday_closing %><br>
+    <%= f.text_field :monday_closing %>
+  </div>
+  <div class="field">
+    <%= f.label :tuesday_opening %><br>
+    <%= f.text_field :tuesday_opening %>
+  </div>
+  <div class="field">
+    <%= f.label :tuesday_closing %><br>
+    <%= f.text_field :tuesday_closing %>
+  </div>
+  <div class="field">
+    <%= f.label :wednesday_opening %><br>
+    <%= f.text_field :wednesday_opening %>
+  </div>
+  <div class="field">
+    <%= f.label :wednesday_closing %><br>
+    <%= f.text_field :wednesday_closing %>
+  </div>
+  <div class="field">
+    <%= f.label :thursday_opening %><br>
+    <%= f.text_field :thursday_opening %>
+  </div>
+  <div class="field">
+    <%= f.label :thursday_closing %><br>
+    <%= f.text_field :thursday_closing %>
+  </div>
+  <div class="field">
+    <%= f.label :friday_opening %><br>
+    <%= f.text_field :friday_opening %>
+  </div>
+  <div class="field">
+    <%= f.label :friday_closing %><br>
+    <%= f.text_field :friday_closing %>
+  </div>
+  <div class="field">
+    <%= f.label :saturday_opening %><br>
+    <%= f.text_field :saturday_opening %>
+  </div>
+  <div class="field">
+    <%= f.label :saturday_closing %><br>
+    <%= f.text_field :saturday_closing %>
+  </div>
+
+  <!-- CONTACT INFO -->
+  <div class="field">
+    <%= f.label :street_address %><br>
+    <%= f.text_area :street_address %>
+  </div>
+    <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_area :city %>
+  </div>
+    <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_area :state %>
+  </div>
+    <div class="field">
+    <%= f.label :zip %><br>
+    <%= f.text_area :zip %>
   </div>
   <div class="field">
     <%= f.label :phone %><br>
     <%= f.text_field :phone %>
   </div>
   <div class="field">
-    <%= f.label :street_address %><br>
-    <%= f.text_area :street_address %>
-  </div>
-  <div class="field">
     <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
 
+  <!-- TAGS -->
   <div class="field">
     <h4>Biztags</h4>
     <%= f.collection_check_boxes :biztag_ids, Biztag.all, :id, :name, {:item_wrapper_class => 'checkbox_container'} %><br>
   </div>
-
   <div class="field">
     <h4>Designers</h4>
     <%= f.collection_check_boxes :designer_ids, Designer.all, :id, :name, {:item_wrapper_class => 'checkbox_container'} %><br>
   </div>
+
+  <!-- ADMIN ACCESS -->
+  <div class="field">
+    <%= f.label :admin_email %><br>
+    <%= f.text_field :admin_email, placeholder: "Admin Email"%>
+  </div>
+
+  <!-- USER HIDDEN FIELD -->
+  <%= f.hidden_field :user_id, :value => current_user.id %>
 
   <div class="actions">
     <%= f.submit "submit info" %>
