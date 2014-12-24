@@ -54,12 +54,16 @@ class UsersController < ApplicationController
 
     # CONSIGN.NYC admin
     def is_owner?
-      (user_signed_in? && (current_user.email == "consigndotnyc@gmail.com"))
+      if user_signed_in?
+        (current_user.email == "consigndotnyc@gmail.com")
+      end
     end
 
     # Individual user edit for user
     def is_user?
-      (user_signed_in? && (current_user.email == "consigndotnyc@gmail.com") || (current_user.email == @user.email))
+      if user_signed_in? 
+        ((current_user.email == "consigndotnyc@gmail.com") || (current_user.email == @user.email))
+      end
     end
 
 end

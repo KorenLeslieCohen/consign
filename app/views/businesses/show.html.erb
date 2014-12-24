@@ -84,16 +84,16 @@
 
 <div>
   <% if current_user %>
-    <% if (current_user.first_name != nil && current_user.last_name != nil && current_user.first_name != "" && current_user.last_name != "" ) %>
+    <%# if (current_user.first_name != nil && current_user.last_name != nil && current_user.first_name != "" && current_user.last_name != "" ) %>
       <div id="new-photo">
         <h5>Upload a photo of <%= @business.name %>.</h5>
       </div>  
       <%= render 'photos/new', photo: Photo.new(business_id: @business.id) %>
-    <% elsif (current_user.last_name == nil || current_user.first_name == nil || current_user.last_name == "" || current_user.first_name == "") %>
-      <div class="business-complete-to-upload">
-        <h4><%= link_to "COMPLETE PROFILE TO UPLOAD", edit_user_path(current_user), :class => 'navbar-link'  %> </h4>
-      </div>
-    <% end %>
+    <%# elsif (current_user.last_name == nil || current_user.first_name == nil || current_user.last_name == "" || current_user.first_name == "") %>
+ <!--      <div class="business-complete-to-upload">
+        <h4><%#= link_to "COMPLETE PROFILE TO UPLOAD", edit_user_path(current_user), :class => 'navbar-link'  %> </h4>
+      </div> -->
+    <%# end %>
   <% else %>
     <div class="business-login-to-upload">
       <h4><%= link_to "LOGIN TO UPLOAD PHOTOS", new_user_session_path, :class => 'navbar-link'  %></h4>
@@ -133,7 +133,7 @@
 <% if current_user %>
 
   <!-- IF PROFILE COMPLETE -->
-  <% if (current_user.last_name != nil && current_user.first_name != nil && current_user.last_name != "" && current_user.first_name != "" ) %>
+  <%# if (current_user.last_name != nil && current_user.first_name != nil && current_user.last_name != "" && current_user.first_name != "" ) %>
 
     <!-- IF ALREADY REVIEWED -->
     <% if @business.reviews.any? { |review| review.user.email == current_user.email } %>
@@ -149,11 +149,11 @@
     <% end %> 
 
   <!-- IF PROFILE NOT COMPLETE -->
-  <% elsif (current_user.last_name == nil || current_user.first_name == nil || current_user.last_name == "" || current_user.first_name == "") %>
-    <div class="business-complete-to-review">
-      <h4><%= link_to "COMPLETE PROFILE TO REVIEW", edit_user_path(current_user), :class => 'navbar-link'  %> </h4>
-    </div>
-  <% end %> 
+  <%# elsif (current_user.last_name == nil || current_user.first_name == nil || current_user.last_name == "" || current_user.first_name == "") %>
+    <!-- <div class="business-complete-to-review"> -->
+      <!-- <h4><%#= link_to "COMPLETE PROFILE TO REVIEW", edit_user_path(current_user), :class => 'navbar-link'  %> </h4> -->
+    <!-- </div> -->
+  <%# end %> 
 
 <!-- IF NOT CURRENT USER -->
 <% else %>
