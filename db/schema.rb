@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141224020629) do
+ActiveRecord::Schema.define(version: 20141224022752) do
 
   create_table "biztags", force: true do |t|
     t.string   "name"
@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 20141224020629) do
     t.string   "friday_closing"
     t.string   "saturday_opening"
     t.string   "saturday_closing"
+    t.text     "return_of_consigned_goods"
   end
 
   create_table "designers", force: true do |t|
