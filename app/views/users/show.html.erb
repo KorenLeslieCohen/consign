@@ -1,20 +1,13 @@
-<div class="users-page">
+<section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+  <h1 class="header"><%= @user.first_name.upcase %> <%= @user.last_name[0].upcase %>.</h1>
+  <p class="header">PROFILE</p>
+</section>
 
+<div class="users-page">
   <!-- IF USER SIGNED IN -->
   <% if user_signed_in? %>
-
     <!-- IF VIEWING YOUR OWN PROFILE -->
     <% if (current_user.email == @user.email) %>
-
-      <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
-        <h1 class="header user-profile-photo">
-          <% if !@user.user_profile_photo? %>
-            <img src="https://s3.amazonaws.com/consignnyc/placeholder-profile.png">
-          <% else %>
-            <%= image_tag current_user.user_profile_photo %></h1>
-          <% end %>
-        <p class="header"><%= current_user.first_name.upcase %> <%= current_user.last_name[0].upcase %>.</p>
-      </section>
 
       <p id="notice"><%= notice %></p>
 
@@ -31,53 +24,22 @@
       <div class="user-profile-logout">
         <h4><%= link_to "LOGOUT", destroy_user_session_path, method: :delete%></h4>
       </div>
-      <p>
-        <strong>Bio:</strong>
-        <%= @user.bio %>
-      </p>
-
-    <!-- IF SIGNED IN BUT VIEWING ANOTHER USER'S PROFILE -->
-    <% else %>
-
-      <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
-        <h1 class="header user-profile-photo">
-        <% if !@user.user_profile_photo? %>
-          <img src="https://s3.amazonaws.com/consignnyc/placeholder-profile.png">
-        <% else %>
-          <%= image_tag @user.user_profile_photo %></h1>
-        <% end %>
-        <p class="header"><%= @user.first_name.upcase %> <%= @user.last_name[0].upcase %>.</p>
-      </section>
-
-      <p id="notice"><%= notice %></p>
-
-      <p>
-        <strong>Bio:</strong>
-        <%= @user.bio %>
-      </p>
 
     <% end %>
-
-  <% else %>
-
-    <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
-      <h1 class="header user-profile-photo">
-      <% if !@user.user_profile_photo? %>
-        <img src="https://s3.amazonaws.com/consignnyc/placeholder-profile.png">
-      <% else %>
-        <%= image_tag @user.user_profile_photo %></h1>
-      <% end %>
-      <p class="header"><%= @user.first_name.upcase %> <%= @user.last_name[0].upcase %>.</p>
-    </section>
-
-    <p id="notice"><%= notice %></p>
-
-    <p>
-      <strong>Bio:</strong>
-      <%= @user.bio %>
-    </p>
-
   <% end %>
+
+  <div class="user-profile-photo">
+    <% if !@user.user_profile_photo? %>
+      <img src="https://s3.amazonaws.com/consignnyc/placeholder-profile.png">
+    <% else %>
+      <%= image_tag @user.user_profile_photo %></h1>
+    <% end %>
+  </div>
+
+  <p>
+    <strong>Bio:</strong>
+    <%= @user.bio %>
+  </p>
 
   <!-- SHOW USER'S REVIEWS -->
   <div class="user-header">
@@ -154,6 +116,7 @@
       </div>
     </div>
   </section>
+  
 </div>
 
 
