@@ -14,6 +14,11 @@ class UsersController < ApplicationController
   def show
   end
 
+  # GET /users/new
+  def new
+    redirect_to businesses_path
+  end
+
   # GET /users/1/edit
   def edit
     redirect_to businesses_path unless (is_owner? || is_user?)
