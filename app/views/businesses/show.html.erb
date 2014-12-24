@@ -29,33 +29,149 @@
 
 <p id="notice"><%= notice %></p>    
 
+<!-- MAP -->
 <div class="business-map">
   <iframe height="200" frameborder="0" style="border:0"
   src="<%= @business.map  %>AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94"></iframe>
 </div>
 
-<div>
-  <p>
-    <strong>Website:</strong>
-    <%= link_to @business.website.gsub("http://", ""), @business.website, :target => "_blank" %>
-  </p>
-</div>
-
+<!-- MAIN INFO -->
 <p>
-  <strong>Phone:</strong>
-  <%= @business.phone %>
+  <strong>Website:</strong>
+  <%= link_to @business.website.gsub("http://", ""), @business.website, :target => "_blank" %>
 </p>
 
+<!-- BOROUGH / NEIGHBORHOOD -->
+<p>
+  <strong>Borough:</strong>
+  <%= @business.borough %>
+</p>
+<p>
+  <strong>Neighborhood:</strong>
+  <%= @business.neighborhood %>
+</p>
+
+<!-- CONTACT INFO -->
 <p>
   <strong>Street Address:</strong>
   <%= @business.street_address %>
 </p>
-
+<p>
+  <strong>City:</strong>
+  <%= @business.city %>
+</p>
+<p>
+  <strong>State:</strong>
+  <%= @business.state %>
+</p>
+<p>
+  <strong>Zip:</strong>
+  <%= @business.zip %>
+</p>
+<p>
+  <strong>Phone:</strong>
+  <%= @business.phone %>
+</p>
 <p>
   <strong>Email:</strong>
   <%= @business.email %>
 </p>
 
+<!-- FOR SELLERS -->
+<p>
+  <strong>Percent to Client:</strong>
+  <%= @business.percent_to_client %>
+</p>
+<p>
+  <strong>Markdown Info:</strong>
+  <%= @business.markdown_info %>
+</p>
+<p>
+  <strong>Consignment Period:</strong>
+  <%= @business.consignment_period %>
+</p>
+<p>
+  <strong>Appointment Info:</strong>
+  <%= @business.appointment_info %>
+</p>
+<p>
+  <strong>Special Offers:</strong>
+  <%= @business.special_offers %>
+</p>
+<p>
+  <strong>Return of Consigned Goods:</strong>
+  <%= @business.return_of_consigned_goods %>
+</p>
+
+<!-- FOR SHOPPERS -->
+<p>
+  <strong>Return Policy:</strong>
+  <%= @business.return_policy %>
+</p>
+<p>
+  <strong>eCommerce Site:</strong>
+  <%= @business.ecommerce_site %>
+</p>
+
+<!-- HOURS OF OPERATION -->
+<p>
+  <strong>Sunday Opening:</strong>
+  <%= @business.sunday_opening %>
+</p>
+<p>
+  <strong>Sunday Closing:</strong>
+  <%= @business.sunday_closing %>
+</p>
+<p>
+  <strong>Monday Opening:</strong>
+  <%= @business.monday_opening %>
+</p>
+<p>
+  <strong>Monday Closing:</strong>
+  <%= @business.monday_closing %>
+</p>
+<p>
+  <strong>Tuesday Opening:</strong>
+  <%= @business.tuesday_opening %>
+</p>
+<p>
+  <strong>Tuesday Closing:</strong>
+  <%= @business.tuesday_closing %>
+</p>
+<p>
+  <strong>Wednesday Opening:</strong>
+  <%= @business.wednesday_opening %>
+</p>
+<p>
+  <strong>Wednesday Closing:</strong>
+  <%= @business.wednesday_closing %>
+</p>
+<p>
+  <strong>Thursday Opening:</strong>
+  <%= @business.thursday_opening %>
+</p>
+<p>
+  <strong>Thursday Closing:</strong>
+  <%= @business.thursday_closing %>
+</p>
+<p>
+  <strong>Friday Opening:</strong>
+  <%= @business.friday_opening %>
+</p>
+<p>
+  <strong>Friday Closing:</strong>
+  <%= @business.friday_closing %>
+</p>
+<p>
+  <strong>Saturday Opening:</strong>
+  <%= @business.saturday_opening %>
+</p>
+<p>
+  <strong>Saturday Closing:</strong>
+  <%= @business.saturday_closing %>
+</p>
+
+<!-- TAGS -->
 <p><strong>Biztags:</strong>
 <% @business.biztags.each do |biztag| %> 
   <%= link_to biztag.name, biztag %><%= "," unless biztag == @business.biztags.last %>
