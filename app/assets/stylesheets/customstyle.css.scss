@@ -700,6 +700,33 @@ a:hover {
   background: #FFF;
 }
 
+/*--------------BUSINESS FORM--------------*/
+
+.day .field {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.days-inner {
+  width: 190px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sun .field,
+.mon .field,
+.tues .field,
+.wed .field,
+.thurs .field,
+.fri .field,
+.sat .field {
+  float: left;
+}
+
+.days h4 {
+  text-align: center;
+}
+
 /*--------------DESIGNERS--------------*/
 
 .designers {
