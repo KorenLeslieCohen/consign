@@ -419,7 +419,8 @@ h1 {
 .signin-button,
 .signup-button,
 .reset-button,
-.update-profile-button {
+.update-profile-button,
+.business-button {
   margin-top: 0;
   margin-right: auto;
   margin-left: auto;
@@ -445,12 +446,17 @@ h1 {
   width: 156px;
 }
 
+.business-button {
+  width: 204px;
+}
+
 .review-button button,
 .photo-button button,
 .signin-button button,
 .signup-button button,
 .reset-button button,
-.update-profile-button button  {
+.update-profile-button button,
+.business-button button  {
     background: #FD8698;
     color: white;
     outline: 0px;
@@ -461,7 +467,8 @@ h1 {
 .signin-button button:hover,
 .signup-button button:hover,
 .reset-button button:hover,
-.update-profile-button button:hover {
+.update-profile-button button:hover,
+.business-button button:hover {
     background: #000;
 }
 
@@ -707,6 +714,11 @@ a:hover {
   margin-right: 10px;
 }
 
+.days {
+  width: 400px;
+  height: 380px;
+}
+
 .days-inner {
   width: 190px;
   margin-left: auto;
@@ -724,6 +736,50 @@ a:hover {
 }
 
 .days h4 {
+  text-align: center;
+}
+
+.state-zip .field {
+  float: left;
+}
+
+.borough-neighborhood {
+  width: 400px;
+}
+
+.city,
+.zip {
+  border: 1px solid #CCC;
+  padding: 5px;
+  width: 300px;
+}
+
+.city {
+  width: 200px;
+}
+
+.zip {
+  width: 100px;
+}
+
+.biz-form {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.biz-form input,
+.biz-form textarea {
+  border: 1px solid #CCC;
+  width: 400px;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.biz-form h1 {
+  color: #FD8698;
+  font-size: 30px;
   text-align: center;
 }
 
@@ -822,6 +878,13 @@ a:hover {
 #footer .btn-group {
   margin-bottom: 0;
 }
+
+/*#footer .btn,
+#footer .btn-group,
+#footer .btn-default {
+  border: 0px;
+}*/
+
 
 .fa-facebook,
 .fa-twitter,

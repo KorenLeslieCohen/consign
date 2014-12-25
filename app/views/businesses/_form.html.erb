@@ -10,200 +10,217 @@
       </ul>
     </div>
   <% end %>
- 
- <!-- PROFILE PHOTO -->
- <div class="field business-field">
-    <%= f.label :profile_photo %>
-    <%= f.file_field :profile_photo, placeholder: "Profile Photo"%>
-  </div>
 
-  <!-- MAIN INFO -->
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :website %><br>
-    <%= f.text_field :website %>
-  </div>
+  <div class="col-md-12">
+    <div class="biz-form">
 
-  <!-- BOROUGH / NEIGHBORHOOD -->
-  <div class="field">
-    <%= f.label :borough_id %><br>
-    <%#= f.number_field :borough_id %>
-    <%= f.collection_select(:borough_id, Borough.all, :id, :name ) %>
-  </div>
-  <div class="field">
-    <%= f.label :neighborhood_id %><br>
-    <%#= f.number_field :neighborhood_id %>
-    <%= f.collection_select(:neighborhood_id, Neighborhood.all, :id, :name ) %>
-  </div>
-  <div class="field">
-    <%= f.label :map %><br>
-    <%= f.text_field :map %>
-  </div>
+    <h1>General Info</h1>
 
-  <!-- FOR SELLERS -->
-  <div class="field">
-    <%= f.label :percent_to_client %><br>
-    <%= f.text_field :percent_to_client %>
-  </div>
-  <div class="field">
-    <%= f.label :markdown_info %><br>
-    <%= f.text_field :markdown_info %>
-  </div>
-  <div class="field">
-    <%= f.label :consignment_period %><br>
-    <%= f.text_field :consignment_period %>
-  </div>
-  <div class="field">
-    <%= f.label :appointment_info %><br>
-    <%= f.text_field :appointment_info %>
-  </div>
-  <div class="field">
-    <%= f.label :special_offers %><br>
-    <%= f.text_field :special_offers %>
-  </div>
-  <div class="field">
-    <%= f.label :return_of_consigned_goods %><br>
-    <%= f.text_field :return_of_consigned_goods %>
-  </div>
+      <!-- PROFILE PHOTO -->
+      <div class="field">
+        <%= f.file_field :profile_photo, placeholder: "Profile Photo"%>
+      </div>
 
-  <!-- FOR SHOPPERS -->
-  <div class="field">
-    <%= f.label :return_policy %><br>
-    <%= f.text_field :return_policy %>
-  </div>
-  <div class="field">
-    <%= f.label :ecommerce_site %><br>
-    <%= f.text_field :ecommerce_site %>
-  </div>
+      <!-- MAIN INFO -->
+      <div class="field">
+        <%= f.text_field :name, placeholder: "Store Name" %>
+      </div>
+      <div class="field">
+        <%= f.text_field :website, placeholder: "Store Website" %>
+      </div>
 
-  <!-- HOURS OF OPERATION -->
-  <div class="days col-md-12">
-    <div class="days-inner">
-      <h4>Hours of Operation</h4>
-      <div class="day sun">
+      <!-- BOROUGH / NEIGHBORHOOD -->
+      <div class="borough-neighborhood">
         <div class="field">
-        Sunday
-          <%#= f.label :sunday_opening %><br>
-          <%= f.select :sunday_opening, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %> to
+          <%= f.label :borough_id %>
+          <%= f.collection_select(:borough_id, Borough.all, :id, :name ) %>
         </div>
         <div class="field">
-          <%#= f.label :sunday_closing %><br>
-          <%= f.select :sunday_closing, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %>
+          <%= f.label :neighborhood_id %>
+          <%= f.collection_select(:neighborhood_id, Neighborhood.all, :id, :name ) %>
         </div>
       </div>
-      <div class="day mon">
+      <div class="field">
+        <%= f.text_field :map, placeholder: "Map URL" %>
+      </div>
+
+      <!-- NEWS & SPECIALS  -->
+      <div class="field">
+        <%= f.text_field :special_offers, placeholder: "News / Special Offers" %>
+      </div>
+     
+      <!-- CONTACT INFO -->
+      <h1>Contact Info</h1>
+
+        <div class="address">
+          <div class="street-address">
+            <div class="field">
+              <%= f.text_area :street_address, placeholder: "Number and Street Address", :class => 'biz-input' %>
+            </div>
+          </div>
+          <div class="field">
+            <%= f.text_area :city, placeholder: "City", :class => 'city' %>
+          </div>
+        </div>
+
+        <div class="state-zip">
+          <div class="field">
+            <%= f.select :state, ["NY", "NJ", "CT"] %>
+          </div>
+          <div class="field">
+            <%= f.text_area :zip, placeholder: "Zip", :class => 'zip' %>
+          </div>
+        </div>
+
         <div class="field">
-        Monday
-          <%#= f.label :monday_opening %><br>
-          <%= f.select :monday_opening, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %> to
+          <%= f.text_field :phone, placeholder: "Store Phone", :class => 'biz-input' %>
         </div>
         <div class="field">
-          <%#= f.label :monday_closing %><br>
-          <%= f.select :monday_closing, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %>
+          <%= f.text_field :email, placeholder: "Store Email", :class => 'biz-input' %>
+        </div>
+
+      <!-- HOURS OF OPERATION -->
+      <h1>Hours of Operation</h1>
+
+      <div class="days">
+        <div class="days-inner">
+          
+          <div class="day sun">
+            <div class="field">
+            Sunday<br>
+              <%= f.select :sunday_opening, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %> to
+            </div>
+            <div class="field">
+              <br>
+              <%= f.select :sunday_closing, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %>
+            </div>
+          </div>
+          <div class="day mon">
+            <div class="field">
+            Monday<br>
+              <%= f.select :monday_opening, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %> to
+            </div>
+            <div class="field">
+              <br>
+              <%= f.select :monday_closing, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %>
+            </div>
+          </div>
+          <div class="day tues">
+            <div class="field">
+            Tuesday<br>
+              <%= f.select :tuesday_opening, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %> to
+            </div>
+            <div class="field">
+              <br>
+              <%= f.select :tuesday_closing, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %>
+            </div>
+          </div>
+          <div class="day wed">
+            <div class="field">
+            Wednesday<br>
+              <%= f.select :wednesday_opening, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %> to
+            </div>
+            <div class="field">
+            <br>
+              <%= f.select :wednesday_closing, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %>
+            </div>
+          </div>
+          <div class="day thurs">
+            <div class="field">
+            Thursday<br>
+              <%= f.select :thursday_opening, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %> to
+            </div>
+            <div class="field">
+              <br>
+              <%= f.select :thursday_closing, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %>
+            </div>
+          </div>
+          <div class="day fri">
+            <div class="field">
+            Friday<br>
+              <%= f.select :friday_opening, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %> to
+            </div>
+            <div class="field">
+              <br>
+              <%= f.select :friday_closing, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %>
+            </div>
+          </div>
+          <div class="day sat">
+            <div class="field">
+            Saturday<br>
+              <%= f.select :saturday_opening, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %> to
+            </div>
+            <div class="field">
+              <br>
+              <%= f.select :saturday_closing, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %>
+            </div>
+          </div>
+
         </div>
       </div>
-      <div class="day tues">
-        <div class="field">
-        Tuesday<br>
-          <%= f.select :tuesday_opening, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %> to
-        </div>
-        <div class="field">
-          <br>
-          <%= f.select :tuesday_closing, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %>
-        </div>
+
+      <!-- FOR SELLERS -->
+      <h1>For Consignors</h1>
+
+      <div class="field">
+        <%= f.text_field :percent_to_client, placeholder: "Percent to Client" %>
       </div>
-      <div class="day wed">
-        <div class="field">
-        Wednesday<br>
-          <%= f.select :wednesday_opening, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %> to
-        </div>
-        <div class="field">
-        <br>
-          <%= f.select :wednesday_closing, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %>
-        </div>
+      <div class="field">
+        <%= f.text_field :markdown_info, placeholder: "Markdown Periods" %>
       </div>
-      <div class="day thurs">
-        <div class="field">
-        Thursday<br>
-          <%= f.select :thursday_opening, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %> to
-        </div>
-        <div class="field">
-          <br>
-          <%= f.select :thursday_closing, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %>
-        </div>
+      <div class="field">
+        <%= f.text_field :consignment_period, placeholder: "Consignment Period" %>
       </div>
-      <div class="day fri">
-        <div class="field">
-        Friday<br>
-          <%= f.select :friday_opening, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %> to
-        </div>
-        <div class="field">
-          <br>
-          <%= f.select :friday_closing, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %>
-        </div>
+      <div class="field">
+        <%= f.text_field :appointment_info, placeholder: "Appointment Info" %>
       </div>
-      <div class="day sat">
-        <div class="field">
-        Saturday<br>
-          <%= f.select :saturday_opening, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %> to
-        </div>
-        <div class="field">
-          <br>
-          <%= f.select :saturday_closing, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %>
-        </div>
+      <div class="field">
+        <%= f.text_field :return_of_consigned_goods, placeholder: "Return of Consigned Items" %>
+      </div>
+
+      <!-- FOR SHOPPERS -->
+      <h1>For Shoppers</h1>
+
+      <div class="field">
+        <%= f.text_field :return_policy, placeholder: "Return Policy" %>
+      </div>
+      <div class="field">
+        <%= f.text_field :ecommerce_site, placeholder: "eCommerce Site?" %>
+      </div>
+
       </div>
     </div>
   </div>
 
-  <!-- CONTACT INFO -->
-  <div class="field">
-    <%= f.label :street_address %><br>
-    <%= f.text_area :street_address %>
-  </div>
-    <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_area :city %>
-  </div>
-    <div class="field">
-    <%= f.label :state %><br>
-    <%= f.text_area :state %>
-  </div>
-    <div class="field">
-    <%= f.label :zip %><br>
-    <%= f.text_area :zip %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-
   <!-- TAGS -->
-  <div class="field">
+  <div class="field col-md-12">
     <h4>Biztags</h4>
     <%= f.collection_check_boxes :biztag_ids, Biztag.all, :id, :name, {:item_wrapper_class => 'checkbox_container'} %><br>
   </div>
-  <div class="field">
+  <div class="field col-md-12">
     <h4>Designers</h4>
     <%= f.collection_check_boxes :designer_ids, Designer.all, :id, :name, {:item_wrapper_class => 'checkbox_container'} %><br>
   </div>
 
-  <!-- ADMIN ACCESS -->
-  <div class="field">
-    <%= f.label :admin_email %><br>
-    <%= f.text_field :admin_email, placeholder: "Admin Email"%>
+  <div class="biz-form">
+
+    <!-- ADMIN ACCESS -->
+    <% if is_owner? %>
+      <h1>Admin Access</h1>
+      <div class="field col-md-12">
+        <%= f.text_field :admin_email, placeholder: "Admin Email" %>
+      </div>
+    <% end %>
+
   </div>
 
   <!-- USER HIDDEN FIELD -->
   <%= f.hidden_field :user_id, :value => current_user.id %>
 
-  <div class="actions">
-    <%= f.submit "submit info" %>
+  <div class="business-button">
+    <div class="form-group form">
+      <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">SUBMIT BUSINESS INFO</button>
+    </div>
   </div>
+
 <% end %>
