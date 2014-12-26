@@ -18,12 +18,12 @@ div.owl-item {
 }
 
 .owlitem p a {
-  color: #FD8698;
+  color: #000;
   font-family: "Playfair Display";
 }
 
 .owlitem p a:hover {
-  color: #000;
+  color: #FD8698;
 }
 
 .owlitem p {
