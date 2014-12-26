@@ -789,6 +789,8 @@ td {
   color: #FD8698;
 }
 
+/*--------------BUSINESS DESIGNERS--------------*/
+
 .designer-list {
   max-width: 700px;
   margin-left: auto;
@@ -799,6 +801,17 @@ td {
 
 .designer-list p {
   text-align: center;
+  font-family: 'Dancing Script';
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+.designer-list p a {
+  color: #FD8698;
+}
+
+.designer-list p a:hover {
+  color: #777;
 }
 
 /*--------------BUSINESS FORM--------------*/
