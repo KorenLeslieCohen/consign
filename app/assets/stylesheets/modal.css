@@ -22,26 +22,27 @@
 
 .modalDialog > .modal-box {
   position: relative;
-  color: #FFF;
+  color: #000;
   width: 300px;
   margin-left: auto;
   margin-right: auto;
-  border: 3px solid #CCC;
-  background: #000;
+  border: 3px solid #000;
+  background: #FFF;
 }
 
 .modal-box {
-  color: #FFF;
+  color: #000;
   width: 300px;
 }
 
 .close {
-  color: #FFF;
+  color: #000;
   float: none;
-  font-family: 'Arial';
+  font-family: 'Playfair Display';
   font-size: 15px;
   opacity: 1;
   margin-left: 120px;
+  font-weight: normal;
 }
 
 .close a {
@@ -51,12 +52,12 @@
 
 .close:visited,
 .close:hover {
-  color: #FFF;
+  color: #000;
 }
 
 .hours-table {
   padding: 20px;
-  background: #000;
+  background: #FFF;
   margin-left: auto;
   margin-right: auto;
 }
@@ -85,23 +86,23 @@
 
 .modalDialog2 > .modal-box2 {
   position: relative;
-  color: #FFF;
+  color: #000;
   width: 315px;
   margin-left: auto;
   margin-right: auto;
-  border: 3px solid #CCC;
-  background: #000;
+  border: 3px solid #000;
+  background: #FFF;
 }
 
 .modal-box2 {
-  color: #FFF;
+  color: #000;
   width: 300px;
 }
 
 .close2 {
-  color: #FFF;
+  color: #000;
   float: none;
-  font-family: 'Arial';
+  font-family: 'Playfair Display';
   font-size: 15px;
   opacity: 1;
   margin-left: 130px;
@@ -114,6 +115,150 @@
 
 .close2:visited,
 .close2:hover {
+  color: #000;
+}
+
+/*-------------------MODAL CONSIGNMENT TERMS-------------------*/
+
+.modalDialog3 {
+  position: fixed;
+  overflow: scroll;
+  top: 25%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+  opacity:0;
+  transition-duration: .5s;
+  transition-property: opacity;
+  pointer-events: none;
+}
+
+.modalDialog3:target {
+  opacity: 1;
+  pointer-events: auto;
+  transition-duration: .5s;
+}
+
+.modalDialog3 > .modal-box3 {
+  position: relative;
+  color: #000;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid #000;
+  background: #FFF;
+}
+
+.modal-box3 {
+  color: #000;
+  width: 300px;
+}
+
+.close3 {
+  color: #000;
+  float: none;
+  font-family: 'Playfair Display';
+  font-size: 15px;
+  opacity: 1;
+  margin-left: 120px;
+  font-weight: normal;
+}
+
+.close3 a {
+  line-height: 25px;
+  position: absolute;
+}
+
+.close3:visited,
+.close3:hover {
+  color: #000;
+}
+
+.consign-table {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  max-width: 600px;
+}
+
+/*-------------------MODAL SHOP TERMS-------------------*/
+
+.modalDialog4 {
+  position: fixed;
+  overflow: scroll;
+  top: 25%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+  opacity:0;
+  transition-duration: .5s;
+  transition-property: opacity;
+  pointer-events: none;
+}
+
+.modalDialog4:target {
+  opacity: 1;
+  pointer-events: auto;
+  transition-duration: .5s;
+}
+
+.modalDialog4 > .modal-box4 {
+  position: relative;
+  color: #000;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid #000;
+  background: #FFF;
+}
+
+.modal-box4 {
+  color: #000;
+  width: 300px;
+}
+
+.close4 {
+  color: #000;
+  float: none;
+  font-family: 'Playfair Display';
+  font-size: 15px;
+  opacity: 1;
+  margin-left: 120px;
+  font-weight: normal;
+}
+
+.close4 a {
+  line-height: 25px;
+  position: absolute;
+}
+
+.close4:visited,
+.close4:hover {
+  color: #000;
+}
+
+/*-------------------TERMS-------------------*/
+
+.terms {
+  background: #000;
+  width: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.terms h4 {
+  padding: 5px;
+}
+
+.terms h4 a {
   color: #FFF;
+}
+
+/*-------------------MODAL WRAP-------------------*/
+
+.modal-header button {
+  float: right;
 }
 

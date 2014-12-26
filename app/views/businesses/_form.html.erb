@@ -60,11 +60,11 @@
         <div class="address">
           <div class="street-address">
             <div class="field">
-              <%= f.text_area :street_address, placeholder: "Number and Street Address", :class => 'biz-input' %>
+              <%= f.text_field :street_address, placeholder: "Number and Street Address", :class => 'biz-input' %>
             </div>
           </div>
           <div class="field">
-            <%= f.text_area :city, placeholder: "City", :class => 'city' %>
+            <%= f.text_field :city, placeholder: "City", :class => 'city' %>
           </div>
         </div>
 
@@ -73,7 +73,7 @@
             <%= f.select :state, ["NY", "NJ", "CT"] %>
           </div>
           <div class="field">
-            <%= f.text_area :zip, placeholder: "Zip", :class => 'zip' %>
+            <%= f.text_field :zip, placeholder: "Zip", :class => 'zip' %>
           </div>
         </div>
 

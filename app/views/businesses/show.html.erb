@@ -1,6 +1,6 @@
 <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
   <h1 class="header"><%= @business.name.upcase %></h1>
-  <p class="header"><%= link_to @business.neighborhood.name, @business.neighborhood %>, <%= link_to @business.borough.name, @business.borough %></p>
+  <p class="header"><%= link_to @business.neighborhood.name, @business.neighborhood %></p>
   <p class="header">
     <% if @business.reviews.length == 0 %>
     <% else %>
@@ -39,24 +39,106 @@
   <p><%= @business.special_offers %></p>
 </div>
 
-<!-- CONTACT INFO -->
-<div class="contact-info">
-  <p>
-    <%= @business.street_address %><br>
-    <%= @business.city %>, <%= @business.state %> <%= @business.zip %><br>
-    <%= @business.phone %>
-    <% if (@business.website != nil && @business.website != "") %>
-      <br><%= link_to @business.website.gsub("http://", ""), @business.website, :target => "_blank" %>
-    <% end %>
-    <% if (@business.email != nil && @business.email != "") %>
-      <br><a href="mailto:<%= @business.email %>"><%= @business.email %></a>
-    <% end %>
-  </p>
-</div>
+<section id="services">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <div class="delight-icon-services">
+            <i class="icon-wallet"></i>
+          </div>
+          <div class="caption">
+            <h3>CONSIGNORS</h3>
+            <div class="terms">
+              <h4><a href="#openModal3">TERMS</a></h4>
+              <div id="openModal3" class="modalDialog3">
+                <div class="modal-box3">
+                  <div class="modal-text3">
+                    <div class="consign-table">
+                      <table align="center">
+                        <tbody>
+                          <tr>
+                            <td>Percent to Client</td><td><%= @business.percent_to_client %></td>
+                          </tr>
+                          <tr>
+                            <td>Markdown Info:</td><td><%= @business.markdown_info %></td>
+                          </tr>
+                          <tr>
+                            <td>Consignment Period</td><td><%= @business.consignment_period %></td>
+                          </tr>
+                          <tr>
+                            <td>Appointment Info</td><td><%= @business.appointment_info %></td>
+                          </tr>
+                          <tr>
+                            <td>Return of Consigned Goods</td><td><%= @business.return_of_consigned_goods %></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <a href="#close" title="Close" class="close3">CLOSE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CONTACT INFO -->
+      <div class="contact-info col-sm-4">
+        <p>
+          <%= @business.street_address %><br>
+          <%= @business.city %>, <%= @business.state %> <%= @business.zip %><br>
+          <%= @business.phone %>
+          <% if (@business.website != nil && @business.website != "") %>
+            <br><%= link_to @business.website.gsub("http://", ""), @business.website, :target => "_blank" %>
+          <% end %>
+          <% if (@business.email != nil && @business.email != "") %>
+            <br><a href="mailto:<%= @business.email %>"><%= @business.email %></a>
+          <% end %>
+        </p>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <div class="delight-icon-services">
+            <i class="icon-briefcase"></i>
+          </div>
+          <div class="caption">
+            <h3>SHOPPERS</h3>
+            <!-- FOR SHOPPERS -->
+            <div class="terms">
+              <h4><a href="#openModal4">TERMS</a></h4>
+              <div id="openModal4" class="modalDialog4">
+                <div class="modal-box4">
+                  <div class="modal-text4">
+                    <div class="shop-table">
+                      <table align="center">
+                        <tbody>
+                          <tr>
+                            <td>Return Policy</td><td><%= @business.return_policy %></td>
+                          </tr>
+                          <tr>
+                            <td>eCommerce Site</td><td><%= @business.ecommerce_site %></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <a href="#close" title="Close" class="close4">CLOSE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- HOURS OF OPERATION -->
 <div id="hours-dropdown">
-  <p><a href="#openModal">SHOP HOURS</a></p>
+  <h4><a href="#openModal">SHOP HOURS</a></h4>
   <div id="openModal" class="modalDialog">
     <div class="modal-box">
       <div class="modal-text">
@@ -79,64 +161,19 @@
   </div>
 </div>
 
-<!-- FOR CONSIGNORS -->
-<div class="biz-header">
-  <h2>CONSIGNORS</h2>
-</div>
-
-<div class="consign-table">
-  <table align="center">
-    <tbody>
-      <tr>
-        <td>Percent to Client</td><td><%= @business.percent_to_client %></td>
-      </tr>
-      <tr>
-        <td>Markdown Info:</td><td><%= @business.markdown_info %></td>
-      </tr>
-      <tr>
-        <td>Consignment Period</td><td><%= @business.consignment_period %></td>
-      </tr>
-      <tr>
-        <td>Appointment Info</td><td><%= @business.appointment_info %></td>
-      </tr>
-      <tr>
-        <td>Return of Consigned Goods</td><td><%= @business.return_of_consigned_goods %></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<!-- FOR SHOPPERS -->
-<div class="biz-header">
-  <h2>SHOPPERS</h2>
-</div>
-
-<div class="consign-table">
-  <table align="center">
-    <tbody>
-      <tr>
-        <td>Return Policy</td><td><%= @business.return_policy %></td>
-      </tr>
-      <tr>
-        <td>eCommerce Site</td><td><%= @business.ecommerce_site %></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
 <!-- TAGS -->
+<!-- <h1>Tags</h1>
+<p> -->
+<%# @business.biztags.each do |biztag| %> 
+  <%#= link_to biztag.name, biztag %><%#= "," unless biztag == @business.biztags.last %>
+<%# end %><!-- </p> -->
 
-<h1>Tags</h1>
-<p>
-<% @business.biztags.each do |biztag| %> 
-  <%= link_to biztag.name, biztag %><%= "," unless biztag == @business.biztags.last %>
-<% end %></p>
-
-<h1>Designers</h1>
+<div class="designer-list">
 <p>
 <% @business.designers.each do |designer| %> 
   <%= link_to designer.name, designer %><%= "," unless designer == @business.designers.last %>
 <% end %></p>
+</div>
 
 <!-- PHOTO FORM -->
 <div class="biz-header">

@@ -393,7 +393,6 @@ h1 {
 #photo-form textarea {
   width: 300px;
   margin: 5px;
-  background: #FFF;
 }
 
 #new-review h5,
@@ -453,7 +452,6 @@ h1 {
   background: #000;
   color: white;
   outline: 0px;
-  border: 1px solid #CCC;
 }
 
 .review-button button:hover,
@@ -718,14 +716,14 @@ td {
 .contact-info p {
   text-align: center;
   font-size: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .special-offers p {
-  color: #FC596F;
-  font-family: "Playfair Display";
+  font-family: "Times";
   font-weight: bold;
+  font-style: italic;
 }
 
 .contact-info p {
@@ -734,11 +732,11 @@ td {
 }
 
 .contact-info a {
-  color: #FD8698;
+  color: #777;
 }
 
 .contact-info a:hover {
-  color: #777;
+  color: #FD8698;
 }
 
 #hours-dropdown,
@@ -747,8 +745,12 @@ td {
   margin: 5px;
 }
 
-#hours-dropdown p,
-#photo-upload p {
+#hours-dropdown {
+  margin-top: 0;
+}
+
+#hours-dropdown h4,
+#photo-upload h4 {
   text-align: center;
   font-size: 20px;
   font-family: "Playfair Display";
@@ -756,18 +758,28 @@ td {
   padding: 5px;
   margin-left: auto;
   margin-right: auto;
+  transition-duration: .5s;
+  transition-property: background;
+  margin-top: 0;
 }
 
-#hours-dropdown p {
+#hours-dropdown h4:hover,
+#photo-upload h4:hover {
+  background: #FD8698;
+  transition-duration: .5s;
+  transition-property: background;
+}
+
+#hours-dropdown h4 {
   width: 140px;
 }
 
-#photo-upload p {
+#photo-upload h4 {
   width: 170px;
 }
 
-#hours-dropdown p a,
-#photo-upload p a {
+#hours-dropdown h4 a,
+#photo-upload h4 a {
   color: #FFF;
 }
 
@@ -777,14 +789,16 @@ td {
   color: #FD8698;
 }
 
-.consign-table {
+.designer-list {
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-/*  width: 90%;
-  max-width: 600px;*/
-  /*width: 600px;*/
-  padding: 10px;
-  max-width: 600px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.designer-list p {
+  text-align: center;
 }
 
 /*--------------BUSINESS FORM--------------*/
