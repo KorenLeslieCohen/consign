@@ -92,7 +92,7 @@
           
           <div class="day sun">
             <div class="field">
-            Sunday<br>
+              Sunday<br>
               <%= f.select :sunday_opening, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %> to
             </div>
             <div class="field">
@@ -102,7 +102,7 @@
           </div>
           <div class="day mon">
             <div class="field">
-            Monday<br>
+              Monday<br>
               <%= f.select :monday_opening, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %> to
             </div>
             <div class="field">
@@ -112,7 +112,7 @@
           </div>
           <div class="day tues">
             <div class="field">
-            Tuesday<br>
+              Tuesday<br>
               <%= f.select :tuesday_opening, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %> to
             </div>
             <div class="field">
@@ -122,7 +122,7 @@
           </div>
           <div class="day wed">
             <div class="field">
-            Wednesday<br>
+              Wednesday<br>
               <%= f.select :wednesday_opening, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %> to
             </div>
             <div class="field">
@@ -132,7 +132,7 @@
           </div>
           <div class="day thurs">
             <div class="field">
-            Thursday<br>
+              Thursday<br>
               <%= f.select :thursday_opening, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %> to
             </div>
             <div class="field">
@@ -142,7 +142,7 @@
           </div>
           <div class="day fri">
             <div class="field">
-            Friday<br>
+              Friday<br>
               <%= f.select :friday_opening, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %> to
             </div>
             <div class="field">
@@ -152,7 +152,7 @@
           </div>
           <div class="day sat">
             <div class="field">
-            Saturday<br>
+              Saturday<br>
               <%= f.select :saturday_opening, ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00,", "4:30", "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30"] %> to
             </div>
             <div class="field">
@@ -180,7 +180,8 @@
         <%= f.text_field :appointment_info, placeholder: "Appointment Info" %>
       </div>
       <div class="field">
-        <%= f.text_field :return_of_consigned_goods, placeholder: "Return of Consigned Items" %>
+        <%= f.label :return_of_consigned_goods %>?
+        <%= f.select :return_of_consigned_goods, ["Yes", "No"] %>
       </div>
 
       <!-- FOR SHOPPERS -->
@@ -190,7 +191,8 @@
         <%= f.text_field :return_policy, placeholder: "Return Policy" %>
       </div>
       <div class="field">
-        <%= f.text_field :ecommerce_site, placeholder: "eCommerce Site?" %>
+        <%= f.label :ecommerce_site %>?
+        <%= f.select :ecommerce_site, ["Yes", "No"] %>
       </div>
 
       </div>

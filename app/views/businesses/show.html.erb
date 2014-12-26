@@ -54,85 +54,75 @@
   </p>
 </div>
 
-
-
-
+<!-- HOURS OF OPERATION -->
 <div id="hours-dropdown">
-<p><a href="#openModal">SHOW HOURS</a></p>
-<div id="openModal" class="modalDialog">
-  <div class="modal-box">
-    <div class="modal-text">
-      
-
-<div class="hours-table">
-  <table align="center">
-    <tbody>
-      <tr><td>Sunday</td><td><%= @business.sunday_opening %></td><td>to</td><td><%= @business.sunday_closing %></td></tr>
-      <tr><td>Monday</td><td><%= @business.monday_opening %></td><td>to</td><td><%= @business.monday_closing %></td></tr>
-      <tr><td>Tuesday</td><td><%= @business.tuesday_opening %></td><td>to</td><td><%= @business.tuesday_closing %></td></tr>
-      <tr><td>Wednesday</td><td><%= @business.wednesday_opening %></td><td>to</td><td><%= @business.wednesday_closing %></td></tr>
-      <tr><td>Thursday</td><td><%= @business.thursday_opening %></td><td>to</td><td><%= @business.thursday_closing %></td></tr>
-      <tr><td>Friday</td><td><%= @business.friday_opening %></td><td>to</td><td><%= @business.friday_closing %></td></tr>
-      <tr><td>Saturday</td><td><%= @business.saturday_opening %></td><td>to</td><td><%= @business.saturday_closing %></td></tr>
-    </tbody>
-  </table>
-</div>
-
+  <p><a href="#openModal">SHOW HOURS</a></p>
+  <div id="openModal" class="modalDialog">
+    <div class="modal-box">
+      <div class="modal-text">
+        <div class="hours-table">
+          <table align="center">
+            <tbody>
+              <tr><td>Sunday</td><td><%= @business.sunday_opening %></td><td>to</td><td><%= @business.sunday_closing %></td></tr>
+              <tr><td>Monday</td><td><%= @business.monday_opening %></td><td>to</td><td><%= @business.monday_closing %></td></tr>
+              <tr><td>Tuesday</td><td><%= @business.tuesday_opening %></td><td>to</td><td><%= @business.tuesday_closing %></td></tr>
+              <tr><td>Wednesday</td><td><%= @business.wednesday_opening %></td><td>to</td><td><%= @business.wednesday_closing %></td></tr>
+              <tr><td>Thursday</td><td><%= @business.thursday_opening %></td><td>to</td><td><%= @business.thursday_closing %></td></tr>
+              <tr><td>Friday</td><td><%= @business.friday_opening %></td><td>to</td><td><%= @business.friday_closing %></td></tr>
+              <tr><td>Saturday</td><td><%= @business.saturday_opening %></td><td>to</td><td><%= @business.saturday_closing %></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <a href="#close" title="Close" class="close">CLOSE</a>
     </div>
-    <a href="#close" title="Close" class="close">CLOSE</a>
   </div>
 </div>
+
+<!-- FOR CONSIGNORS -->
+<div class="biz-show-header">
+  <h3>CONSIGNMENT INFORMATION</h3>
 </div>
 
-
-<!-- HOURS OF OPERATION -->
-<!-- <div class="hours-table">
+<div class="consign-table">
   <table align="center">
     <tbody>
-      <tr><td>Sunday</td><td><%= @business.sunday_opening %></td><td>to</td><td><%= @business.sunday_closing %></td></tr>
-      <tr><td>Monday</td><td><%= @business.monday_opening %></td><td>to</td><td><%= @business.monday_closing %></td></tr>
-      <tr><td>Tuesday</td><td><%= @business.tuesday_opening %></td><td>to</td><td><%= @business.tuesday_closing %></td></tr>
-      <tr><td>Wednesday</td><td><%= @business.wednesday_opening %></td><td>to</td><td><%= @business.wednesday_closing %></td></tr>
-      <tr><td>Thursday</td><td><%= @business.thursday_opening %></td><td>to</td><td><%= @business.thursday_closing %></td></tr>
-      <tr><td>Friday</td><td><%= @business.friday_opening %></td><td>to</td><td><%= @business.friday_closing %></td></tr>
-      <tr><td>Saturday</td><td><%= @business.saturday_opening %></td><td>to</td><td><%= @business.saturday_closing %></td></tr>
+      <tr>
+        <td>Percent to Client</td><td><%= @business.percent_to_client %></td>
+      </tr>
+      <tr>
+        <td>Markdown Info:</td><td><%= @business.markdown_info %></td>
+      </tr>
+      <tr>
+        <td>Consignment Period</td><td><%= @business.consignment_period %></td>
+      </tr>
+      <tr>
+        <td>Appointment Info</td><td><%= @business.appointment_info %></td>
+      </tr>
+      <tr>
+        <td>Return of Consigned Goods</td><td><%= @business.return_of_consigned_goods %></td>
+      </tr>
     </tbody>
   </table>
-</div> -->
-
-<!-- FOR SELLERS -->
-<h1>For Consignors</h1>
-<p>
-  <strong>Percent to Client:</strong>
-  <%= @business.percent_to_client %>
-</p>
-<p>
-  <strong>Markdown Info:</strong>
-  <%= @business.markdown_info %>
-</p>
-<p>
-  <strong>Consignment Period:</strong>
-  <%= @business.consignment_period %>
-</p>
-<p>
-  <strong>Appointment Info:</strong>
-  <%= @business.appointment_info %>
-</p>
-<p>
-  <strong>Return of Consigned Goods:</strong>
-  <%= @business.return_of_consigned_goods %>
-</p>
+</div>
 
 <!-- FOR SHOPPERS -->
-<h1>For Shoppers</h1>
-<p>
-  <strong>Return Policy:</strong>
-  <%= @business.return_policy %>
-</p>
-<p>
-  <strong>eCommerce Site:</strong>
-  <%= @business.ecommerce_site %>
-</p>
+<div class="biz-show-header">
+  <h3>FOR SHOPPERS</h3>
+</div>
+
+<div class="consign-table">
+  <table align="center">
+    <tbody>
+      <tr>
+        <td>Return Policy</td><td><%= @business.return_policy %></td>
+      </tr>
+      <tr>
+        <td>eCommerce Site</td><td><%= @business.ecommerce_site %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 
 

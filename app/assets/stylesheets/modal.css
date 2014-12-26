@@ -1,4 +1,4 @@
-/*MODAL*/
+/*-------------------MODAL-------------------*/
 
 .modalDialog {
   position: fixed;
@@ -60,3 +60,60 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+/*-------------------MODAL PHOTOS-------------------*/
+
+.modalDialog2 {
+  position: fixed;
+  overflow: scroll;
+  top: 25%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+  opacity:0;
+  transition-duration: .5s;
+  transition-property: opacity;
+  pointer-events: none;
+}
+
+.modalDialog2:target {
+  opacity: 1;
+  pointer-events: auto;
+  transition-duration: .5s;
+}
+
+.modalDialog2 > .modal-box2 {
+  position: relative;
+  color: #FFF;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid #FD8698;
+  background: #000;
+}
+
+.modal-box2 {
+  color: #FFF;
+  width: 300px;
+}
+
+.close2 {
+  color: #FFF;
+  float: none;
+  font-family: 'Arial';
+  font-size: 15px;
+  opacity: 1;
+  margin-left: 170px;
+}
+
+.close2 a {
+  line-height: 25px;
+  position: absolute;
+}
+
+.close2:visited,
+.close2:hover {
+  color: #FFF;
+}
+

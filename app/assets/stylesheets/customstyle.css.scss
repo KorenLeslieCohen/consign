@@ -392,15 +392,13 @@ h1 {
 #photo-form {
   margin-left: auto;
   margin-right: auto;
-  max-width: 620px;
+  max-width: 300px;
 }
 
 #photo-form input,
 #photo-form textarea {
-  float: left;
   width: 300px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 5px;
 }
 
 #new-review h5,
@@ -747,29 +745,50 @@ td {
   color: #777;
 }
 
-#hours-dropdown {
+#hours-dropdown,
+#photo-upload {
   margin: 5px;
 }
 
-#hours-dropdown p {
+#hours-dropdown p,
+#photo-upload p {
   text-align: center;
   font-size: 15px;
   font-family: "Playfair Display";
   background: #000;
   padding: 5px;
-  width: 110px;
   margin-left: auto;
   margin-right: auto;
 }
 
-#hours-dropdown p a{
+#hours-dropdown p {
+  width: 110px;
+}
+
+#photo-upload p {
+  width: 150px;
+}
+
+#hours-dropdown p a,
+#photo-upload p a {
   color: #FFF;
 }
 
-/*.hours-table p {
-  font-size: 15px;
-  font-family: "Playfair Display";
-}*/
+.biz-show-header h3 {
+  text-align: center;
+  font-size: 30px;
+  color: #FD8698;
+}
+
+.consign-table {
+  margin-left: auto;
+  margin-right: auto;
+/*  width: 90%;
+  max-width: 600px;*/
+  /*width: 600px;*/
+  padding: 10px;
+  max-width: 600px;
+}
 
 /*--------------BUSINESS FORM--------------*/
 
@@ -929,11 +948,9 @@ td {
   transition-property: color;
 }
 #footer .btn-default {
-  /*border: 1px solid #FD8698;*/
   border-radius: 50%;
   width: 56px;
   height: 56px;
-  /*margin: 3px;*/
   transition-duration: .5s;
   transition-property: background;
 }
@@ -948,19 +965,10 @@ td {
   margin-bottom: 0;
 }
 
-/*#footer .btn,
-#footer .btn-group,
-#footer .btn-default {
-  border: 0px;
-}*/
-
-
 .fa-facebook,
 .fa-twitter,
 .fa-instagram {
   color: #FFF;
-/*  transition-duration: .5s;
-  transition-property: color;*/
 }
 
 /*--------------EAST VILLAGE--------------*/
@@ -1017,23 +1025,7 @@ td {
   margin-right: auto;
 }
 
-/* Smaller Screens - Breakpoint -------> */
-/*@media screen and (max-width : 1200px) {
-
-  .container-nav {
-    width: 1100px;
-  }
-
-}*/
-
-/* Smaller Screens - Breakpoint -------> */
-/*@media screen and (max-width : 1150px) {
-
-  .container-nav {
-    width: 1050px;
-  }
-
-}*/
+/*MEDIA QUERIES*/
 
 /* Smaller Screens - Breakpoint -------> */
 @media screen and (max-width : 1100px) {
@@ -1044,16 +1036,6 @@ td {
 
 }
 
-/* Smaller Screens - Breakpoint -------> */
-/*@media screen and (max-width : 1050px) {
-
-  .container-nav {
-    width: 950px;
-  }
-
-
-
-}*/
 
 
 
