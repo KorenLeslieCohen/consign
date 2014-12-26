@@ -1,0 +1,62 @@
+/*MODAL*/
+
+.modalDialog {
+  position: fixed;
+  overflow: scroll;
+  top: 25%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+  opacity:0;
+  transition-duration: .5s;
+  transition-property: opacity;
+  pointer-events: none;
+}
+
+.modalDialog:target {
+  opacity: 1;
+  pointer-events: auto;
+  transition-duration: .5s;
+}
+
+.modalDialog > .modal-box {
+  position: relative;
+  color: #FFF;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid #FD8698;
+  background: #000;
+}
+
+.modal-box {
+  color: #FFF;
+  width: 300px;
+}
+
+.close {
+  color: #FFF;
+  float: none;
+  font-family: 'Arial';
+  font-size: 15px;
+  opacity: 1;
+  margin-left: 120px;
+}
+
+.close a {
+  line-height: 25px;
+  position: absolute;
+}
+
+.close:visited,
+.close:hover {
+  color: #FFF;
+}
+
+.hours-table {
+  padding: 20px;
+  background: #000;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -24,6 +24,7 @@ class Business < ActiveRecord::Base
     # :default_style => :thumb, 
     :s3_protocol => "https"
 
+  validates_presence_of :name, :street_address, :city, :state, :zip, :phone
   validates :admin_email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
   validates :profile_photo, :attachment_presence => true

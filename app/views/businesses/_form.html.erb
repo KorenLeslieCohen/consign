@@ -30,21 +30,26 @@
       </div>
 
       <!-- BOROUGH / NEIGHBORHOOD -->
-      <div class="borough-neighborhood">
-        <div class="field">
-          <%= f.label :borough_id %>
-          <%= f.collection_select(:borough_id, Borough.all, :id, :name ) %>
+      <% if is_owner? %>
+        <div class="borough-neighborhood">
+          <div class="field">
+            <%= f.label :borough_id %>
+            <%= f.collection_select(:borough_id, Borough.all, :id, :name ) %>
+          </div>
+          <div class="field">
+            <%= f.label :neighborhood_id %>
+            <%= f.collection_select(:neighborhood_id, Neighborhood.all, :id, :name ) %>
+          </div>
         </div>
         <div class="field">
-          <%= f.label :neighborhood_id %>
-          <%= f.collection_select(:neighborhood_id, Neighborhood.all, :id, :name ) %>
+          <%= f.text_field :map, placeholder: "Map URL" %>
         </div>
-      </div>
-      <div class="field">
-        <%= f.text_field :map, placeholder: "Map URL" %>
-      </div>
+      <% end %>
 
       <!-- NEWS & SPECIALS  -->
+
+      <h1>News & Specials</h1>
+
       <div class="field">
         <%= f.text_field :special_offers, placeholder: "News / Special Offers" %>
       </div>
@@ -193,12 +198,17 @@
   </div>
 
   <!-- TAGS -->
-  <div class="field col-md-12">
-    <h4>Biztags</h4>
-    <%= f.collection_check_boxes :biztag_ids, Biztag.all, :id, :name, {:item_wrapper_class => 'checkbox_container'} %><br>
-  </div>
-  <div class="field col-md-12">
-    <h4>Designers</h4>
+  <% if is_owner? %>
+    <div class="field col-md-12 biztag-checkboxes">
+      <h4>Biztags</h4>
+      <%= f.collection_check_boxes :biztag_ids, Biztag.all, :id, :name, {:item_wrapper_class => 'checkbox_container'} %><br>
+    </div>
+  <% end %>
+
+  <div class="field col-md-12 designer-checkboxes">
+    <div class="biz-form">
+      <h1>Designers</h1>
+    </div>
     <%= f.collection_check_boxes :designer_ids, Designer.all, :id, :name, {:item_wrapper_class => 'checkbox_container'} %><br>
   </div>
 

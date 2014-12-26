@@ -1,6 +1,6 @@
 <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
   <h1 class="header"><%= @business.name.upcase %></h1>
-  <p class="header"><%= link_to @business.neighborhood.name, @business.neighborhood %> <i class="fa fa-heart"></i> <%= link_to @business.borough.name, @business.borough %></p>
+  <p class="header"><%= link_to @business.neighborhood.name, @business.neighborhood %>, <%= link_to @business.borough.name, @business.borough %></p>
   <p class="header">
     <% if @business.reviews.length == 0 %>
     <% else %>
@@ -35,49 +35,73 @@
   src="<%= @business.map  %>AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94"></iframe>
 </div>
 
-<!-- MAIN INFO -->
-<p>
-  <strong>Website:</strong>
-  <%= link_to @business.website.gsub("http://", ""), @business.website, :target => "_blank" %>
-</p>
-
-<!-- BOROUGH / NEIGHBORHOOD -->
-<p>
-  <strong>Borough:</strong>
-  <%= @business.borough %>
-</p>
-<p>
-  <strong>Neighborhood:</strong>
-  <%= @business.neighborhood %>
-</p>
+<div class="special-offers">
+  <p><%= @business.special_offers %></p>
+</div>
 
 <!-- CONTACT INFO -->
-<p>
-  <strong>Street Address:</strong>
-  <%= @business.street_address %>
-</p>
-<p>
-  <strong>City:</strong>
-  <%= @business.city %>
-</p>
-<p>
-  <strong>State:</strong>
-  <%= @business.state %>
-</p>
-<p>
-  <strong>Zip:</strong>
-  <%= @business.zip %>
-</p>
-<p>
-  <strong>Phone:</strong>
-  <%= @business.phone %>
-</p>
-<p>
-  <strong>Email:</strong>
-  <%= @business.email %>
-</p>
+<div class="contact-info">
+  <p>
+    <%= @business.street_address %><br>
+    <%= @business.city %>, <%= @business.state %> <%= @business.zip %><br>
+    <%= @business.phone %>
+    <% if (@business.website != nil && @business.website != "") %>
+      <br><%= link_to @business.website.gsub("http://", ""), @business.website, :target => "_blank" %>
+    <% end %>
+    <% if (@business.email != nil && @business.email != "") %>
+      <br><a href="mailto:<%= @business.email %>"><%= @business.email %></a>
+    <% end %>
+  </p>
+</div>
+
+
+
+
+<div id="hours-dropdown">
+<p><a href="#openModal">SHOW HOURS</a></p>
+<div id="openModal" class="modalDialog">
+  <div class="modal-box">
+    <div class="modal-text">
+      
+
+<div class="hours-table">
+  <table align="center">
+    <tbody>
+      <tr><td>Sunday</td><td><%= @business.sunday_opening %></td><td>to</td><td><%= @business.sunday_closing %></td></tr>
+      <tr><td>Monday</td><td><%= @business.monday_opening %></td><td>to</td><td><%= @business.monday_closing %></td></tr>
+      <tr><td>Tuesday</td><td><%= @business.tuesday_opening %></td><td>to</td><td><%= @business.tuesday_closing %></td></tr>
+      <tr><td>Wednesday</td><td><%= @business.wednesday_opening %></td><td>to</td><td><%= @business.wednesday_closing %></td></tr>
+      <tr><td>Thursday</td><td><%= @business.thursday_opening %></td><td>to</td><td><%= @business.thursday_closing %></td></tr>
+      <tr><td>Friday</td><td><%= @business.friday_opening %></td><td>to</td><td><%= @business.friday_closing %></td></tr>
+      <tr><td>Saturday</td><td><%= @business.saturday_opening %></td><td>to</td><td><%= @business.saturday_closing %></td></tr>
+    </tbody>
+  </table>
+</div>
+
+    </div>
+    <a href="#close" title="Close" class="close">CLOSE</a>
+  </div>
+</div>
+</div>
+
+
+<!-- HOURS OF OPERATION -->
+<!-- <div class="hours-table">
+  <table align="center">
+    <tbody>
+      <tr><td>Sunday</td><td><%= @business.sunday_opening %></td><td>to</td><td><%= @business.sunday_closing %></td></tr>
+      <tr><td>Monday</td><td><%= @business.monday_opening %></td><td>to</td><td><%= @business.monday_closing %></td></tr>
+      <tr><td>Tuesday</td><td><%= @business.tuesday_opening %></td><td>to</td><td><%= @business.tuesday_closing %></td></tr>
+      <tr><td>Wednesday</td><td><%= @business.wednesday_opening %></td><td>to</td><td><%= @business.wednesday_closing %></td></tr>
+      <tr><td>Thursday</td><td><%= @business.thursday_opening %></td><td>to</td><td><%= @business.thursday_closing %></td></tr>
+      <tr><td>Friday</td><td><%= @business.friday_opening %></td><td>to</td><td><%= @business.friday_closing %></td></tr>
+      <tr><td>Saturday</td><td><%= @business.saturday_opening %></td><td>to</td><td><%= @business.saturday_closing %></td></tr>
+    </tbody>
+  </table>
+</div> -->
 
 <!-- FOR SELLERS -->
+<h1>For Consignors</h1>
 <p>
   <strong>Percent to Client:</strong>
   <%= @business.percent_to_client %>
@@ -95,15 +119,12 @@
   <%= @business.appointment_info %>
 </p>
 <p>
-  <strong>Special Offers:</strong>
-  <%= @business.special_offers %>
-</p>
-<p>
   <strong>Return of Consigned Goods:</strong>
   <%= @business.return_of_consigned_goods %>
 </p>
 
 <!-- FOR SHOPPERS -->
+<h1>For Shoppers</h1>
 <p>
   <strong>Return Policy:</strong>
   <%= @business.return_policy %>
@@ -113,71 +134,18 @@
   <%= @business.ecommerce_site %>
 </p>
 
-<!-- HOURS OF OPERATION -->
-<p>
-  <strong>Sunday Opening:</strong>
-  <%= @business.sunday_opening %>
-</p>
-<p>
-  <strong>Sunday Closing:</strong>
-  <%= @business.sunday_closing %>
-</p>
-<p>
-  <strong>Monday Opening:</strong>
-  <%= @business.monday_opening %>
-</p>
-<p>
-  <strong>Monday Closing:</strong>
-  <%= @business.monday_closing %>
-</p>
-<p>
-  <strong>Tuesday Opening:</strong>
-  <%= @business.tuesday_opening %>
-</p>
-<p>
-  <strong>Tuesday Closing:</strong>
-  <%= @business.tuesday_closing %>
-</p>
-<p>
-  <strong>Wednesday Opening:</strong>
-  <%= @business.wednesday_opening %>
-</p>
-<p>
-  <strong>Wednesday Closing:</strong>
-  <%= @business.wednesday_closing %>
-</p>
-<p>
-  <strong>Thursday Opening:</strong>
-  <%= @business.thursday_opening %>
-</p>
-<p>
-  <strong>Thursday Closing:</strong>
-  <%= @business.thursday_closing %>
-</p>
-<p>
-  <strong>Friday Opening:</strong>
-  <%= @business.friday_opening %>
-</p>
-<p>
-  <strong>Friday Closing:</strong>
-  <%= @business.friday_closing %>
-</p>
-<p>
-  <strong>Saturday Opening:</strong>
-  <%= @business.saturday_opening %>
-</p>
-<p>
-  <strong>Saturday Closing:</strong>
-  <%= @business.saturday_closing %>
-</p>
+
 
 <!-- TAGS -->
-<p><strong>Biztags:</strong>
+
+<h1>Tags</h1>
+<p>
 <% @business.biztags.each do |biztag| %> 
   <%= link_to biztag.name, biztag %><%= "," unless biztag == @business.biztags.last %>
 <% end %></p>
 
-<p><strong>Designers:</strong>
+<h1>Designers</h1>
+<p>
 <% @business.designers.each do |designer| %> 
   <%= link_to designer.name, designer %><%= "," unless designer == @business.designers.last %>
 <% end %></p>
