@@ -50,30 +50,28 @@
 
 <!-- ADMIN PANEL -->
 <div class="admin">
-<% if user_signed_in? %>
-  <% if (current_user.email == "koren.cohen@gmail.com") ||  (current_user.email == "consigndotnyc@gmail.com")%>
-    <p>Admin</p>
-    <table>
-      <thead>
+<% if is_owner? %>
+  <p>Admin</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Borough</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @boroughs.each do |borough| %>
         <tr>
-          <th>Borough</th>
-          <th colspan="3"></th>
+          <td><%= link_to borough.name, borough %></td>
+          <td><%= link_to 'Show', borough %></td>
+          <td><%= link_to 'Edit', edit_borough_path(borough) %></td>
+          <td><%= link_to 'Destroy', borough, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
-      </thead>
-      <tbody>
-        <% @boroughs.each do |borough| %>
-          <tr>
-            <td><%= link_to borough.name, borough %></td>
-            <td><%= link_to 'Show', borough %></td>
-            <td><%= link_to 'Edit', edit_borough_path(borough) %></td>
-            <td><%= link_to 'Destroy', borough, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-    <br>
-    <%= link_to 'New Borough', new_borough_path %>
-  <% end %>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <%= link_to 'New Borough', new_borough_path %>
 <% end %>
 </div>
 

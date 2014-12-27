@@ -57,19 +57,19 @@
                     <div class="consign-table">
                       <table align="center">
                         <tbody>
-                          <tr>
+                          <tr style="background:#FFE6E9">
                             <td>Percent to Client</td><td><%= @business.percent_to_client %></td>
                           </tr>
                           <tr>
                             <td>Markdown Info:</td><td><%= @business.markdown_info %></td>
                           </tr>
-                          <tr>
+                          <tr style="background:#FFE6E9">
                             <td>Consignment Period</td><td><%= @business.consignment_period %></td>
                           </tr>
                           <tr>
                             <td>Appointment Info</td><td><%= @business.appointment_info %></td>
                           </tr>
-                          <tr>
+                          <tr style="background:#FFE6E9">
                             <td>Return of Consigned Goods</td><td><%= @business.return_of_consigned_goods %></td>
                           </tr>
                         </tbody>
@@ -105,13 +105,13 @@
                 <div class="hours-table">
                   <table align="center">
                     <tbody>
-                      <tr><td>Sunday</td><td><%= @business.sunday_opening %></td><td>to</td><td><%= @business.sunday_closing %></td></tr>
+                      <tr style="background:#FFE6E9"><td>Sunday</td><td><%= @business.sunday_opening %></td><td>to</td><td><%= @business.sunday_closing %></td></tr>
                       <tr><td>Monday</td><td><%= @business.monday_opening %></td><td>to</td><td><%= @business.monday_closing %></td></tr>
-                      <tr><td>Tuesday</td><td><%= @business.tuesday_opening %></td><td>to</td><td><%= @business.tuesday_closing %></td></tr>
+                      <tr style="background:#FFE6E9"><td>Tuesday</td><td><%= @business.tuesday_opening %></td><td>to</td><td><%= @business.tuesday_closing %></td></tr>
                       <tr><td>Wednesday</td><td><%= @business.wednesday_opening %></td><td>to</td><td><%= @business.wednesday_closing %></td></tr>
-                      <tr><td>Thursday</td><td><%= @business.thursday_opening %></td><td>to</td><td><%= @business.thursday_closing %></td></tr>
+                      <tr style="background:#FFE6E9"><td>Thursday</td><td><%= @business.thursday_opening %></td><td>to</td><td><%= @business.thursday_closing %></td></tr>
                       <tr><td>Friday</td><td><%= @business.friday_opening %></td><td>to</td><td><%= @business.friday_closing %></td></tr>
-                      <tr><td>Saturday</td><td><%= @business.saturday_opening %></td><td>to</td><td><%= @business.saturday_closing %></td></tr>
+                      <tr style="background:#FFE6E9"><td>Saturday</td><td><%= @business.saturday_opening %></td><td>to</td><td><%= @business.saturday_closing %></td></tr>
                     </tbody>
                   </table>
                 </div>
@@ -138,7 +138,7 @@
                     <div class="shop-table">
                       <table align="center">
                         <tbody>
-                          <tr>
+                          <tr style="background:#FFE6E9">
                             <td>Return Policy</td><td><%= @business.return_policy %></td>
                           </tr>
                           <tr>
@@ -167,10 +167,9 @@
 <%# end %><!-- </p> -->
 
 <div class="designer-list">
-<p>
-<% @business.designers.sort{|a,b| a.name <=> b.name }.each do |designer| %> 
-  <%= link_to designer.name, designer %><%= "," unless designer == @business.designers.sort{|a,b| a.name <=> b.name }.last %>
-<% end %></p>
+  <p><% @business.designers.sort{|a,b| a.name <=> b.name}.each do |designer| %> 
+    <%= link_to designer.name, designer %><%= "," unless designer == @business.designers.sort{|a,b| a.name <=> b.name}.last %>
+  <% end %></p>
 </div>
 
 <!-- PHOTO FORM -->

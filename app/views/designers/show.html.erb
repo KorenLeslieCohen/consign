@@ -12,7 +12,7 @@
       <% if @designer.businesses.empty? %>
         <h4>Sorry! There are no businesses with the designer <%= @designer.name %>!</h4>
       <% else %>
-        <% @designer.businesses.sort{|a,b| a.name <=> b.name }.each do |business| %>
+        <% @designer.businesses.sort{|a,b| a.name <=> b.name}.each do |business| %>
           <div class="col-sm-6 col-md-4 gallery-item biz">
 
             <% if !business.profile_photo? %>

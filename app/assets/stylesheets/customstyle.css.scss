@@ -393,6 +393,7 @@ h1 {
 #photo-form textarea {
   width: 300px;
   margin: 5px;
+  background: #FFE6E9;
 }
 
 #new-review h5,
@@ -855,21 +856,6 @@ td {
   width: 400px;
 }
 
-.city,
-.zip {
-  border: 1px solid #CCC;
-  padding: 5px;
-  width: 300px;
-}
-
-.city {
-  width: 200px;
-}
-
-.zip {
-  width: 100px;
-}
-
 .biz-form {
   max-width: 400px;
   margin-left: auto;
@@ -883,6 +869,20 @@ td {
   padding: 5px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.city,
+.zip {
+  border: 1px solid #CCC;
+  padding: 5px;
+}
+
+.city {
+  width: 200px;
+}
+
+.zip {
+  width: 100px;
 }
 
 .biz-form h1 {
@@ -1043,14 +1043,14 @@ td {
 .gm-style-iw a {
     color: #4272db;
 }
-    .google-maps {
+.google-maps {
   width: 85%;
   min-width: 300px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/*MEDIA QUERIES*/
+/*--------------MEDIA QUERIES--------------*/
 
 /* Smaller Screens - Breakpoint -------> */
 @media screen and (max-width : 1100px) {

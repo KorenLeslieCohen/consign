@@ -164,7 +164,6 @@
   font-family: 'Playfair Display';
   font-size: 15px;
   opacity: 1;
-  margin-left: 120px;
   font-weight: normal;
 }
 
@@ -178,11 +177,18 @@
   color: #000;
 }
 
-.consign-table {
+.consign-table,
+.shop-table {
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
   max-width: 600px;
+  text-align: left;
+}
+
+.consign-table td,
+.shop-table td {
+  font-size: 15px;
 }
 
 /*-------------------MODAL SHOP TERMS-------------------*/
@@ -229,7 +235,6 @@
   font-family: 'Playfair Display';
   font-size: 15px;
   opacity: 1;
-  margin-left: 120px;
   font-weight: normal;
 }
 

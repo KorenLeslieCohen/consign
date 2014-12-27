@@ -351,8 +351,6 @@ strong {
 .container-fluid > .navbar-header,
 .container > .navbar-collapse,
 .container-fluid > .navbar-collapse {
-/*	margin-right: -15px;
-	margin-left: -15px;*/
 }
 
 @media (min-width: 768px) {
@@ -368,8 +366,6 @@ strong {
 @media (max-width: 1050px) {
 	.navbar-header,
 	.menu_align {
-/*		padding-top: 8px;
-		padding-bottom: 8px;*/
 	}
 }
 
