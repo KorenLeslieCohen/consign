@@ -58,18 +58,27 @@
                       <table align="center">
                         <tbody>
                           <tr style="background:#FFE6E9">
-                            <td>Percent to Client</td><td><%= @business.percent_to_client %></td>
+                            <td>Percent to client</td><td><%= @business.percent_to_client %></td>
                           </tr>
                           <tr>
-                            <td>Markdown Info:</td><td><%= @business.markdown_info %></td>
+                            <td>Markdown information</td><td><%= @business.markdown_info %></td>
                           </tr>
                           <tr style="background:#FFE6E9">
-                            <td>Consignment Period</td><td><%= @business.consignment_period %></td>
+                            <td>Consignment period</td><td><%= @business.consignment_period %></td>
                           </tr>
                           <tr>
-                            <td>Appointment Info</td><td><%= @business.appointment_info %></td>
+                            <td>Appointment information</td><td><%= @business.appointment_info %></td>
                           </tr>
                           <tr style="background:#FFE6E9">
+                            <td>Pickup or shipment available?</td><td><%= @business.pickup_available %></td>
+                          </tr>
+                          <tr>
+                            <td>Item restrictions</td><td><%= @business.restrictions %></td>
+                          </tr>
+                          <tr style="background:#FFE6E9">
+                            <td>Additional information</td><td><%= @business.additional_info %></td>
+                          </tr>
+                          <tr>
                             <td>Return of Consigned Goods</td><td><%= @business.return_of_consigned_goods %></td>
                           </tr>
                         </tbody>
