@@ -87,8 +87,8 @@
           <%= link_to review.business.name.upcase, review.business %> | 
           <%= review.role.upcase %> 
           <% if (review.user == current_user) %>
-            | <%= link_to 'EDIT REVIEW', edit_review_path(review), method: :get %> |
-            <%= link_to 'DELETE REVIEW', review, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <!-- |  --><%#= link_to 'EDIT REVIEW', edit_review_path(review), method: :get %>
+            | <%= link_to 'DELETE REVIEW', review, method: :delete, data: { confirm: 'Are you sure?' } %>
           <% end %><br>
           <div id="user-review-content">
             <%= review.content %>

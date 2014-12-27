@@ -1,6 +1,10 @@
-/*-------------------MODAL-------------------*/
+/*-------------------GENERAL MODAL SETTINGS-------------------*/
 
-.modalDialog {
+.modalDialog,
+.modalDialog2,
+.modalDialog3,
+.modalDialog4,
+.modalDialog5 {
   position: fixed;
   overflow: scroll;
   top: 0;
@@ -14,11 +18,49 @@
   pointer-events: none;
 }
 
-.modalDialog:target {
+.modalDialog:target,
+.modalDialog2:target,
+.modalDialog3:target,
+.modalDialog4:target,
+.modalDialog5:target {
   opacity: 1;
   pointer-events: auto;
   transition-duration: .5s;
 }
+
+.modal-box,
+.modal-box2,
+.modal-box3,
+.modal-box4,
+.modal-box5 {
+  color: #000;
+  width: 300px;
+  top: 100px;
+}
+
+.close a,
+.close2 a,
+.close3 a,
+.close4 a,
+.close5 a {
+  line-height: 25px;
+  position: absolute;
+}
+
+.close:visited,
+.close:hover,
+.close2:visited,
+.close2:hover,
+.close3:visited,
+.close3:hover,
+.close4:visited,
+.close4:hover,
+.close5:visited,
+.close5:hover {
+  color: #000;
+}
+
+/*-------------------MODAL HOURS-------------------*/
 
 .modalDialog > .modal-box {
   position: relative;
@@ -28,12 +70,6 @@
   margin-right: auto;
   border: 3px solid #000;
   background: #FFF;
-}
-
-.modal-box {
-  color: #000;
-  width: 300px;
-  top: 100px;
 }
 
 .close {
@@ -46,16 +82,6 @@
   font-weight: normal;
 }
 
-.close a {
-  line-height: 25px;
-  position: absolute;
-}
-
-.close:visited,
-.close:hover {
-  color: #000;
-}
-
 .hours-table {
   padding: 20px;
   background: #FFF;
@@ -64,26 +90,6 @@
 }
 
 /*-------------------MODAL PHOTOS-------------------*/
-
-.modalDialog2 {
-  position: fixed;
-  overflow: scroll;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 99999;
-  opacity:0;
-  transition-duration: .5s;
-  transition-property: opacity;
-  pointer-events: none;
-}
-
-.modalDialog2:target {
-  opacity: 1;
-  pointer-events: auto;
-  transition-duration: .5s;
-}
 
 .modalDialog2 > .modal-box2 {
   position: relative;
@@ -95,12 +101,6 @@
   background: #FFF;
 }
 
-.modal-box2 {
-  color: #000;
-  width: 300px;
-  top: 100px;
-}
-
 .close2 {
   color: #000;
   float: none;
@@ -110,37 +110,7 @@
   margin-left: 130px;
 }
 
-.close2 a {
-  line-height: 25px;
-  position: absolute;
-}
-
-.close2:visited,
-.close2:hover {
-  color: #000;
-}
-
 /*-------------------MODAL CONSIGNMENT TERMS-------------------*/
-
-.modalDialog3 {
-  position: fixed;
-  overflow: scroll;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 99999;
-  opacity:0;
-  transition-duration: .5s;
-  transition-property: opacity;
-  pointer-events: none;
-}
-
-.modalDialog3:target {
-  opacity: 1;
-  pointer-events: auto;
-  transition-duration: .5s;
-}
 
 .modalDialog3 > .modal-box3 {
   position: relative;
@@ -152,12 +122,6 @@
   background: #FFF;
 }
 
-.modal-box3 {
-  color: #000;
-  width: 300px;
-  top: 100px;
-}
-
 .close3 {
   color: #000;
   float: none;
@@ -165,16 +129,6 @@
   font-size: 15px;
   opacity: 1;
   font-weight: normal;
-}
-
-.close3 a {
-  line-height: 25px;
-  position: absolute;
-}
-
-.close3:visited,
-.close3:hover {
-  color: #000;
 }
 
 .consign-table,
@@ -193,26 +147,6 @@
 
 /*-------------------MODAL SHOP TERMS-------------------*/
 
-.modalDialog4 {
-  position: fixed;
-  overflow: scroll;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 99999;
-  opacity:0;
-  transition-duration: .5s;
-  transition-property: opacity;
-  pointer-events: none;
-}
-
-.modalDialog4:target {
-  opacity: 1;
-  pointer-events: auto;
-  transition-duration: .5s;
-}
-
 .modalDialog4 > .modal-box4 {
   position: relative;
   color: #000;
@@ -221,12 +155,6 @@
   margin-right: auto;
   border: 3px solid #000;
   background: #FFF;
-}
-
-.modal-box4 {
-  color: #000;
-  width: 300px;
-  top: 100px;
 }
 
 .close4 {
@@ -238,37 +166,7 @@
   font-weight: normal;
 }
 
-.close4 a {
-  line-height: 25px;
-  position: absolute;
-}
-
-.close4:visited,
-.close4:hover {
-  color: #000;
-}
-
 /*-------------------MODAL REVIEW-------------------*/
-
-.modalDialog5 {
-  position: fixed;
-  overflow: scroll;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 99999;
-  opacity:0;
-  transition-duration: .5s;
-  transition-property: opacity;
-  pointer-events: none;
-}
-
-.modalDialog5:target {
-  opacity: 1;
-  pointer-events: auto;
-  transition-duration: .5s;
-}
 
 .modalDialog5 > .modal-box5 {
   position: relative;
@@ -280,12 +178,6 @@
   background: #FFF;
 }
 
-.modal-box5 {
-  color: #000;
-  width: 300px;
-  top: 100px;
-}
-
 .close5 {
   color: #000;
   float: none;
@@ -294,16 +186,6 @@
   opacity: 1;
   font-weight: normal;
   margin-left: 130px;
-}
-
-.close5 a {
-  line-height: 25px;
-  position: absolute;
-}
-
-.close5:visited,
-.close5:hover {
-  color: #000;
 }
 
 /*-------------------TERMS-------------------*/
