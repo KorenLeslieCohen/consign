@@ -10,7 +10,7 @@ h1 {
 
 .faq h2 {
   font-size: 20px;
-  color: #FD8698;
+  color: #FC4063;
 }
 
 .faq p {
@@ -20,7 +20,7 @@ h1 {
 
 .faq a,
 .caption a {
-  color: #FD8698;
+  color: #FC4063;
   transition-duration: .5s;
   transition-property: color;
 }
@@ -240,7 +240,9 @@ h1 {
 .button_to,
 .edit-profile,
 #user_first_name,
-#user_last_name {
+#user_last_name,
+.edit-profile input,
+.edit-profile textarea {
   margin-left: auto;
   margin-right: auto;
   width: 300px;
@@ -962,7 +964,7 @@ td {
 }
 
 #footer a {
-  color: #777;
+  color: #FFF;
   transition-duration: .5s;
   transition-property: color;
 }

@@ -17,24 +17,35 @@
 
   <div class="field">
     <%= f.label :user_profile_photo %>
-    <%= f.file_field :user_profile_photo, placeholder: "Profile Photo"%>
+    <%= f.file_field :user_profile_photo, placeholder: "Profile photo" %>
   </div>
 
   <div class="field">
-    First name:<br>
-    <%= f.text_field :first_name %>
+    <%= f.text_field :first_name, placeholder: "First name" %>
   </div>
 
   <div class="field">
-   Last name (kept private):<br>
-    <%= f.text_field :last_name %>
+    <%= f.text_field :last_name, placeholder: "Last name (kept private)" %>
   </div>
 
   <h6>OPTIONAL</h6>
 
   <div class="field">
-    <%= f.label :bio %><br>
-    <%= f.text_field :bio %>
+    <%= f.text_field :city, placeholder: "City" %>
+  </div>
+
+  <!-- <div class="field"> -->
+    <%#= f.label :state %><!-- <br> -->
+    <%#= f.text_field :state %>
+  <!-- </div> -->
+  <div class="field">
+    <%= f.text_field :tagline, placeholder: "Tagline" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :bio, placeholder: "Who are you? (short bio)" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :url, placeholder: "Blog or website URL" %>
   </div>
 
 </div>
