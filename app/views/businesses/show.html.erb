@@ -42,7 +42,6 @@
 <section id="services">
   <div class="container">
     <div class="row">
-
       <div class="col-sm-4">
         <div class="thumbnail">
           <div class="delight-icon-services">
@@ -97,6 +96,30 @@
             <br><a href="mailto:<%= @business.email %>"><%= @business.email %></a>
           <% end %>
         </p>
+        <!-- HOURS OF OPERATION -->
+        <div id="hours-dropdown">
+          <h4><a href="#openModal">SHOP HOURS</a></h4>
+          <div id="openModal" class="modalDialog">
+            <div class="modal-box">
+              <div class="modal-text">
+                <div class="hours-table">
+                  <table align="center">
+                    <tbody>
+                      <tr><td>Sunday</td><td><%= @business.sunday_opening %></td><td>to</td><td><%= @business.sunday_closing %></td></tr>
+                      <tr><td>Monday</td><td><%= @business.monday_opening %></td><td>to</td><td><%= @business.monday_closing %></td></tr>
+                      <tr><td>Tuesday</td><td><%= @business.tuesday_opening %></td><td>to</td><td><%= @business.tuesday_closing %></td></tr>
+                      <tr><td>Wednesday</td><td><%= @business.wednesday_opening %></td><td>to</td><td><%= @business.wednesday_closing %></td></tr>
+                      <tr><td>Thursday</td><td><%= @business.thursday_opening %></td><td>to</td><td><%= @business.thursday_closing %></td></tr>
+                      <tr><td>Friday</td><td><%= @business.friday_opening %></td><td>to</td><td><%= @business.friday_closing %></td></tr>
+                      <tr><td>Saturday</td><td><%= @business.saturday_opening %></td><td>to</td><td><%= @business.saturday_closing %></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <a href="#close" title="Close" class="close">CLOSE</a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="col-sm-4">
@@ -136,31 +159,6 @@
   </div>
 </section>
 
-<!-- HOURS OF OPERATION -->
-<div id="hours-dropdown">
-  <h4><a href="#openModal">SHOP HOURS</a></h4>
-  <div id="openModal" class="modalDialog">
-    <div class="modal-box">
-      <div class="modal-text">
-        <div class="hours-table">
-          <table align="center">
-            <tbody>
-              <tr><td>Sunday</td><td><%= @business.sunday_opening %></td><td>to</td><td><%= @business.sunday_closing %></td></tr>
-              <tr><td>Monday</td><td><%= @business.monday_opening %></td><td>to</td><td><%= @business.monday_closing %></td></tr>
-              <tr><td>Tuesday</td><td><%= @business.tuesday_opening %></td><td>to</td><td><%= @business.tuesday_closing %></td></tr>
-              <tr><td>Wednesday</td><td><%= @business.wednesday_opening %></td><td>to</td><td><%= @business.wednesday_closing %></td></tr>
-              <tr><td>Thursday</td><td><%= @business.thursday_opening %></td><td>to</td><td><%= @business.thursday_closing %></td></tr>
-              <tr><td>Friday</td><td><%= @business.friday_opening %></td><td>to</td><td><%= @business.friday_closing %></td></tr>
-              <tr><td>Saturday</td><td><%= @business.saturday_opening %></td><td>to</td><td><%= @business.saturday_closing %></td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <a href="#close" title="Close" class="close">CLOSE</a>
-    </div>
-  </div>
-</div>
-
 <!-- TAGS -->
 <!-- <h1>Tags</h1>
 <p> -->
@@ -170,8 +168,8 @@
 
 <div class="designer-list">
 <p>
-<% @business.designers.each do |designer| %> 
-  <%= link_to designer.name, designer %><%= "," unless designer == @business.designers.last %>
+<% @business.designers.sort{|a,b| a.name <=> b.name }.each do |designer| %> 
+  <%= link_to designer.name, designer %><%= "," unless designer == @business.designers.sort{|a,b| a.name <=> b.name }.last %>
 <% end %></p>
 </div>
 
