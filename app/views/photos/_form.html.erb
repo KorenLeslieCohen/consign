@@ -3,21 +3,24 @@
   <div id="openModal2" class="modalDialog2">
     <div class="modal-box2">
       <div class="modal-text2">
-        <%= form_for [@business, Photo.new] do |f| %>
-          <div class="field business-field">
-            <div id="photo-form">
-              <%= f.file_field :business_photo, placeholder: "UPLOAD PHOTO"%>
-              <%= f.text_area :description, class: "form-control col-lg-8", placeholder: "DESCRIPTION (20 CHAR. MAX)" %>
-              <%= f.hidden_field :business_id, :value => @business.id %>
-              <%= f.hidden_field :user_id, :value => current_user.id %>
+        <div class="photo-form">
+          <h6>UPLOAD PHOTO</h6>
+          <%= form_for [@business, Photo.new] do |f| %>
+            <div class="field business-field">
+              <div id="photo-form">
+                <%= f.file_field :business_photo, placeholder: "UPLOAD PHOTO"%>
+                <%= f.text_area :description, class: "form-control col-lg-8", placeholder: "DESCRIPTION (20 CHAR. MAX)" %>
+                <%= f.hidden_field :business_id, :value => @business.id %>
+                <%= f.hidden_field :user_id, :value => current_user.id %>
+              </div>
             </div>
-          </div>
-          <div class="photo-button">
-            <div class="form-group form">
-              <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">UPLOAD PHOTO</button>
+            <div class="photo-button">
+              <div class="form-group form">
+                <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">UPLOAD PHOTO</button>
+              </div>
             </div>
-          </div>
-        <% end %>
+          <% end %>
+        </div>
       </div>
       <a href="#close" title="Close" class="close2">CLOSE</a>
     </div>

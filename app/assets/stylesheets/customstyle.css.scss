@@ -181,9 +181,9 @@ h1 {
   max-width: 800px;
 }
 
-#review_content {
+/*#review_content {
   height: 75px;
-}
+}*/
 
 #review-content {
   text-align: justify;
@@ -392,11 +392,17 @@ h1 {
 }
 
 #photo-form input,
-#photo-form textarea {
+#photo-form textarea,
+#review-form textarea {
   width: 300px;
   margin: 5px;
   background: #FFE6E9;
 }
+
+#review-form textarea {
+  height: 150px;
+}
+
 
 #new-review h5,
 #new-photo h5 {
@@ -775,7 +781,7 @@ td {
 }
 
 #hours-dropdown h4 {
-  width: 140px;
+  width: 150px;
 }
 
 #photo-upload h4 {

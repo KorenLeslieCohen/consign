@@ -1,45 +1,56 @@
-<%= form_for [@business, Review.new], :remote => true do |f| %>
+<div id="photo-upload">
+  <h4><a href="#openModal5">REVIEW STORE</a></h4>
+  <div id="openModal5" class="modalDialog5">
+    <div class="modal-box5">
+      <div class="modal-text5">
+        <div class="photo-form">
+          <h6>REVIEW STORE</h6>
+          <%= form_for [@business, Review.new], :remote => true do |f| %>
 
-  <div class="field review-field">
-    <div id="review-form">
-      <div id="review-form-stars">
+            <div class="field review-field">
+              <div id="review-form">
+                <div id="review-form-stars">
 
-        <%= f.radio_button :rating, 1,  placeholder: "RATING 1" %> 
-        <span><i class="fa fa-star"></i></span><br>
+                  <%= f.radio_button :rating, 1,  placeholder: "RATING 1" %> 
+                  <span><i class="fa fa-star"></i></span><br>
 
-        <%= f.radio_button :rating, 2,  placeholder: "RATING 2" %> 
-        <span><i class="fa fa-star"></i><i class="fa fa-star"></i></span><br>
+                  <%= f.radio_button :rating, 2,  placeholder: "RATING 2" %> 
+                  <span><i class="fa fa-star"></i><i class="fa fa-star"></i></span><br>
 
-        <%= f.radio_button :rating, 3,  placeholder: "RATING 3" %>
-        <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span><br>
+                  <%= f.radio_button :rating, 3,  placeholder: "RATING 3" %>
+                  <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span><br>
 
-        <%= f.radio_button :rating, 4,  placeholder: "RATING 4" %>
-        <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span><br>
+                  <%= f.radio_button :rating, 4,  placeholder: "RATING 4" %>
+                  <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span><br>
 
-        <%= f.radio_button :rating, 5,  placeholder: "RATING 5" %>
-        <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                  <%= f.radio_button :rating, 5,  placeholder: "RATING 5" %>
+                  <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                </div>
+
+                <%= f.text_area :content, class: "form-control col-lg-8", placeholder: "DETAILED REVIEW (30 CHAR. MIN)" %>
+
+                <div id="review-form-role">
+                  <p><%= f.radio_button :role, "Shopper",  placeholder: "SHOPPER" %>SHOPPER
+                  <%= f.radio_button :role, "Consignor",  placeholder: "SELLER" %>CONSIGNOR</p>
+                </div>
+
+                <%= f.hidden_field :business_id, :value => @business.id %>
+                <%= f.hidden_field :user_id, :value => current_user.id %>
+
+              </div>
+            </div>
+            <div class="review-button">
+              <div class="form-group form">
+                <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">REVIEW SHOP</button>
+              </div>
+            </div>
+          <% end %>
+        </div>
       </div>
-
-      <%= f.text_area :content, class: "form-control col-lg-8", placeholder: "DETAILED REVIEW (30 CHAR. MIN)" %>
-
-      <div id="review-form-role">
-        <p><%= f.radio_button :role, "Shopper",  placeholder: "SHOPPER" %>SHOPPER
-        <%= f.radio_button :role, "Consignor",  placeholder: "SELLER" %>CONSIGNOR</p>
-      </div>
-
-      <%= f.hidden_field :business_id, :value => @business.id %>
-      <%= f.hidden_field :user_id, :value => current_user.id %>
-
+      <a href="#close" title="Close" class="close5">CLOSE</a>
     </div>
   </div>
-
-  <div class="review-button">
-    <div class="form-group form">
-      <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">REVIEW SHOP</button>
-    </div>
-  </div>
-  
-<% end %>
+</div>
 
 
 
