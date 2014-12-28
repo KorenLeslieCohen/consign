@@ -258,7 +258,10 @@
           <% else %>
             <%= image_tag review.user.user_profile_photo %></h1>
           <% end %>
-          <%= review.created_at.strftime("%b %d, %Y").upcase %>
+
+          <%= link_to review.user.first_name, review.user, :class => 'review-name' %> |
+
+          <%= review.created_at.strftime("%b %d, %Y").upcase %> |
           <% if review.rating == 1 %>
             <i class="fa fa-star"></i>
           <% elsif review.rating == 2 %>
@@ -269,9 +272,9 @@
             <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
           <% else %>
             <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-          <% end %><br>
-          <%= link_to review.user.first_name.upcase, review.user %> 
-          | <%= review.role.upcase %> 
+          <% end %> | 
+          <%= review.role.upcase %>
+
           <div id="review-content">
             <%= review.content %>
           </div>

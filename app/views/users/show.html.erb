@@ -72,7 +72,8 @@
           <% else %>
             <%= image_tag review.business.profile_photo, :height => "100" %>
           <% end %>
-          <%= review.created_at.strftime("%b %d, %Y") %> 
+          <%= link_to review.business.name, review.business, :class => 'review-name' %> | 
+          <%= review.created_at.strftime("%b %d, %Y") %> |  
           <% if review.rating == 1 %>
             <i class="fa fa-star"></i>
           <% elsif review.rating == 2 %>
@@ -83,8 +84,7 @@
             <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
           <% else %>
             <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-          <% end %><br>
-          <%= link_to review.business.name.upcase, review.business %> | 
+          <% end %> | 
           <%= review.role.upcase %> 
           <% if (review.user == current_user) %>
             <!-- |  --><%#= link_to 'EDIT REVIEW', edit_review_path(review), method: :get %>
