@@ -103,13 +103,13 @@
           <%= link_to review.business.name, review.business, :class => 'review-name' %><br> 
           <%= review.created_at.strftime("%b %d, %Y") %> <i class="fa fa-caret-right"></i>  
           <% if review.rating == 1 %>
-            <i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
           <% elsif review.rating == 2 %>
-            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
           <% elsif review.rating == 3 %>
-            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
           <% elsif review.rating == 4 %>
-            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
           <% else %>
             <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
           <% end %> <i class="fa fa-caret-right"></i> 
