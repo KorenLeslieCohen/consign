@@ -201,25 +201,35 @@
   <% end %>
 
 <!-- DISPLAY PHOTOS -->
-<section id="gallery photos">
+<!-- <section id="gallery photos">
   <div class="container">
     <div class="row">
-      <% if @business.photos.empty? %>
-        <h3>There are no photos of <%= @business.name %>.</h3>
-      <% else %>
-        <% @business.photos.reverse.each do |photo| %>
+      <%# if @business.photos.empty? %>
+        <h3>There are no photos of <%#= @business.name %>.</h3>
+      <%# else %>
+        <%# @business.photos.reverse.each do |photo| %>
           <div class="col-sm-6 col-md-4 gallery-item">
-            <a href="<%= photo.business_photo %>" data-toggle="lightbox">
-              <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" height="200">
+            <a href="<%#= photo.business_photo %>" data-toggle="lightbox">
+              <div class="thumbnail-gallery" style="background-image:url('<%#= photo.business_photo %>'); background-size:cover" height="200">
               </div>
             </a>
-            <%= photo.description[0..15].upcase %> | <%= photo.created_at.strftime("%b %d, %Y") %> | <%= link_to photo.user.first_name.upcase, photo.user %> 
+            <%#= photo.description[0..15].upcase %> | <%#= photo.created_at.strftime("%b %d, %Y") %> | <%#= link_to photo.user.first_name.upcase, photo.user %> 
           </div>
-        <% end %>
-      <% end %>
+        <%# end %>
+      <%# end %>
     </div>
   </div>
-</section> 
+</section>  -->
+
+<section id="gallery">
+  <div id="owl-demo-biz" class="owl-carousel owl-theme">
+    <% @business.photos.reverse.each do |photo| %>
+      <div class="owlitem-biz"style="background-image:url('<%= photo.business_photo %>'); background-size:cover">
+      <p><%= photo.description[0..15].upcase %> | <%= photo.created_at.strftime("%b %d, %Y") %> | <%= link_to photo.user.first_name.upcase, photo.user %></p>
+      </div>
+    <% end %>
+  </div>
+</section>
 
 <!-- REVIEW FORM -->
 <div class="biz-header">
@@ -230,7 +240,7 @@
 <% if current_user %>
 
   <!-- PRIOR REVIEW / REVIEW FORM -->
-  <% if @business.reviews.any? { |review| review.user.email == current_user.email } %>
+  <% if @business.reviews.any? {|review| review.user.email == current_user.email} %>
     <div class="you-reviewed">
       <h3>Thank you for reviewing <%= @business.name %>!</h3>
     </div>
@@ -258,9 +268,7 @@
           <% else %>
             <%= image_tag review.user.user_profile_photo %></h1>
           <% end %>
-
           <%= link_to review.user.first_name, review.user, :class => 'review-name' %> |
-
           <%= review.created_at.strftime("%b %d, %Y").upcase %> |
           <% if review.rating == 1 %>
             <i class="fa fa-star"></i>
@@ -274,7 +282,6 @@
             <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
           <% end %> | 
           <%= review.role.upcase %>
-
           <div id="review-content">
             <%= review.content %>
           </div>

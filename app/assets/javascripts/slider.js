@@ -10,4 +10,14 @@ $(document).ready(function() {
  
   });
  
+  var owl_biz = $("#owl-demo-biz");
+ 
+  owl_biz.owlCarousel({
+
+    items : 3,
+    navigation : true,
+    pagination: false
+ 
+  });
+ 
 });

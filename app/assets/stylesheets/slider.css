@@ -1,4 +1,6 @@
-#owl-demo .owlitem{
+/*GALLERY SLIDER*/
+
+#owl-demo .owlitem {
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 20px;
@@ -40,4 +42,24 @@ div.owl-item {
 
 .owl-theme .owl-controls {
   margin-top: 0px;
+}
+
+/*BUSINESS INDEX SLIDER*/
+
+.owlitem-biz {
+  height: 270px;
+  border: 0px;
+}
+
+.owlitem-biz p {
+  background: white;
+  margin: 0;
+  width: 100%;
+  color: black;
+  font-family: "Playfair Display";
+}
+
+#owl-demo-biz .owlitem-biz {
+  margin-left: 2px;
+  margin-right: 2px;
 }
