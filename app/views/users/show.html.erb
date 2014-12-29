@@ -94,6 +94,8 @@
           </a>
           <p><%= link_to photo.business.name.upcase, photo.business %><% if (photo.user == current_user) %> 
             |  <%= link_to 'DELETE PHOTO', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% else %>
+            <i class="fa fa-heart"></i> <%= photo.created_at.strftime("%b %d, %Y") %>
           <% end %></p>
         </div>
       <% end %>

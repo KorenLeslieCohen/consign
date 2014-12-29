@@ -13,13 +13,13 @@
       <% end %>
       <% overall_rating = (total_rating / num_of_ratings) %>
       <% if overall_rating == 1 %>
-        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
       <% elsif overall_rating == 2 %>
-        <i class="fa fa-star"></i><i class="fa fa-star"></i>
+        <i class="fa fa-star"></i><i class="fa fa-star"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
       <% elsif overall_rating == 3 %>
-        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
       <% elsif overall_rating == 4 %>
-        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
       <% else %>
         <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
       <% end %>
@@ -229,7 +229,7 @@
           <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover">
           </div>
         </a>
-        <p><%= photo.description[0..15].upcase %> | <%= photo.created_at.strftime("%b %d, %Y") %> | <%= link_to photo.user.first_name.upcase, photo.user %></p>
+        <p><%= photo.description[0..15].upcase %> <i class="fa fa-heart"></i> <%= photo.created_at.strftime("%b %d, %Y") %> <i class="fa fa-heart"></i> <%= link_to photo.user.first_name.upcase, photo.user %></p>
       </div>
     <% end %>
   </div>
