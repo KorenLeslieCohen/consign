@@ -606,7 +606,7 @@
 
 
     <h3>Congratulations!</h3><br>
-    <h3><%= link_to @user.first_name, @user %> has uploaded a photo to <%= link_to @business.name, @business %>.</h3>
+    <h3><a href="http://consign.nyc/users/<%= @user.id %>"><%= @user.first_name %></a> has uploaded a photo to <a href="http://consign.nyc/businesses/<%= @business.id %>"><%= @business.name %></a>.</h3>
     <p>Thanks for registering for admin access!</p>
     <p>Visit <a href="http://consign.nyc">CONSIGN.NYC</a> again soon!</p>
 

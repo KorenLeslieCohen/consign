@@ -605,9 +605,9 @@
                         <td valign="top" class="mcnTextContent" style="padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;">
 
 
- <h3>Thanks for your photo, <%= link_to @user.first_name, @user %>!</h3>
+ <h3>Thanks for your photo, <a href="http://consign.nyc/users/<%= @user.id %>"><%= @user.first_name %></a>!</h3>
     <p>
-      You have successfully uploaded a photo to <%= link_to @business.name, @business %>.<br>
+      You have successfully uploaded a photo to <a href="http://consign.nyc/businesses/<%= @business.id %>"><%= @business.name %></a>.<br>
     </p>
     <p>Thanks for joining and have a great day!</p>
     <p>Visit <a href="http://consign.nyc">CONSIGN.NYC</a> again soon!</p>
