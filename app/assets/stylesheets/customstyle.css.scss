@@ -985,39 +985,30 @@ td {
   line-height: 1.3;
 }
 
-#footer a {
+#footer a,
+.fa-facebook,
+.fa-twitter,
+.fa-instagram {
   color: #FFF;
   transition-duration: .5s;
   transition-property: color;
 }
 
-#footer a:hover {
+#footer a:hover,
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-instagram:hover {
   color: #FD8698;
   transition-duration: .5s;
   transition-property: color;
 }
 #footer .btn-default {
-  border-radius: 50%;
   width: 56px;
   height: 56px;
-  transition-duration: .5s;
-  transition-property: background;
-}
-
-#footer .btn-default:hover {
-  background: #FD8698;
-  transition-duration: .5s;
-  transition-property: background;
 }
 
 #footer .btn-group {
   margin-bottom: 0;
-}
-
-.fa-facebook,
-.fa-twitter,
-.fa-instagram {
-  color: #FFF;
 }
 
 /*--------------EAST VILLAGE--------------*/
