@@ -53,11 +53,11 @@
       <% end %>
     <% end %><br> 
       
-    <%= link_to business.borough.name.upcase, business.borough %> <i class="fa fa-heart"></i> <%= link_to business.neighborhood.name.upcase, business.neighborhood %><br>
+    <%= link_to business.borough.name.upcase, business.borough %> <i class="fa fa-caret-right"></i> <%= link_to business.neighborhood.name.upcase, business.neighborhood %><br>
     <% if business.reviews.length == 1 %>
-      <%= business.reviews.length %> REVIEW <i class="fa fa-heart"></i>
+      <%= business.reviews.length %> REVIEW <i class="fa fa-caret-right"></i>
     <% else %>
-      <%= business.reviews.length %> REVIEWS <i class="fa fa-heart"></i> 
+      <%= business.reviews.length %> REVIEWS <i class="fa fa-caret-right"></i> 
     <% end %> 
     <% if business.photos.length == 1 %>
       <%= business.photos.length %> PHOTO
