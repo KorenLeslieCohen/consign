@@ -29,13 +29,23 @@
 }
 
 .modal-box,
-.modal-box2,
-.modal-box3,
-.modal-box4,
-.modal-box5 {
+.modal-box2 {
   color: #000;
   width: 300px;
   top: 20vh;
+}
+
+.modal-box3,
+.modal-box5 {
+  color: #000;
+  width: 300px;
+  top: 10vh;
+}
+
+.modal-box4 {
+  color: #000;
+  width: 300px;
+  top: 40vh;
 }
 
 .close a,
