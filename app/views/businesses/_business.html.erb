@@ -1,15 +1,18 @@
 <div class="col-sm-6 col-md-4 gallery-item biz">
 
-  <% if !business.profile_photo? %>
+  <a href="/businesses/<%= business.id %>">
+    <% if !business.profile_photo? %>
 
-    <div class="thumbnail-gallery" style="background-image:url('https://s3.amazonaws.com/consignnyc/placeholder-business.png'); background-size:cover" height="200">
-    </div>
+      <div class="thumbnail-gallery" style="background-image:url('https://s3.amazonaws.com/consignnyc/placeholder-business.png'); background-size:cover" height="200">
+      </div>
 
-  <% else %>
+    <% else %>
 
-    <div class="thumbnail-gallery" style="background-image:url('<%= business.profile_photo %>'); background-size:cover" height="200">
-    </div>
-  <% end %>
+      <div class="thumbnail-gallery" style="background-image:url('<%= business.profile_photo %>'); background-size:cover" height="200">
+      </div>
+    <% end %>
+  </a>
+  
   <div class="biz-info">
     <span class="span"><%= link_to business.name.upcase, business %></span>
 
