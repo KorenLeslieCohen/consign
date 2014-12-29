@@ -53,6 +53,53 @@
     <%= @user.bio %>
   </p>
 
+  <!-- SHOW USER'S PHOTOS - modify wording based on owner of profile -->
+  <div class="user-header">
+    <% if @user.photos.length == 1 %>
+      <h2><%= @user.photos.length %> PHOTO</h2>
+    <% elsif @user.photos.length == 0 %>
+    <% else %>
+      <h2><%= @user.photos.length %> PHOTOS</h2>
+    <% end %>
+  </div>
+
+<!--   <section id="gallery">
+    <div class="container">
+      <div class="row divide">
+        <%# @user.photos.reverse.each do |photo| %>
+          <div class="col-sm-6 col-md-4 gallery-item">
+            <%#= link_to photo.business.name.upcase, photo.business %>  | <%#= photo.created_at.strftime("%b %d, %Y") %>
+            <a href="<%#= photo.business_photo %>" data-toggle="lightbox">
+              <div class="thumbnail-gallery" style="background-image:url('<%#= photo.business_photo %>'); background-size:cover" height="200">
+              </div>
+            </a>
+            "<%#= photo.description[0..20].upcase %>" 
+            <%# if (photo.user == current_user) %>
+              <%#= link_to 'Edit Review', [@business, review], method: :get, data: { confirm: 'Are you sure?' } %>
+              | <%#= link_to 'DELETE PHOTO', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%# end %>           
+          </div>
+        <%# end %>
+      </div>
+    </div>
+  </section> -->
+
+  <section id="gallery">
+    <div id="owl-demo-biz" class="owl-carousel owl-theme">
+      <% @user.photos.reverse.each do |photo| %>
+        <div class="owlitem-biz">
+          <a href="<%= photo.business_photo %>" data-toggle="lightbox">
+            <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover">
+            </div>
+          </a>
+          <p><%= link_to photo.business.name.upcase, photo.business %><% if (photo.user == current_user) %> 
+            |  <%= link_to 'DELETE PHOTO', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %></p>
+        </div>
+      <% end %>
+    </div>
+  </section>
+
   <!-- SHOW USER'S REVIEWS -->
   <div class="user-header">
     <% if @user.reviews.length == 1 %>
@@ -97,37 +144,6 @@
       </div>
     <% end %>
   </div>
-
-  <!-- SHOW USER'S PHOTOS - modify wording based on owner of profile -->
-  <div class="user-header">
-    <% if @user.photos.length == 1 %>
-      <h2><%= @user.photos.length %> PHOTO</h2>
-    <% elsif @user.photos.length == 0 %>
-    <% else %>
-      <h2><%= @user.photos.length %> PHOTOS</h2>
-    <% end %>
-  </div>
-
-  <section id="gallery">
-    <div class="container">
-      <div class="row divide">
-        <% @user.photos.reverse.each do |photo| %>
-          <div class="col-sm-6 col-md-4 gallery-item">
-            <%= link_to photo.business.name.upcase, photo.business %>  | <%= photo.created_at.strftime("%b %d, %Y") %>
-            <a href="<%= photo.business_photo %>" data-toggle="lightbox">
-              <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover" height="200">
-              </div>
-            </a>
-            "<%= photo.description[0..20].upcase %>" 
-            <% if (photo.user == current_user) %>
-              <%#= link_to 'Edit Review', [@business, review], method: :get, data: { confirm: 'Are you sure?' } %>
-              | <%= link_to 'DELETE PHOTO', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
-            <% end %>           
-          </div>
-        <% end %>
-      </div>
-    </div>
-  </section>
   
 </div>
 
