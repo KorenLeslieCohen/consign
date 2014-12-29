@@ -188,13 +188,6 @@
   </div>
 </section>
 
-<!-- TAGS -->
-<!-- <h1>Tags</h1>
-<p> -->
-<%# @business.biztags.each do |biztag| %> 
-  <%#= link_to biztag.name, biztag %><%#= "," unless biztag == @business.biztags.last %>
-<%# end %><!-- </p> -->
-
 <div class="designer-list">
   <p><% @business.designers.sort{|a,b| a.name <=> b.name}.each do |designer| %> 
     <%= link_to designer.name, designer %><%= "," unless designer == @business.designers.sort{|a,b| a.name <=> b.name}.last %>

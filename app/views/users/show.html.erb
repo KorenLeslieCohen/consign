@@ -4,8 +4,10 @@
 </section>
 
 <div class="users-page">
+
   <!-- IF USER SIGNED IN -->
   <% if user_signed_in? %>
+  
     <!-- IF VIEWING YOUR OWN PROFILE -->
     <% if (current_user.email == @user.email) %>
 
