@@ -19,7 +19,6 @@
             <% num_of_ratings += 1 %>
           <% end %>
           <% overall_rating = (total_rating.to_f / num_of_ratings.to_f) %>
-          <%#= overall_rating.to_f %>
           <% if (overall_rating.to_f >= 1 && overall_rating.to_f <= 1.24)  %>
             <i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
 
