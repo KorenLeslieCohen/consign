@@ -93,9 +93,9 @@
             </div>
           </a>
           <p><%= link_to photo.business.name.upcase, photo.business %><% if (photo.user == current_user) %> 
-            |  <%= link_to 'DELETE PHOTO', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <i class="fa fa-caret-right"></i> <%= link_to 'DELETE PHOTO', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
           <% else %>
-            <i class="fa fa-heart"></i> <%= photo.created_at.strftime("%b %d, %Y") %>
+            <i class="fa fa-caret-right"></i> <%= photo.created_at.strftime("%b %d, %Y") %>
           <% end %></p>
         </div>
       <% end %>
@@ -121,8 +121,8 @@
           <% else %>
             <%= image_tag review.business.profile_photo, :height => "100" %>
           <% end %>
-          <%= link_to review.business.name, review.business, :class => 'review-name' %> | 
-          <%= review.created_at.strftime("%b %d, %Y") %> |  
+          <%= link_to review.business.name, review.business, :class => 'review-name' %><br> 
+          <%= review.created_at.strftime("%b %d, %Y") %> <i class="fa fa-caret-right"></i>  
           <% if review.rating == 1 %>
             <i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-half-o"></i>
           <% elsif review.rating == 2 %>
@@ -133,11 +133,11 @@
             <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>
           <% else %>
             <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-          <% end %> | 
+          <% end %> <i class="fa fa-caret-right"></i> 
           <%= review.role.upcase %> 
           <% if (review.user == current_user) %>
             <!-- |  --><%#= link_to 'EDIT REVIEW', edit_review_path(review), method: :get %>
-            | <%= link_to 'DELETE REVIEW', review, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <i class="fa fa-caret-right"></i> <%= link_to 'DELETE REVIEW', review, method: :delete, data: { confirm: 'Are you sure?' } %>
           <% end %><br>
           <div id="user-review-content">
             <%= review.content %>

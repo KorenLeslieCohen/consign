@@ -377,6 +377,14 @@ h1 {
   background: none;
 }
 
+.contact-form h3 {
+  font-family: 'Dancing Script';
+  text-align: center;
+  font-size: 30px;
+  color: #FC4063;
+  margin-top: 30px;
+}
+
 .delight-icon-services {
   width: 80px;
 }
@@ -803,6 +811,10 @@ td {
   color: #FD8698;
 }
 
+.fa-caret-right {
+  color: #FC4063;
+}
+
 /*--------------BUSINESS DESIGNERS--------------*/
 
 .designer-list {
@@ -1006,10 +1018,6 @@ td {
 .fa-twitter,
 .fa-instagram {
   color: #FFF;
-}
-
-.fa-copyright {
-  font-size: 13px;
 }
 
 /*--------------EAST VILLAGE--------------*/
