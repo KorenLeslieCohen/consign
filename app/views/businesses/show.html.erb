@@ -11,17 +11,35 @@
         <% total_rating += review.rating %>
         <% num_of_ratings += 1 %>
       <% end %>
-      <% overall_rating = (total_rating / num_of_ratings) %>
-      <% if overall_rating == 1 %>
+      <% overall_rating = (total_rating.to_f / num_of_ratings.to_f) %>
+      <%#= overall_rating.to_f %>
+      <% if (overall_rating.to_f >= 1 && overall_rating.to_f <= 1.24)  %>
         <i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
-      <% elsif overall_rating == 2 %>
-        <i class="fa fa-star"></i><i class="fa fa-star"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
-      <% elsif overall_rating == 3 %>
+
+      <% elsif (overall_rating.to_f >= 1.25 && overall_rating.to_f <= 1.74)  %>
+        <i class="fa fa-star"></i><i class="fa fa-star--half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+
+      <% elsif (overall_rating.to_f >= 1.75 && overall_rating.to_f <= 2.24)  %>
+        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+
+      <% elsif (overall_rating.to_f >= 2.25 && overall_rating.to_f <= 2.74)  %>
+         <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+
+      <% elsif (overall_rating.to_f >= 2.75 && overall_rating.to_f <= 3.24)  %>
         <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
-      <% elsif overall_rating == 4 %>
+
+      <% elsif (overall_rating.to_f >= 3.25 && overall_rating.to_f <= 3.74)  %>
+        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i>
+
+      <% elsif (overall_rating.to_f >= 3.75 && overall_rating.to_f <= 4.24)  %>
         <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
-      <% else %>
+
+      <% elsif (overall_rating.to_f >= 4.25 && overall_rating.to_f <= 4.74)  %>
+        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>
+
+      <% elsif overall_rating.to_f >= 4.75 %>
         <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+
       <% end %>
     <% end %>
   </p>
@@ -275,13 +293,13 @@
           <%= link_to review.user.first_name, review.user, :class => 'review-name' %> |
           <%= review.created_at.strftime("%b %d, %Y").upcase %> |
           <% if review.rating == 1 %>
-            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
           <% elsif review.rating == 2 %>
-            <i class="fa fa-star"></i><i class="fa fa-star"></i>
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
           <% elsif review.rating == 3 %>
-            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
           <% elsif review.rating == 4 %>
-            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
           <% else %>
             <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
           <% end %> | 
