@@ -9,7 +9,7 @@
       <div class="owlitem"style="background-image:url('<%= photo.business_photo %>'); background-size:cover">
       <p><%= link_to photo.business.name.upcase, photo.business %><br>
         <% if photo.business.reviews.length == 0 %>
-        (NO REVIEWS YET)
+          <i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
         <% else %>
           <% total_rating = 0 %>
           <% num_of_ratings = 0 %>

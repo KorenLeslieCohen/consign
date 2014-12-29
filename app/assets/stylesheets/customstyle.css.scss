@@ -377,7 +377,8 @@ h1 {
   background: none;
 }
 
-.contact-form h3 {
+.contact-form h3,
+.contact-thanks h3 {
   font-family: 'Dancing Script';
   text-align: center;
   font-size: 30px;
@@ -657,13 +658,15 @@ a:hover {
   background-size: cover;
 }
 
-#all-businesses p {
+#all-businesses p,
+#all-designers p {
   text-align: center;
   margin-bottom: 10px;
   font-size: 15px;
 }
 
-#all-businesses p a {
+#all-businesses p a,
+#all-designers p a {
   font-family: "Playfair Display";
   background: #000;
   color: #FFF;
@@ -673,7 +676,8 @@ a:hover {
   transition-property: background;
 }
 
-#all-businesses p a:hover {
+#all-businesses p a:hover,
+#all-designers p a:hover {
   background: #FD8698;
   transition-duration: .5s;
   transition-property: background;  

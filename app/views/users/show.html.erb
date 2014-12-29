@@ -63,27 +63,6 @@
     <% end %>
   </div>
 
-<!--   <section id="gallery">
-    <div class="container">
-      <div class="row divide">
-        <%# @user.photos.reverse.each do |photo| %>
-          <div class="col-sm-6 col-md-4 gallery-item">
-            <%#= link_to photo.business.name.upcase, photo.business %>  | <%#= photo.created_at.strftime("%b %d, %Y") %>
-            <a href="<%#= photo.business_photo %>" data-toggle="lightbox">
-              <div class="thumbnail-gallery" style="background-image:url('<%#= photo.business_photo %>'); background-size:cover" height="200">
-              </div>
-            </a>
-            "<%#= photo.description[0..20].upcase %>" 
-            <%# if (photo.user == current_user) %>
-              <%#= link_to 'Edit Review', [@business, review], method: :get, data: { confirm: 'Are you sure?' } %>
-              | <%#= link_to 'DELETE PHOTO', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
-            <%# end %>           
-          </div>
-        <%# end %>
-      </div>
-    </div>
-  </section> -->
-
   <section id="gallery">
     <div id="owl-demo-biz" class="owl-carousel owl-theme">
       <% @user.photos.reverse.each do |photo| %>
