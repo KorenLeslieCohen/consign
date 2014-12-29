@@ -549,8 +549,6 @@ a:hover {
 .user-profile-logout,
 .business-login-to-review,
 .business-login-to-upload,
-.business-complete-to-review,
-.business-complete-to-upload,
 .create-account-link,
 .logout-link {
   margin-left: auto;
@@ -565,16 +563,6 @@ a:hover {
 
 .create-account-link {
   margin-top: 75px;
-}
-
-.business-complete-to-review,
-.business-login-to-review {
-  margin-bottom: 40px;
-}
-
-.business-complete-to-review,
-.business-complete-to-upload {
-  margin-top: 20px;
 }
 
 .faq-link {
@@ -601,14 +589,6 @@ a:hover {
   width: 274px;
 }
 
-.business-complete-to-review {
-  width: 315px;
-}
-
-.business-complete-to-upload {
-  width: 320px;
-}
-
 .create-account-link {
   width: 188px;
 }
@@ -623,8 +603,6 @@ a:hover {
 .user-profile-logout h4 a,
 .business-login-to-review h4 a,
 .business-login-to-upload h4 a,
-.business-complete-to-review h4 a,
-.business-complete-to-upload h4 a,
 .create-account-link h4 a,
 .logout-link h4 a {
   color: #FFF;
@@ -634,7 +612,7 @@ a:hover {
   transition-duration: .5s;
   transition-property: background;
   background: #000;
-  padding: 5px;
+  padding: 0 5px;
 }
 
 .faq-link h4 a:hover,
@@ -642,8 +620,6 @@ a:hover {
 .user-profile-logout h4 a:hover,
 .business-login-to-review h4 a:hover,
 .business-login-to-upload h4 a:hover,
-.business-complete-to-review h4 a:hover,
-.business-complete-to-upload h4 a:hover,
 .create-account-link h4 a:hover,
 .logout-link h4 a:hover {
   background: #FD8698;
