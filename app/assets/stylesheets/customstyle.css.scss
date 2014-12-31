@@ -1021,8 +1021,19 @@ td {
   color: #FD8698;
 }
 
-.footer-top p {
+#footer .footer-top {
   margin-top: 0;
+}
+
+#footer .footer-top a {
+  font-family: 'Dancing Script';
+  color: #FD8698;
+  font-size: 25px;
+  padding: 2px;
+}
+
+#footer .footer-top a:hover {
+  color: #FFF;
 }
 
 /*--------------TWEET--------------*/
