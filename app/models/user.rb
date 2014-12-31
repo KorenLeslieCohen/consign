@@ -20,8 +20,12 @@ class User < ActiveRecord::Base
     # :default_style => :thumb, 
     :s3_protocol => "https"
 
-  validates :first_name, :presence => { :message => "cannot be blank" }
-  validates :last_name, :presence => { :message => "cannot be blank" }
+  validates :tagline, length: {maximum: 30}
+  validates :city, length: {maximum: 30}
+  validates :url, length: {maximum: 30}
+  validates :bio, length: {maximum: 200}
+  validates :first_name, presence: true, length: {maximum: 30}
+  validates :last_name, presence: true, length: {maximum: 30}
   # validates :user_profile_photo, :attachment_presence => { :message => "You must include a profile photo" }
   validates_with AttachmentSizeValidator, :attributes => :user_profile_photo, :less_than => 3.megabytes
   validates_attachment_content_type :user_profile_photo, :content_type => /\Aimage\/.*\Z/
