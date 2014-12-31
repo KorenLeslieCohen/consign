@@ -7,54 +7,43 @@
 
   <!-- IF USER SIGNED IN -->
   <% if user_signed_in? %>
-  
     <!-- IF VIEWING YOUR OWN PROFILE -->
     <% if (current_user.email == @user.email) %>
-
       <p id="notice"><%= notice %></p>
-
-<!--       <div id="private-profile">
-        <h5>PRIVATE INFORMATION</h5>
-        <h5><strong>Name:</strong> <%#= @user.first_name %> <%#= @user.last_name %></h5>
-        <h5><strong>Email:</strong> <%#= @user.email %></h5>
-      </div><br> -->
-
       <div class="see-all">
         <p><%= link_to 'EDIT PROFILE', edit_user_path(@user) %> 
         <%= link_to 'EDIT ACCOUNT', edit_user_registration_path, :class => 'navbar-link' %></p>
       </div>
-
     <% end %>
   <% end %>
 
-  <div class="user-profile-photo">
-    <% if !@user.user_profile_photo? %>
-      <img src="https://s3.amazonaws.com/consignnyc/placeholder-profile.png">
-    <% else %>
-      <%= image_tag @user.user_profile_photo %></h1>
+  <div class="col-md-12 user-info">
+
+    <div class="user-profile-photo">
+      <% if !@user.user_profile_photo? %>
+        <img src="https://s3.amazonaws.com/consignnyc/placeholder-profile.png">
+      <% else %>
+        <%= image_tag @user.user_profile_photo %></h1>
+      <% end %>
+    </div>
+
+    <p><%= @user.city %></p>
+    <h3><%= @user.tagline %></h3>
+    <p><a href="<%= @user.url %>" alt="high end consignment nyc east village" target="_blank"><%= @user.url %></a></p>
+    <p><%#= link_to @user.url.gsub("http://", ""), @user.url, :target => "_blank" %></p>
+    <p><%= @user.bio %></p>
+
+  </div>
+
+  <!-- IF USER SIGNED IN -->
+  <% if user_signed_in? %>
+    <!-- IF VIEWING YOUR OWN PROFILE -->
+    <% if (current_user.email == @user.email) %>
+      <div class="see-all">
+        <p><%= link_to "LOGOUT", destroy_user_session_path, method: :delete%></p>
+      </div>
     <% end %>
-  </div>
-
-  <p>
-    <strong>City:</strong>
-    <%= @user.city %>
-  </p>
-  <p>
-    <strong>Website/Blog:</strong>
-    <%= @user.url %>
-  </p>
-  <p>
-    <strong>Tagline:</strong>
-    <%= @user.tagline %>
-  </p>
-  <p>
-    <strong>Bio:</strong>
-    <%= @user.bio %>
-  </p>
-
-  <div class="see-all">
-    <p><%= link_to "LOGOUT", destroy_user_session_path, method: :delete%></p>
-  </div>
+  <% end %>
 
   <!-- SHOW USER'S PHOTOS - modify wording based on owner of profile -->
   <div class="user-header">
