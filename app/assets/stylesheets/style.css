@@ -611,7 +611,7 @@ p.header_works {
 	-moz-opacity: 0.95;
 	-o-opacity: 0.95;
 	opacity: 0.95;
-	background-color: #000;
+	background-color: rgba(0,0,0,0.8);
 }
 
 .ekko-lightbox .modal-content {
@@ -640,11 +640,12 @@ p.header_works {
 	-webkit-opacity: 0.5;
 	-moz-opacity: 0.5;
 	-o-opacity: 0.5;
-	opacity: 0.5;
+	opacity: 1;
 	color: #fff;
 	text-shadow: 0;
 	font-weight: 100;
 	margin-top: 5px;
+	font-size: 50px;
 }
 
 .ekko-lightbox .modal-header .close:hover {
