@@ -383,7 +383,7 @@ h1 {
   background: none;
 }
 
-.contact-form h3,
+.script-header h3,
 .contact-thanks h3 {
   font-family: 'Dancing Script';
   text-align: center;
@@ -640,15 +640,15 @@ a:hover {
   background-size: cover;
 }
 
-#all-businesses p,
-#all-designers p {
+/*--------------SEE ALL BUTTONS--------------*/
+
+.see-all p {
   text-align: center;
   margin-bottom: 10px;
   font-size: 15px;
 }
 
-#all-businesses p a,
-#all-designers p a {
+.see-all p a {
   font-family: "Playfair Display";
   background: #000;
   color: #FFF;
@@ -658,11 +658,16 @@ a:hover {
   transition-property: background;
 }
 
-#all-businesses p a:hover,
-#all-designers p a:hover {
+.see-all p a:hover {
   background: #FD8698;
   transition-duration: .5s;
   transition-property: background;  
+}
+
+/*--------------SEARCH--------------*/
+
+.no-results {
+  margin-top: 75px;
 }
 
 /*--------------BUSINESS--------------*/

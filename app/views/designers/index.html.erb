@@ -17,8 +17,13 @@
           <% if @designers.present? %>
             <%= render @designers %>
           <% else %>
-            <h5>There are no designers by the name <%= params[:search] %>.</h5>
-            <p><%= link_to 'SEE ALL DESIGNERS', designers_path %></p>
+            <div class="script-header no-results">
+              <h3>There are no designers by the name <%= params[:search] %>.</h3>
+            </div>
+            <div class="see-all">
+              <p><%= link_to 'SEE ALL DESIGNERS', designers_path %></p>
+            </div>
+            <div class="user-divide"></div>
           <% end %>
         </div>
       </div>
