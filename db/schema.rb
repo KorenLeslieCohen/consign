@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141227030455) do
+ActiveRecord::Schema.define(version: 20141231201537) do
 
   create_table "biztags", force: true do |t|
     t.string   "name"
@@ -171,6 +171,8 @@ ActiveRecord::Schema.define(version: 20141227030455) do
     t.string   "tagline"
     t.string   "city"
     t.string   "state"
+    t.string   "age"
+    t.string   "gender"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
