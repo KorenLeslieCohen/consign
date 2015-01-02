@@ -194,10 +194,12 @@
 </section>
 
 <div class="designer-list">
-  <h3>Designers:</h3>
-  <p><% @business.designers.sort{|a,b| a.name <=> b.name}.each do |designer| %> 
-    <%= link_to designer.name, designer %><%= "," unless designer == @business.designers.sort{|a,b| a.name <=> b.name}.last %>
-  <% end %></p>
+  <% if @business.designers.length != 0 %>
+    <h3>Designers:</h3>
+    <p><% @business.designers.sort{|a,b| a.name <=> b.name}.each do |designer| %> 
+      <%= link_to designer.name, designer %><%= "," unless designer == @business.designers.sort{|a,b| a.name <=> b.name}.last %>
+    <% end %></p>
+  <% end %>
 </div>
 
 <!-- PHOTO FORM -->
