@@ -25,12 +25,13 @@
       <div class="field">
         <%= f.text_field :name, placeholder: "Store Name" %>
       </div>
-      <div class="field">
-        <%= f.text_field :website, placeholder: "Store Website" %>
-      </div>
+
+      <% if is_owner? %>
+        <div class="field">
+          <%= f.text_field :website, placeholder: "Store Website" %>
+        </div>
 
       <!-- BOROUGH / NEIGHBORHOOD -->
-      <% if is_owner? %>
         <div class="borough-neighborhood">
           <div class="field">
             <%= f.label :borough_id %>

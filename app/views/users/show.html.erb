@@ -29,8 +29,14 @@
 
     <p><%= @user.city %></p>
     <h3><%= @user.tagline %></h3>
-    <p><a href="<%= @user.url %>" alt="high end consignment nyc east village" target="_blank"><%= @user.url %></a></p>
-    <p><%#= link_to @user.url.gsub("http://", ""), @user.url, :target => "_blank" %></p>
+    <% if @user.url %>
+      <% if @user.url.include?("http://") %>
+        <p><%= link_to @user.url.gsub("http://", ""), @user.url, :target => "_blank" %></p>
+      <% else %>
+        <p><a href="http://<%= @user.url %>" alt="high end consignment nyc east village" target="_blank"><%= @user.url %></a></p>
+      <% end %>
+    <% end %>
+    
     <p><%= @user.bio %></p>
 
   </div>

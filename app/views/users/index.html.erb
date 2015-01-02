@@ -9,13 +9,16 @@
   <table align="center">
     <thead>
       <tr>
+        <th>No.</th>
+        <th>User ID</th>
+        <th>Joined</th>
         <th>First Name</th>
         <th>Last Name</th>
         <th>Email</th>
         <th>City</th>
         <th>Age</th>
         <th>Gender</th>
-        <th>Tagline</th>
+        <!-- <th>Tagline</th> -->
         <th>URL</th>
         <!-- <th>Role</th> -->
         <th colspan="3"></th>
@@ -23,16 +26,28 @@
     </thead>
 
     <tbody>
+      <% num = 0 %>
       <% @users.each do |user| %>
         <tr>
+          <td><%= num += 1 %></td>
+          <td><%= user.id %></td>
+          <td><%= user.created_at.strftime("%b %d, %Y") %></td>
           <td><%= user.first_name %></td>
           <td><%= user.last_name %></td>
           <td><%= user.email %></td>
           <td><%= user.city %></td>
           <td><%= user.age %></td>
           <td><%= user.gender %></td>
-          <td><%= user.tagline %></td>
-          <td><a href="<%= user.url %>" target="_blank"><%= user.url %></a></td>
+          <!-- <td><%#= user.tagline %></td> -->
+          <td>    
+            <% if user.url %>
+              <% if user.url.include?("http://") %>
+                <%= link_to user.url.gsub("http://", ""), user.url, :target => "_blank" %>
+              <% else %>
+                <a href="http://<%= user.url %>" alt="high end consignment nyc east village" target="_blank"><%= user.url %></a>
+              <% end %>
+            <% end %>
+          </td>
           <!-- <td><%#= user.role %></td> -->
           <td><%= link_to 'Show', user %></td>
           <td><%= link_to 'Edit', edit_user_path(user) %></td> 
