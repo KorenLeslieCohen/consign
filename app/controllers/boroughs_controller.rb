@@ -10,15 +10,18 @@ class BoroughsController < ApplicationController
   # GET /boroughs/1
   # GET /boroughs/1.json
   def show
+    redirect_to "/boroughs" unless is_owner?
   end
 
   # GET /boroughs/new
   def new
+    redirect_to "/boroughs" unless is_owner?
     @borough = Borough.new
   end
 
   # GET /boroughs/1/edit
   def edit
+    redirect_to "/boroughs" unless is_owner?
   end
 
   # POST /boroughs
@@ -71,4 +74,12 @@ class BoroughsController < ApplicationController
     def borough_params
       params.require(:borough).permit(:name)
     end
+
+    # CONSIGN.NYC admin
+    def is_owner?
+      if user_signed_in?
+        (current_user.email == "consigndotnyc@gmail.com")
+      end
+    end
+
 end

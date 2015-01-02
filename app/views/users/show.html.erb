@@ -3,6 +3,8 @@
   <p class="header">PROFILE</p>
 </section>
 
+<p id="notice"><%= notice %></p>
+
 <div class="users-page">
 
   <!-- IF USER SIGNED IN -->
@@ -69,7 +71,7 @@
             <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover">
             </div>
           </a>
-          <p><%= link_to photo.business.name.upcase, photo.business %><% if (photo.user == current_user) %> 
+          <p><%= link_to photo.business.name.upcase, photo.business %><% if ((photo.user == current_user) || is_owner?) %> 
             <i class="fa fa-caret-right"></i> <%= link_to 'DELETE PHOTO', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
           <% else %>
             <i class="fa fa-caret-right"></i> <%= photo.created_at.strftime("%b %d, %Y") %>
@@ -112,7 +114,7 @@
             <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
           <% end %> <i class="fa fa-caret-right"></i> 
           <%= review.role.upcase %> 
-          <% if (review.user == current_user) %>
+          <% if ((review.user == current_user) || is_owner?) %>
             <!-- |  --><%#= link_to 'EDIT REVIEW', edit_review_path(review), method: :get %>
             <i class="fa fa-caret-right"></i> <%= link_to 'DELETE REVIEW', review, method: :delete, data: { confirm: 'Are you sure?' } %>
           <% end %><br>

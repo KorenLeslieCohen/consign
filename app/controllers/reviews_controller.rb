@@ -4,21 +4,25 @@ class ReviewsController < ApplicationController
   # GET /reviews
   # GET /reviews.json
   def index
+    redirect_to "/businesses" unless is_owner?
     @reviews = Review.all
   end
 
   # GET /reviews/1
   # GET /reviews/1.json
   def show
+    redirect_to "/businesses" unless is_owner?
   end
 
   # GET /reviews/new
   def new
+    redirect_to "/businesses" unless is_owner?
     @review = Review.new
   end
 
   # GET /reviews/1/edit
   def edit
+    redirect_to "/businesses" unless is_owner?
   end
 
   # POST /reviews
@@ -70,5 +74,12 @@ class ReviewsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def review_params
       params.require(:review).permit(:business_id, :user_id, :rating, :content, :role)
+    end
+
+    # CONSIGN.NYC admin
+    def is_owner?
+      if user_signed_in?
+        (current_user.email == "consigndotnyc@gmail.com")
+      end
     end
 end

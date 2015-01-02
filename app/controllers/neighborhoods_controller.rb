@@ -14,11 +14,13 @@ class NeighborhoodsController < ApplicationController
 
   # GET /neighborhoods/new
   def new
+    redirect_to businesses_path unless is_owner?
     @neighborhood = Neighborhood.new
   end
 
   # GET /neighborhoods/1/edit
   def edit
+    redirect_to businesses_path unless is_owner?
   end
 
   # POST /neighborhoods
@@ -70,5 +72,12 @@ class NeighborhoodsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def neighborhood_params
       params.require(:neighborhood).permit(:name, :borough_id)
+    end
+
+    # CONSIGN.NYC admin
+    def is_owner?
+      if user_signed_in?
+        (current_user.email == "consigndotnyc@gmail.com")
+      end
     end
 end

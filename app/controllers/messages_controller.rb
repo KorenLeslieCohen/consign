@@ -77,6 +77,8 @@ class MessagesController < ApplicationController
 
     # CONSIGN.NYC admin
     def is_owner?
-      (user_signed_in? && (current_user.email == "consigndotnyc@gmail.com"))
+      if user_signed_in?
+        (current_user.email == "consigndotnyc@gmail.com")
+      end
     end
 end

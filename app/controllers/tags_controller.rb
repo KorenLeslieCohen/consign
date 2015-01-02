@@ -4,12 +4,14 @@ class TagsController < ApplicationController
   # GET /tags
   # GET /tags.json
   def index
+    redirect_to businesses_path unless is_owner?
     @tags = Tag.all
   end
 
   # GET /tags/1
   # GET /tags/1.json
   def show
+    redirect_to businesses_path unless is_owner?
   end
 
   # GET /tags/new
@@ -76,6 +78,8 @@ class TagsController < ApplicationController
 
     # CONSIGN.NYC admin
     def is_owner?
-      (user_signed_in? && (current_user.email == "consigndotnyc@gmail.com"))
+      if user_signed_in?
+        (current_user.email == "consigndotnyc@gmail.com")
+      end
     end
 end

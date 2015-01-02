@@ -10,15 +10,18 @@ class PhotosController < ApplicationController
   # GET /photos/1
   # GET /photos/1.json
   def show
+    redirect_to "/photos" unless is_owner?
   end
 
   # GET /photos/new
   def new
+    redirect_to "/photos" unless is_owner?
     @photo = Photo.new
   end
 
   # GET /photos/1/edit
   def edit
+    redirect_to "/photos" unless is_owner?
   end
 
   # POST /photos
@@ -68,6 +71,13 @@ class PhotosController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_params
       params.require(:photo).permit(:business_id, :user_id, :business_photo_file_name, :business_photo_content_type, :business_photo_file_size, :business_photo_updated_at, :description, :business_photo)
+    end
+
+    # CONSIGN.NYC admin
+    def is_owner?
+      if user_signed_in?
+        (current_user.email == "consigndotnyc@gmail.com")
+      end
     end
 
 end
