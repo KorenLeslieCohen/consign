@@ -347,7 +347,20 @@ h1 {
 .admin-table td {
   padding: 3px;
   border: 1px solid #CCC;
-  font-size: 15px;
+  font-size: 13px;
+}
+
+.admin-table th {
+  background-color: #CCC;
+  border: 1px solid #000;
+}
+
+.admin-table tr:nth-child(odd) {
+    background-color: #FFE6E9;
+}
+
+.admin-table a {
+  color: #FC4063;
 }
 
 /*--------------DIVIDE--------------*/
