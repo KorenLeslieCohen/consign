@@ -5,21 +5,17 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   has_one :business
-  has_many :reviews, :dependent => :destroy 
-  has_many :photos, :dependent => :destroy
+  has_many :reviews, :dependent => :destroy # destroys associated photos when business destroyed
+  has_many :photos, :dependent => :destroy # destroys associated photos when business destroyed
 
+  # Amazon S3 photos
   has_attached_file :user_profile_photo, 
     :storage => :s3, 
-    # :hash_secret => "longSecretString", 
-    # :path => ":hash", 
     :bucket => "consignnyc",
     :s3_credentials => "#{Rails.root}/config/aws.yml",
-    # :s3_credentials => Proc.new{|a| a.instance.s3_credentials },
-    # :s3_credentials => S3_CREDENTIALS,
-    # :styles => { :thumb => "1024x768"}, 
-    # :default_style => :thumb, 
     :s3_protocol => "https"
 
+  # Validations
   validates :tagline, length: {maximum: 30}
   validates :city, length: {maximum: 30}
   validates :url, length: {maximum: 30}

@@ -3,6 +3,7 @@ class Review < ActiveRecord::Base
   belongs_to :business
   belongs_to :user
 
+  # Validations
   validates_presence_of :business_id, :user_id
   validates :rating, presence: true 
   validates :content, presence: true, length: {minimum: 30}

@@ -6,18 +6,14 @@ class Photo < ActiveRecord::Base
   has_many :tags, through: :photo_tags
   accepts_nested_attributes_for :tags
 
+  # Amazon S3 photos
   has_attached_file :business_photo, 
     :storage => :s3, 
-    # :hash_secret => "longSecretString", 
-    # :path => ":hash", 
     :bucket => "consignnyc",
     :s3_credentials => "#{Rails.root}/config/aws.yml",
-    # :s3_credentials => Proc.new{|a| a.instance.s3_credentials },
-    # :s3_credentials => S3_CREDENTIALS,
-    # :styles => { :thumb => "1024x768"}, 
-    # :default_style => :thumb, 
     :s3_protocol => "https"
 
+  # Validations
   validates :description, presence: true, length: {maximum: 20}
   validates :business_photo, :attachment_presence => true
   validates_with AttachmentSizeValidator, :attributes => :business_photo, :less_than => 3.megabytes
