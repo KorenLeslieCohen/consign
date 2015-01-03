@@ -1,19 +1,38 @@
+<section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+  <h1 class="header">ADMIN PAGE</h1>
+  <p class="header">MESSAGE</p>
+</section>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @message.name %>
-</p>
+<div class="user-divide">
+</div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @message.email %>
-</p>
+<div class="admin-table">
+  <table align="center">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Message</th>
+        <th colspan="1"></th>
+      </tr>
+    </thead>
 
-<p>
-  <strong>Body:</strong>
-  <%= @message.body %>
-</p>
+    <tbody>
+      <tr>
+        <td><%= @message.created_at.strftime("%b %d, %Y") %></td>
+        <td><%= @message.name %></td>
+        <td><%= @message.email %></td>
+        <td><%= @message.body %></td> 
+        <td><%= link_to 'Back to Messages', messages_path %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-<%= link_to 'Edit', edit_message_path(@message) %> |
-<%= link_to 'Back', messages_path %>
+<div class="user-divide">
+</div>
+
+<%#= link_to 'Edit', edit_message_path(@message) %> 
