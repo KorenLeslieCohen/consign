@@ -9,14 +9,16 @@ class Mailer < ActionMailer::Base
   def new_review_email(user, business)
     @user = user
     @business = business
-    mail(:to => @user.email, :subject => "Your review has been posted on CONSIGN.NYC")
+    mail(:to => @user.email, :subject => "Your review has been posted on CONSIGN.NYC",
+      :bcc => "ConsignDotNYC@gmail.com")
   end
 
   # USER confirmation email following PHOTO
   def new_photo_email(user, business)
     @user = user
     @business = business
-    mail(:to => @user.email, :subject => "Your photo has been uploaded on CONSIGN.NYC")
+    mail(:to => @user.email, :subject => "Your photo has been uploaded on CONSIGN.NYC",
+      :bcc => "ConsignDotNYC@gmail.com")
   end
 
   # CONSIGN.NYC EMAILS
@@ -50,7 +52,8 @@ class Mailer < ActionMailer::Base
   def store_photo_email(user, business)
     @user = user
     @business = business
-    mail(:to => @business.admin_email, :subject => "#{@business.name} has a new photo on CONSIGN.NYC")
+    mail(:to => @business.admin_email, :subject => "#{@business.name} has a new photo on CONSIGN.NYC",
+      :bcc => "ConsignDotNYC@gmail.com")
   end
 
   # NEW MESSAGE EMAIL
@@ -60,7 +63,8 @@ class Mailer < ActionMailer::Base
     @name = name
     @email = email
     @body = body
-    mail(:to => "consigndotnyc@gmail.com", :subject => "New Message from CONSIGN.NYC")
+    mail(:to => "consigndotnyc@gmail.com", :subject => "New Message from CONSIGN.NYC",
+      :bcc => "ConsignDotNYC@gmail.com")
   end
 
 end
