@@ -2,13 +2,15 @@
   <h1 class="header">ADMIN PAGE</h1>
   <p class="header">REVIEWS LIST</p>
 </section>
-
+ 
 <p id="notice"><%= notice %></p>
 
 <div class="admin-table">
   <table align="center">
     <thead>
       <tr>
+        <th>No.</th>
+        <th>Date</th>
         <th>Business</th>
         <th>User</th>
         <th>Rating</th>
@@ -18,8 +20,11 @@
     </thead>
 
     <tbody>
+      <% num = 0 %>
       <% @reviews.each do |review| %>
         <tr>
+          <td><%= num += 1 %></td>
+          <td width="90"><%= review.created_at.strftime("%b %d, %Y") %></td>
           <td><%= link_to review.business.name, review.business %></td>
           <td><%= link_to review.user.first_name, review.user %></td>
           <td><%= review.rating %></td>
@@ -34,4 +39,4 @@
 </div>
 <br>
 
-<%= link_to 'New Review', new_review_path %>
+<%#= link_to 'New Review', new_review_path %>
