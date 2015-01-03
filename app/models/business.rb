@@ -20,6 +20,7 @@ class Business < ActiveRecord::Base
     :s3_protocol => "https"
 
   # Validations
+  validates :store_bio, length: {maximum: 700}
   validates_presence_of :name, :street_address, :city, :state, :zip, :phone, :map, :percent_to_client, :consignment_period, :return_policy
   validates :admin_email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }

@@ -23,7 +23,7 @@
           <td><%= link_to review.business.name, review.business %></td>
           <td><%= link_to review.user.first_name, review.user %></td>
           <td><%= review.rating %></td>
-          <td><%= review.content %></td>
+          <td><%= h(review.content).gsub(/\n/, '<br>').html_safe %></td>
           <td><%= link_to 'Show', review %></td>
           <td><%= link_to 'Edit', edit_review_path(review) %></td>
           <td><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>

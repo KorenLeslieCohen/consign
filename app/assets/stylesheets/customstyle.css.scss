@@ -842,7 +842,8 @@ td {
 
 /*--------------BUSINESS DESIGNERS--------------*/
 
-.designer-list {
+.designer-list,
+.store-bio {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -850,12 +851,24 @@ td {
   padding-right: 15px;
 }
 
-.designer-list p {
+.store-bio {
+  max-width: 1000px;
+}
+
+.designer-list p,
+.store-bio p {
   text-align: center;
   font-family: 'Dancing Script';
   font-size: 20px;
   line-height: 1.3;
   margin-top: 5px;
+  color: #FD8698;
+}
+
+.store-bio p {
+  font-family: 'Playfair Display';
+  font-size: 15px;
+  color: #000;
 }
 
 .designer-list p a {
@@ -866,11 +879,16 @@ td {
   color: #777;
 }
 
-.designer-list h3 {
+.designer-list h3,
+.store-bio h3 {
   text-align: center;
   font-family: 'Dancing Script';
   font-size: 25px;
   margin-bottom: 0;
+}
+
+.store-bio h3 {
+  color: #FC4063;
 }
 
 /*--------------BUSINESS FORM--------------*/

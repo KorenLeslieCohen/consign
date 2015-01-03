@@ -47,10 +47,14 @@
         </div>
       <% end %>
 
+      <!-- STORE BIO  -->
+      <h1>Store Bio</h1>
+      <div class="field">
+        <%= f.text_field :store_bio, placeholder: "(One Paragraph / 700 Char. Max)" %>
+      </div>
+
       <!-- NEWS & SPECIALS  -->
-
       <h1>News & Specials</h1>
-
       <div class="field">
         <%= f.text_field :special_offers, placeholder: "News / Special Offers" %>
       </div>
@@ -169,29 +173,28 @@
       <h1>For Consignors</h1>
 
       <div class="field">
-        <%= f.text_field :percent_to_client, placeholder: "Percent to client" %>
+        <%= f.text_field :percent_to_client, placeholder: "Percent to Client" %>
       </div>
       <div class="field">
-        <%= f.text_field :consignment_period, placeholder: "Consignment period" %>
+        <%= f.text_field :consignment_period, placeholder: "Consignment Period" %>
       </div>
       <div class="field">
-        <%= f.text_field :markdown_info, placeholder: "Markdown period" %>
+        <%= f.text_field :markdown_info, placeholder: "Markdown Period" %>
       </div>
       <div class="field">
-        <%= f.text_field :appointment_info, placeholder: "Appointment information" %>
+        <%= f.text_field :appointment_info, placeholder: "Appointment Information" %>
       </div>
       <div class="field">
-        <%= f.text_field :pickup_available, placeholder: "Pickup or shipment available?" %>
+        <%= f.text_field :pickup_available, placeholder: "Pickup or Shipment Available?" %>
       </div>
       <div class="field">
-        <%= f.text_field :restrictions, placeholder: "Item restrictions" %>
+        <%= f.text_field :restrictions, placeholder: "Item Restrictions" %>
       </div>
       <div class="field">
-        <%= f.text_field :additional_info, placeholder: "Additional information" %>
+        <%= f.text_field :additional_info, placeholder: "Additional Consignment Information" %>
       </div>
       <div class="field">
-        <%= f.label :return_of_consigned_goods %>?
-        <%= f.select :return_of_consigned_goods, ["Yes", "No"] %>
+        <%= f.text_field :return_of_consigned_goods, placeholder: "Return of Consigned Items?" %>
       </div>
 
       <!-- FOR SHOPPERS -->
@@ -201,8 +204,15 @@
         <%= f.text_field :return_policy, placeholder: "Return Policy" %>
       </div>
       <div class="field">
+        <%= f.label :authenticity %> Guaranteed?
+        <%= f.select :authenticity, ["Yes", "No"] %>
+      </div>
+      <div class="field">
         <%= f.label :ecommerce_site %>?
         <%= f.select :ecommerce_site, ["Yes", "No"] %>
+      </div>
+      <div class="field">
+        <%= f.text_field :shop_additional_info, placeholder: "Additional Purchase Info" %>
       </div>
 
       </div>

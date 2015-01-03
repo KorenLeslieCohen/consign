@@ -119,7 +119,7 @@
             <i class="fa fa-caret-right"></i> <%= link_to 'DELETE REVIEW', review, method: :delete, data: { confirm: 'Are you sure?' } %>
           <% end %><br>
           <div id="user-review-content">
-            <%= review.content %>
+            <%= h(review.content).gsub(/\n/, '<br>').html_safe %>
           </div>
         </div>
       </div>

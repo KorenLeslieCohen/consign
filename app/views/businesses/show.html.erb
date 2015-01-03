@@ -92,13 +92,13 @@
                             <td>Pickup or shipment available?</td><td><%= @business.pickup_available %></td>
                           </tr>
                           <tr>
-                            <td>Item restrictions</td><td><%= @business.restrictions %></td>
+                            <td>Return of consigned items?</td><td><%= @business.return_of_consigned_goods %></td> 
                           </tr>
                           <tr style="background:#FFE6E9">
-                            <td>Additional information</td><td><%= @business.additional_info %></td>
+                            <td>Item restrictions</td><td><%= @business.restrictions %></td>
                           </tr>
                           <tr>
-                            <td>Return of consigned items?</td><td><%= @business.return_of_consigned_goods %></td>
+                            <td>Additional information</td><td><%= @business.additional_info %></td>
                           </tr>
                         </tbody>
                       </table>
@@ -173,10 +173,16 @@
                       <table align="center">
                         <tbody>
                           <tr style="background:#FFE6E9">
-                            <td>Return Policy</td><td><%= @business.return_policy %></td>
+                            <td>Authenticity guaranteed?</td><td><%= @business.authenticity %></td>
                           </tr>
                           <tr>
-                            <td>eCommerce Site</td><td><%= @business.ecommerce_site %></td>
+                            <td>Return policy</td><td><%= @business.return_policy %></td>
+                          </tr>
+                          <tr style="background:#FFE6E9">
+                            <td>eCommerce site?</td><td><%= @business.ecommerce_site %></td>
+                          </tr>
+                          <tr>
+                            <td>Additional information</td><td><%= @business.shop_additional_info %></td>
                           </tr>
                         </tbody>
                       </table>
@@ -193,6 +199,13 @@
   </div>
 </section>
 
+
+<div class="store-bio">
+<% if (@business.store_bio != "" && @business.store_bio != nil) %>
+<h3>Store Bio</h3>
+<p><%= @business.store_bio %></p>
+<% end %>
+</div>
 <!-- <div class="designer-list">
   <%# if @business.designers.length != 0 %>
     <h3>Designers:</h3>
@@ -290,7 +303,7 @@
           <% end %> <i class="fa fa-caret-right"></i> 
           <%= review.role.upcase %>
           <div id="review-content">
-            <%= review.content %>
+            <%= h(review.content).gsub(/\n/, '<br>').html_safe %>
           </div>
         </div>
       </div>
