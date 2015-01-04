@@ -199,13 +199,15 @@
   </div>
 </section>
 
-
+<!-- STORE BIO -->
 <div class="store-bio">
-<% if (@business.store_bio != "" && @business.store_bio != nil) %>
-<h3>Store Bio</h3>
-<p><%= @business.store_bio %></p>
-<% end %>
+  <% if (@business.store_bio != "" && @business.store_bio != nil) %>
+    <h3>Store Bio</h3>
+    <p><%= @business.store_bio %></p>
+  <% end %>
 </div>
+
+<!-- DESIGNERS -->
 <!-- <div class="designer-list">
   <%# if @business.designers.length != 0 %>
     <h3>Designers:</h3>
@@ -314,8 +316,10 @@
 <!-- ADMIN LINK -->
 <div class="see-all">
   <% if is_admin? %>
-    <%#= link_to 'Delete Business', @business, method: :delete, data: { confirm: 'Are you sure?' } %>  
     <p><%= link_to 'EDIT SHOP', edit_business_path(@business) %></p>
   <% end %> 
+  <% if is_owner? %>
+    <p><%= link_to 'DELETE SHOP', @business, method: :delete, data: { confirm: 'Are you sure?' } %> </p>
+  <% end %>
 </div>
 

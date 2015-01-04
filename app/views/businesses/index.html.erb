@@ -29,3 +29,25 @@
   </div>
 </section>
 
+<% if is_owner? %>
+  <div class="admin-table">
+    <table align="center">
+      <thead>
+        <tr>
+          <th>Business</th>
+          <th>Special</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @businesses.each do |business| %>
+          <tr>
+            <td><%= link_to business.name, business %></td>
+            <td><%= business.special_offers %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% end %>
+
