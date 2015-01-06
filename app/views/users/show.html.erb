@@ -11,7 +11,7 @@
   <% if user_signed_in? %>
     <!-- IF VIEWING YOUR OWN PROFILE -->
     <% if (current_user.email == @user.email) %>
-      <p id="notice"><%= notice %></p>
+      
       <div class="see-all">
         <p><%= link_to 'EDIT PROFILE', edit_user_path(@user) %> 
         <%= link_to 'EDIT ACCOUNT', edit_user_registration_path, :class => 'navbar-link' %></p>
@@ -31,6 +31,7 @@
 
     <p><%= @user.city %></p>
     <h3><%= @user.tagline %></h3>
+
     <% if @user.url %>
       <% if @user.url.include?("http://") %>
         <p><%= link_to @user.url.gsub("http://", ""), @user.url, :target => "_blank" %></p>

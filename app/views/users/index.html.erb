@@ -50,14 +50,15 @@
           <td><%= user.age %></td>
           <td><%= user.gender %></td>
           <!-- <td><%#= user.tagline %></td> -->
-          <td>    
-            <% if user.url %>
-              <% if user.url.include?("http://") %>
-                <%= link_to user.url.gsub("http://", ""), user.url, :target => "_blank" %>
-              <% else %>
-                <a href="http://<%= user.url %>" alt="high end consignment nyc east village" target="_blank"><%= user.url %></a>
-              <% end %>
-            <% end %>
+          <td> 
+            <%= user.url %>  
+  <!--           <%# if user.url %>
+              <%# if user.url.include?("http://") %>
+                <%#= link_to user.url.gsub("http://", ""), user.url, :target => "_blank" %>
+              <%# else %>
+                <a href="http://<%#= user.url %>" alt="high end consignment nyc east village" target="_blank"><%#= user.url %></a>
+              <%# end %>
+            <%# end %> -->
           </td>
           <td>
             <% if user.reviews.length != 0 %>
