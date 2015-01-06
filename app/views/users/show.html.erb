@@ -42,6 +42,26 @@
     
     <p><%= @user.bio %></p>
 
+    <!-- PLACEHOLDER IF NO PROFILE INFO -->
+    <% if user_signed_in? %>
+      <% if (current_user.email == @user.email) %>
+        <% if is_profile_empty? %>
+          <h3>You have not completed your profile...</h3>
+          <h3>Complete it now!</h3>
+        <% end %>
+      <% else %>
+        <% if is_profile_empty? %>
+          <h3><%= @user.first_name %> has not completed their profile...</h3>
+          <h3>Check back soon!</h3>
+        <% end %>
+      <% end %>
+    <% else %>
+        <% if is_profile_empty? %>
+          <h3><%= @user.first_name %> has not completed their profile...</h3>
+          <h3>Check back soon!</h3>
+        <% end %>
+    <% end %>
+
   </div>
 
   <!-- IF USER SIGNED IN -->
