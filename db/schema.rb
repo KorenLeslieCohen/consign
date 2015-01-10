@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150103044325) do
+ActiveRecord::Schema.define(version: 20150109234815) do
 
   create_table "biztags", force: true do |t|
     t.string   "name"
@@ -176,6 +176,7 @@ ActiveRecord::Schema.define(version: 20150103044325) do
     t.string   "state"
     t.string   "age"
     t.string   "gender"
+    t.string   "agree_to_terms"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

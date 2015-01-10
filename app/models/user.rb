@@ -16,6 +16,7 @@ class User < ActiveRecord::Base
     :s3_protocol => "https"
 
   # Validations
+  validates :agree_to_terms, :presence => { :message => " must be checked" }
   validates :tagline, length: {maximum: 30}
   validates :city, length: {maximum: 30}
   validates :url, length: {maximum: 30}
