@@ -1,5 +1,7 @@
 // SOHO ETC MAP
 
+console.log("soho.js");
+
 $(document).ready(function(){ 
 
     google.maps.event.addDomListener(window, 'load', init);

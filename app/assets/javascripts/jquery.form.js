@@ -10,6 +10,8 @@
  */
 /*global ActiveXObject */
 
+console.log("jquery form.js");
+
 // AMD support
 (function (factory) {
     "use strict";

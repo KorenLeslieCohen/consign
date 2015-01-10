@@ -1,5 +1,7 @@
 // EAST VILLAGE MAP
 
+console.log("east village.js");
+
 $(document).ready(function(){ 
  
     google.maps.event.addDomListener(window, 'load', init);

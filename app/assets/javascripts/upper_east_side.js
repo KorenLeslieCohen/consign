@@ -1,5 +1,7 @@
 // UPPER EAST SIDE
 
+console.log("ues.js");
+
 $(document).ready(function(){ 
 
     google.maps.event.addDomListener(window, 'load', init);

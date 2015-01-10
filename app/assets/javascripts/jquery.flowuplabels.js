@@ -1,3 +1,5 @@
+console.log("jquery flowup.js");
+
 (function($) {
 	$.fn.FlowupLabels = function( options ){
 	

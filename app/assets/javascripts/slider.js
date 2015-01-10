@@ -1,3 +1,5 @@
+console.log("slider.js");
+
 $(document).ready(function() {
  
   var owl = $("#owl-demo");

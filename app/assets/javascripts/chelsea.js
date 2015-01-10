@@ -1,5 +1,7 @@
 // CHELSEA MAP
 
+console.log("chelsea.js");
+
 $(document).ready(function(){ 
 
     google.maps.event.addDomListener(window, 'load', init);

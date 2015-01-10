@@ -1,3 +1,5 @@
+console.log("retina.js");
+
 (function() {
   var root = (typeof exports == 'undefined' ? window : exports);
 
