@@ -13,11 +13,11 @@ class Business < ActiveRecord::Base
   accepts_nested_attributes_for :designers
 
   # Amazon S3 photos
-  has_attached_file :profile_photo, 
-    :storage => :s3,  
-    :bucket => "consignnyc",
-    :s3_credentials => "#{Rails.root}/config/aws.yml",
-    :s3_protocol => "https"
+  has_attached_file :profile_photo
+    # :storage => :s3,  
+    # :bucket => "consignnyc",
+    # :s3_credentials => "#{Rails.root}/config/aws.yml",
+    # :s3_protocol => "https"
 
   # Validations
   validates :store_bio, length: {maximum: 700}

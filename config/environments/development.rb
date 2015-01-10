@@ -47,7 +47,8 @@ Rails.application.configure do
     :storage => :s3,
     # :s3_host_name => 'REMOVE_THIS_LINE_IF_UNNECESSARY',
     :s3_credentials => {
-      :bucket => 'consignnyc'
+      :bucket => 'consignnyc',
+      :s3_credentials => "#{Rails.root}/config/aws.yml",
     }
   }
 end
