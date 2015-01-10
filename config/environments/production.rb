@@ -85,28 +85,26 @@ Rails.application.configure do
   config.assets.precompile = ['*.js', '*.css', '*.css.erb']
 
   # Action Mailer / Devise Mailers 
-
-  # config.action_mailer.default_url_options = { host: 'http://your-app-on-heroku.herokuapp.com' }
-  # config.action_mailer.default_url_options =   { :host => 'your_app.herokuapp.com' }
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.smtp_settings = {
-  #       address: "smtp.gmail.com",
-  #       port: 587,
-  #       authentication: "plain",
-  #       enable_starttls_auto: true,
-  #       user_name: "your_email@gmail.com",
-  #       password: "your_password" 
-
-  #   }
-
-
-  config.action_mailer.default_url_options = {:host => 'http://consigndotnyc.herokuapp.con'}
+  config.action_mailer.default_url_options =   { :host => 'consigndotnyc.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address => "127.0.0.1",
-    :port    => 25,
-    :domain  => 'consign.nyc'
-  }
+        address: "smtp.gmail.com",
+        port: "587",
+        domain: "gmail.com",
+        authentication: "plain",
+        enable_starttls_auto: true,
+        user_name: ENV['GMAIL_EMAIL'],
+        password: ENV['GMAIL_PASSWORD']
+
+    }
+
+  # config.action_mailer.default_url_options = {:host => 'http://consigndotnyc.herokuapp.con'}
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   :address => "127.0.0.1",
+  #   :port    => 25,
+  #   :domain  => 'consign.nyc'
+  # }
 
   # Amazon Web Services S3
   config.paperclip_defaults = {
