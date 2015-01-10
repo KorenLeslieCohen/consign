@@ -14,6 +14,8 @@
 ----------------------------
 */
 
+console.log("custom.js file");
+
 $(document).ready(function() {
 	'use strict';
 

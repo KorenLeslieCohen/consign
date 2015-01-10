@@ -158,7 +158,8 @@ strong {
 }
 
 .load_logo {
-	background: #000 url("../img/load_logo.png") no-repeat center center;
+	background: #000;
+	background-image: image-url("../img/load_logo.png") no-repeat center center;
 	position: absolute;
 	top: 45%;
 	left: 50%;
@@ -179,7 +180,8 @@ strong {
 
 #home {
 	min-height: 445px;
-	background: #000 url("header-small.png") no-repeat center center;
+	background: #000;
+	background-image: image-url("header-small.png") no-repeat center center;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
@@ -498,7 +500,7 @@ p.header {
 /*-----------------------------------------------------------------------------------*/
 
 #works-start {
-	background: url("../img/works_bg.jpg") no-repeat center center;
+	background-image: image-url("../img/works_bg.jpg") no-repeat center center;
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-color: #fff;
@@ -563,7 +565,7 @@ p.header_works {
 /*-----------------------------------------------------------------------------------*/
 
 #gallery-start {
-	background: url("../img/gallery_bg.jpg") no-repeat center center;
+	background-image: image-url("../img/gallery_bg.jpg") no-repeat center center;
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-color: #000;
@@ -692,7 +694,7 @@ p.header_works {
 /*-----------------------------------------------------------------------------------*/
 
 #team-start {
-	background: url("../img/team_bg.jpg") no-repeat center center;
+	background-image: image-url("../img/team_bg.jpg") no-repeat center center;
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-color: #000;
@@ -747,7 +749,7 @@ p.header_works {
 /*-----------------------------------------------------------------------------------*/
 
 #contact-start {
-	background: url("../img/contact_bg.jpg") no-repeat center center;
+	background-image: image-url("../img/contact_bg.jpg") no-repeat center center;
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-color: #000;
