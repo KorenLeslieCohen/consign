@@ -98,14 +98,6 @@ Rails.application.configure do
 
     }
 
-  # config.action_mailer.default_url_options = {:host => 'http://consigndotnyc.herokuapp.con'}
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.smtp_settings = {
-  #   :address => "127.0.0.1",
-  #   :port    => 25,
-  #   :domain  => 'consign.nyc'
-  # }
-
   # Amazon Web Services S3
   config.paperclip_defaults = {
     :storage => :s3,
