@@ -81,6 +81,9 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  # Precompile assets
+  config.assets.precompile = ['*.js', '*.css', '*.css.erb']
+
   # Action Mailer / Devise Mailers 
   config.action_mailer.default_url_options = {:host => 'consign.nyc'}
   config.action_mailer.delivery_method = :smtp
