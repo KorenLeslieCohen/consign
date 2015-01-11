@@ -235,3 +235,18 @@
   float: right;
 }
 
+/*--------------MEDIA QUERIES--------------*/
+
+/* Smaller Screens - Breakpoint -------> */
+@media screen and (max-width : 500px) {
+
+  .modal-box,
+  .modal-box2,
+  .modal-box3,
+  .modal-box4,
+  .modal-box4 {
+    padding-bottom: 40px;
+  }
+
+}
+
