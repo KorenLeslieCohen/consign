@@ -85,7 +85,7 @@ Rails.application.configure do
   # config.assets.precompile = ['*.js', '*.css', '*.css.erb']
 
   # Action Mailer / Devise Mailers 
-  config.action_mailer.default_url_options =   { :host => 'consigndotnyc.herokuapp.com' }
+  config.action_mailer.default_url_options =   { :host => 'consign.nyc' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
         address: "smtp.gmail.com",
