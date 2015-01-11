@@ -7520,12 +7520,30 @@ td {
   margin-right: auto;
 }
 
-/* line 1153, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/*--------------BOOTSTRAP--------------*/
+/* line 1155, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+.ekko-lightbox-container {
+  max-width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* line 1161, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+.ekko-lightbox-container img {
+  border: 3px solid #FFF;
+}
+
+/* line 1165, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+.modal-header .close {
+  margin-right: 10px;
+}
+
+/* line 1169, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .pre-scrollable {
   max-height: 400px;
 }
 
-/* line 1158, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1174, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .navbar-fixed-top .navbar-collapse,
 .navbar-fixed-bottom .navbar-collapse {
   max-height: 400px;
@@ -7534,7 +7552,7 @@ td {
 /*--------------MEDIA QUERIES--------------*/
 /* Smaller Screens - Breakpoint -------> */
 @media screen and (max-width: 1100px) {
-  /* line 1167, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+  /* line 1183, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
   .business-map {
     width: 90%;
   }
@@ -21236,12 +21254,30 @@ td {
   margin-right: auto;
 }
 
-/* line 1153, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/*--------------BOOTSTRAP--------------*/
+/* line 1155, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+.ekko-lightbox-container {
+  max-width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* line 1161, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+.ekko-lightbox-container img {
+  border: 3px solid #FFF;
+}
+
+/* line 1165, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+.modal-header .close {
+  margin-right: 10px;
+}
+
+/* line 1169, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .pre-scrollable {
   max-height: 400px;
 }
 
-/* line 1158, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1174, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .navbar-fixed-top .navbar-collapse,
 .navbar-fixed-bottom .navbar-collapse {
   max-height: 400px;
@@ -21250,7 +21286,7 @@ td {
 /*--------------MEDIA QUERIES--------------*/
 /* Smaller Screens - Breakpoint -------> */
 @media screen and (max-width: 1100px) {
-  /* line 1167, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+  /* line 1183, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
   .business-map {
     width: 90%;
   }

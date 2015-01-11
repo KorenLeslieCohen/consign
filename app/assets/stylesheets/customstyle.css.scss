@@ -1150,6 +1150,22 @@ td {
   margin-right: auto;
 }
 
+/*--------------BOOTSTRAP--------------*/
+
+.ekko-lightbox-container {
+  max-width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.ekko-lightbox-container img {
+  border: 3px solid #FFF;
+}
+
+.modal-header .close {
+  margin-right: 10px;
+}
+
 .pre-scrollable {
   max-height: 400px;
 }
