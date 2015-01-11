@@ -82,7 +82,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Precompile assets
-  config.assets.precompile = ['*.js', '*.css', '*.css.erb']
+  # config.assets.precompile = ['*.js', '*.css', '*.css.erb']
 
   # Action Mailer / Devise Mailers 
   config.action_mailer.default_url_options =   { :host => 'consigndotnyc.herokuapp.com' }
