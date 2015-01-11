@@ -29,10 +29,11 @@
 }
 
 .modal-box,
-.modal-box2{
+.modal-box2,
+.modal-box4 {
   color: #000;
   width: 300px;
-  top: 20vh;
+  top: 125px;
   padding-bottom: 17px;
 }
 
@@ -40,14 +41,7 @@
 .modal-box5 {
   color: #000;
   width: 300px;
-  top: 15vh;
-  padding-bottom: 17px;
-}
-
-.modal-box4 {
-  color: #000;
-  width: 300px;
-  top: 30vh;
+  top: 100px;
   padding-bottom: 17px;
 }
 
