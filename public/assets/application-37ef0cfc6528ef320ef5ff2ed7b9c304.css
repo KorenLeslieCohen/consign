@@ -8089,10 +8089,11 @@ you can use the generic selector below, but it's slower:
 }
 
 .modal-box,
-.modal-box2{
+.modal-box2,
+.modal-box4 {
   color: #000;
   width: 300px;
-  top: 20vh;
+  top: 125px;
   padding-bottom: 17px;
 }
 
@@ -8100,14 +8101,7 @@ you can use the generic selector below, but it's slower:
 .modal-box5 {
   color: #000;
   width: 300px;
-  top: 15vh;
-  padding-bottom: 17px;
-}
-
-.modal-box4 {
-  color: #000;
-  width: 300px;
-  top: 30vh;
+  top: 100px;
   padding-bottom: 17px;
 }
 
@@ -8293,6 +8287,21 @@ you can use the generic selector below, but it's slower:
 
 .modal-header button {
   float: right;
+}
+
+/*--------------MEDIA QUERIES--------------*/
+
+/* Smaller Screens - Breakpoint -------> */
+@media screen and (max-width : 500px) {
+
+  .modal-box,
+  .modal-box2,
+  .modal-box3,
+  .modal-box4,
+  .modal-box4 {
+    padding-bottom: 40px;
+  }
+
 }
 
 /* 
@@ -21277,33 +21286,26 @@ td {
   transition-duration: .5s;
 }
 
-/* line 33, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
+/* line 34, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
 .modal-box,
-.modal-box2 {
+.modal-box2,
+.modal-box4 {
   color: #000;
   width: 300px;
-  top: 20vh;
+  top: 125px;
   padding-bottom: 17px;
 }
 
-/* line 41, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
+/* line 42, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
 .modal-box3,
 .modal-box5 {
   color: #000;
   width: 300px;
-  top: 15vh;
+  top: 100px;
   padding-bottom: 17px;
 }
 
-/* line 48, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
-.modal-box4 {
-  color: #000;
-  width: 300px;
-  top: 30vh;
-  padding-bottom: 17px;
-}
-
-/* line 59, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
+/* line 53, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
 .close a,
 .close2 a,
 .close3 a,
@@ -21313,7 +21315,7 @@ td {
   position: absolute;
 }
 
-/* line 73, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
+/* line 67, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
 .close:visited,
 .close:hover,
 .close2:visited,
@@ -21328,7 +21330,7 @@ td {
 }
 
 /*-------------------MODAL HOURS-------------------*/
-/* line 79, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
+/* line 73, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
 .modalDialog > .modal-box {
   position: relative;
   color: #000;
@@ -21339,7 +21341,7 @@ td {
   background: #FFF;
 }
 
-/* line 89, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
+/* line 83, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
 .close {
   color: #000;
   float: none;
@@ -21350,7 +21352,7 @@ td {
   font-weight: normal;
 }
 
-/* line 99, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
+/* line 93, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
 .hours-table {
   padding: 20px;
   background: #FFF;
@@ -21359,7 +21361,7 @@ td {
 }
 
 /*-------------------MODAL PHOTOS-------------------*/
-/* line 108, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
+/* line 102, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
 .modalDialog2 > .modal-box2 {
   position: relative;
   color: #000;
@@ -21370,7 +21372,7 @@ td {
   background: #FFF;
 }
 
-/* line 118, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
+/* line 112, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
 .close2 {
   color: #000;
   float: none;
@@ -21381,7 +21383,7 @@ td {
 }
 
 /*-------------------MODAL CONSIGNMENT TERMS-------------------*/
-/* line 129, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
+/* line 123, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
 .modalDialog3 > .modal-box3 {
   position: relative;
   color: #000;
@@ -21392,7 +21394,7 @@ td {
   background: #FFF;
 }
 
-/* line 139, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
+/* line 133, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
 .close3 {
   color: #000;
   float: none;
@@ -21402,7 +21404,7 @@ td {
   font-weight: normal;
 }
 
-/* line 149, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
+/* line 143, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
 .consign-table,
 .shop-table {
   margin-left: auto;
@@ -21412,14 +21414,14 @@ td {
   text-align: left;
 }
 
-/* line 158, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
+/* line 152, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
 .consign-table td,
 .shop-table td {
   font-size: 15px;
 }
 
 /*-------------------MODAL SHOP TERMS-------------------*/
-/* line 164, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
+/* line 158, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
 .modalDialog4 > .modal-box4 {
   position: relative;
   color: #000;
@@ -21430,7 +21432,7 @@ td {
   background: #FFF;
 }
 
-/* line 174, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
+/* line 168, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
 .close4 {
   color: #000;
   float: none;
@@ -21441,7 +21443,7 @@ td {
 }
 
 /*-------------------MODAL REVIEW-------------------*/
-/* line 185, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
+/* line 179, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
 .modalDialog5 > .modal-box5 {
   position: relative;
   color: #000;
@@ -21452,7 +21454,7 @@ td {
   background: #FFF;
 }
 
-/* line 195, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
+/* line 189, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
 .close5 {
   color: #000;
   float: none;
@@ -21464,7 +21466,7 @@ td {
 }
 
 /*-------------------TERMS-------------------*/
-/* line 207, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
+/* line 201, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
 .terms {
   background: #000;
   width: 80px;
@@ -21472,17 +21474,17 @@ td {
   margin-right: auto;
 }
 
-/* line 214, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
+/* line 208, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
 .terms h4 {
   padding: 5px;
 }
 
-/* line 218, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
+/* line 212, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
 .terms h4 a {
   color: #FFF;
 }
 
-/* line 226, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
+/* line 220, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
 .hours-table h6,
 .consign-table h6,
 .shop-table h6,
@@ -21495,7 +21497,20 @@ td {
 }
 
 /*-------------------MODAL WRAP-------------------*/
-/* line 235, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
+/* line 229, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
 .modal-header button {
   float: right;
+}
+
+/*--------------MEDIA QUERIES--------------*/
+/* Smaller Screens - Breakpoint -------> */
+@media screen and (max-width: 500px) {
+  /* line 242, /Users/korenlcohen/consign/app/assets/stylesheets/modal.css */
+  .modal-box,
+  .modal-box2,
+  .modal-box3,
+  .modal-box4,
+  .modal-box4 {
+    padding-bottom: 40px;
+  }
 }
