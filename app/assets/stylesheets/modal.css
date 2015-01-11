@@ -33,6 +33,7 @@
   color: #000;
   width: 300px;
   top: 20vh;
+  padding-bottom: 17px;
 }
 
 .modal-box3,
@@ -40,12 +41,14 @@
   color: #000;
   width: 300px;
   top: 15vh;
+  padding-bottom: 17px;
 }
 
 .modal-box4 {
   color: #000;
   width: 300px;
   top: 30vh;
+  padding-bottom: 17px;
 }
 
 .close a,
