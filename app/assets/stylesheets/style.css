@@ -180,8 +180,7 @@ strong {
 
 #home {
 	min-height: 445px;
-	background: #000;
-	background-image: image-url("header-small.png") no-repeat center center;
+	background: url("header-small.png") no-repeat center center;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
