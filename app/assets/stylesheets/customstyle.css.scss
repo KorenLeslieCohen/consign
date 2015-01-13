@@ -220,6 +220,10 @@ h1 {
   transition-property: opacity;
 }
 
+.biz-thumbnail-gallery {
+  height:300px;
+}
+
 /*--------------USER PROFILE & LOGIN--------------*/
 
 .user-profile-photo img {
@@ -740,6 +744,10 @@ a:hover {
 .biz {
   padding-bottom: 5px;
   margin-bottom: 5px;
+}
+
+#biz-slider {
+  max-width: 1100px;
 }
 
 #business-body{
