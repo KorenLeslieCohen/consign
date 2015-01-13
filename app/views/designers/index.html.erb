@@ -3,29 +3,33 @@
   <p class="header">Shops By Designer</p>
 </section>
 
-<form>
-  <%= form_tag(designers_path, :method => "get", id: "search-form") do %>
-    <%= text_field_tag :search, params[:search], class: "form-control col-lg-8", id: "autocompete", placeholder: "SEARCH DESIGNERS" %>  
-  <% end %>
-</form>
+<div id="designers-index">
 
-<section id="services">
-  <div class="container">
-    <div class="row">
-      <section id="services">
-        <div class="search-results">
-          <% if @designers.present? %>
-            <%= render @designers %>
-          <% else %>
-            <div class="script-header no-results">
-              <h3>There are no designers by the name <%= params[:search] %>.</h3>
-            </div>
-            <div class="see-all">
-              <p><%= link_to 'SEE ALL DESIGNERS', designers_path %></p>
-            </div>
-            <div class="user-divide"></div>
-          <% end %>
+  <form>
+    <%= form_tag(designers_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], class: "form-control col-lg-8", id: "autocompete", placeholder: "SEARCH DESIGNERS" %>  
+    <% end %>
+  </form>
+
+  <section id="services">
+    <div class="container">
+      <div class="row">
+        <section id="services">
+          <div class="search-results">
+            <% if @designers.present? %>
+              <%= render @designers %>
+            <% else %>
+              <div class="script-header no-results">
+                <h3>There are no designers by the name <%= params[:search] %>.</h3>
+              </div>
+              <div class="see-all">
+                <p><%= link_to 'SEE ALL DESIGNERS', designers_path %></p>
+              </div>
+              <div class="user-divide"></div>
+            <% end %>
+          </div>
         </div>
       </div>
-    </div>
-</section>
+  </section>
+
+</div>

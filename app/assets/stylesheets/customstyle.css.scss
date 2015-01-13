@@ -12,6 +12,8 @@ h1 {
 .faq h2 {
   font-size: 20px;
   color: #FC4063;
+  margin-top: 0;
+  padding-top: 20px;
 }
 
 .faq p {
@@ -127,6 +129,15 @@ h1 {
 
 /*--------------LOCAL--------------*/
 
+.local {
+  background-color: #FFF;
+}
+
+.local h2 {
+  margin-top: 0;
+  padding-top:  10px;
+}
+
 .local h2,
 .local h3,
 .local h4 {
@@ -151,6 +162,9 @@ h1 {
 
 #user-reviews {
   padding-top: 10px;
+  /*margin-bottom: 0;*/
+  background-color: #FFF;
+  padding-bottom: 8px;
 }
 
 #reviews img,
@@ -225,7 +239,8 @@ h1 {
 }
 
 .biz-thumbnail-gallery {
-  height:300px;
+  height: 300px;
+  margin-top: 5px;
 }
 
 /*--------------USER PROFILE & LOGIN--------------*/
@@ -246,6 +261,7 @@ h1 {
 
 .users-page {
   background-color: #FFF;
+  margin-bottom: 0;
 }
 
 .users-page #gallery-start {
@@ -283,6 +299,8 @@ h1 {
 .edit-profile h6 {
   font-size: 20px;
   text-align: center;
+  margin-top: 0;
+  padding-top: 10px;
 }
 
 .edit-profile a {
@@ -306,6 +324,7 @@ h1 {
   margin-right: auto;
   color: #FFF;
   padding: 5px;
+  margin-top: 0;
 }
 
 .instructions p a {
@@ -314,10 +333,7 @@ h1 {
 }
 
 .instructions {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 10px;
 }
 
 #user_email,
@@ -446,6 +462,10 @@ h1 {
   margin:0;
 }
 
+.form-group {
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
 
 .form-control {
   height: 50px;
@@ -636,11 +656,11 @@ a:hover {
 
 .business-login-to-review,
 .business-login-to-upload {
-  margin-top: 15px;
+  padding-top: 15px;
 }
 
 .create-account-link {
-  margin-top: 75px;
+  padding-top: 75px;
 }
 
 .faq-link {
@@ -713,6 +733,8 @@ a:hover {
 
 .see-all {
   padding-top: 10px;
+  background-color: #FFF;
+  padding-bottom: 10px;
 }
 
 .see-all p {
@@ -720,6 +742,7 @@ a:hover {
   margin-bottom: 10px;
   font-size: 15px;
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .see-all p a {
@@ -753,6 +776,10 @@ a:hover {
 
 #biz-slider {
   max-width: 1100px;
+}
+
+#biz-index {
+  background-color: #FFF;
 }
 
 #business-body{
@@ -899,6 +926,10 @@ td {
   padding-right: 15px;
 }
 
+#designers-index {
+  background-color: #FFF;
+}
+
 .store-bio {
   max-width: 1000px;
 }
@@ -1017,6 +1048,8 @@ td {
   color: #FD8698;
   font-size: 30px;
   text-align: center;
+  margin-top: 0;
+  padding-top: 10px;
 }
 
 .biztag-checkboxes input,
@@ -1073,6 +1106,8 @@ td {
 
 .faq p {
   text-align: justify;
+  margin-top: 0;
+  padding-top: 10px;
 }
 
 .notification-image {

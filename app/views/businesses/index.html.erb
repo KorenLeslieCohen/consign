@@ -3,51 +3,53 @@
   <p class="header">CURATED LIST OF HIGH END CONSIGNMENT SHOPS</p>
 </section>
 
-<form>
-  <%= form_tag(businesses_path, :method => "get", id: "search-form") do %>
-    <%= text_field_tag :search, params[:search], class: "form-control col-lg-8", id: "autocompete", placeholder: "SEARCH SHOPS BY NAME" %>  
-  <% end %>
-</form>
+<div id="biz-index">
+  <form>
+    <%= form_tag(businesses_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], class: "form-control col-lg-8", id: "autocompete", placeholder: "SEARCH SHOPS BY NAME" %>  
+    <% end %>
+  </form>
 
-<section id="services">
-  <div class="container">
-    <div class="row">
-     <div class="search-results">
-      <% if @businesses.present? %>
-        <%= render @businesses %>
-      <% else %>
-        <div class="script-header no-results">
-          <h3>There are no shops by the name <%= params[:search] %>.</h3>
+  <section id="services">
+    <div class="container">
+      <div class="row">
+       <div class="search-results">
+        <% if @businesses.present? %>
+          <%= render @businesses %>
+        <% else %>
+          <div class="script-header no-results">
+            <h3>There are no shops by the name <%= params[:search] %>.</h3>
+          </div>
+          <div class="see-all">
+            <p><%= link_to 'SEE ALL SHOPS', businesses_path %></p>
+          </div>
+          <div class="user-divide"></div>
+        <% end %>
         </div>
-        <div class="see-all">
-          <p><%= link_to 'SEE ALL SHOPS', businesses_path %></p>
-        </div>
-        <div class="user-divide"></div>
-      <% end %>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<% if is_owner? %>
-  <div class="admin-table">
-    <table align="center">
-      <thead>
-        <tr>
-          <th>Business</th>
-          <th>Special</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @businesses.each do |business| %>
+  <% if is_owner? %>
+    <div class="admin-table">
+      <table align="center">
+        <thead>
           <tr>
-            <td><%= link_to business.name, business %></td>
-            <td><%= business.special_offers %></td>
+            <th>Business</th>
+            <th>Special</th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
-  </div>
-<% end %>
+        </thead>
+
+        <tbody>
+          <% @businesses.each do |business| %>
+            <tr>
+              <td><%= link_to business.name, business %></td>
+              <td><%= business.special_offers %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  <% end %>
+</div>
 
