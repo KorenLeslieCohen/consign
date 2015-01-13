@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     redirect_to businesses_path unless is_owner?
-    @users = User.all
+    @users = User.all.order("id ASC")
   end
 
   # # GET /users/1
