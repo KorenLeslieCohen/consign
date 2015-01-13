@@ -30,7 +30,7 @@ class Business < ActiveRecord::Base
  
  # Search
   def self.search(search)
-    Business.where("name LIKE ?", "%#{search.upcase}%") 
+    Business.where("name ILIKE ?", "%#{search.upcase}%") 
   end
 
 end

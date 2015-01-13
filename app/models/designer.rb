@@ -8,7 +8,7 @@ class Designer < ActiveRecord::Base
 
   # Search
   def self.search(search)
-    Designer.where("name LIKE ?", "%#{search.upcase}%")
+    Designer.where("name ILIKE ?", "%#{search.upcase}%")
   end
 
 end
