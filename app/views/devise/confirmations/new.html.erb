@@ -3,23 +3,27 @@
   <p class="header">RESEND CONFIRMATION INSTRUCTIONS</p>
 </section>
 
-<div class="user-divide">
-</div>
+<div class="col-md-12">
 
-<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
-
-  <div class="reset-button">
-    <div class="form-group form">
-      <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">RESEND CONFIRMATION INSTRUCTIONS</button>
-    </div>
+  <div class="user-divide">
   </div>
-<% end %>
 
-<%= render "devise/shared/links" %>
+  <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+    <%= devise_error_messages! %>
 
-<div class="user-divide">
+    <div><%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %></div>
+
+    <div class="reset-button">
+      <div class="form-group form">
+        <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">RESEND CONFIRMATION INSTRUCTIONS</button>
+      </div>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+
+  <div class="user-divide">
+  </div>
+
 </div>

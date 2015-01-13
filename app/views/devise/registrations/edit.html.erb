@@ -1,46 +1,48 @@
 <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
-  <h1 class="header user-profile-photo">ACCOUNT SETTINGS</h1>
+  <h1 class="header">ACCOUNT SETTINGS</h1>
   <p class="header">Edit <%= resource_name.to_s.humanize %></p>
 </section>
 
-<div class="user-divide">
-</div>
+<div class="col-md-12">
+  <div class="user-divide">
+  </div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
+    <div><%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %></div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <% end %>
+
+    <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+      <%= f.password_field :password, autocomplete: "off" %></div>
+
+    <div><%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+
+    <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+      <%= f.password_field :current_password, autocomplete: "off" %></div>
+
+    <div class="signup-button">
+      <div class="form-group form">
+        <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">UPDATE</button>
+      </div>
+    </div>
   <% end %>
 
-  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
-
-  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %></div>
-
-  <div class="signup-button">
-    <div class="form-group form">
-      <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">UPDATE</button>
-    </div>
+  <div class="devise-link">
+    <p>Unhappy? Note that if you cancel your account, all information, reviews and photos will be permanently deleted.</p>
   </div>
-<% end %>
 
-<div class="devise-link">
-  <p>Unhappy? Note that if you cancel your account, all information, reviews and photos will be permanently deleted.</p>
-</div>
+  <p><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-<p><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+  <div class="devise-link">
+    <%= link_to "Back to Profile", :back %>
+  </div>
 
-<div class="devise-link">
-  <%= link_to "Back to Profile", :back %>
-</div>
-
-<div class="user-divide">
+  <div class="user-divide">
+  </div>
 </div>

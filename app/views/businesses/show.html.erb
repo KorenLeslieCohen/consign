@@ -45,281 +45,285 @@
   </p>
 </section>
 
-<p id="notice"><%= notice %></p>    
+<div id="business-body">
 
-<!-- MAP -->
-<div class="business-map">
-  <iframe height="200" frameborder="0" style="border:0"
-  src="<%= @business.map  %>AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94"></iframe>
-</div>
+  <p id="notice"><%= notice %></p>    
 
-<div class="special-offers">
-  <p><%= @business.special_offers %></p>
-</div>
-
-<section id="services">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-4">
-        <div class="thumbnail">
-          <div class="delight-icon-services">
-            <i class="icon-wallet"></i>
-          </div>
-          <div class="caption">
-            <h3>CONSIGNORS</h3>
-            <div class="terms">
-              <h4><a href="#openModal3">TERMS</a></h4>
-              <div id="openModal3" class="modalDialog3">
-                <div class="modal-box3">
-                  <div class="modal-text3">
-                    <div class="consign-table">
-                      <h6>CONSIGNMENT TERMS</h6>
-                      <table align="center">
-                        <tbody>
-                          <tr style="background:#FFE6E9">
-                            <td>Percent to client</td><td><%= @business.percent_to_client %></td>
-                          </tr>
-                          <tr>
-                            <td>Consignment period</td><td><%= @business.consignment_period %></td>
-                          </tr>
-                          <tr style="background:#FFE6E9">
-                            <td>Markdown information</td><td><%= @business.markdown_info %></td>
-                          </tr>
-                          <tr>
-                            <td>Appointment information</td><td><%= @business.appointment_info %></td>
-                          </tr>
-                          <tr style="background:#FFE6E9">
-                            <td>Pickup or shipment available?</td><td><%= @business.pickup_available %></td>
-                          </tr>
-                          <tr>
-                            <td>Return of consigned items?</td><td><%= @business.return_of_consigned_goods %></td> 
-                          </tr>
-                          <tr style="background:#FFE6E9">
-                            <td>Item restrictions</td><td><%= @business.restrictions %></td>
-                          </tr>
-                          <tr>
-                            <td>Additional information</td><td><%= @business.additional_info %></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  <a href="#close" title="Close" class="close3">CLOSE</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- CONTACT INFO -->
-      <div class="contact-info col-sm-4">
-        <p>
-          <%= @business.street_address %><br>
-          <%= @business.city %>, <%= @business.state %> <%= @business.zip %><br>
-          <%= @business.phone %>
-          <% if (@business.website != nil && @business.website != "") %>
-            <br><%= link_to @business.website.gsub("http://", ""), @business.website, :target => "_blank" %>
-          <% end %>
-          <% if (@business.email != nil && @business.email != "") %>
-            <br><a href="mailto:<%= @business.email %>"><%= @business.email %></a>
-          <% end %>
-        </p>
-        <!-- HOURS OF OPERATION -->
-        <div id="hours-dropdown">
-          <h4><a href="#openModal">STORE HOURS</a></h4>
-          <div id="openModal" class="modalDialog">
-            <div class="modal-box">
-              <div class="modal-text">
-                <div class="hours-table">
-                  <h6>STORE HOURS</h6>
-                  <table align="center">
-                    <tbody>
-                      <tr style="background:#FFE6E9"><td>Sunday</td><td><%= @business.sunday_opening %></td><td>to</td><td><%= @business.sunday_closing %></td></tr>
-                      <tr><td>Monday</td><td><%= @business.monday_opening %></td><td>to</td><td><%= @business.monday_closing %></td></tr>
-                      <tr style="background:#FFE6E9"><td>Tuesday</td><td><%= @business.tuesday_opening %></td><td>to</td><td><%= @business.tuesday_closing %></td></tr>
-                      <tr><td>Wednesday</td><td><%= @business.wednesday_opening %></td><td>to</td><td><%= @business.wednesday_closing %></td></tr>
-                      <tr style="background:#FFE6E9"><td>Thursday</td><td><%= @business.thursday_opening %></td><td>to</td><td><%= @business.thursday_closing %></td></tr>
-                      <tr><td>Friday</td><td><%= @business.friday_opening %></td><td>to</td><td><%= @business.friday_closing %></td></tr>
-                      <tr style="background:#FFE6E9"><td>Saturday</td><td><%= @business.saturday_opening %></td><td>to</td><td><%= @business.saturday_closing %></td></tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <a href="#close" title="Close" class="close">CLOSE</a>
-            </div>
-          </div>
-          <div class="tweet">
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://consign.nyc/businesses/<%= @business.id %>" data-text="Check out <%= @business.name %> on CONSIGN.NYC!" data-via="consigndotnyc" data-related="consigndotnyc" data-count="none" data-hashtags="consigndotnyc #consignment #nyc #fashion">Tweet</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-4">
-        <div class="thumbnail">
-          <div class="delight-icon-services">
-            <i class="icon-briefcase"></i>
-          </div>
-          <div class="caption">
-            <h3>SHOPPERS</h3>
-            <!-- FOR SHOPPERS -->
-            <div class="terms">
-              <h4><a href="#openModal4">TERMS</a></h4>
-              <div id="openModal4" class="modalDialog4">
-                <div class="modal-box4">
-                  <div class="modal-text4">
-                    <div class="shop-table">
-                      <h6>PURCHASE TERMS</h6>
-                      <table align="center">
-                        <tbody>
-                          <tr style="background:#FFE6E9">
-                            <td>Authenticity guaranteed?</td><td><%= @business.authenticity %></td>
-                          </tr>
-                          <tr>
-                            <td>Return policy</td><td><%= @business.return_policy %></td>
-                          </tr>
-                          <tr style="background:#FFE6E9">
-                            <td>eCommerce site?</td><td><%= @business.ecommerce_site %></td>
-                          </tr>
-                          <tr>
-                            <td>Additional information</td><td><%= @business.shop_additional_info %></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  <a href="#close" title="Close" class="close4">CLOSE</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- MAP -->
+  <div class="business-map">
+    <iframe height="200" frameborder="0" style="border:0"
+    src="<%= @business.map  %>AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94"></iframe>
   </div>
-</section>
 
-<!-- STORE BIO -->
-<div class="store-bio">
-  <% if (@business.store_bio != "" && @business.store_bio != nil) %>
-    <h3>Store Bio</h3>
-    <p><%= @business.store_bio %></p>
-  <% end %>
-</div>
+  <div class="special-offers">
+    <p><%= @business.special_offers %></p>
+  </div>
 
-<!-- DESIGNERS -->
-<!-- <div class="designer-list">
-  <%# if @business.designers.length != 0 %>
-    <h3>Designers:</h3>
-    <p><%# @business.designers.sort{|a,b| a.name <=> b.name}.each do |designer| %> 
-      <%#= link_to designer.name, designer %><%#= "," unless designer == @business.designers.sort{|a,b| a.name <=> b.name}.last %>
-    <%# end %></p>
-  <%# end %>
-</div> -->
-
-<!-- PHOTO FORM -->
-<div class="biz-header">
-  <h2>PHOTOS</h2>
-</div>
-
-<div>
-  <% if current_user %>
-    <div id="new-photo">
-      <h5>Upload a photo of <%= @business.name %>.</h5>
-    </div>  
-    <%= render 'photos/new', photo: Photo.new(business_id: @business.id) %>
-  <% else %>
-    <div class="business-login-to-upload">
-      <h4><%= link_to "LOGIN TO UPLOAD PHOTOS", new_user_session_path, :class => 'navbar-link'  %></h4>
-    </div>
-  <% end %>
-
-<!-- DISPLAY PHOTOS -->
-<% if @business.photos.length == 0 %>
-  <h3>There are no photos for <%= @business.name %>.</h3>
-<% else %>
-  <section id="gallery">
-    <div id="owl-demo-biz" class="owl-carousel owl-theme">
-      <% @business.photos.reverse.each do |photo| %>
-        <div class="owlitem-biz">
-          <a href="<%= photo.business_photo %>" data-toggle="lightbox">
-            <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover">
+  <section id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <div class="delight-icon-services">
+              <i class="icon-wallet"></i>
             </div>
-          </a>
-          <p><%= photo.description[0..15].upcase %> <i class="fa fa-caret-right"></i> <%= photo.created_at.strftime("%b %d, %Y") %> <i class="fa fa-caret-right"></i> <%= link_to photo.user.first_name.upcase, photo.user %></p>
+            <div class="caption">
+              <h3>CONSIGNORS</h3>
+              <div class="terms">
+                <h4><a href="#openModal3">TERMS</a></h4>
+                <div id="openModal3" class="modalDialog3">
+                  <div class="modal-box3">
+                    <div class="modal-text3">
+                      <div class="consign-table">
+                        <h6>CONSIGNMENT TERMS</h6>
+                        <table align="center">
+                          <tbody>
+                            <tr style="background:#FFE6E9">
+                              <td>Percent to client</td><td><%= @business.percent_to_client %></td>
+                            </tr>
+                            <tr>
+                              <td>Consignment period</td><td><%= @business.consignment_period %></td>
+                            </tr>
+                            <tr style="background:#FFE6E9">
+                              <td>Markdown information</td><td><%= @business.markdown_info %></td>
+                            </tr>
+                            <tr>
+                              <td>Appointment information</td><td><%= @business.appointment_info %></td>
+                            </tr>
+                            <tr style="background:#FFE6E9">
+                              <td>Pickup or shipment available?</td><td><%= @business.pickup_available %></td>
+                            </tr>
+                            <tr>
+                              <td>Return of consigned items?</td><td><%= @business.return_of_consigned_goods %></td> 
+                            </tr>
+                            <tr style="background:#FFE6E9">
+                              <td>Item restrictions</td><td><%= @business.restrictions %></td>
+                            </tr>
+                            <tr>
+                              <td>Additional information</td><td><%= @business.additional_info %></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <a href="#close" title="Close" class="close3">CLOSE</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      <% end %>
+        <!-- CONTACT INFO -->
+        <div class="contact-info col-sm-4">
+          <p>
+            <%= @business.street_address %><br>
+            <%= @business.city %>, <%= @business.state %> <%= @business.zip %><br>
+            <%= @business.phone %>
+            <% if (@business.website != nil && @business.website != "") %>
+              <br><%= link_to @business.website.gsub("http://", ""), @business.website, :target => "_blank" %>
+            <% end %>
+            <% if (@business.email != nil && @business.email != "") %>
+              <br><a href="mailto:<%= @business.email %>"><%= @business.email %></a>
+            <% end %>
+          </p>
+          <!-- HOURS OF OPERATION -->
+          <div id="hours-dropdown">
+            <h4><a href="#openModal">STORE HOURS</a></h4>
+            <div id="openModal" class="modalDialog">
+              <div class="modal-box">
+                <div class="modal-text">
+                  <div class="hours-table">
+                    <h6>STORE HOURS</h6>
+                    <table align="center">
+                      <tbody>
+                        <tr style="background:#FFE6E9"><td>Sunday</td><td><%= @business.sunday_opening %></td><td>to</td><td><%= @business.sunday_closing %></td></tr>
+                        <tr><td>Monday</td><td><%= @business.monday_opening %></td><td>to</td><td><%= @business.monday_closing %></td></tr>
+                        <tr style="background:#FFE6E9"><td>Tuesday</td><td><%= @business.tuesday_opening %></td><td>to</td><td><%= @business.tuesday_closing %></td></tr>
+                        <tr><td>Wednesday</td><td><%= @business.wednesday_opening %></td><td>to</td><td><%= @business.wednesday_closing %></td></tr>
+                        <tr style="background:#FFE6E9"><td>Thursday</td><td><%= @business.thursday_opening %></td><td>to</td><td><%= @business.thursday_closing %></td></tr>
+                        <tr><td>Friday</td><td><%= @business.friday_opening %></td><td>to</td><td><%= @business.friday_closing %></td></tr>
+                        <tr style="background:#FFE6E9"><td>Saturday</td><td><%= @business.saturday_opening %></td><td>to</td><td><%= @business.saturday_closing %></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <a href="#close" title="Close" class="close">CLOSE</a>
+              </div>
+            </div>
+            <div class="tweet">
+              <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://consign.nyc/businesses/<%= @business.id %>" data-text="Check out <%= @business.name %> on CONSIGN.NYC!" data-via="consigndotnyc" data-related="consigndotnyc" data-count="none" data-hashtags="consigndotnyc #consignment #nyc #fashion">Tweet</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <div class="delight-icon-services">
+              <i class="icon-briefcase"></i>
+            </div>
+            <div class="caption">
+              <h3>SHOPPERS</h3>
+              <!-- FOR SHOPPERS -->
+              <div class="terms">
+                <h4><a href="#openModal4">TERMS</a></h4>
+                <div id="openModal4" class="modalDialog4">
+                  <div class="modal-box4">
+                    <div class="modal-text4">
+                      <div class="shop-table">
+                        <h6>PURCHASE TERMS</h6>
+                        <table align="center">
+                          <tbody>
+                            <tr style="background:#FFE6E9">
+                              <td>Authenticity guaranteed?</td><td><%= @business.authenticity %></td>
+                            </tr>
+                            <tr>
+                              <td>Return policy</td><td><%= @business.return_policy %></td>
+                            </tr>
+                            <tr style="background:#FFE6E9">
+                              <td>eCommerce site?</td><td><%= @business.ecommerce_site %></td>
+                            </tr>
+                            <tr>
+                              <td>Additional information</td><td><%= @business.shop_additional_info %></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <a href="#close" title="Close" class="close4">CLOSE</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-<% end %>
 
-<!-- REVIEW FORM -->
-<div class="biz-header">
-  <h2>REVIEWS</h2>
-</div>
-
-<!-- IF CURRENT USER -->
-<% if current_user %>
-
-  <!-- PRIOR REVIEW / REVIEW FORM -->
-  <% if @business.reviews.any? {|review| review.user.email == current_user.email} %>
-    <div class="you-reviewed">
-      <h3>Thank you for reviewing <%= @business.name %>!</h3>
-    </div>
-  <% else %>
-    <%= render 'reviews/new', review: Review.new(business_id: @business.id) %>
-  <% end %> 
-
-<!-- IF NOT CURRENT USER -->
-<% else %>
-  <div class="business-login-to-review"> 
-    <h4><%= link_to "LOGIN TO REVIEW", new_user_session_path, :class => 'navbar-link'  %></h4>
+  <!-- STORE BIO -->
+  <div class="store-bio">
+    <% if (@business.store_bio != "" && @business.store_bio != nil) %>
+      <h3>Store Bio</h3>
+      <p><%= @business.store_bio %></p>
+    <% end %>
   </div>
-<% end %>
 
-<!-- DISPLAY REVIEWS -->
-<div id="reviews">
-  <% if @business.reviews.length == 0 %>
-    <h3>There are no reviews for <%= @business.name %>.</h3>
-  <% else %>
-    <% @business.reviews.reverse.each do |review| %>
-      <div class="col-md-12">
-        <div id="review">
-          <% if !review.user.user_profile_photo? %>
-            <img src="https://s3.amazonaws.com/consignnyc/placeholder-profile.png">
-          <% else %>
-            <%= image_tag review.user.user_profile_photo %></h1>
-          <% end %>
-          <%= link_to review.user.first_name, review.user, :class => 'review-name' %><br>
-          <%= review.created_at.strftime("%b %d, %Y").upcase %> <i class="fa fa-caret-right"></i>
-          <% if review.rating == 1 %>
-            <i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
-          <% elsif review.rating == 2 %>
-            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
-          <% elsif review.rating == 3 %>
-            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
-          <% elsif review.rating == 4 %>
-            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
-          <% else %>
-            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-          <% end %> <i class="fa fa-caret-right"></i> 
-          <%= review.role.upcase %>
-          <div id="review-content">
-            <%= h(review.content).gsub(/\n/, '<br>').html_safe %>
-          </div>
-        </div>
+  <!-- DESIGNERS -->
+  <!-- <div class="designer-list">
+    <%# if @business.designers.length != 0 %>
+      <h3>Designers:</h3>
+      <p><%# @business.designers.sort{|a,b| a.name <=> b.name}.each do |designer| %> 
+        <%#= link_to designer.name, designer %><%#= "," unless designer == @business.designers.sort{|a,b| a.name <=> b.name}.last %>
+      <%# end %></p>
+    <%# end %>
+  </div> -->
+
+  <!-- PHOTO FORM -->
+  <div class="biz-header">
+    <h2>PHOTOS</h2>
+  </div>
+
+  <div>
+    <% if current_user %>
+      <div id="new-photo">
+        <h5>Upload a photo of <%= @business.name %>.</h5>
+      </div>  
+      <%= render 'photos/new', photo: Photo.new(business_id: @business.id) %>
+    <% else %>
+      <div class="business-login-to-upload">
+        <h4><%= link_to "LOGIN TO UPLOAD PHOTOS", new_user_session_path, :class => 'navbar-link'  %></h4>
       </div>
     <% end %>
-  <% end %>
-</div>
 
-<!-- ADMIN LINK -->
-<div class="see-all">
-  <% if is_admin? %>
-    <p><%= link_to 'EDIT SHOP', edit_business_path(@business) %></p>
-  <% end %> 
-  <% if is_owner? %>
-    <p><%= link_to 'DELETE SHOP', @business, method: :delete, data: { confirm: 'Are you sure?' } %> </p>
+  <!-- DISPLAY PHOTOS -->
+  <% if @business.photos.length == 0 %>
+    <h3>There are no photos for <%= @business.name %>.</h3>
+  <% else %>
+    <section id="gallery">
+      <div id="owl-demo-biz" class="owl-carousel owl-theme">
+        <% @business.photos.reverse.each do |photo| %>
+          <div class="owlitem-biz">
+            <a href="<%= photo.business_photo %>" data-toggle="lightbox">
+              <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover">
+              </div>
+            </a>
+            <p><%= photo.description[0..15].upcase %> <i class="fa fa-caret-right"></i> <%= photo.created_at.strftime("%b %d, %Y") %> <i class="fa fa-caret-right"></i> <%= link_to photo.user.first_name.upcase, photo.user %></p>
+          </div>
+        <% end %>
+      </div>
+    </section>
   <% end %>
+
+  <!-- REVIEW FORM -->
+  <div class="biz-header">
+    <h2>REVIEWS</h2>
+  </div>
+
+  <!-- IF CURRENT USER -->
+  <% if current_user %>
+
+    <!-- PRIOR REVIEW / REVIEW FORM -->
+    <% if @business.reviews.any? {|review| review.user.email == current_user.email} %>
+      <div class="you-reviewed">
+        <h3>Thank you for reviewing <%= @business.name %>!</h3>
+      </div>
+    <% else %>
+      <%= render 'reviews/new', review: Review.new(business_id: @business.id) %>
+    <% end %> 
+
+  <!-- IF NOT CURRENT USER -->
+  <% else %>
+    <div class="business-login-to-review"> 
+      <h4><%= link_to "LOGIN TO REVIEW", new_user_session_path, :class => 'navbar-link'  %></h4>
+    </div>
+  <% end %>
+
+  <!-- DISPLAY REVIEWS -->
+  <div id="reviews">
+    <% if @business.reviews.length == 0 %>
+      <h3>There are no reviews for <%= @business.name %>.</h3>
+    <% else %>
+      <% @business.reviews.reverse.each do |review| %>
+        <div class="col-md-12">
+          <div id="review">
+            <% if !review.user.user_profile_photo? %>
+              <img src="https://s3.amazonaws.com/consignnyc/placeholder-profile.png">
+            <% else %>
+              <%= image_tag review.user.user_profile_photo %></h1>
+            <% end %>
+            <%= link_to review.user.first_name, review.user, :class => 'review-name' %><br>
+            <%= review.created_at.strftime("%b %d, %Y").upcase %> <i class="fa fa-caret-right"></i>
+            <% if review.rating == 1 %>
+              <i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+            <% elsif review.rating == 2 %>
+              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+            <% elsif review.rating == 3 %>
+              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+            <% elsif review.rating == 4 %>
+              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+            <% else %>
+              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            <% end %> <i class="fa fa-caret-right"></i> 
+            <%= review.role.upcase %>
+            <div id="review-content">
+              <%= h(review.content).gsub(/\n/, '<br>').html_safe %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <!-- ADMIN LINK -->
+  <div class="see-all">
+    <% if is_admin? %>
+      <p><%= link_to 'EDIT SHOP', edit_business_path(@business) %></p>
+    <% end %> 
+    <% if is_owner? %>
+      <p><%= link_to 'DELETE SHOP', @business, method: :delete, data: { confirm: 'Are you sure?' } %> </p>
+    <% end %>
+  </div>
+
 </div>
 

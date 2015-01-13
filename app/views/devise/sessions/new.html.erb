@@ -3,31 +3,33 @@
   <p class="header">WELCOME TO CONSIGN.NYC</p>
 </section>
 
-<div class="create-account-link">
-  <h4><%= link_to "CREATE ACCOUNT", new_user_registration_path %></h4>
-</div>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
-
-  <div><%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
-
-  <div class="signin-button">
-    <div class="form-group form">
-      <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">SIGN IN</button>
-    </div>
+<div class="col-md-12">
+  <div class="create-account-link">
+    <h4><%= link_to "CREATE ACCOUNT", new_user_registration_path %></h4>
   </div>
-<% end %>
 
-<%= render "devise/shared/links" %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div><%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %></div>
 
-<div class="user-divide">
+    <div><%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "off" %></div>
+
+    <% if devise_mapping.rememberable? -%>
+      <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+    <% end -%>
+
+    <div class="signin-button">
+      <div class="form-group form">
+        <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">SIGN IN</button>
+      </div>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+
+  <div class="user-divide">
+  </div>
 </div>
 
 

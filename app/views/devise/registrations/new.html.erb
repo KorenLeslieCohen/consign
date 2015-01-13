@@ -3,49 +3,51 @@
   <p class="header">WELCOME TO CONSIGN.NYC</p>
 </section>
 
-<div class="instructions">
-  <p>Please check your email for account confirmation instructions. You will be sent a link through which to login.</p>
-</div>
-
-<div class="instructions">
-  <p>By registering, you agree to this site's <a href="/terms" alt="terms" target="_blank">terms and conditions</a>.</p>
-</div>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
-
-  <div><%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
-
-  <div >
-    First name<br>
-    <%= f.text_field :first_name %>
+<div class="col-md-12">
+  <div class="instructions">
+    <p>Please check your email for account confirmation instructions. You will be sent a link through which to login.</p>
   </div>
 
-  <div>
-   Last name (kept private)<br>
-    <%= f.text_field :last_name %>
+  <div class="instructions">
+    <p>By registering, you agree to this site's <a href="/terms" alt="terms" target="_blank">terms and conditions</a>.</p>
   </div>
 
-  <div>
-    <%= f.radio_button :agree_to_terms, "I agree to this site's terms and conditions" %>
-    I agree to this site's terms and conditions
-  </div>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
 
-  <div class="signup-button">
-    <div class="form-group form">
-      <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">SIGN UP</button>
+    <div><%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %></div>
+
+    <div><%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "off" %></div>
+
+    <div><%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+
+    <div >
+      First name<br>
+      <%= f.text_field :first_name %>
     </div>
+
+    <div>
+     Last name (kept private)<br>
+      <%= f.text_field :last_name %>
+    </div>
+
+    <div>
+      <%= f.radio_button :agree_to_terms, "I agree to this site's terms and conditions" %>
+      I agree to this site's terms and conditions
+    </div>
+
+    <div class="signup-button">
+      <div class="form-group form">
+        <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">SIGN UP</button>
+      </div>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+
+  <div class="user-divide">
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
-
-<div class="user-divide">
 </div>

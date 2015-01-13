@@ -1,70 +1,73 @@
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<div class="col-md-12">
 
-      <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <%= form_for(@user) do |f| %>
+    <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+        <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+  <div class="edit-profile">
+
+    <h6>REQUIRED</h6>
+
+    <div class="field">
+      <%= f.label :user_profile_photo %>
+      <%= f.file_field :user_profile_photo, placeholder: "Profile photo" %>
     </div>
+
+    <div class="field">
+      <%= f.text_field :first_name, placeholder: "First name" %>
+    </div>
+
+    <div class="field">
+      <%= f.text_field :last_name, placeholder: "Last name (kept private)" %>
+    </div>
+
+    <h6>OPTIONAL</h6>
+
+    <div class="field">
+      <%= f.text_field :city, placeholder: "City" %>
+    </div>
+
+    <!-- <div class="field"> -->
+      <%#= f.label :state %><!-- <br> -->
+      <%#= f.text_field :state %>
+    <!-- </div> -->
+    <div class="field">
+      <%= f.text_field :tagline, placeholder: "Tagline" %>
+    </div>
+    <div class="field">
+      <%= f.text_field :bio, placeholder: "Who are you? (short bio)" %>
+    </div>
+    <div class="field">
+      <%= f.text_field :url, placeholder: "Blog or website URL (http://url.com)" %>
+    </div>
+
+    <h6>OPTIONAL & PRIVATE</h6>
+
+    <div class="field">
+      <%= f.label :age %>
+      <%= f.select :age, ["---", "13-17", "18-22", "22-26", "26-29", "30-33", "34-36", "37-40", "41-45", "46-49", "50-55", "56-59", "60-65", "66-69", "70-75", "Other"] %>
+    </div>
+    <div class="field">
+      <%= f.label :gender %>  
+      <%= f.select :gender, ["---", "Male", "Female", "Other"] %>
+    </div>
+
+  </div>
+
+    <div class="update-profile-button">
+      <div class="form-group form">
+        <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">UPDATE PROFILE</button>
+      </div>
+    </div>
+
   <% end %>
-
-<div class="edit-profile">
-
-  <h6>REQUIRED</h6>
-
-  <div class="field">
-    <%= f.label :user_profile_photo %>
-    <%= f.file_field :user_profile_photo, placeholder: "Profile photo" %>
-  </div>
-
-  <div class="field">
-    <%= f.text_field :first_name, placeholder: "First name" %>
-  </div>
-
-  <div class="field">
-    <%= f.text_field :last_name, placeholder: "Last name (kept private)" %>
-  </div>
-
-  <h6>OPTIONAL</h6>
-
-  <div class="field">
-    <%= f.text_field :city, placeholder: "City" %>
-  </div>
-
-  <!-- <div class="field"> -->
-    <%#= f.label :state %><!-- <br> -->
-    <%#= f.text_field :state %>
-  <!-- </div> -->
-  <div class="field">
-    <%= f.text_field :tagline, placeholder: "Tagline" %>
-  </div>
-  <div class="field">
-    <%= f.text_field :bio, placeholder: "Who are you? (short bio)" %>
-  </div>
-  <div class="field">
-    <%= f.text_field :url, placeholder: "Blog or website URL (http://url.com)" %>
-  </div>
-
-  <h6>OPTIONAL & PRIVATE</h6>
-
-  <div class="field">
-    <%= f.label :age %>
-    <%= f.select :age, ["---", "13-17", "18-22", "22-26", "26-29", "30-33", "34-36", "37-40", "41-45", "46-49", "50-55", "56-59", "60-65", "66-69", "70-75", "Other"] %>
-  </div>
-  <div class="field">
-    <%= f.label :gender %>  
-    <%= f.select :gender, ["---", "Male", "Female", "Other"] %>
-  </div>
-
 </div>
-
-  <div class="update-profile-button">
-    <div class="form-group form">
-      <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">UPDATE PROFILE</button>
-    </div>
-  </div>
-
-<% end %>
