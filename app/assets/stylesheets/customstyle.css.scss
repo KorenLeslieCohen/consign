@@ -149,6 +149,10 @@ h1 {
 
 /*--------------REVIEWS--------------*/
 
+#user-reviews {
+  padding-top: 10px;
+}
+
 #reviews img,
 #user-reviews img {
   width: 120px;
@@ -259,6 +263,7 @@ h1 {
   width: 100%;
   background: #000;
   color: #FFF;
+  margin-bottom: 0;
 }
 
 #new_user,

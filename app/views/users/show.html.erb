@@ -89,7 +89,7 @@
       <% @user.photos.reverse.each do |photo| %>
         <div class="owlitem-biz">
           <a href="<%= photo.business_photo %>" data-toggle="lightbox">
-            <div class="thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover">
+            <div class="thumbnail-gallery biz-thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover">
             </div>
           </a>
           <p><%= link_to photo.business.name.upcase, photo.business %><% if ((photo.user == current_user) || is_owner?) %> 
