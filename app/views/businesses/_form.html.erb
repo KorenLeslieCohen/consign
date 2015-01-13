@@ -217,17 +217,16 @@
 
       </div>
     </div>
-  </div>
 
   <!-- TAGS -->
   <% if is_owner? %>
-    <div class="field col-md-12 biztag-checkboxes">
+    <div class="field biztag-checkboxes">
       <h4>Biztags</h4>
       <%= f.collection_check_boxes :biztag_ids, Biztag.all, :id, :name, {:item_wrapper_class => 'checkbox_container'} %><br>
     </div>
   <% end %>
 
-  <div class="field col-md-12 designer-checkboxes">
+  <div class="field designer-checkboxes">
     <div class="biz-form">
       <h1>Designers</h1>
     </div>
@@ -254,5 +253,5 @@
       <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">SUBMIT BUSINESS INFO</button>
     </div>
   </div>
-
+</div>
 <% end %>
