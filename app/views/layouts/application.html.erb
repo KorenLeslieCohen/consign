@@ -6,6 +6,7 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <%= analytics_init if Rails.env.production? %>
+  <%= favicon_link_tag '/favicon.ico' %>
 
   <meta charset="utf-8">
 
@@ -26,7 +27,6 @@
   <link href='http://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Pacifico:400,700' rel='stylesheet' type='text/css'>
   <link rel="image_src" href="thumbnail.png">
-  <link rel="icon" type="image/ico" href="favicon.ico">
 
 </head>
 <body>
