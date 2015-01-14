@@ -240,6 +240,11 @@ h1 {
 
 /*--------------USER PROFILE & LOGIN--------------*/
 
+.space {
+  height: 10px;
+  width: 100%;
+}
+
 .user-profile-photo img {
   height: 120px;
   width: 120px;
@@ -369,6 +374,14 @@ h1 {
 
 /*--------------ADMIN INDEXES - USERS, REVIEWS--------------*/
 
+.admin-page {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #FFF;
+}
+
 .admin-table {
   background-color: #FFF;
 }
@@ -455,6 +468,7 @@ h1 {
 #messages-page {
   background-color: #FFF;
   margin:0;
+  padding-bottom: 25px;
 }
 
 .form-group {

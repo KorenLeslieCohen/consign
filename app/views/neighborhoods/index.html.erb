@@ -1,28 +1,35 @@
-<h1>Listing neighborhoods</h1>
+<section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+  <h1 class="header">ADMIN PAGE</h1>
+  <p class="header">NEIGHBORHOODS</p>
+</section>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Borough</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="admin-page">
+  <div class="admin-table">
+    <table align="center">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Borough</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @neighborhoods.each do |neighborhood| %>
-      <tr>
-        <td><%= link_to neighborhood.name, neighborhood %></td>
-        <td><%= link_to neighborhood.borough.name, neighborhood.borough %></td>
-        <!-- <td><%#= link_to 'Show', neighborhood %></td> -->
-        <!-- <td><%#= link_to 'Edit', edit_neighborhood_path(neighborhood) %></td> -->
-        <td><%= link_to 'Destroy', neighborhood, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <tbody>
+        <% @neighborhoods.each do |neighborhood| %>
+          <tr>
+            <td><%= link_to neighborhood.name, neighborhood %></td>
+            <td><%= link_to neighborhood.borough.name, neighborhood.borough %></td>
+            <td><%= link_to 'Show', neighborhood %></td>
+            <td><%= link_to 'Edit', edit_neighborhood_path(neighborhood) %></td>
+            <td><%= link_to 'Destroy', neighborhood, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 
+  <br>
 
-<br>
+  <%#= link_to 'New Neighborhood', new_neighborhood_path %>
 
-<%#= link_to 'New Neighborhood', new_neighborhood_path %>
+</div>

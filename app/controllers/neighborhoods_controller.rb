@@ -4,6 +4,7 @@ class NeighborhoodsController < ApplicationController
   # GET /neighborhoods
   # GET /neighborhoods.json
   def index
+    redirect_to businesses_path unless is_owner?
     @neighborhoods = Neighborhood.all.order('name ASC')
   end
 

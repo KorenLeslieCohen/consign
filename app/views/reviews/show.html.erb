@@ -1,13 +1,20 @@
+<section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+  <h1 class="header">ADMIN PAGE</h1>
+  <p class="header">REVIEW</p>
+</section>
+
+<div class="admin-page">
+
 <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Business:</strong>
-  <%= @review.business_id %>
+  <%= link_to @review.business.name, @review.business %>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @review.user_id %>
+  <%= link_to @review.user.first_name, @review.user %>
 </p>
 
 <p>
@@ -22,3 +29,5 @@
 
 <%= link_to 'Edit', edit_review_path(@review) %> |
 <%= link_to 'Back', reviews_path %>
+
+</div>

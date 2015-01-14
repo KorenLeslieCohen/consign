@@ -3,36 +3,40 @@
   <p class="header">MESSAGES</p>
 </section>
 
-<p id="notice"><%= notice %></p>
+<div class="admin-page">
 
-<div class="admin-table">
-  <table align="center">
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Message</th>
-        <th colspan="2"></th>
-      </tr>
-    </thead>
+  <p id="notice"><%= notice %></p>
 
-    <tbody>
-      <% @messages.each do |message| %>
+  <div class="admin-table">
+    <table align="center">
+      <thead>
         <tr>
-          <td><%= message.created_at.strftime("%b %d, %Y") %></td>
-          <td><%= message.name %></td>
-          <td><%= message.email %></td>
-          <td><%= message.body %></td>
-          <td><%= link_to 'Show', message %></td>
-          <!-- <td><%#= link_to 'Edit', edit_message_path(message) %></td> -->
-          <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <th>Date</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Message</th>
+          <th colspan="2"></th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+
+      <tbody>
+        <% @messages.each do |message| %>
+          <tr>
+            <td><%= message.created_at.strftime("%b %d, %Y") %></td>
+            <td><%= message.name %></td>
+            <td><%= message.email %></td>
+            <td><%= message.body %></td>
+            <td><%= link_to 'Show', message %></td>
+            <!-- <td><%#= link_to 'Edit', edit_message_path(message) %></td> -->
+            <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <br>
+
+  <%#= link_to 'New Message', new_message_path %>
+
 </div>
-
-<br>
-
-<%#= link_to 'New Message', new_message_path %>

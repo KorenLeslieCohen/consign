@@ -3,36 +3,37 @@
   <p class="header">MESSAGE</p>
 </section>
 
-<p id="notice"><%= notice %></p>
+<div class="admin-page">
 
-<div class="user-divide">
-</div>
+  <p id="notice"><%= notice %></p>
 
-<div class="admin-table">
-  <table align="center">
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Message</th>
-        <th colspan="1"></th>
-      </tr>
-    </thead>
+  <div class="admin-table">
+    <table align="center">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Message</th>
+          <th colspan="1"></th>
+        </tr>
+      </thead>
 
-    <tbody>
-      <tr>
-        <td><%= @message.created_at.strftime("%b %d, %Y") %></td>
-        <td><%= @message.name %></td>
-        <td><%= @message.email %></td>
-        <td><%= @message.body %></td> 
-        <td><%= link_to 'Back to Messages', messages_path %></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+      <tbody>
+        <tr>
+          <td><%= @message.created_at.strftime("%b %d, %Y") %></td>
+          <td><%= @message.name %></td>
+          <td><%= @message.email %></td>
+          <td><%= @message.body %></td> 
+          <td><%= link_to 'Back to Messages', messages_path %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-<div class="user-divide">
-</div>
+  <div class="user-divide">
+  </div>
 
-<%#= link_to 'Edit', edit_message_path(@message) %> 
+  <%#= link_to 'Edit', edit_message_path(@message) %>
+
+</div> 
