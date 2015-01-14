@@ -6481,6 +6481,12 @@ h1 {
 
 /*--------------USER PROFILE & LOGIN--------------*/
 /* line 243, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+.space {
+  height: 10px;
+  width: 100%;
+}
+
+/* line 248, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .user-profile-photo img {
   height: 120px;
   width: 120px;
@@ -6489,32 +6495,32 @@ h1 {
   margin: 0;
 }
 
-/* line 251, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 256, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .user-profile-photo {
   margin-left: auto;
   margin-right: auto;
   width: 120px;
 }
 
-/* line 257, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 262, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .users-page {
   background-color: #FFF;
   margin-bottom: 0;
 }
 
-/* line 262, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 267, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .users-page #gallery-start {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-/* line 267, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 272, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #private-profile h5 {
   font-size: 20px;
   text-align: center;
 }
 
-/* line 272, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 277, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .user-header h2 {
   text-align: center;
   width: 100%;
@@ -6523,7 +6529,7 @@ h1 {
   margin-bottom: 0;
 }
 
-/* line 288, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 293, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #new_user,
 .devise-link,
 #edit_user,
@@ -6538,7 +6544,7 @@ h1 {
   width: 300px;
 }
 
-/* line 294, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 299, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .edit-profile h6 {
   font-size: 20px;
   text-align: center;
@@ -6546,12 +6552,12 @@ h1 {
   padding-top: 10px;
 }
 
-/* line 301, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 306, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .edit-profile a {
   text-align: center;
 }
 
-/* line 306, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 311, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .devise-link p,
 .edit-profile p {
   width: 300px;
@@ -6560,7 +6566,7 @@ h1 {
   margin-bottom: 15px;
 }
 
-/* line 313, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 318, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .instructions p {
   background: #FD8698;
   font-family: "Playfair Display";
@@ -6573,18 +6579,18 @@ h1 {
   margin-top: 0;
 }
 
-/* line 325, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 330, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .instructions p a {
   color: #777;
   font-size: 15px;
 }
 
-/* line 330, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 335, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .instructions {
   padding: 10px;
 }
 
-/* line 340, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 345, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #user_email,
 #user_password,
 #user_password_confirmation,
@@ -6597,42 +6603,51 @@ h1 {
   padding: 5px;
 }
 
-/* line 346, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 351, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .user-divide {
   height: 75px;
 }
 
-/* line 350, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 355, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .user-info {
   padding-bottom: 25px;
 }
 
-/* line 354, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 359, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .user-info p {
   text-align: center;
   font-family: 'Playfair Display';
   font-size: 20px;
 }
 
-/* line 360, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 365, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .user-info h3 {
   font-family: 'Dancing Script';
   font-size: 25px;
   color: #FC4063;
 }
 
-/* line 366, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 371, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .newuser {
   padding-bottom: 50px;
 }
 
 /*--------------ADMIN INDEXES - USERS, REVIEWS--------------*/
-/* line 372, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 377, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+.admin-page {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #FFF;
+}
+
+/* line 385, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .admin-table {
   background-color: #FFF;
 }
 
-/* line 377, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 390, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .admin-table th,
 .admin-table td {
   padding: 3px;
@@ -6640,24 +6655,24 @@ h1 {
   font-size: 13px;
 }
 
-/* line 383, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 396, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .admin-table th {
   background-color: #CCC;
   border: 1px solid #000;
 }
 
-/* line 388, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 401, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .admin-table tr:nth-child(odd) {
   background-color: #FFE6E9;
 }
 
-/* line 392, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 405, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .admin-table a {
   color: #FC4063;
 }
 
 /*--------------DIVIDE--------------*/
-/* line 400, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 413, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #gallery-start,
 #services-start,
 #contact-start {
@@ -6665,7 +6680,7 @@ h1 {
   padding-bottom: 30px;
 }
 
-/* line 408, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 421, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .business-index .divide,
 #works .divide,
 #gallery .divide,
@@ -6674,19 +6689,19 @@ h1 {
   margin-top: 10px;
 }
 
-/* line 413, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 426, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .divide_services {
   margin-bottom: 10px;
 }
 
 /*--------------BOOTSTRAP--------------*/
-/* line 419, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 432, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .col-sm-6 h1 {
   font-size: 40px;
   padding-top: 20px;
 }
 
-/* line 424, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 437, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .col-sm-3 a {
   color: black;
   font-size: 20px;
@@ -6694,7 +6709,7 @@ h1 {
   transition-property: color;
 }
 
-/* line 431, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 444, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .col-sm-3 a:hover {
   color: #FD8698;
   transition-duration: .5s;
@@ -6702,48 +6717,49 @@ h1 {
 }
 
 /*--------------SERVICES--------------*/
-/* line 439, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 452, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #services .thumbnail p {
   font-size: 15px;
   font-family: "Playfair Display";
   color: black;
 }
 
-/* line 445, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 458, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #services {
   background: white;
 }
 
-/* line 449, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 462, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #services .thumbnail h3 {
   color: black;
 }
 
 /*--------------CONTACT, REVIEWS, PHOTOS FORMS-----------*/
-/* line 455, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 468, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #messages-page {
   background-color: #FFF;
   margin: 0;
+  padding-bottom: 25px;
 }
 
-/* line 460, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 474, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .form-group {
   margin-bottom: 0;
   padding-bottom: 10px;
 }
 
-/* line 465, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 479, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .form-control {
   height: 50px;
   margin-bottom: 10px;
 }
 
-/* line 470, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 484, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #contact .form-control {
   background: none;
 }
 
-/* line 475, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 489, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .script-header h3,
 .contact-thanks h3 {
   font-family: 'Dancing Script';
@@ -6754,30 +6770,30 @@ h1 {
   margin: 0;
 }
 
-/* line 484, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 498, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .delight-icon-services {
   width: 80px;
 }
 
-/* line 488, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 502, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .contact-thanks h2 {
   text-align: center;
   font-size: 30px;
 }
 
-/* line 493, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 507, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #review-form {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 499, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 513, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #review-form span .fa {
   color: #000;
 }
 
-/* line 505, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 519, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #photo-form input,
 #photo-form textarea,
 #review-form textarea {
@@ -6786,25 +6802,25 @@ h1 {
   background: #FFE6E9;
 }
 
-/* line 511, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 525, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #review-form textarea {
   height: 100px;
 }
 
-/* line 516, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 530, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #new-review h5,
 #new-photo h5 {
   text-align: center;
   font-size: 20px;
 }
 
-/* line 521, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 535, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #new-photo h5 {
   margin-top: 20px;
   margin-bottom: 15px;
 }
 
-/* line 532, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 546, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .review-button,
 .photo-button,
 .signin-button,
@@ -6817,37 +6833,37 @@ h1 {
   margin-left: auto;
 }
 
-/* line 538, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 552, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .review-button {
   width: 131px;
 }
 
-/* line 542, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 556, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .photo-button {
   width: 148px;
 }
 
-/* line 546, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 560, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .signin-button {
   width: 82px;
 }
 
-/* line 550, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 564, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .signup-button {
   width: 88px;
 }
 
-/* line 554, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 568, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .update-profile-button {
   width: 156px;
 }
 
-/* line 558, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 572, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .business-button {
   width: 204px;
 }
 
-/* line 568, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 582, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .review-button button,
 .photo-button button,
 .signin-button button,
@@ -6860,7 +6876,7 @@ h1 {
   outline: 0px;
 }
 
-/* line 580, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 594, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .review-button button:hover,
 .photo-button button:hover,
 .signin-button button:hover,
@@ -6871,7 +6887,7 @@ h1 {
   background: #FD8698;
 }
 
-/* line 584, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 598, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #photo_business_photo {
   width: 300px;
   margin-right: auto;
@@ -6882,61 +6898,61 @@ h1 {
   height: 52px;
 }
 
-/* line 594, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 608, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #review_content {
   margin-top: 15px;
 }
 
-/* line 598, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 612, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #review-form-stars {
   width: 87px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 605, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 619, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #review_role_consignor,
 #review_role_shopper {
   margin-left: 3px;
   margin-right: 3px;
 }
 
-/* line 610, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 624, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #review-form-role p {
   font-family: "Playfair Display";
   text-align: center;
   margin: 0;
 }
 
-/* line 617, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 631, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #reviews h3,
 h3 {
   text-align: center;
 }
 
-/* line 621, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 635, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #reviews h3 {
   margin-bottom: 30px;
 }
 
 /*--------------HEART ICON--------------*/
-/* line 627, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 641, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .icon-heart {
   color: #FD8698;
 }
 
-/* line 631, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 645, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 span a {
   color: black;
 }
 
-/* line 635, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 649, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 a:hover {
   background: none;
 }
 
 /*--------------LINK BUTTONS--------------*/
-/* line 646, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 660, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .faq-link,
 .user-account-header,
 .business-login-to-review,
@@ -6948,59 +6964,59 @@ a:hover {
   margin-bottom: 20px;
 }
 
-/* line 653, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 667, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .business-login-to-review,
 .business-login-to-upload {
   padding-top: 15px;
 }
 
-/* line 657, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 671, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .create-account-link {
   padding-top: 75px;
 }
 
-/* line 661, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 675, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .faq-link {
   width: 323px;
 }
 
-/* line 665, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 679, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .user-account-header {
   width: 278px;
 }
 
-/* line 669, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 683, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .business-login-to-review {
   width: 184px;
 }
 
-/* line 673, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 687, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .business-login-to-upload {
   width: 274px;
 }
 
-/* line 677, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 691, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .create-account-link {
   width: 188px;
 }
 
-/* line 681, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 695, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .logout-link {
   width: 92px;
 }
 
-/* line 686, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 700, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .faq-link h4,
 .faq-link {
   margin-bottom: 0;
 }
 
-/* line 690, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 704, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .faq-link {
   padding-bottom: 20px;
 }
 
-/* line 699, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 713, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .faq-link h4 a,
 .user-account-header h4 a,
 .business-login-to-review h4 a,
@@ -7017,7 +7033,7 @@ a:hover {
   padding: 0 5px;
 }
 
-/* line 714, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 728, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .faq-link h4 a:hover,
 .business-login-to-review h4 a:hover,
 .business-login-to-upload h4 a:hover,
@@ -7028,7 +7044,7 @@ a:hover {
   transition-property: background;
 }
 
-/* line 722, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 736, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #gallery-start,
 #services-start,
 #contact-start {
@@ -7037,14 +7053,14 @@ a:hover {
 }
 
 /*--------------SEE ALL BUTTONS--------------*/
-/* line 729, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 743, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .see-all {
   padding-top: 10px;
   background-color: #FFF;
   padding-bottom: 10px;
 }
 
-/* line 735, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 749, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .see-all p {
   text-align: center;
   margin-bottom: 10px;
@@ -7053,7 +7069,7 @@ a:hover {
   margin-bottom: 0;
 }
 
-/* line 743, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 757, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .see-all p a {
   font-family: "Playfair Display";
   background: #000;
@@ -7064,7 +7080,7 @@ a:hover {
   transition-property: background;
 }
 
-/* line 753, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 767, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .see-all p a:hover {
   background: #FD8698;
   transition-duration: .5s;
@@ -7072,34 +7088,34 @@ a:hover {
 }
 
 /*--------------SEARCH--------------*/
-/* line 761, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 775, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .no-results {
   margin-top: 75px;
 }
 
 /*--------------BUSINESS--------------*/
-/* line 767, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 781, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biz {
   padding-bottom: 5px;
   margin-bottom: 5px;
 }
 
-/* line 772, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 786, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #biz-slider {
   max-width: 1100px;
 }
 
-/* line 776, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 790, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #biz-index {
   background-color: #FFF;
 }
 
-/* line 780, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 794, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #business-body {
   background-color: #FFF;
 }
 
-/* line 785, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 799, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biz a,
 .biz a:visited {
   color: black;
@@ -7108,25 +7124,25 @@ a:hover {
   transition-property: color;
 }
 
-/* line 792, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 806, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biz a:hover {
   color: #FD8698;
   transition-duration: .5s;
   transition-property: color;
 }
 
-/* line 798, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 812, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biz img {
   border: 1px solid #CCC;
 }
 
-/* line 802, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 816, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biz-info {
   border: 1px solid #CCC;
   padding: 10px;
 }
 
-/* line 807, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 821, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biz-header h2 {
   text-align: center;
   width: 100%;
@@ -7134,19 +7150,19 @@ a:hover {
   color: #FFF;
 }
 
-/* line 814, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 828, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .col-md-12 {
   background: #FFF;
 }
 
-/* line 818, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 832, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 td {
   padding: 3px;
   font-size: 18px;
   font-family: "Playfair Display";
 }
 
-/* line 825, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 839, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .special-offers,
 .contact-info {
   margin-left: auto;
@@ -7154,7 +7170,7 @@ td {
   max-width: 800px;
 }
 
-/* line 832, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 846, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .special-offers p,
 .contact-info p {
   text-align: center;
@@ -7163,7 +7179,7 @@ td {
   margin-right: 15px;
 }
 
-/* line 839, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 853, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .special-offers p {
   font-family: "Dancing Script";
   color: #FC4063;
@@ -7171,35 +7187,35 @@ td {
   line-height: 1.3;
 }
 
-/* line 846, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 860, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .contact-info p {
   line-height: 1.3;
   font-family: "Playfair Display";
 }
 
-/* line 851, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 865, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .contact-info a {
   color: #777;
 }
 
-/* line 855, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 869, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .contact-info a:hover {
   color: #FD8698;
 }
 
-/* line 861, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 875, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #hours-dropdown,
 #photo-upload,
 #review-modal {
   margin: 5px;
 }
 
-/* line 865, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 879, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #hours-dropdown {
   margin-top: 7px;
 }
 
-/* line 870, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 884, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #hours-dropdown h4,
 #photo-upload h4 {
   text-align: center;
@@ -7214,7 +7230,7 @@ td {
   margin-top: 0;
 }
 
-/* line 884, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 898, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #hours-dropdown h4:hover,
 #photo-upload h4:hover {
   background: #FD8698;
@@ -7222,36 +7238,36 @@ td {
   transition-property: background;
 }
 
-/* line 890, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 904, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #hours-dropdown h4 {
   width: 150px;
 }
 
-/* line 894, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 908, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #photo-upload h4 {
   width: 170px;
 }
 
-/* line 899, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 913, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #hours-dropdown h4 a,
 #photo-upload h4 a {
   color: #FFF;
 }
 
-/* line 903, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 917, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biz-show-header h3 {
   text-align: center;
   font-size: 30px;
   color: #FD8698;
 }
 
-/* line 909, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 923, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .fa-caret-right {
   color: #FC4063;
 }
 
 /*--------------BUSINESS DESIGNERS--------------*/
-/* line 916, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 930, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .designer-list,
 .store-bio {
   max-width: 800px;
@@ -7261,17 +7277,17 @@ td {
   padding-right: 15px;
 }
 
-/* line 924, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 938, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #designers-index {
   background-color: #FFF;
 }
 
-/* line 928, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 942, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .store-bio {
   max-width: 1000px;
 }
 
-/* line 933, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 947, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .designer-list p,
 .store-bio p {
   text-align: center;
@@ -7282,7 +7298,7 @@ td {
   color: #FD8698;
 }
 
-/* line 942, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 956, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .store-bio p {
   font-family: 'Playfair Display';
   font-size: 15px;
@@ -7290,17 +7306,17 @@ td {
   text-align: justify;
 }
 
-/* line 949, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 963, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .designer-list p a {
   color: #FD8698;
 }
 
-/* line 953, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 967, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .designer-list p a:hover {
   color: #777;
 }
 
-/* line 958, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 972, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .designer-list h3,
 .store-bio h3 {
   text-align: center;
@@ -7309,32 +7325,32 @@ td {
   margin-bottom: 0;
 }
 
-/* line 965, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 979, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .store-bio h3 {
   color: #FC4063;
 }
 
 /*--------------BUSINESS FORM--------------*/
-/* line 971, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 985, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .day .field {
   margin-left: 10px;
   margin-right: 10px;
 }
 
-/* line 976, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 990, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .days {
   width: 400px;
   height: 380px;
 }
 
-/* line 981, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 995, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .days-inner {
   width: 190px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 993, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1007, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .sun .field,
 .mon .field,
 .tues .field,
@@ -7345,22 +7361,22 @@ td {
   float: left;
 }
 
-/* line 997, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1011, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .days h4 {
   text-align: center;
 }
 
-/* line 1001, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1015, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .state-zip .field {
   float: left;
 }
 
-/* line 1005, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1019, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .borough-neighborhood {
   width: 400px;
 }
 
-/* line 1009, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1023, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biz-form {
   max-width: 400px;
   margin-left: auto;
@@ -7368,7 +7384,7 @@ td {
   background-color: #FFF;
 }
 
-/* line 1017, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1031, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biz-form input,
 .biz-form textarea {
   border: 1px solid #CCC;
@@ -7378,29 +7394,29 @@ td {
   margin-right: auto;
 }
 
-/* line 1025, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1039, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #new-biz {
   background-color: #FFF;
 }
 
-/* line 1030, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1044, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .city,
 .zip {
   border: 1px solid #CCC;
   padding: 5px;
 }
 
-/* line 1035, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1049, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .city {
   width: 200px;
 }
 
-/* line 1039, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1053, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .zip {
   width: 100px;
 }
 
-/* line 1043, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1057, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biz-form h1 {
   color: #FD8698;
   font-size: 30px;
@@ -7409,35 +7425,35 @@ td {
   padding-top: 10px;
 }
 
-/* line 1052, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1066, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biztag-checkboxes input,
 .designer-checkboxes input {
   margin-left: 10px;
 }
 
 /*--------------DESIGNERS--------------*/
-/* line 1058, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1072, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .designers {
   min-height: 240px;
 }
 
-/* line 1062, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1076, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .designers h2 {
   font-size: 20px;
 }
 
-/* line 1066, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1080, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .designers h2 a {
   color: #000;
 }
 
-/* line 1070, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1084, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #services .designers .thumbnail i {
   font-size: 30px;
 }
 
 /*--------------SLIDER--------------*/
-/* line 1076, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1090, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .item {
   margin-left: auto;
   margin-right: auto;
@@ -7445,13 +7461,13 @@ td {
   height: 500px;
 }
 
-/* line 1083, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1097, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .slider-img {
   height: 400px;
 }
 
 /*--------------FAQ & FOR STORES--------------*/
-/* line 1089, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1103, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .faq {
   max-width: 800px;
   margin-left: auto;
@@ -7460,51 +7476,51 @@ td {
   padding-right: 10px;
 }
 
-/* line 1097, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1111, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .faq img {
   max-width: 800px;
   width: 100%;
   margin-top: 20px;
 }
 
-/* line 1103, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1117, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .faq p {
   text-align: justify;
   margin-top: 0;
   padding-top: 10px;
 }
 
-/* line 1109, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1123, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .notification-image {
   margin-left: auto;
   margin-right: auto;
   max-width: 500px;
 }
 
-/* line 1115, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1129, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .notification-image img {
   max-width: 500px;
 }
 
 /*--------------FOOTER--------------*/
-/* line 1121, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1135, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #footer {
   border-top: 1px solid white;
   padding-bottom: 50px;
 }
 
-/* line 1126, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1140, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #footer p {
   font-family: "Playfair Display";
 }
 
-/* line 1130, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1144, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #footer p span {
   font-size: 15px;
   line-height: 1.3;
 }
 
-/* line 1138, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1152, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #footer a,
 .fa-facebook,
 .fa-twitter,
@@ -7514,7 +7530,7 @@ td {
   transition-property: color;
 }
 
-/* line 1147, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1161, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #footer a:hover,
 .fa-facebook:hover,
 .fa-twitter:hover,
@@ -7524,28 +7540,28 @@ td {
   transition-property: color;
 }
 
-/* line 1152, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1166, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #footer .btn-default {
   width: 56px;
   height: 56px;
 }
 
-/* line 1157, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1171, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #footer .btn-group {
   margin-bottom: 0;
 }
 
-/* line 1161, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1175, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #footer .fa-caret-right {
   color: #FD8698;
 }
 
-/* line 1165, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1179, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #footer .footer-top {
   margin-top: 0;
 }
 
-/* line 1169, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1183, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #footer .footer-top a {
   font-family: 'Dancing Script';
   color: #FD8698;
@@ -7553,24 +7569,24 @@ td {
   padding: 2px;
 }
 
-/* line 1176, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1190, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #footer .footer-top a:hover {
   color: #FFF;
 }
 
 /*--------------MAILING LIST PAGE--------------*/
-/* line 1182, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1196, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #mailing-page {
   padding: 50px 15px;
   background-color: #FFF;
 }
 
-/* line 1187, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1201, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .mailing-page {
   padding-top: 50px;
 }
 
-/* line 1191, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1205, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .mailing-page p {
   text-align: center;
   font-family: 'Playfair Display';
@@ -7579,7 +7595,7 @@ td {
 }
 
 /*--------------TWEET--------------*/
-/* line 1200, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1214, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .tweet {
   margin-left: auto;
   margin-right: auto;
@@ -7587,7 +7603,7 @@ td {
 }
 
 /*--------------NEIGHBORHOOD MAPS--------------*/
-/* line 1211, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1225, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #EastVillage,
 #UpperEastSide,
 #Chelsea,
@@ -7597,24 +7613,24 @@ td {
   margin-top: 20px;
 }
 
-/* line 1217, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1231, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .gm-style-iw * {
   display: block;
   width: 100%;
 }
 
-/* line 1222, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1236, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .gm-style-iw h4, .gm-style-iw p {
   margin: 0;
   padding: 0;
 }
 
-/* line 1227, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1241, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .gm-style-iw a {
   color: #4272db;
 }
 
-/* line 1231, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1245, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .google-maps {
   width: 85%;
   min-width: 300px;
@@ -7624,29 +7640,29 @@ td {
 }
 
 /*--------------BOOTSTRAP--------------*/
-/* line 1241, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1255, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .ekko-lightbox-container {
   max-width: 90%;
   margin-right: auto;
   margin-left: auto;
 }
 
-/* line 1247, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1261, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .ekko-lightbox-container img {
   border: 3px solid #FFF;
 }
 
-/* line 1251, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1265, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .modal-header .close {
   margin-right: 10px;
 }
 
-/* line 1255, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1269, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .pre-scrollable {
   max-height: 400px;
 }
 
-/* line 1260, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1274, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .navbar-fixed-top .navbar-collapse,
 .navbar-fixed-bottom .navbar-collapse {
   max-height: 400px;
@@ -7655,7 +7671,7 @@ td {
 /*--------------MEDIA QUERIES--------------*/
 /* Smaller Screens - Breakpoint -------> */
 @media screen and (max-width: 1100px) {
-  /* line 1269, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+  /* line 1283, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
   .business-map {
     width: 90%;
   }
@@ -20318,6 +20334,12 @@ h1 {
 
 /*--------------USER PROFILE & LOGIN--------------*/
 /* line 243, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+.space {
+  height: 10px;
+  width: 100%;
+}
+
+/* line 248, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .user-profile-photo img {
   height: 120px;
   width: 120px;
@@ -20326,32 +20348,32 @@ h1 {
   margin: 0;
 }
 
-/* line 251, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 256, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .user-profile-photo {
   margin-left: auto;
   margin-right: auto;
   width: 120px;
 }
 
-/* line 257, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 262, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .users-page {
   background-color: #FFF;
   margin-bottom: 0;
 }
 
-/* line 262, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 267, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .users-page #gallery-start {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-/* line 267, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 272, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #private-profile h5 {
   font-size: 20px;
   text-align: center;
 }
 
-/* line 272, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 277, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .user-header h2 {
   text-align: center;
   width: 100%;
@@ -20360,7 +20382,7 @@ h1 {
   margin-bottom: 0;
 }
 
-/* line 288, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 293, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #new_user,
 .devise-link,
 #edit_user,
@@ -20375,7 +20397,7 @@ h1 {
   width: 300px;
 }
 
-/* line 294, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 299, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .edit-profile h6 {
   font-size: 20px;
   text-align: center;
@@ -20383,12 +20405,12 @@ h1 {
   padding-top: 10px;
 }
 
-/* line 301, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 306, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .edit-profile a {
   text-align: center;
 }
 
-/* line 306, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 311, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .devise-link p,
 .edit-profile p {
   width: 300px;
@@ -20397,7 +20419,7 @@ h1 {
   margin-bottom: 15px;
 }
 
-/* line 313, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 318, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .instructions p {
   background: #FD8698;
   font-family: "Playfair Display";
@@ -20410,18 +20432,18 @@ h1 {
   margin-top: 0;
 }
 
-/* line 325, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 330, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .instructions p a {
   color: #777;
   font-size: 15px;
 }
 
-/* line 330, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 335, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .instructions {
   padding: 10px;
 }
 
-/* line 340, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 345, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #user_email,
 #user_password,
 #user_password_confirmation,
@@ -20434,42 +20456,51 @@ h1 {
   padding: 5px;
 }
 
-/* line 346, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 351, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .user-divide {
   height: 75px;
 }
 
-/* line 350, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 355, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .user-info {
   padding-bottom: 25px;
 }
 
-/* line 354, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 359, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .user-info p {
   text-align: center;
   font-family: 'Playfair Display';
   font-size: 20px;
 }
 
-/* line 360, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 365, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .user-info h3 {
   font-family: 'Dancing Script';
   font-size: 25px;
   color: #FC4063;
 }
 
-/* line 366, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 371, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .newuser {
   padding-bottom: 50px;
 }
 
 /*--------------ADMIN INDEXES - USERS, REVIEWS--------------*/
-/* line 372, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 377, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+.admin-page {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #FFF;
+}
+
+/* line 385, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .admin-table {
   background-color: #FFF;
 }
 
-/* line 377, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 390, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .admin-table th,
 .admin-table td {
   padding: 3px;
@@ -20477,24 +20508,24 @@ h1 {
   font-size: 13px;
 }
 
-/* line 383, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 396, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .admin-table th {
   background-color: #CCC;
   border: 1px solid #000;
 }
 
-/* line 388, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 401, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .admin-table tr:nth-child(odd) {
   background-color: #FFE6E9;
 }
 
-/* line 392, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 405, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .admin-table a {
   color: #FC4063;
 }
 
 /*--------------DIVIDE--------------*/
-/* line 400, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 413, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #gallery-start,
 #services-start,
 #contact-start {
@@ -20502,7 +20533,7 @@ h1 {
   padding-bottom: 30px;
 }
 
-/* line 408, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 421, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .business-index .divide,
 #works .divide,
 #gallery .divide,
@@ -20511,19 +20542,19 @@ h1 {
   margin-top: 10px;
 }
 
-/* line 413, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 426, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .divide_services {
   margin-bottom: 10px;
 }
 
 /*--------------BOOTSTRAP--------------*/
-/* line 419, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 432, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .col-sm-6 h1 {
   font-size: 40px;
   padding-top: 20px;
 }
 
-/* line 424, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 437, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .col-sm-3 a {
   color: black;
   font-size: 20px;
@@ -20531,7 +20562,7 @@ h1 {
   transition-property: color;
 }
 
-/* line 431, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 444, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .col-sm-3 a:hover {
   color: #FD8698;
   transition-duration: .5s;
@@ -20539,48 +20570,49 @@ h1 {
 }
 
 /*--------------SERVICES--------------*/
-/* line 439, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 452, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #services .thumbnail p {
   font-size: 15px;
   font-family: "Playfair Display";
   color: black;
 }
 
-/* line 445, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 458, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #services {
   background: white;
 }
 
-/* line 449, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 462, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #services .thumbnail h3 {
   color: black;
 }
 
 /*--------------CONTACT, REVIEWS, PHOTOS FORMS-----------*/
-/* line 455, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 468, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #messages-page {
   background-color: #FFF;
   margin: 0;
+  padding-bottom: 25px;
 }
 
-/* line 460, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 474, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .form-group {
   margin-bottom: 0;
   padding-bottom: 10px;
 }
 
-/* line 465, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 479, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .form-control {
   height: 50px;
   margin-bottom: 10px;
 }
 
-/* line 470, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 484, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #contact .form-control {
   background: none;
 }
 
-/* line 475, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 489, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .script-header h3,
 .contact-thanks h3 {
   font-family: 'Dancing Script';
@@ -20591,30 +20623,30 @@ h1 {
   margin: 0;
 }
 
-/* line 484, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 498, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .delight-icon-services {
   width: 80px;
 }
 
-/* line 488, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 502, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .contact-thanks h2 {
   text-align: center;
   font-size: 30px;
 }
 
-/* line 493, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 507, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #review-form {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 499, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 513, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #review-form span .fa {
   color: #000;
 }
 
-/* line 505, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 519, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #photo-form input,
 #photo-form textarea,
 #review-form textarea {
@@ -20623,25 +20655,25 @@ h1 {
   background: #FFE6E9;
 }
 
-/* line 511, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 525, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #review-form textarea {
   height: 100px;
 }
 
-/* line 516, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 530, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #new-review h5,
 #new-photo h5 {
   text-align: center;
   font-size: 20px;
 }
 
-/* line 521, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 535, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #new-photo h5 {
   margin-top: 20px;
   margin-bottom: 15px;
 }
 
-/* line 532, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 546, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .review-button,
 .photo-button,
 .signin-button,
@@ -20654,37 +20686,37 @@ h1 {
   margin-left: auto;
 }
 
-/* line 538, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 552, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .review-button {
   width: 131px;
 }
 
-/* line 542, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 556, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .photo-button {
   width: 148px;
 }
 
-/* line 546, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 560, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .signin-button {
   width: 82px;
 }
 
-/* line 550, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 564, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .signup-button {
   width: 88px;
 }
 
-/* line 554, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 568, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .update-profile-button {
   width: 156px;
 }
 
-/* line 558, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 572, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .business-button {
   width: 204px;
 }
 
-/* line 568, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 582, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .review-button button,
 .photo-button button,
 .signin-button button,
@@ -20697,7 +20729,7 @@ h1 {
   outline: 0px;
 }
 
-/* line 580, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 594, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .review-button button:hover,
 .photo-button button:hover,
 .signin-button button:hover,
@@ -20708,7 +20740,7 @@ h1 {
   background: #FD8698;
 }
 
-/* line 584, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 598, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #photo_business_photo {
   width: 300px;
   margin-right: auto;
@@ -20719,61 +20751,61 @@ h1 {
   height: 52px;
 }
 
-/* line 594, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 608, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #review_content {
   margin-top: 15px;
 }
 
-/* line 598, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 612, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #review-form-stars {
   width: 87px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 605, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 619, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #review_role_consignor,
 #review_role_shopper {
   margin-left: 3px;
   margin-right: 3px;
 }
 
-/* line 610, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 624, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #review-form-role p {
   font-family: "Playfair Display";
   text-align: center;
   margin: 0;
 }
 
-/* line 617, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 631, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #reviews h3,
 h3 {
   text-align: center;
 }
 
-/* line 621, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 635, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #reviews h3 {
   margin-bottom: 30px;
 }
 
 /*--------------HEART ICON--------------*/
-/* line 627, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 641, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .icon-heart {
   color: #FD8698;
 }
 
-/* line 631, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 645, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 span a {
   color: black;
 }
 
-/* line 635, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 649, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 a:hover {
   background: none;
 }
 
 /*--------------LINK BUTTONS--------------*/
-/* line 646, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 660, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .faq-link,
 .user-account-header,
 .business-login-to-review,
@@ -20785,59 +20817,59 @@ a:hover {
   margin-bottom: 20px;
 }
 
-/* line 653, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 667, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .business-login-to-review,
 .business-login-to-upload {
   padding-top: 15px;
 }
 
-/* line 657, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 671, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .create-account-link {
   padding-top: 75px;
 }
 
-/* line 661, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 675, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .faq-link {
   width: 323px;
 }
 
-/* line 665, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 679, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .user-account-header {
   width: 278px;
 }
 
-/* line 669, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 683, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .business-login-to-review {
   width: 184px;
 }
 
-/* line 673, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 687, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .business-login-to-upload {
   width: 274px;
 }
 
-/* line 677, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 691, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .create-account-link {
   width: 188px;
 }
 
-/* line 681, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 695, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .logout-link {
   width: 92px;
 }
 
-/* line 686, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 700, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .faq-link h4,
 .faq-link {
   margin-bottom: 0;
 }
 
-/* line 690, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 704, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .faq-link {
   padding-bottom: 20px;
 }
 
-/* line 699, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 713, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .faq-link h4 a,
 .user-account-header h4 a,
 .business-login-to-review h4 a,
@@ -20854,7 +20886,7 @@ a:hover {
   padding: 0 5px;
 }
 
-/* line 714, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 728, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .faq-link h4 a:hover,
 .business-login-to-review h4 a:hover,
 .business-login-to-upload h4 a:hover,
@@ -20865,7 +20897,7 @@ a:hover {
   transition-property: background;
 }
 
-/* line 722, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 736, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #gallery-start,
 #services-start,
 #contact-start {
@@ -20874,14 +20906,14 @@ a:hover {
 }
 
 /*--------------SEE ALL BUTTONS--------------*/
-/* line 729, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 743, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .see-all {
   padding-top: 10px;
   background-color: #FFF;
   padding-bottom: 10px;
 }
 
-/* line 735, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 749, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .see-all p {
   text-align: center;
   margin-bottom: 10px;
@@ -20890,7 +20922,7 @@ a:hover {
   margin-bottom: 0;
 }
 
-/* line 743, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 757, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .see-all p a {
   font-family: "Playfair Display";
   background: #000;
@@ -20901,7 +20933,7 @@ a:hover {
   transition-property: background;
 }
 
-/* line 753, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 767, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .see-all p a:hover {
   background: #FD8698;
   transition-duration: .5s;
@@ -20909,34 +20941,34 @@ a:hover {
 }
 
 /*--------------SEARCH--------------*/
-/* line 761, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 775, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .no-results {
   margin-top: 75px;
 }
 
 /*--------------BUSINESS--------------*/
-/* line 767, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 781, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biz {
   padding-bottom: 5px;
   margin-bottom: 5px;
 }
 
-/* line 772, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 786, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #biz-slider {
   max-width: 1100px;
 }
 
-/* line 776, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 790, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #biz-index {
   background-color: #FFF;
 }
 
-/* line 780, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 794, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #business-body {
   background-color: #FFF;
 }
 
-/* line 785, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 799, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biz a,
 .biz a:visited {
   color: black;
@@ -20945,25 +20977,25 @@ a:hover {
   transition-property: color;
 }
 
-/* line 792, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 806, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biz a:hover {
   color: #FD8698;
   transition-duration: .5s;
   transition-property: color;
 }
 
-/* line 798, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 812, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biz img {
   border: 1px solid #CCC;
 }
 
-/* line 802, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 816, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biz-info {
   border: 1px solid #CCC;
   padding: 10px;
 }
 
-/* line 807, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 821, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biz-header h2 {
   text-align: center;
   width: 100%;
@@ -20971,19 +21003,19 @@ a:hover {
   color: #FFF;
 }
 
-/* line 814, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 828, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .col-md-12 {
   background: #FFF;
 }
 
-/* line 818, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 832, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 td {
   padding: 3px;
   font-size: 18px;
   font-family: "Playfair Display";
 }
 
-/* line 825, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 839, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .special-offers,
 .contact-info {
   margin-left: auto;
@@ -20991,7 +21023,7 @@ td {
   max-width: 800px;
 }
 
-/* line 832, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 846, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .special-offers p,
 .contact-info p {
   text-align: center;
@@ -21000,7 +21032,7 @@ td {
   margin-right: 15px;
 }
 
-/* line 839, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 853, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .special-offers p {
   font-family: "Dancing Script";
   color: #FC4063;
@@ -21008,35 +21040,35 @@ td {
   line-height: 1.3;
 }
 
-/* line 846, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 860, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .contact-info p {
   line-height: 1.3;
   font-family: "Playfair Display";
 }
 
-/* line 851, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 865, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .contact-info a {
   color: #777;
 }
 
-/* line 855, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 869, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .contact-info a:hover {
   color: #FD8698;
 }
 
-/* line 861, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 875, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #hours-dropdown,
 #photo-upload,
 #review-modal {
   margin: 5px;
 }
 
-/* line 865, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 879, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #hours-dropdown {
   margin-top: 7px;
 }
 
-/* line 870, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 884, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #hours-dropdown h4,
 #photo-upload h4 {
   text-align: center;
@@ -21051,7 +21083,7 @@ td {
   margin-top: 0;
 }
 
-/* line 884, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 898, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #hours-dropdown h4:hover,
 #photo-upload h4:hover {
   background: #FD8698;
@@ -21059,36 +21091,36 @@ td {
   transition-property: background;
 }
 
-/* line 890, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 904, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #hours-dropdown h4 {
   width: 150px;
 }
 
-/* line 894, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 908, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #photo-upload h4 {
   width: 170px;
 }
 
-/* line 899, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 913, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #hours-dropdown h4 a,
 #photo-upload h4 a {
   color: #FFF;
 }
 
-/* line 903, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 917, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biz-show-header h3 {
   text-align: center;
   font-size: 30px;
   color: #FD8698;
 }
 
-/* line 909, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 923, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .fa-caret-right {
   color: #FC4063;
 }
 
 /*--------------BUSINESS DESIGNERS--------------*/
-/* line 916, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 930, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .designer-list,
 .store-bio {
   max-width: 800px;
@@ -21098,17 +21130,17 @@ td {
   padding-right: 15px;
 }
 
-/* line 924, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 938, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #designers-index {
   background-color: #FFF;
 }
 
-/* line 928, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 942, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .store-bio {
   max-width: 1000px;
 }
 
-/* line 933, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 947, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .designer-list p,
 .store-bio p {
   text-align: center;
@@ -21119,7 +21151,7 @@ td {
   color: #FD8698;
 }
 
-/* line 942, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 956, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .store-bio p {
   font-family: 'Playfair Display';
   font-size: 15px;
@@ -21127,17 +21159,17 @@ td {
   text-align: justify;
 }
 
-/* line 949, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 963, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .designer-list p a {
   color: #FD8698;
 }
 
-/* line 953, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 967, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .designer-list p a:hover {
   color: #777;
 }
 
-/* line 958, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 972, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .designer-list h3,
 .store-bio h3 {
   text-align: center;
@@ -21146,32 +21178,32 @@ td {
   margin-bottom: 0;
 }
 
-/* line 965, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 979, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .store-bio h3 {
   color: #FC4063;
 }
 
 /*--------------BUSINESS FORM--------------*/
-/* line 971, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 985, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .day .field {
   margin-left: 10px;
   margin-right: 10px;
 }
 
-/* line 976, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 990, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .days {
   width: 400px;
   height: 380px;
 }
 
-/* line 981, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 995, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .days-inner {
   width: 190px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 993, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1007, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .sun .field,
 .mon .field,
 .tues .field,
@@ -21182,22 +21214,22 @@ td {
   float: left;
 }
 
-/* line 997, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1011, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .days h4 {
   text-align: center;
 }
 
-/* line 1001, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1015, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .state-zip .field {
   float: left;
 }
 
-/* line 1005, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1019, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .borough-neighborhood {
   width: 400px;
 }
 
-/* line 1009, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1023, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biz-form {
   max-width: 400px;
   margin-left: auto;
@@ -21205,7 +21237,7 @@ td {
   background-color: #FFF;
 }
 
-/* line 1017, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1031, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biz-form input,
 .biz-form textarea {
   border: 1px solid #CCC;
@@ -21215,29 +21247,29 @@ td {
   margin-right: auto;
 }
 
-/* line 1025, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1039, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #new-biz {
   background-color: #FFF;
 }
 
-/* line 1030, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1044, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .city,
 .zip {
   border: 1px solid #CCC;
   padding: 5px;
 }
 
-/* line 1035, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1049, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .city {
   width: 200px;
 }
 
-/* line 1039, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1053, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .zip {
   width: 100px;
 }
 
-/* line 1043, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1057, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biz-form h1 {
   color: #FD8698;
   font-size: 30px;
@@ -21246,35 +21278,35 @@ td {
   padding-top: 10px;
 }
 
-/* line 1052, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1066, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biztag-checkboxes input,
 .designer-checkboxes input {
   margin-left: 10px;
 }
 
 /*--------------DESIGNERS--------------*/
-/* line 1058, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1072, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .designers {
   min-height: 240px;
 }
 
-/* line 1062, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1076, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .designers h2 {
   font-size: 20px;
 }
 
-/* line 1066, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1080, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .designers h2 a {
   color: #000;
 }
 
-/* line 1070, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1084, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #services .designers .thumbnail i {
   font-size: 30px;
 }
 
 /*--------------SLIDER--------------*/
-/* line 1076, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1090, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .item {
   margin-left: auto;
   margin-right: auto;
@@ -21282,13 +21314,13 @@ td {
   height: 500px;
 }
 
-/* line 1083, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1097, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .slider-img {
   height: 400px;
 }
 
 /*--------------FAQ & FOR STORES--------------*/
-/* line 1089, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1103, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .faq {
   max-width: 800px;
   margin-left: auto;
@@ -21297,51 +21329,51 @@ td {
   padding-right: 10px;
 }
 
-/* line 1097, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1111, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .faq img {
   max-width: 800px;
   width: 100%;
   margin-top: 20px;
 }
 
-/* line 1103, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1117, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .faq p {
   text-align: justify;
   margin-top: 0;
   padding-top: 10px;
 }
 
-/* line 1109, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1123, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .notification-image {
   margin-left: auto;
   margin-right: auto;
   max-width: 500px;
 }
 
-/* line 1115, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1129, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .notification-image img {
   max-width: 500px;
 }
 
 /*--------------FOOTER--------------*/
-/* line 1121, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1135, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #footer {
   border-top: 1px solid white;
   padding-bottom: 50px;
 }
 
-/* line 1126, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1140, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #footer p {
   font-family: "Playfair Display";
 }
 
-/* line 1130, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1144, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #footer p span {
   font-size: 15px;
   line-height: 1.3;
 }
 
-/* line 1138, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1152, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #footer a,
 .fa-facebook,
 .fa-twitter,
@@ -21351,7 +21383,7 @@ td {
   transition-property: color;
 }
 
-/* line 1147, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1161, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #footer a:hover,
 .fa-facebook:hover,
 .fa-twitter:hover,
@@ -21361,28 +21393,28 @@ td {
   transition-property: color;
 }
 
-/* line 1152, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1166, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #footer .btn-default {
   width: 56px;
   height: 56px;
 }
 
-/* line 1157, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1171, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #footer .btn-group {
   margin-bottom: 0;
 }
 
-/* line 1161, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1175, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #footer .fa-caret-right {
   color: #FD8698;
 }
 
-/* line 1165, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1179, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #footer .footer-top {
   margin-top: 0;
 }
 
-/* line 1169, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1183, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #footer .footer-top a {
   font-family: 'Dancing Script';
   color: #FD8698;
@@ -21390,24 +21422,24 @@ td {
   padding: 2px;
 }
 
-/* line 1176, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1190, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #footer .footer-top a:hover {
   color: #FFF;
 }
 
 /*--------------MAILING LIST PAGE--------------*/
-/* line 1182, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1196, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #mailing-page {
   padding: 50px 15px;
   background-color: #FFF;
 }
 
-/* line 1187, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1201, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .mailing-page {
   padding-top: 50px;
 }
 
-/* line 1191, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1205, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .mailing-page p {
   text-align: center;
   font-family: 'Playfair Display';
@@ -21416,7 +21448,7 @@ td {
 }
 
 /*--------------TWEET--------------*/
-/* line 1200, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1214, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .tweet {
   margin-left: auto;
   margin-right: auto;
@@ -21424,7 +21456,7 @@ td {
 }
 
 /*--------------NEIGHBORHOOD MAPS--------------*/
-/* line 1211, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1225, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #EastVillage,
 #UpperEastSide,
 #Chelsea,
@@ -21434,24 +21466,24 @@ td {
   margin-top: 20px;
 }
 
-/* line 1217, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1231, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .gm-style-iw * {
   display: block;
   width: 100%;
 }
 
-/* line 1222, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1236, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .gm-style-iw h4, .gm-style-iw p {
   margin: 0;
   padding: 0;
 }
 
-/* line 1227, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1241, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .gm-style-iw a {
   color: #4272db;
 }
 
-/* line 1231, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1245, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .google-maps {
   width: 85%;
   min-width: 300px;
@@ -21461,29 +21493,29 @@ td {
 }
 
 /*--------------BOOTSTRAP--------------*/
-/* line 1241, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1255, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .ekko-lightbox-container {
   max-width: 90%;
   margin-right: auto;
   margin-left: auto;
 }
 
-/* line 1247, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1261, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .ekko-lightbox-container img {
   border: 3px solid #FFF;
 }
 
-/* line 1251, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1265, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .modal-header .close {
   margin-right: 10px;
 }
 
-/* line 1255, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1269, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .pre-scrollable {
   max-height: 400px;
 }
 
-/* line 1260, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1274, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .navbar-fixed-top .navbar-collapse,
 .navbar-fixed-bottom .navbar-collapse {
   max-height: 400px;
@@ -21492,7 +21524,7 @@ td {
 /*--------------MEDIA QUERIES--------------*/
 /* Smaller Screens - Breakpoint -------> */
 @media screen and (max-width: 1100px) {
-  /* line 1269, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+  /* line 1283, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
   .business-map {
     width: 90%;
   }
