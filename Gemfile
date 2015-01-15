@@ -36,6 +36,11 @@ gem "mini_magick"
 # Ratings
 # gem 'ratyrate'
 
+# Facebook
+gem 'figaro'
+gem 'omniauth'
+gem 'omniauth-facebook'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
