@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
     # :s3_protocol => "https"
 
   # Validations
-  validates :agree_to_terms, :presence => { :message => " must be checked" }
+  # validates :agree_to_terms, :presence => { :message => " must be checked" }
   validates :tagline, length: {maximum: 30}
   validates :city, length: {maximum: 30}
   validates :url, length: {maximum: 30}
@@ -29,19 +29,20 @@ class User < ActiveRecord::Base
   validates_attachment_content_type :user_profile_photo, :content_type => /\Aimage\/.*\Z/
   
   # Facebook OmniAuth
-  def self.from_omniauth(auth_hash)
-    # where(auth_hash.slice(:provider, :uid)).first_or_initialize.tap do |user|
+  def self.from_omniauth(auth)
+    # where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-      user.provider = auth_hash.provider
-      user.uid = auth_hash.uid
+      user.provider = auth.provider
+      user.uid = auth.uid
       user.password = Devise.friendly_token[0,20]
-      user.first_name = auth_hash.info.first_name
-      user.last_name = auth_hash.info.last_name
-      user.email = auth_hash.info.email
-      user.user_profile_photo = auth_hash.info.image + "?type=large"
-      user.gender = auth_hash.extra.raw_info.gender
-      user.oauth_token = auth_hash.credentials.token
-      user.oauth_expires_at = Time.at(auth_hash.credentials.expires_at)
+      user.first_name = auth.info.first_name
+      user.last_name = auth.info.last_name
+      user.email = auth.info.email
+      user.facebook_profile_photo = auth.info.image + "?type=large"
+      user.gender = auth.extra.raw_info.gender
+      user.oauth_token = auth.credentials.token
+      user.oauth_expires_at = Time.at(auth.credentials.expires_at)
+      user.skip_confirmation!
       user.save!
     end
   end
