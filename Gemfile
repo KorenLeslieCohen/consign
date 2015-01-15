@@ -36,6 +36,7 @@ gem "mini_magick"
 # Facebook Omniauth
 gem 'figaro'
 gem 'omniauth-facebook'
+gem 'omniauth'
 
 # Ratings
 # gem 'ratyrate'
