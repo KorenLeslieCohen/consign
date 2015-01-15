@@ -1,8 +1,18 @@
 Rails.application.routes.draw do
 
+  # facebook
+  get '/auth/facebook', as: "facebook_login"
+  match 'auth/facebook/callback', to: 'sessions#create', via: [:get, :post]
+  match 'auth/failure', to: redirect('/'), via: [:get, :post]
+  get '/logout' => 'sessions#destroy', :as => :logout 
+
+  # get '/auth/facebook' => 'sessions#new'
+  # get '/auth/facebook/callback' => 'sessions#create'
+  # get '/logout' => 'sessions#destroy'
+
   resources :messages
 
-  post '/rate' => 'rater#create', :as => 'rate'
+  # post '/rate' => 'rater#create', :as => 'rate'
   root 'application#index'
 
   resources :neighborhoods
@@ -21,11 +31,9 @@ Rails.application.routes.draw do
     resources :photos
   end
 
-
   # devise_for :users
   devise_for :users, :controllers => { registrations: 'registrations' }
-  resources :users 
-
+  resources :users
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
