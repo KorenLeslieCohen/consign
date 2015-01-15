@@ -19,3 +19,4 @@
 /config/application.yml
 /config/secrets.yml
 /config/aws.yml
+/config/facebook.yml
