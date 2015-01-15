@@ -26,5 +26,21 @@ class User < ActiveRecord::Base
   # validates :user_profile_photo, :attachment_presence => { :message => "You must include a profile photo" }
   validates_with AttachmentSizeValidator, :attributes => :user_profile_photo, :less_than => 3.megabytes
   validates_attachment_content_type :user_profile_photo, :content_type => /\Aimage\/.*\Z/
+
+  # Facebook OmniAuth
+  def self.from_omniauth(auth_hash)
+    where(auth_hash.slice(:provider, :uid)).first_or_initialize.tap do |user|
+      user.provider = auth_hash.provider
+      user.uid = auth_hash.uid
+      user.first_name = auth_hash.info.first_name
+      user.last_name = auth_hash.info.last_name
+      user.email = auth_hash.info.email
+      user.user_profile_photo = auth_hash.info.image + "?type=large"
+      user.gender = auth_hash.extra.raw_info.gender
+      user.oauth_token = auth_hash.credentials.token
+      user.oauth_expires_at = Time.at(auth_hash.credentials.expires_at)
+      user.save!
+    end
+  end
   
 end

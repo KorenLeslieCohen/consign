@@ -33,6 +33,10 @@ gem 'paperclip'
 # Manipulate images
 gem "mini_magick"
 
+# Facebook Omniauth
+gem 'figaro'
+gem 'omniauth-facebook'
+
 # Ratings
 # gem 'ratyrate'
 
