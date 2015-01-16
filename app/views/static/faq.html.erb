@@ -57,9 +57,12 @@
 
     <h2>How do I sign up for the mailing list?</h2>
 
-      <p>Easy! Simply <%= link_to "register with the site", new_user_registration_path, :target => "_blank" %> and you'll automatically be added to the mailing list. If you already have an account, you're on the list!</p>
-
-      <p>Newsletters may include new site content, photos and special offers.</p>
+      <% if user_signed_in? %>
+        <p>It looks like you're already logged in to CONSIGN.NYC. This means you're already on the mailing list!</p>
+      <% else %>
+        <p>Easy! Simply <%= link_to "sign up using your email address", new_user_registration_path, :target => "_blank" %> and you'll be added to the mailing list. You'll also be added to the mailing list if you <%= link_to "login through facebook", user_omniauth_authorize_path(:facebook) %>.</p>
+        <p>Newsletters may include new site content, photos and special offers.</p>
+      <% end %>
 
     <h2>Can I purchase items on CONSIGN.NYC?</h2>
 
