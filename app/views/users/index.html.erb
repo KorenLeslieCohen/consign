@@ -11,7 +11,7 @@
         <tr>
           <th>No.</th>
           <th>User ID</th>
-          <!-- <th>Facebook</th> -->
+          <th>Facebook</th>
           <th>Confirmed</th>
           <th>Joined</th>
           <th>First Name</th>
@@ -36,11 +36,11 @@
           <tr>
             <td><%= num += 1 %></td>
             <td><%= user.id %></td>
-            <!-- <td> -->
-              <%# if user.provider == 'facebook' %>
-                <!-- FACEBOOK -->
-              <%# end %>
-            <!-- </td> -->
+            <td>
+              <% if user.provider == 'facebook' %>
+                FACEBOOK
+              <% end %>
+            </td>
             <td>
               <% if (user.confirmed_at != nil) %>
                 (<%= count += 1 %>) YES <%#= user.confirmed_at.strftime("%b %d, %Y") %>

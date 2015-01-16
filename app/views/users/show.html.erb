@@ -26,11 +26,11 @@
 
     <div class="user-profile-photo">
       <% if !@user.user_profile_photo? %>
-        <%# if @user.provider == 'facebook' %>
-          <%#= image_tag @user.facebook_profile_photo %>
-        <%# else %>
+        <% if @user.provider == 'facebook' %>
+          <%= image_tag @user.facebook_profile_photo %>
+        <% else %>
           <img src="https://s3.amazonaws.com/consignnyc/placeholder-profile.png">
-        <%# end %>
+        <% end %>
       <% else %>
         <%= image_tag @user.user_profile_photo %>
       <% end %>
