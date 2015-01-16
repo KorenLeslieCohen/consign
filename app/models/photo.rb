@@ -8,10 +8,6 @@ class Photo < ActiveRecord::Base
 
   # Amazon S3 photos
   has_attached_file :business_photo
-    # :storage => :s3, 
-    # :bucket => "consignnyc",
-    # :s3_credentials => "#{Rails.root}/config/aws.yml",
-    # :s3_protocol => "https"
 
   # Validations
   validates :description, presence: true, length: {maximum: 20}

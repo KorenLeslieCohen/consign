@@ -11,10 +11,6 @@ class User < ActiveRecord::Base
 
   # Amazon S3 photos
   has_attached_file :user_profile_photo
-    # :storage => :s3, 
-    # :bucket => "consignnyc",
-    # :s3_credentials => "#{Rails.root}/config/aws.yml",
-    # :s3_protocol => "https"
 
   # Validations
   # validates :agree_to_terms, :presence => { :message => " must be checked" }
@@ -30,7 +26,6 @@ class User < ActiveRecord::Base
   
   # Facebook OmniAuth
   def self.from_omniauth(auth)
-    # where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid

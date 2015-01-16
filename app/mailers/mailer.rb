@@ -63,8 +63,7 @@ class Mailer < ActionMailer::Base
     @name = name
     @email = email
     @body = body
-    mail(:to => "consigndotnyc@gmail.com", :subject => "New Message from CONSIGN.NYC",
-      :bcc => "ConsignDotNYC@gmail.com")
+    mail(:to => "consigndotnyc@gmail.com", :subject => "New Message from CONSIGN.NYC")
   end
 
 end
