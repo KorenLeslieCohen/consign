@@ -3,9 +3,14 @@
   <p class="header">WELCOME TO CONSIGN.NYC</p>
 </section>
 
-<div class="col-md-12">
+<div class="col-md-12 new-session">
 
-  <div class="user-divide">
+  <div class="create-account-link">
+    <h4><%= link_to "SIGN UP WITH EMAIL", new_user_registration_path %></h4>
+  </div>
+
+  <div class="facebook-login">
+    <%= link_to image_tag("facebook1.png" ), user_omniauth_authorize_path(:facebook) %>
   </div>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -25,14 +30,6 @@
       </div>
     </div>
   <% end %>
-
-  <div class="create-account-link">
-    <h4><%= link_to "SIGN UP WITH EMAIL", new_user_registration_path %></h4>
-  </div>
-
-  <div class="facebook-login">
-    <%= link_to image_tag("facebook1.png" ), user_omniauth_authorize_path(:facebook) %>
-  </div>
 
   <div class="devise-links">
     <%= render "devise/shared/links" %>
