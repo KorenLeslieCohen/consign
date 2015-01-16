@@ -234,6 +234,12 @@
       <div class="business-login-to-upload">
         <h4><%= link_to "LOGIN TO UPLOAD PHOTOS", new_user_session_path, :class => 'navbar-link'  %></h4>
       </div>
+      <div class="create-account-link">
+        <h4><%= link_to "SIGN UP WITH EMAIL", new_user_registration_path %></h4>
+      </div>
+      <div class="facebook-login">
+        <%= link_to image_tag("facebook1.png" ), user_omniauth_authorize_path(:facebook) %>
+      </div>
     <% end %>
 
   <!-- DISPLAY PHOTOS -->
@@ -276,6 +282,12 @@
   <% else %>
     <div class="business-login-to-review"> 
       <h4><%= link_to "LOGIN TO REVIEW", new_user_session_path, :class => 'navbar-link'  %></h4>
+    </div>
+    <div class="create-account-link">
+      <h4><%= link_to "SIGN UP WITH EMAIL", new_user_registration_path %></h4>
+    </div>
+    <div class="facebook-login">
+      <%= link_to image_tag("facebook1.png" ), user_omniauth_authorize_path(:facebook) %>
     </div>
   <% end %>
 

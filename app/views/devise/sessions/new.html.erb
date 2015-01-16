@@ -4,8 +4,8 @@
 </section>
 
 <div class="col-md-12">
-  <div class="create-account-link">
-    <h4><%= link_to "CREATE ACCOUNT", new_user_registration_path %></h4>
+
+  <div class="user-divide">
   </div>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -26,7 +26,17 @@
     </div>
   <% end %>
 
-  <%= render "devise/shared/links" %>
+  <div class="create-account-link">
+    <h4><%= link_to "SIGN UP WITH EMAIL", new_user_registration_path %></h4>
+  </div>
+
+  <div class="facebook-login">
+    <%= link_to image_tag("facebook1.png" ), user_omniauth_authorize_path(:facebook) %>
+  </div>
+
+  <div class="devise-links">
+    <%= render "devise/shared/links" %>
+  </div>
 
   <div class="user-divide">
   </div>

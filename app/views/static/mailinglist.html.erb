@@ -4,21 +4,26 @@
 </section>
 
 <div id="mailing-page">
-
   <div class="script-header">
     <h3>Be notified of new site content, special offers and other exciting info.</h3>
   </div>
-
-  <div class="mailing-page">
-    <p>Good news!</p>
-    <p>If you've already logged in to CONSIGN.NYC, you're already on the list.</p> 
-    <p>Not registered yet? No problem.</p>
-  </div>
-
-  <div class="create-account-link">
-    <h4><%= link_to "CREATE ACCOUNT", new_user_registration_path %></h4>
-  </div>
-
+  <% if user_signed_in? %>
+    <div class="mailing-page">
+      <p>Good news!</p>
+      <p>You've already logged in to CONSIGN.NYC, so you're already on the list!</p> 
+    </div>
+  <% else %>
+    <div class="mailing-page">
+      <p>Good news!</p>
+      <p>Simply login to CONSIGN.NYC and you'll be added to the list!</p> 
+    </div>
+    <div class="create-account-link">
+      <h4><%= link_to "SIGN UP WITH EMAIL", new_user_registration_path %></h4>
+    </div>
+    <div class="facebook-login">
+      <%= link_to image_tag("facebook1.png" ), user_omniauth_authorize_path(:facebook) %>
+    </div>
+  <% end %>
 </div>
 
 

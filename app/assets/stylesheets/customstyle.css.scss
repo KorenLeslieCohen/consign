@@ -316,20 +316,19 @@ h1 {
 }
 
 .instructions p {
-  background: #FD8698;
   font-family: "Playfair Display";
   font-size: 15px;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  color: #FFF;
+  color: #000;
   padding: 5px;
   margin-top: 0;
 }
 
-.instructions p a {
-  color: #777;
-  font-size: 15px;
+.instructions p a,
+.devise-links a {
+  color: #FD8698;
 }
 
 .instructions {
@@ -669,7 +668,8 @@ a:hover {
 }
 
 .create-account-link {
-  padding-top: 75px;
+  padding-top: 25px;
+  margin-bottom: 10px;
 }
 
 .faq-link {
@@ -689,7 +689,7 @@ a:hover {
 }
 
 .create-account-link {
-  width: 188px;
+  width: 210px;
 }
 
 .logout-link {
@@ -1273,6 +1273,19 @@ td {
 .navbar-fixed-top .navbar-collapse,
 .navbar-fixed-bottom .navbar-collapse {
   max-height: 400px;
+}
+
+/*--------------FACEBOOK LOGIN--------------*/
+
+.facebook-login {
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.facebook-login img {
+  width: 180px;
+  padding-bottom: 20px;
 }
 
 /*--------------MEDIA QUERIES--------------*/
