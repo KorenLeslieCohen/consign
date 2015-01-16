@@ -723,7 +723,7 @@ a:hover {
 }
 
 .create-account-link h4 a {
-  padding: 5px;
+  padding: 7px 5px;
   border-radius: 3px;
 }
 
@@ -1291,11 +1291,26 @@ td {
 
 .facebook-login img {
   width: 212px;
-  padding-bottom: 20px;
 }
 
 .faq .facebook-login img {
   margin-top: 0;
+}
+
+.business-logins {
+  width: 442px;
+  height: 45px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.business-logins .facebook-login, 
+.business-logins .create-account-link {
+  float: left;
+  margin: 0 5px;
+  padding: 0;
 }
 
 /*--------------MEDIA QUERIES--------------*/
@@ -1305,6 +1320,26 @@ td {
 
   .business-map {
     width: 90%;
+  }
+
+}
+
+/* Smaller Screens - Breakpoint -------> */
+@media screen and (max-width : 450px) {
+
+  .business-logins {
+    height: 90px;
+    margin-top: 10px;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 212px;
+
+  }
+
+  .business-logins .facebook-login, 
+  .business-logins .create-account-link {
+    float: none;
   }
 
 }
