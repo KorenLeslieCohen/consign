@@ -70,6 +70,15 @@
 
       <p>Many stores listed on CONSIGN.NYC have eCommerce sites. This is noted in each store's Purchase Terms.</p>
 
+      <% if !user_signed_in? %>
+        <div class="create-account-link">
+          <h4><%= link_to "SIGN UP WITH EMAIL", new_user_registration_path %></h4>
+        </div>
+        <div class="facebook-login">
+          <%= link_to image_tag("facebook1.png" ), user_omniauth_authorize_path(:facebook) %>
+        </div>
+      <% end %>
+
     <div class="user-divide">
     </div>
   </div>

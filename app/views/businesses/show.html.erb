@@ -209,6 +209,15 @@
     <% end %>
   </div>
 
+  <% if !user_signed_in? %>
+    <div class="create-account-link">
+      <h4><%= link_to "SIGN UP WITH EMAIL", new_user_registration_path %></h4>
+    </div>
+    <div class="facebook-login">
+      <%= link_to image_tag("facebook1.png" ), user_omniauth_authorize_path(:facebook) %>
+    </div>
+  <% end %>
+
   <!-- DESIGNERS -->
   <!-- <div class="designer-list">
     <%# if @business.designers.length != 0 %>
@@ -226,20 +235,14 @@
 
   <div>
     <% if current_user %>
-      <div id="new-photo">
+      <div class="new-photo">
         <h5>Upload a photo of <%= @business.name %>.</h5>
       </div>  
       <%= render 'photos/new', photo: Photo.new(business_id: @business.id) %>
     <% else %>
-      <div class="business-login-to-upload">
-        <h4><%= link_to "LOGIN TO UPLOAD PHOTOS", new_user_session_path, :class => 'navbar-link'  %></h4>
-      </div>
-      <div class="create-account-link">
-        <h4><%= link_to "SIGN UP WITH EMAIL", new_user_registration_path %></h4>
-      </div>
-      <div class="facebook-login">
-        <%= link_to image_tag("facebook1.png" ), user_omniauth_authorize_path(:facebook) %>
-      </div>
+      <div class="new-photo">
+        <h5>You must be logged in to upload photos of <%= @business.name %>.</h5>
+      </div> 
     <% end %>
 
   <!-- DISPLAY PHOTOS -->
@@ -280,14 +283,8 @@
 
   <!-- IF NOT CURRENT USER -->
   <% else %>
-    <div class="business-login-to-review"> 
-      <h4><%= link_to "LOGIN TO REVIEW", new_user_session_path, :class => 'navbar-link'  %></h4>
-    </div>
-    <div class="create-account-link">
-      <h4><%= link_to "SIGN UP WITH EMAIL", new_user_registration_path %></h4>
-    </div>
-    <div class="facebook-login">
-      <%= link_to image_tag("facebook1.png" ), user_omniauth_authorize_path(:facebook) %>
+    <div class="you-reviewed">
+      <h3>You must be logged in to review <%= @business.name %>.</h3>
     </div>
   <% end %>
 
