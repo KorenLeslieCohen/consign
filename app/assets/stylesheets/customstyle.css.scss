@@ -1347,6 +1347,10 @@ td {
 /* Smaller Screens - 768 Breakpoint -------> */
 @media screen and (max-width : 768px) {
 
+  .navbar-default .navbar-nav > li > a {
+    padding-right: 0px;
+  }
+
   .navbar-nav.navbar-right:last-child {
     margin-right: 0px;
   }
