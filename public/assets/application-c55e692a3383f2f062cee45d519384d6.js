@@ -16526,7 +16526,7 @@ $(document).ready(function() {
  
   owl.owlCarousel({
 
-    items : 3,
+    items : 2,
     navigation : true,
     pagination: false
  
