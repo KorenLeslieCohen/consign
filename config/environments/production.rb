@@ -135,8 +135,8 @@ Rails.application.configure do
   #   location: '/usr/sbin/sendmail',
   #   arguments: '-i -t'
   # }
-  # config.action_mailer.perform_deliveries = true
-  # config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
   # config.action_mailer.default_options = {from: 'no-reply@consign.nyc'} 
 
   # Amazon Web Services S3
