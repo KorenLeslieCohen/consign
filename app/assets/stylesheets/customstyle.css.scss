@@ -1344,6 +1344,15 @@ td {
 
 }
 
+/* Smaller Screens - 768 Breakpoint -------> */
+@media screen and (max-width : 768px) {
+
+  .navbar-nav.navbar-right:last-child {
+    margin-right: 0px;
+  }
+
+}
+
 /* Smaller Screens - 450 Breakpoint -------> */
 @media screen and (max-width : 450px) {
 
