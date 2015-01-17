@@ -87,16 +87,17 @@ Rails.application.configure do
   # Action Mailer / Devise Mailers 
   config.action_mailer.default_url_options =   { :host => 'consign.nyc' }
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-        address: "smtp.gmail.com",
-        port: "587",
-        domain: "gmail.com",
-        authentication: "plain",
-        enable_starttls_auto: true,
-        user_name: ENV['GMAIL_EMAIL'],
-        password: ENV['GMAIL_PASSWORD']
-
-    }
+  # config.action_mailer.smtp_settings = {
+  #       address: "smtp.gmail.com",
+  #       port: "587",
+  #       domain: "gmail.com",
+  #       authentication: "plain",
+  #       enable_starttls_auto: true,
+  #       user_name: ENV['GMAIL_EMAIL'],
+  #       password: ENV['GMAIL_PASSWORD']
+  #   }
+  config.action_mailer.smtp_settings = {:address => "no-reply@consign.nyc"}
+  config.mailer_sender = 'no-reply@consign.nyc'
 
   # Amazon Web Services S3
   config.paperclip_defaults = {
