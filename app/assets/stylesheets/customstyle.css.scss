@@ -1319,7 +1319,7 @@ td {
 
 /*--------------MEDIA QUERIES--------------*/
 
-/* Smaller Screens - Breakpoint -------> */
+/* Smaller Screens - 1100 Breakpoint -------> */
 @media screen and (max-width : 1100px) {
 
   .business-map {
@@ -1328,7 +1328,21 @@ td {
 
 }
 
-/* Smaller Screens - Breakpoint -------> */
+/* Smaller Screens - 850 Breakpoint -------> */
+@media screen and (max-width : 850px) {
+
+  .navbar-default .navbar-nav > li > a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .navbar-nav.navbar-right:last-child {
+    margin-right: 30px;
+  }
+
+}
+
+/* Smaller Screens - 450 Breakpoint -------> */
 @media screen and (max-width : 450px) {
 
   .business-logins {
@@ -1347,6 +1361,7 @@ td {
   }
 
 }
+
 
 
 
