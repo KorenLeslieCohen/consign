@@ -7739,9 +7739,16 @@ td {
     margin-right: 30px;
   }
 }
+/* Smaller Screens - 768 Breakpoint -------> */
+@media screen and (max-width: 768px) {
+  /* line 1350, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+  .navbar-nav.navbar-right:last-child {
+    margin-right: 0px;
+  }
+}
 /* Smaller Screens - 450 Breakpoint -------> */
 @media screen and (max-width: 450px) {
-  /* line 1350, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+  /* line 1359, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
   .business-logins {
     height: 90px;
     margin-top: 10px;
@@ -7751,7 +7758,7 @@ td {
     width: 212px;
   }
 
-  /* line 1361, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+  /* line 1370, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
   .business-logins .facebook-login,
   .business-logins .create-account-link {
     float: none;
@@ -21673,9 +21680,16 @@ td {
     margin-right: 30px;
   }
 }
+/* Smaller Screens - 768 Breakpoint -------> */
+@media screen and (max-width: 768px) {
+  /* line 1350, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+  .navbar-nav.navbar-right:last-child {
+    margin-right: 0px;
+  }
+}
 /* Smaller Screens - 450 Breakpoint -------> */
 @media screen and (max-width: 450px) {
-  /* line 1350, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+  /* line 1359, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
   .business-logins {
     height: 90px;
     margin-top: 10px;
@@ -21685,7 +21699,7 @@ td {
     width: 212px;
   }
 
-  /* line 1361, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+  /* line 1370, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
   .business-logins .facebook-login,
   .business-logins .create-account-link {
     float: none;
