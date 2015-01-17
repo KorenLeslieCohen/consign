@@ -326,6 +326,16 @@
     <% end %>
   </div>
 
+  Related stores
+  
+  <!-- render_similar_businesses -->
+      <% render_similar_businesses.each do |similar| %>
+        <%= link_to similar.name, similar %><br>
+      <% end %>
+
+      <%#= render_similar_businesses? %>
+
+
   <!-- ADMIN LINK -->
   <div class="see-all">
     <% if is_admin? %>

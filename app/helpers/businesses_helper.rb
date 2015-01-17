@@ -13,5 +13,17 @@ module BusinessesHelper
       (current_user.email == "consigndotnyc@gmail.com")
     end
   end
+
+  def render_similar_businesses
+    @businesses.each do |business|
+      similar_businesses  = []
+      if (business.neighborhood == @business.neighborhood) && (business.name != @business.name)
+        similar_businesses << business
+      end
+      return similar_businesses
+    end
+  end
     
 end
+
+  
