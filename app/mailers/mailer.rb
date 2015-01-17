@@ -1,7 +1,7 @@
 class Mailer < ActionMailer::Base
 
   # default email
-  default from: "ConsignDotNYC@gmail.com"
+  default from: "no-reply@consign.nyc"
 
   # USER EMAILS
 
