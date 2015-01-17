@@ -16540,7 +16540,9 @@ $(document).ready(function() {
 
     items : 3,
     navigation : true,
-    pagination: false
+    pagination: false,
+    itemsDesktop: false,
+    itemsDesktopSmall: false
  
   });
  
