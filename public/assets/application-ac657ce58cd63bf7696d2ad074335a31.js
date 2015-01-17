@@ -16528,7 +16528,9 @@ $(document).ready(function() {
 
     items : 2,
     navigation : true,
-    pagination: false
+    pagination: false,
+    itemsDesktop: false,
+    itemsDesktopSmall: false
  
   });
  
