@@ -22,10 +22,11 @@ class Mailer < ActionMailer::Base
   # CONSIGN.NYC EMAILS
 
   # CONSIGN.NYC email following user REVIEW
-  def admin_review_email(user, content, business)
+  def admin_review_email(user, content, business, rating)
     @user = user
     @content = content
     @business = business
+    @rating = rating
     mail(:to => "consigndotnyc@gmail.com", :subject => "New Review on CONSIGN.NYC")
   end
 
@@ -39,10 +40,11 @@ class Mailer < ActionMailer::Base
   # STORE ADMIN ACCESS TEMPLATE EMAILS
 
   # STORE ADMIN confirmation email following REVIEW
-  def store_review_email(user, content, business)
+  def store_review_email(user, content, business, rating)
     @user = user
     @content = content
     @business = business
+    @rating = rating
     mail(:to => @business.admin_email, :subject => "#{@business.name} has received a new review on CONSIGN.NYC")
   end
 

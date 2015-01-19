@@ -21,13 +21,13 @@ class Review < ActiveRecord::Base
 
   # consign admin review email
   def send_admin_review_email
-    Mailer.admin_review_email(user, content, business).deliver
+    Mailer.admin_review_email(user, content, business, rating).deliver
   end
 
   # store admin review email
   def send_store_review_email
     if (business.admin_email != nil && business.admin_email != "")
-      Mailer.store_review_email(user, content, business).deliver
+      Mailer.store_review_email(user, content, business, rating).deliver
     end
   end
 
