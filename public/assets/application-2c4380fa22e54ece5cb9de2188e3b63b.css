@@ -7145,13 +7145,13 @@ a:hover {
 
 /* line 822, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biz img {
-  border: 1px solid #CCC;
+  /*border: 1px solid #CCC;*/
 }
 
 /* line 826, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biz-info {
-  border: 1px solid #CCC;
   padding: 10px;
+  background: #FFE6E9;
 }
 
 /* line 831, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
@@ -21091,13 +21091,13 @@ a:hover {
 
 /* line 822, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biz img {
-  border: 1px solid #CCC;
+  /*border: 1px solid #CCC;*/
 }
 
 /* line 826, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .biz-info {
-  border: 1px solid #CCC;
   padding: 10px;
+  background: #FFE6E9;
 }
 
 /* line 831, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
