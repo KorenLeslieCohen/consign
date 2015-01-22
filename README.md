@@ -13,7 +13,7 @@ CONSIGN.NYC provides a variety of unique benefits to stores, consignors and shop
 
 ## Background
 
-CONSIGN.NYC was founded by Koren Leslie Cohen, a lawyer turned web developer presently working as an engineer in the fashion industry.
+CONSIGN.NYC was founded by <a href="http://twitter.com/korenlc" target="_blank" alt="koren leslie cohen">Koren Leslie Cohen</a>, a lawyer turned software engineer.
 
 When Koren moved to New York years ago, she moved from a spacious apartment with multiple closets in the Beacon Hill neighborhood of Boston to a tiny studio in Murray Hill. The one closet in her apartment was overflowing with clothes, and she quickly realized she needed to make some adjustments to her living situation.
 
@@ -27,7 +27,7 @@ Shoppers and consignors can upload photos and review stores. Businesses can gain
 
 ## Usage
 
-Visit <a href="http://consign.nyc" alt="high end consignment new york city" target="_blank">CONSIGN.NYC</a> to view stores, review stores, upload photos or claim your business.
+Visit <a href="http://consign.nyc" alt="high end consignment new york city" target="_blank">CONSIGN.NYC</a> to search stores, review stores, upload photos or claim your business.
 
 ## Author
 
