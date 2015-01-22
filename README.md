@@ -2,31 +2,32 @@
 
 ## Description
 
+<a href="http://consign.nyc" alt="high end consignment new york city" target="_blank">CONSIGN.NYC</a> is a web application catering to the high end consignment market in New York City.
 
+CONSIGN.NYC is the only platform that provides a curated list of high end consignment shops in New York City with complete information regarding purchase and sale terms.
+CONSIGN.NYC provides a variety of unique benefits to stores, consignors and shoppers.
 
 ## Screenshots
 
-
+<img src="http://klcohen.com/assets/images/consign-home.png">
 
 ## Background
 
-Purpose; development process
+CONSIGN.NYC was founded by Koren Leslie Cohen, a lawyer turned web developer presently working as an engineer in the fashion industry.
+
+When Koren moved to New York years ago, she moved from a spacious apartment with multiple closets in the Beacon Hill neighborhood of Boston to a tiny studio in Murray Hill. The one closet in her apartment was overflowing with clothes, and she quickly realized she needed to make some adjustments to her living situation.
+
+Koren inventoried her clothes and began a search for the best stores in the city to sell her new and gently worn high end items. This involved reading numerous blogs containing inaccurate or incomplete information, cross-referencing those blogs with various review sites, and calling each suitable store directly for their consignment terms. The process was lengthy and frustrating.
+
+Recognizing the obvious thirst for this information and the clear lack of organization and reliability of available material, CONSIGN.NYC was born.
 
 ## Features
 
-
+Shoppers and consignors can upload photos and review stores. Businesses can gain access to a special admin panel where they can easily update store information, including consignment and purchase terms, store hours, product photos and special offers. Businesses with admin access will also receive notification emails whenever a user reviews their store or uploads a photo.
 
 ## Usage
 
-How to use
-
-## Development/Contribution
-
-How others can contribute
-
-## Future
-
-Potential new features
+Visit <a href="http://consign.nyc" alt="high end consignment new york city" target="_blank">CONSIGN.NYC</a> to view stores, review stores, upload photos or claim your business.
 
 ## Author
 
