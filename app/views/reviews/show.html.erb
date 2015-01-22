@@ -5,29 +5,29 @@
 
 <div class="admin-page">
 
-<p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Business:</strong>
-  <%= link_to @review.business.name, @review.business %>
-</p>
+  <p>
+    <strong>Business:</strong>
+    <%= link_to @review.business.name, @review.business %>
+  </p>
 
-<p>
-  <strong>User:</strong>
-  <%= link_to @review.user.first_name, @review.user %>
-</p>
+  <p>
+    <strong>User:</strong>
+    <%= link_to @review.user.first_name, @review.user %>
+  </p>
 
-<p>
-  <strong>Rating:</strong>
-  <%= @review.rating %>
-</p>
+  <p>
+    <strong>Rating:</strong>
+    <%= @review.rating %>
+  </p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @review.content %>
-</p>
+  <p>
+    <strong>Content:</strong>
+    <%= @review.content %>
+  </p>
 
-<%= link_to 'Edit', edit_review_path(@review) %> |
-<%= link_to 'Back', reviews_path %>
+  <%= link_to 'Edit', edit_review_path(@review) %> |
+  <%= link_to 'Back', reviews_path %>
 
 </div>

@@ -1,15 +1,12 @@
-  <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
-    <h1 class="header">LOCAL</h1>
-    <p class="header">Shops by Neighborhood</p>
-  </section>
+<section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+  <h1 class="header">LOCAL</h1>
+  <p class="header">Shops by Neighborhood</p>
+</section>
 
 <!-- East Village  -->
 <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94&sensor=false&extension=.js'></script> 
 
 <!-- Upper East Side -->
-<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94&sensor=false&extension=.js'></script>
-
-<!-- Chelsea -->
 <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94&sensor=false&extension=.js'></script>
 
 <!-- Soho. Noho, Nolita -->
@@ -20,19 +17,21 @@
   <h2>POPULAR NEIGHBORHOODS</h2>
 
   <!-- GOOGLE MAPS -->
+
+  <!-- EAST VILLAGE -->
   <h3><a href="/neighborhoods/2" alt="EAST VILLAGE consignment">EAST VILLAGE</a></h3>
   <div class="google-maps">
     <div id='EastVillage'></div>
   </div>
+  <!-- UPPER EAST -->
+
   <h3><a href="/neighborhoods/1" alt="UPPER EAST SIDE consignment">UPPER EAST SIDE</a></h3>
   <div class="google-maps">
     <div id='UpperEastSide'></div>
   </div>
-<!--   <h3><a href="/neighborhoods/6" alt="CHELSEA consignment">CHELSEA</a></h3>
-  <div class="google-maps">
-    <div id='Chelsea'></div>
-  </div> -->
-    <h3><a href="/neighborhoods/4" alt="SOHO consignment">SOHO</a> / <a href="/neighborhoods/13" alt="NOHO consignment">NOHO</a> / <a href="/neighborhoods/12" alt="NOLITA consignment">NOLITA</a></h3>
+  <!-- SOHO ETC -->
+
+  <h3><a href="/neighborhoods/4" alt="SOHO consignment">SOHO</a> / <a href="/neighborhoods/13" alt="NOHO consignment">NOHO</a> / <a href="/neighborhoods/12" alt="NOLITA consignment">NOLITA</a></h3>
   <div class="google-maps">
     <div id='Soho'></div>
   </div>
@@ -61,35 +60,34 @@
     <% end %>
   </div>
 
+  <!-- ADMIN TABLE -->
+  <div class="admin-table">
+    <% if is_owner? %>
+      <p>Admin</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Borough</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @boroughs.each do |borough| %>
+            <tr>
+              <td><%= link_to borough.name, borough %></td>
+              <td><%= link_to 'Show', borough %></td>
+              <td><%= link_to 'Edit', edit_borough_path(borough) %></td>
+              <td><%= link_to 'Destroy', borough, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <br>
+      <%= link_to 'New Borough', new_borough_path %>
+    <% end %>
+  </div>
 
-<!-- ADMIN PANEL -->
-<div class="admin-table">
-<% if is_owner? %>
-  <p>Admin</p>
-  <table>
-    <thead>
-      <tr>
-        <th>Borough</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @boroughs.each do |borough| %>
-        <tr>
-          <td><%= link_to borough.name, borough %></td>
-          <td><%= link_to 'Show', borough %></td>
-          <td><%= link_to 'Edit', edit_borough_path(borough) %></td>
-          <td><%= link_to 'Destroy', borough, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-  <br>
-  <%= link_to 'New Borough', new_borough_path %>
-<% end %>
-</div>
-
-<div class="user-divide">
-</div>
+  <div class="user-divide">
+  </div>
 
 </div>

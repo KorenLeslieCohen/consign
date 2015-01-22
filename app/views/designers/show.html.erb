@@ -14,19 +14,18 @@
       <% else %>
         <% @designer.businesses.sort{|a,b| a.name <=> b.name}.each do |business| %>
           <div class="col-sm-6 col-md-4 gallery-item biz">
+            <!-- BUSINESS PHOTO -->
             <a href="/businesses/<%= business.id %>">
-
               <% if !business.profile_photo? %>
                 <div class="thumbnail-gallery" style="background-image:url('https://s3.amazonaws.com/consignnyc/placeholder-business.png'); background-size:cover" height="200">
                 </div>
-
               <% else %>
-
                 <div class="thumbnail-gallery" style="background-image:url('<%= business.profile_photo %>'); background-size:cover" height="200">
                 </div>
               <% end %>
             </a>
             
+            <!-- NAME -->
             <span class="span"><%= link_to business.name.upcase, business %><span>
 
             <!-- RATING -->
@@ -71,8 +70,10 @@
               <% end %>
             <% end %><br>
                 
+            <!-- LOCATION -->
             <%= link_to business.borough.name.upcase, business.borough %> <i class="fa fa-caret-right"></i> <%= link_to business.neighborhood.name.upcase, business.neighborhood %><br>
 
+            <!-- REVIEW / PHOTO COUNT -->
             <% if business.reviews.length == 1 %>
               <%= business.reviews.length %> REVIEW <i class="fa fa-caret-right"></i>
             <% else %>

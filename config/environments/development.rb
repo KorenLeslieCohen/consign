@@ -42,20 +42,9 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {:address => "localhost", :port => 1025}
   config.mailer_sender = 'no-reply@consign.nyc'
 
-  # ActionMailer::Base.smtp_settings = {
-  #   :address        => 'smtp.sendgrid.net',
-  #   :port           => '587',
-  #   :authentication => :plain,
-  #   :user_name      => ENV['SENDGRID_USERNAME'],
-  #   :password       => ENV['SENDGRID_PASSWORD'],
-  #   :domain         => 'heroku.com',
-  #   :enable_starttls_auto => true
-  # }
-
   # Amazon Web Services - S3
   config.paperclip_defaults = {
     :storage => :s3,
-    # :s3_host_name => 'REMOVE_THIS_LINE_IF_UNNECESSARY',
     :s3_credentials => {
       :bucket => 'consignnyc',
       :s3_credentials => "#{Rails.root}/config/aws.yml",

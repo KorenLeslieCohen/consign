@@ -4,12 +4,14 @@ class BiztagsController < ApplicationController
   # GET /biztags
   # GET /biztags.json
   def index
+    redirect_to businesses_path unless is_owner?
     @biztags = Biztag.all.order('name ASC')
   end
 
   # GET /biztags/1
   # GET /biztags/1.json
   def show
+    redirect_to businesses_path unless is_owner?
     @biztag = Biztag.find(params[:id])
   end
 

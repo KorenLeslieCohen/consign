@@ -1,5 +1,5 @@
 <section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
-  <h1 class="header"><%= @borough.name.upcase %></h1>
+  <h1 class="header"><%= @borough.name.upcase %> - ADMIN</h1>
   <p class="header">BROWSE SHOPS</p>
 </section>
 
@@ -20,5 +20,5 @@
   <% end %>
 </p>
 
-<!-- <%#= link_to 'Edit', edit_borough_path(@borough) %> | -->
+<%= link_to 'Edit', edit_borough_path(@borough) %> | 
 <%= link_to 'All Boroughs', boroughs_path %>

@@ -1,21 +1,23 @@
 <div class="col-sm-6 col-md-4 gallery-item biz">
 
+  <!-- BUSINESS PHOTO -->
   <a href="/businesses/<%= business.id %>">
     <% if !business.profile_photo? %>
-
       <div class="thumbnail-gallery" style="background-image:url('https://s3.amazonaws.com/consignnyc/placeholder-business.png'); background-size:cover" height="200">
       </div>
-
     <% else %>
-
       <div class="thumbnail-gallery" style="background-image:url('<%= business.profile_photo %>'); background-size:cover" height="200">
       </div>
     <% end %>
   </a>
   
+  <!-- BUSINESS INFO -->
   <div class="biz-info">
+
+    <!-- NAME -->
     <span class="span"><%= link_to business.name.upcase, business %></span>
 
+    <!-- RATING -->
     <% if business.reviews.length == 0 %>
       <i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
     <% else %>
@@ -56,7 +58,10 @@
       <% end %>
     <% end %><br> 
       
+    <!-- LOCATION -->
     <%= link_to business.borough.name.upcase, business.borough %> <i class="fa fa-caret-right"></i> <%= link_to business.neighborhood.name.upcase, business.neighborhood %><br>
+    
+    <!-- REVIEWS / PHOTOS COUNT -->
     <% if business.reviews.length == 1 %>
       <%= business.reviews.length %> REVIEW <i class="fa fa-caret-right"></i>
     <% else %>

@@ -1,27 +1,27 @@
-<h1>Listing biztags</h1>
+<section id="gallery-start" data-bottom-top="background-position: 50% -400px;" data-top-bottom="background-position: 50% 0px;">
+  <h1 class="header">ADMIN PAGE</h1>
+  <p class="header">BIZTAGS</p>
+</section>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @biztags.each do |biztag| %>
+<div class="admin-table">
+  <table>
+    <thead>
       <tr>
-        <td><%#= biztag.name %></td>
-        <td><%= link_to biztag.name, biztag %></td>
-        <td><%#= link_to 'Edit', edit_biztag_path(biztag) %></td>
-        <td><%#= link_to 'Destroy', biztag, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
 
-
-      <!-- </tr> -->
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%#= link_to 'New Biztag', new_biztag_path %>
+    <tbody>
+      <% @biztags.each do |biztag| %>
+        <tr>
+          <td><%= link_to biztag.name, biztag %></td>
+          <td><%= link_to 'Edit', edit_biztag_path(biztag) %></td>
+          <td><%= link_to 'Destroy', biztag, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <%= link_to 'New Biztag', new_biztag_path %>
+</div>

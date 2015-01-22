@@ -3,21 +3,17 @@ class MessagesController < ApplicationController
 
   respond_to :html
 
-   # should only be for admin for most of these
-
   def index
     redirect_to businesses_path unless is_owner?
     @messages = Message.all
   end
 
   def show
-    # respond_with(@message)
     redirect_to businesses_path unless is_owner?
   end
 
   def new
     @message = Message.new
-    # respond_with(@message)
   end
 
   def edit

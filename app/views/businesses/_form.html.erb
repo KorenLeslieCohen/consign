@@ -14,7 +14,7 @@
   <div class="col-md-12">
     <div class="biz-form">
 
-    <h1>General Info</h1>
+      <h1>General Info</h1>
 
       <!-- PROFILE PHOTO -->
       <div class="field">
@@ -31,7 +31,7 @@
           <%= f.text_field :website, placeholder: "Store Website" %>
         </div>
 
-      <!-- BOROUGH / NEIGHBORHOOD -->
+        <!-- BOROUGH / NEIGHBORHOOD -->
         <div class="borough-neighborhood">
           <div class="field">
             <%= f.label :borough_id %>
@@ -62,32 +62,32 @@
       <!-- CONTACT INFO -->
       <h1>Contact Info</h1>
 
-        <div class="address">
-          <div class="street-address">
-            <div class="field">
-              <%= f.text_field :street_address, placeholder: "Number and Street Address", :class => 'biz-input' %>
-            </div>
-          </div>
+      <div class="address">
+        <div class="street-address">
           <div class="field">
-            <%= f.text_field :city, placeholder: "City", :class => 'city' %>
+            <%= f.text_field :street_address, placeholder: "Number and Street Address", :class => 'biz-input' %>
           </div>
-        </div>
-
-        <div class="state-zip">
-          <div class="field">
-            <%= f.select :state, ["NY", "NJ", "CT"] %>
-          </div>
-          <div class="field">
-            <%= f.text_field :zip, placeholder: "Zip", :class => 'zip' %>
-          </div>
-        </div>
-
-        <div class="field">
-          <%= f.text_field :phone, placeholder: "Store Phone", :class => 'biz-input' %>
         </div>
         <div class="field">
-          <%= f.text_field :email, placeholder: "Store Email", :class => 'biz-input' %>
+          <%= f.text_field :city, placeholder: "City", :class => 'city' %>
         </div>
+      </div>
+
+      <div class="state-zip">
+        <div class="field">
+          <%= f.select :state, ["NY", "NJ", "CT"] %>
+        </div>
+        <div class="field">
+          <%= f.text_field :zip, placeholder: "Zip", :class => 'zip' %>
+        </div>
+      </div>
+
+      <div class="field">
+        <%= f.text_field :phone, placeholder: "Store Phone", :class => 'biz-input' %>
+      </div>
+      <div class="field">
+        <%= f.text_field :email, placeholder: "Store Email", :class => 'biz-input' %>
+      </div>
 
       <!-- HOURS OF OPERATION -->
       <h1>Hours of Operation</h1>
@@ -217,40 +217,40 @@
       </div>
     </div>
 
-  <!-- TAGS -->
-  <% if is_owner? %>
-    <div class="field biztag-checkboxes">
-      <h4>Biztags</h4>
-      <%= f.collection_check_boxes :biztag_ids, Biztag.all, :id, :name, {:item_wrapper_class => 'checkbox_container'} %><br>
-    </div>
-  <% end %>
-
-  <div class="field designer-checkboxes">
-    <div class="biz-form">
-      <h1>Designers</h1>
-    </div>
-    <%= f.collection_check_boxes :designer_ids, Designer.all, :id, :name, {:item_wrapper_class => 'checkbox_container'} %><br>
-  </div>
-
-  <div class="biz-form">
-
-    <!-- ADMIN ACCESS -->
+    <!-- TAGS -->
     <% if is_owner? %>
-      <h1>Admin Access</h1>
-      <div class="field col-md-12">
-        <%= f.text_field :admin_email, placeholder: "Admin Email" %>
+      <div class="field biztag-checkboxes">
+        <h4>Biztags</h4>
+        <%= f.collection_check_boxes :biztag_ids, Biztag.all, :id, :name, {:item_wrapper_class => 'checkbox_container'} %><br>
       </div>
     <% end %>
 
-  </div>
+    <div class="field designer-checkboxes">
+      <div class="biz-form">
+        <h1>Designers</h1>
+      </div>
+      <%= f.collection_check_boxes :designer_ids, Designer.all, :id, :name, {:item_wrapper_class => 'checkbox_container'} %><br>
+    </div>
 
-  <!-- USER HIDDEN FIELD -->
-  <%= f.hidden_field :user_id, :value => current_user.id %>
+    <div class="biz-form">
 
-  <div class="business-button">
-    <div class="form-group form">
-      <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">SUBMIT BUSINESS INFO</button>
+      <!-- ADMIN ACCESS -->
+      <% if is_owner? %>
+        <h1>Admin Access</h1>
+        <div class="field col-md-12">
+          <%= f.text_field :admin_email, placeholder: "Admin Email" %>
+        </div>
+      <% end %>
+
+    </div>
+
+    <!-- USER HIDDEN FIELD -->
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+
+    <div class="business-button">
+      <div class="form-group form">
+        <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">SUBMIT BUSINESS INFO</button>
+      </div>
     </div>
   </div>
-</div>
 <% end %>

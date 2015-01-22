@@ -2,11 +2,10 @@
   <% if @neighborhood.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@neighborhood.errors.count, "error") %> prohibited this neighborhood from being saved:</h2>
-
       <ul>
-      <% @neighborhood.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% @neighborhood.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
@@ -17,7 +16,6 @@
   </div>
   <div class="field">
     <%= f.label :borough_id %><br>
-    <%#= f.number_field :borough_id %>
     <%= f.collection_select(:borough_id, Borough.all, :id, :name ) %>
   </div>
   <div class="actions">

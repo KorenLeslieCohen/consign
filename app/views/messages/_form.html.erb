@@ -10,53 +10,53 @@
 
 <div id="messages-page">
 
-<div class="script-header">
-  <h3>Contact us with questions, or to claim your business.</h3>
-</div>
+  <div class="script-header">
+    <h3>Contact us with questions, or to claim your business.</h3>
+  </div>
 
-<div id="message-error"></div>
+  <div id="message-error"></div>
 
-<section id="contact">
-  <div class="container">
-    <div class="row divide">
-      <%= form_for(@message, remote: true, :html => {:id => "contactForm", :class => "form-inline flowuplabels"}) do |f| %>
-        <% if @message.errors.any? %>
-          <div id="error_explanation">
-            <h2><%= pluralize(@message.errors.count, "error") %> prohibited this message from being saved:</h2>
-            <ul>
-              <% @message.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-            <% end %>
-            </ul>
+  <section id="contact">
+    <div class="container">
+      <div class="row divide">
+        <%= form_for(@message, remote: true, :html => {:id => "contactForm", :class => "form-inline flowuplabels"}) do |f| %>
+          <% if @message.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@message.errors.count, "error") %> prohibited this message from being saved:</h2>
+              <ul>
+                <% @message.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+          <div class="form-group col-md-3 col-sm-6 fl_wrap">
+            <label class="fl_label" for="name">Name:</label>
+            <%= f.text_field :name, :id => "name", :class => "form-control fl_input" %>
+          </div>
+          <div class="form-group col-md-3 col-sm-6 fl_wrap">
+            <label class="fl_label" for="name">Email:</label>
+            <%= f.text_field :email, :id => "email", :class => "form-control fl_input" %>
+          </div>
+          <div class="form-group col-md-3 col-sm-6 fl_wrap">
+            <label class="fl_label" for="message">Message:</label>
+             <%= f.text_area :body, :id => "message", :class => "form-control fl_input"%>
+          </div>
+          <div class="form-group col-md-3 col-sm-6">
+            <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">SEND</button>
+          </div>
+          <div class="form-group col-xs-12">
+            <div class="message">
+              <div class="alert"></div>
+            </div>
           </div>
         <% end %>
-        <div class="form-group col-md-3 col-sm-6 fl_wrap">
-          <label class="fl_label" for="name">Name:</label>
-          <%= f.text_field :name, :id => "name", :class => "form-control fl_input" %>
-        </div>
-        <div class="form-group col-md-3 col-sm-6 fl_wrap">
-          <label class="fl_label" for="name">Email:</label>
-          <%= f.text_field :email, :id => "email", :class => "form-control fl_input" %>
-        </div>
-        <div class="form-group col-md-3 col-sm-6 fl_wrap">
-          <label class="fl_label" for="message">Message:</label>
-           <%= f.text_area :body, :id => "message", :class => "form-control fl_input"%>
-        </div>
-        <div class="form-group col-md-3 col-sm-6">
-          <button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">SEND</button>
-        </div>
-        <div class="form-group col-xs-12">
-          <div class="message">
-            <div class="alert"></div>
-          </div>
-        </div>
-      <% end %>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<div class="script-header">
-  <h3>Have a great day!</h3>
-</div>
+  <div class="script-header">
+    <h3>Have a great day!</h3>
+  </div>
 
 </div>

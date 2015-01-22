@@ -13,59 +13,59 @@
       </div>
     <% end %>
 
-  <div class="edit-profile">
+    <div class="edit-profile">
 
-    <h6>REQUIRED</h6>
+      <h6>REQUIRED</h6>
 
-    <% if @user.provider != 'facebook' %>
+      <% if @user.provider != 'facebook' %>
+        <div class="field">
+          <%= f.label :user_profile_photo %>
+          <%= f.file_field :user_profile_photo, placeholder: "Profile photo" %>
+        </div>
+      <% end %>
+
       <div class="field">
-        <%= f.label :user_profile_photo %>
-        <%= f.file_field :user_profile_photo, placeholder: "Profile photo" %>
+        <%= f.text_field :first_name, placeholder: "First name" %>
       </div>
-    <% end %>
 
-    <div class="field">
-      <%= f.text_field :first_name, placeholder: "First name" %>
-    </div>
-
-    <div class="field">
-      <%= f.text_field :last_name, placeholder: "Last name (kept private)" %>
-    </div>
-
-    <h6>OPTIONAL</h6>
-
-    <div class="field">
-      <%= f.text_field :city, placeholder: "City" %>
-    </div>
-
-    <!-- <div class="field"> -->
-      <%#= f.label :state %><!-- <br> -->
-      <%#= f.text_field :state %>
-    <!-- </div> -->
-    <div class="field">
-      <%= f.text_field :tagline, placeholder: "Tagline" %>
-    </div>
-    <div class="field">
-      <%= f.text_field :bio, placeholder: "Who are you? (short bio)" %>
-    </div>
-    <div class="field">
-      <%= f.text_field :url, placeholder: "Blog or website URL (http://url.com)" %>
-    </div>
-
-    <h6>OPTIONAL & PRIVATE</h6>
-
-    <div class="field">
-      <%= f.label :age %>
-      <%= f.select :age, ["---", "13-17", "18-22", "22-26", "26-29", "30-33", "34-36", "37-40", "41-45", "46-49", "50-55", "56-59", "60-65", "66-69", "70-75", "Other"] %>
-    </div>
-    <% if @user.provider != 'facebook' %>
       <div class="field">
-        <%= f.label :gender %>  
-        <%= f.select :gender, ["---", "Male", "Female", "Other"] %>
+        <%= f.text_field :last_name, placeholder: "Last name (kept private)" %>
       </div>
-    <% end %>
 
-  </div>
+      <h6>OPTIONAL</h6>
+
+      <div class="field">
+        <%= f.text_field :city, placeholder: "City" %>
+      </div>
+
+      <!-- <div class="field"> -->
+        <%#= f.label :state %><!-- <br> -->
+        <%#= f.text_field :state %>
+      <!-- </div> -->
+      <div class="field">
+        <%= f.text_field :tagline, placeholder: "Tagline" %>
+      </div>
+      <div class="field">
+        <%= f.text_field :bio, placeholder: "Who are you? (short bio)" %>
+      </div>
+      <div class="field">
+        <%= f.text_field :url, placeholder: "Blog or website URL (http://url.com)" %>
+      </div>
+
+      <h6>OPTIONAL & PRIVATE</h6>
+
+      <div class="field">
+        <%= f.label :age %>
+        <%= f.select :age, ["---", "13-17", "18-22", "22-26", "26-29", "30-33", "34-36", "37-40", "41-45", "46-49", "50-55", "56-59", "60-65", "66-69", "70-75", "Other"] %>
+      </div>
+      <% if @user.provider != 'facebook' %>
+        <div class="field">
+          <%= f.label :gender %>  
+          <%= f.select :gender, ["---", "Male", "Female", "Other"] %>
+        </div>
+      <% end %>
+
+    </div>
 
     <div class="update-profile-button">
       <div class="form-group form">

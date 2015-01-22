@@ -53,16 +53,7 @@
             <td><%= user.city %></td>
             <td><%= user.age %></td>
             <td><%= user.gender %></td>
-            <td> 
-              <%= user.url %>  
-    <!--           <%# if user.url %>
-                <%# if user.url.include?("http://") %>
-                  <%#= link_to user.url.gsub("http://", ""), user.url, :target => "_blank" %>
-                <%# else %>
-                  <a href="http://<%#= user.url %>" alt="high end consignment nyc east village" target="_blank"><%#= user.url %></a>
-                <%# end %>
-              <%# end %> -->
-            </td>
+            <td><%= user.url %> </td>
             <td>
               <% if user.reviews.length != 0 %>
                 (<%= review_count += 1 %>) <%= user.reviews.length %>
@@ -82,6 +73,4 @@
     </table>
   </div>
   <br>
-
-  <%#= link_to 'New User', new_user_path %>
 </div>
