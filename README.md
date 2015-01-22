@@ -1,4 +1,4 @@
-# Consign NYC
+# CONSIGN.NYC
 
 ## Description
 
