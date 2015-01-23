@@ -256,7 +256,7 @@
       <div id="owl-demo-biz" class="owl-carousel owl-theme">
         <% @business.photos.reverse.each do |photo| %>
           <div class="owlitem-biz">
-            <a href="<%= photo.business_photo %>" data-toggle="lightbox">
+            <a href="<%= photo.business_photo %>" alt="<%= @business.name %> high end consignment new york city nyc east village upper east side" data-toggle="lightbox">
               <div class="thumbnail-gallery biz-thumbnail-gallery" style="background-image:url('<%= photo.business_photo %>'); background-size:cover">
               </div>
             </a>
