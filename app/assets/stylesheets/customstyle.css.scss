@@ -1146,7 +1146,6 @@ td {
 
 #footer {
   border-top: 1px solid white;
-  padding-bottom: 50px;
 }
 
 #footer p {
@@ -1194,15 +1193,36 @@ td {
   margin-top: 0;
 }
 
-#footer .footer-top a {
+#footer .footer-top p {
   font-family: 'Dancing Script';
   color: #FD8698;
   font-size: 25px;
   padding: 2px;
+  margin-top: 0;
 }
 
-#footer .footer-top a:hover {
-  color: #FFF;
+/*--------------MAILCHIMP--------------*/
+
+#mc_embed_signup {
+   background: #000; 
+   clear: left; 
+   font: 14px Helvetica,Arial,sans-serif;  
+   width: 250px;
+   height: 40px;
+}
+
+#mc_embed_signup input {
+  border-radius: 5px;
+}
+
+#mc_embed_signup .clear {
+  margin-bottom: 0;
+}
+
+#mc_embed_signup .clear input {
+  background: #000;
+  height: 1px;
+  margin-bottom: 0;
 }
 
 /*--------------MAILING LIST PAGE--------------*/
