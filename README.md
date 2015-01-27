@@ -15,7 +15,7 @@ Built with Ruby on Rails, JavaScript, Bootstrap, Amazon S3, Paperclip. Deployed 
 
 ## Background
 
-CONSIGN.NYC was founded by <a href="http://twitter.com/korenlc" target="_blank" alt="koren leslie cohen">Koren Leslie Cohen</a>, a lawyer turned software engineer.
+CONSIGN.NYC was built by <a href="http://twitter.com/korenlc" target="_blank" alt="koren leslie cohen">Koren Leslie Cohen</a>, a lawyer turned software engineer.
 
 When Koren moved to New York years ago, she moved from a spacious apartment with multiple closets in the Beacon Hill neighborhood of Boston to a tiny studio in Murray Hill. The one closet in her apartment was overflowing with clothes, and she quickly realized she needed to make some adjustments to her living situation.
 
