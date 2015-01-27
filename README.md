@@ -2,10 +2,12 @@
 
 ## Description
 
-<a href="http://consign.nyc" alt="high end consignment new york city" target="_blank">CONSIGN.NYC</a> is a web application catering to the high end consignment market in New York City.
+<a href="http://consign.nyc" alt="high end consignment new york city" target="_blank">CONSIGN.NYC</a> is a Ruby on Rails application catering to the high end consignment market in New York City.
 
 CONSIGN.NYC is the only platform that provides a curated list of high end consignment shops in New York City with complete information regarding purchase and sale terms.
 CONSIGN.NYC provides a variety of unique benefits to stores, consignors and shoppers.
+
+Built with Ruby on Rails, JavaScript, Bootstrap, Amazon S3, Paperclip. Deployed on Heroku.
 
 ## Screenshots
 
