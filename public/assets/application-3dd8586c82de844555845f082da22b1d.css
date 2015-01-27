@@ -7593,38 +7593,61 @@ td {
   font: 14px Helvetica,Arial,sans-serif;
   width: 250px;
   height: 40px;
+  margin-bottom: 10px;
+  padding-bottom: 50px;
 }
 
-/* line 1214, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1216, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+#mc_embed_signup form {
+  height: 40px;
+}
+
+/* line 1220, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #mc_embed_signup input {
   border-radius: 5px;
 }
 
-/* line 1218, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1224, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #mc_embed_signup .clear {
   margin-bottom: 0;
 }
 
-/* line 1222, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1228, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #mc_embed_signup .clear input {
   background: #000;
   height: 1px;
   margin-bottom: 0;
 }
 
+/* line 1235, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+#mc_embed_signup .button,
+input#mc-embedded-subscribe.button {
+  opacity: .00000000001;
+  height: .05px;
+  width: .05px;
+  margin-bottom: 1px;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 1244, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+#mc_embed_signup_scroll {
+  height: 40px;
+}
+
 /*--------------MAILING LIST PAGE--------------*/
-/* line 1230, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1250, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #mailing-page {
   padding: 50px 15px;
   background-color: #FFF;
 }
 
-/* line 1235, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1255, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .mailing-page {
   padding-top: 50px;
 }
 
-/* line 1239, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1259, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .mailing-page p {
   text-align: center;
   font-family: 'Playfair Display';
@@ -7633,7 +7656,7 @@ td {
 }
 
 /*--------------TWEET--------------*/
-/* line 1248, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1268, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .tweet {
   margin-left: auto;
   margin-right: auto;
@@ -7641,7 +7664,7 @@ td {
 }
 
 /*--------------NEIGHBORHOOD MAPS--------------*/
-/* line 1259, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1279, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #EastVillage,
 #UpperEastSide,
 #Chelsea,
@@ -7651,24 +7674,24 @@ td {
   margin-top: 20px;
 }
 
-/* line 1265, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1285, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .gm-style-iw * {
   display: block;
   width: 100%;
 }
 
-/* line 1270, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1290, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .gm-style-iw h4, .gm-style-iw p {
   margin: 0;
   padding: 0;
 }
 
-/* line 1275, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1295, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .gm-style-iw a {
   color: #4272db;
 }
 
-/* line 1279, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1299, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .google-maps {
   width: 85%;
   min-width: 300px;
@@ -7678,53 +7701,53 @@ td {
 }
 
 /*--------------BOOTSTRAP--------------*/
-/* line 1289, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1309, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .ekko-lightbox-container {
   max-width: 90%;
   margin-right: auto;
   margin-left: auto;
 }
 
-/* line 1295, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1315, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .ekko-lightbox-container img {
   border: 3px solid #FFF;
 }
 
-/* line 1299, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1319, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .modal-header .close {
   margin-right: 10px;
 }
 
-/* line 1303, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1323, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .pre-scrollable {
   max-height: 400px;
 }
 
-/* line 1308, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1328, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .navbar-fixed-top .navbar-collapse,
 .navbar-fixed-bottom .navbar-collapse {
   max-height: 400px;
 }
 
 /*--------------FACEBOOK LOGIN--------------*/
-/* line 1314, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1334, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .facebook-login {
   width: 210px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 1320, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1340, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .facebook-login img {
   width: 210px;
 }
 
-/* line 1324, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1344, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .faq .facebook-login img {
   margin-top: 0;
 }
 
-/* line 1328, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1348, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .business-logins {
   width: 440px;
   height: 45px;
@@ -7734,7 +7757,7 @@ td {
   margin-bottom: 10px;
 }
 
-/* line 1338, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1358, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .business-logins .facebook-login,
 .business-logins .create-account-link {
   float: left;
@@ -7745,39 +7768,39 @@ td {
 /*--------------MEDIA QUERIES--------------*/
 /* Smaller Screens - 1100 Breakpoint -------> */
 @media screen and (max-width: 1100px) {
-  /* line 1349, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+  /* line 1369, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
   .business-map {
     width: 90%;
   }
 }
 /* Smaller Screens - 850 Breakpoint -------> */
 @media screen and (max-width: 850px) {
-  /* line 1358, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+  /* line 1378, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
   .navbar-default .navbar-nav > li > a {
     padding-left: 10px;
     padding-right: 10px;
   }
 
-  /* line 1363, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+  /* line 1383, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
   .navbar-nav.navbar-right:last-child {
     margin-right: 30px;
   }
 }
 /* Smaller Screens - 768 Breakpoint -------> */
 @media screen and (max-width: 768px) {
-  /* line 1372, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+  /* line 1392, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
   .navbar-default .navbar-nav > li > a {
     padding-right: 0px;
   }
 
-  /* line 1376, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+  /* line 1396, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
   .navbar-nav.navbar-right:last-child {
     margin-right: 0px;
   }
 }
 /* Smaller Screens - 450 Breakpoint -------> */
 @media screen and (max-width: 450px) {
-  /* line 1385, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+  /* line 1405, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
   .business-logins {
     height: 90px;
     margin-top: 10px;
@@ -7787,7 +7810,7 @@ td {
     width: 212px;
   }
 
-  /* line 1396, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+  /* line 1416, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
   .business-logins .facebook-login,
   .business-logins .create-account-link {
     float: none;
@@ -21563,38 +21586,61 @@ td {
   font: 14px Helvetica,Arial,sans-serif;
   width: 250px;
   height: 40px;
+  margin-bottom: 10px;
+  padding-bottom: 50px;
 }
 
-/* line 1214, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1216, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+#mc_embed_signup form {
+  height: 40px;
+}
+
+/* line 1220, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #mc_embed_signup input {
   border-radius: 5px;
 }
 
-/* line 1218, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1224, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #mc_embed_signup .clear {
   margin-bottom: 0;
 }
 
-/* line 1222, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1228, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #mc_embed_signup .clear input {
   background: #000;
   height: 1px;
   margin-bottom: 0;
 }
 
+/* line 1235, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+#mc_embed_signup .button,
+input#mc-embedded-subscribe.button {
+  opacity: .00000000001;
+  height: .05px;
+  width: .05px;
+  margin-bottom: 1px;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 1244, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+#mc_embed_signup_scroll {
+  height: 40px;
+}
+
 /*--------------MAILING LIST PAGE--------------*/
-/* line 1230, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1250, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #mailing-page {
   padding: 50px 15px;
   background-color: #FFF;
 }
 
-/* line 1235, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1255, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .mailing-page {
   padding-top: 50px;
 }
 
-/* line 1239, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1259, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .mailing-page p {
   text-align: center;
   font-family: 'Playfair Display';
@@ -21603,7 +21649,7 @@ td {
 }
 
 /*--------------TWEET--------------*/
-/* line 1248, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1268, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .tweet {
   margin-left: auto;
   margin-right: auto;
@@ -21611,7 +21657,7 @@ td {
 }
 
 /*--------------NEIGHBORHOOD MAPS--------------*/
-/* line 1259, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1279, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 #EastVillage,
 #UpperEastSide,
 #Chelsea,
@@ -21621,24 +21667,24 @@ td {
   margin-top: 20px;
 }
 
-/* line 1265, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1285, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .gm-style-iw * {
   display: block;
   width: 100%;
 }
 
-/* line 1270, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1290, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .gm-style-iw h4, .gm-style-iw p {
   margin: 0;
   padding: 0;
 }
 
-/* line 1275, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1295, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .gm-style-iw a {
   color: #4272db;
 }
 
-/* line 1279, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1299, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .google-maps {
   width: 85%;
   min-width: 300px;
@@ -21648,53 +21694,53 @@ td {
 }
 
 /*--------------BOOTSTRAP--------------*/
-/* line 1289, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1309, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .ekko-lightbox-container {
   max-width: 90%;
   margin-right: auto;
   margin-left: auto;
 }
 
-/* line 1295, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1315, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .ekko-lightbox-container img {
   border: 3px solid #FFF;
 }
 
-/* line 1299, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1319, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .modal-header .close {
   margin-right: 10px;
 }
 
-/* line 1303, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1323, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .pre-scrollable {
   max-height: 400px;
 }
 
-/* line 1308, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1328, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .navbar-fixed-top .navbar-collapse,
 .navbar-fixed-bottom .navbar-collapse {
   max-height: 400px;
 }
 
 /*--------------FACEBOOK LOGIN--------------*/
-/* line 1314, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1334, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .facebook-login {
   width: 210px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 1320, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1340, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .facebook-login img {
   width: 210px;
 }
 
-/* line 1324, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1344, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .faq .facebook-login img {
   margin-top: 0;
 }
 
-/* line 1328, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1348, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .business-logins {
   width: 440px;
   height: 45px;
@@ -21704,7 +21750,7 @@ td {
   margin-bottom: 10px;
 }
 
-/* line 1338, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+/* line 1358, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
 .business-logins .facebook-login,
 .business-logins .create-account-link {
   float: left;
@@ -21715,39 +21761,39 @@ td {
 /*--------------MEDIA QUERIES--------------*/
 /* Smaller Screens - 1100 Breakpoint -------> */
 @media screen and (max-width: 1100px) {
-  /* line 1349, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+  /* line 1369, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
   .business-map {
     width: 90%;
   }
 }
 /* Smaller Screens - 850 Breakpoint -------> */
 @media screen and (max-width: 850px) {
-  /* line 1358, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+  /* line 1378, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
   .navbar-default .navbar-nav > li > a {
     padding-left: 10px;
     padding-right: 10px;
   }
 
-  /* line 1363, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+  /* line 1383, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
   .navbar-nav.navbar-right:last-child {
     margin-right: 30px;
   }
 }
 /* Smaller Screens - 768 Breakpoint -------> */
 @media screen and (max-width: 768px) {
-  /* line 1372, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+  /* line 1392, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
   .navbar-default .navbar-nav > li > a {
     padding-right: 0px;
   }
 
-  /* line 1376, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+  /* line 1396, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
   .navbar-nav.navbar-right:last-child {
     margin-right: 0px;
   }
 }
 /* Smaller Screens - 450 Breakpoint -------> */
 @media screen and (max-width: 450px) {
-  /* line 1385, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+  /* line 1405, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
   .business-logins {
     height: 90px;
     margin-top: 10px;
@@ -21757,7 +21803,7 @@ td {
     width: 212px;
   }
 
-  /* line 1396, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
+  /* line 1416, /Users/korenlcohen/consign/app/assets/stylesheets/customstyle.css.scss */
   .business-logins .facebook-login,
   .business-logins .create-account-link {
     float: none;

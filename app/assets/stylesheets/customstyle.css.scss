@@ -1209,6 +1209,12 @@ td {
    font: 14px Helvetica,Arial,sans-serif;  
    width: 250px;
    height: 40px;
+   margin-bottom: 10px;
+   padding-bottom: 50px;
+}
+
+#mc_embed_signup form {
+  height: 40px;
 }
 
 #mc_embed_signup input {
@@ -1223,6 +1229,20 @@ td {
   background: #000;
   height: 1px;
   margin-bottom: 0;
+}
+
+#mc_embed_signup .button,
+input#mc-embedded-subscribe.button {
+  opacity: .00000000001;
+  height: .05px;
+  width: .05px;
+  margin-bottom: 1px;
+  padding: 0;
+  margin: 0;
+}
+
+#mc_embed_signup_scroll {
+  height: 40px;
 }
 
 /*--------------MAILING LIST PAGE--------------*/
