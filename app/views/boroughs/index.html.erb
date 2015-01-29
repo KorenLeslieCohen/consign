@@ -3,91 +3,93 @@
   <p class="header">Shops by Neighborhood</p>
 </section>
 
-<!-- East Village  -->
-<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94&sensor=false&extension=.js'></script> 
+<div id="boroughs-index">
+  <!-- East Village  -->
+  <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94&sensor=false&extension=.js'></script> 
 
-<!-- Upper East Side -->
-<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94&sensor=false&extension=.js'></script>
+  <!-- Upper East Side -->
+  <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94&sensor=false&extension=.js'></script>
 
-<!-- Soho. Noho, Nolita -->
-<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94&sensor=false&extension=.js'></script> 
+  <!-- Soho. Noho, Nolita -->
+  <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBbcPLaJEgvOoBeECL8HR9NmU5ISyfOt94&sensor=false&extension=.js'></script> 
 
-<!-- MAPS -->
-<div class="local col-md-12">
-  <h2>POPULAR NEIGHBORHOODS</h2>
+  <!-- MAPS -->
+  <div class="local col-md-12">
+    <h2>POPULAR NEIGHBORHOODS</h2>
 
-  <!-- GOOGLE MAPS -->
+    <!-- GOOGLE MAPS -->
 
-  <!-- EAST VILLAGE -->
-  <h3><a href="/neighborhoods/2" alt="EAST VILLAGE consignment">EAST VILLAGE</a></h3>
-  <div class="google-maps">
-    <div id='EastVillage'></div>
-  </div>
-  <!-- UPPER EAST -->
+    <!-- EAST VILLAGE -->
+    <h3><a href="/neighborhoods/2" alt="EAST VILLAGE consignment">EAST VILLAGE</a></h3>
+    <div class="google-maps">
+      <div id='EastVillage'></div>
+    </div>
+    <!-- UPPER EAST -->
 
-  <h3><a href="/neighborhoods/1" alt="UPPER EAST SIDE consignment">UPPER EAST SIDE</a></h3>
-  <div class="google-maps">
-    <div id='UpperEastSide'></div>
-  </div>
-  <!-- SOHO ETC -->
+    <h3><a href="/neighborhoods/1" alt="UPPER EAST SIDE consignment">UPPER EAST SIDE</a></h3>
+    <div class="google-maps">
+      <div id='UpperEastSide'></div>
+    </div>
+    <!-- SOHO ETC -->
 
-  <h3><a href="/neighborhoods/4" alt="SOHO consignment">SOHO</a> / <a href="/neighborhoods/13" alt="NOHO consignment">NOHO</a> / <a href="/neighborhoods/12" alt="NOLITA consignment">NOLITA</a></h3>
-  <div class="google-maps">
-    <div id='Soho'></div>
-  </div>
+    <h3><a href="/neighborhoods/4" alt="SOHO consignment">SOHO</a> / <a href="/neighborhoods/13" alt="NOHO consignment">NOHO</a> / <a href="/neighborhoods/12" alt="NOLITA consignment">NOLITA</a></h3>
+    <div class="google-maps">
+      <div id='Soho'></div>
+    </div>
 
-  <!-- COMPLETE NEIGHBORHOOD LIST -->
-  <h2>ALL NEIGHBORHOODS</h2>
-  <div class="col-md-6">
-    <% @boroughs.each do |borough| %>
-      <% if borough.name == "Manhattan" %>
-        <h3><%= link_to borough.name.upcase, borough %></h3>
-        <% borough.neighborhoods.sort{|a,b| a.name <=> b.name }.each do |neighborhood| %>
-          <h4><%= link_to neighborhood.name.upcase, neighborhood %></h4>
-        <% end %>
-      <% end %>
-    <% end %>
-  </div>
-
-  <div class="col-md-6">
-    <% @boroughs.each do |borough| %>
-      <% if borough.name == "Brooklyn" %>
-        <h3><%= link_to borough.name.upcase, borough %></h3>
-        <% borough.neighborhoods.sort{|a,b| a.name <=> b.name }.each do |neighborhood| %>
-          <h4><%= link_to neighborhood.name.upcase, neighborhood %></h4>
-        <% end %>
-      <% end %>
-    <% end %>
-  </div>
-
-  <!-- ADMIN TABLE -->
-  <div class="admin-table">
-    <% if is_owner? %>
-      <p>Admin</p>
-      <table>
-        <thead>
-          <tr>
-            <th>Borough</th>
-            <th colspan="3"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @boroughs.each do |borough| %>
-            <tr>
-              <td><%= link_to borough.name, borough %></td>
-              <td><%= link_to 'Show', borough %></td>
-              <td><%= link_to 'Edit', edit_borough_path(borough) %></td>
-              <td><%= link_to 'Destroy', borough, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            </tr>
+    <!-- COMPLETE NEIGHBORHOOD LIST -->
+    <h2>ALL NEIGHBORHOODS</h2>
+    <div class="col-md-6">
+      <% @boroughs.each do |borough| %>
+        <% if borough.name == "Manhattan" %>
+          <h3><%= link_to borough.name.upcase, borough %></h3>
+          <% borough.neighborhoods.sort{|a,b| a.name <=> b.name }.each do |neighborhood| %>
+            <h4><%= link_to neighborhood.name.upcase, neighborhood %></h4>
           <% end %>
-        </tbody>
-      </table>
-      <br>
-      <%= link_to 'New Borough', new_borough_path %>
-    <% end %>
-  </div>
+        <% end %>
+      <% end %>
+    </div>
 
-  <div class="user-divide">
-  </div>
+    <div class="col-md-6">
+      <% @boroughs.each do |borough| %>
+        <% if borough.name == "Brooklyn" %>
+          <h3><%= link_to borough.name.upcase, borough %></h3>
+          <% borough.neighborhoods.sort{|a,b| a.name <=> b.name }.each do |neighborhood| %>
+            <h4><%= link_to neighborhood.name.upcase, neighborhood %></h4>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
 
-</div>
+    <!-- ADMIN TABLE -->
+    <div class="admin-table">
+      <% if is_owner? %>
+        <p>Admin</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Borough</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @boroughs.each do |borough| %>
+              <tr>
+                <td><%= link_to borough.name, borough %></td>
+                <td><%= link_to 'Show', borough %></td>
+                <td><%= link_to 'Edit', edit_borough_path(borough) %></td>
+                <td><%= link_to 'Destroy', borough, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <br>
+        <%= link_to 'New Borough', new_borough_path %>
+      <% end %>
+    </div>
+
+    <div class="user-divide">
+    </div>
+
+  </div>
+</script>

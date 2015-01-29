@@ -3,89 +3,92 @@
   <p class="header"><%= @neighborhood.borough.name %></p>
 </section>
 
-<p id="notice"><%= notice %></p>
+<div id="neighborhood-show">
 
-<section id="services">
-  <div class="container">
-    <div class="row">
-      <% @neighborhood.businesses.sort{|a,b| a.name <=> b.name}.each do |business| %>
-        <div class="col-sm-6 col-md-4 gallery-item biz">
+  <p id="notice"><%= notice %></p>
 
-          <!-- BUSINESS PROFILE PHOTO -->
-          <a href="/businesses/<%= business.id %>">
-            <% if !business.profile_photo? %>
-              <div class="thumbnail-gallery" style="background-image:url('https://s3.amazonaws.com/consignnyc/placeholder-business.png'); background-size:cover" height="200">
-              </div>
-            <% else %>
-              <div class="thumbnail-gallery" style="background-image:url('<%= business.profile_photo %>'); background-size:cover" height="200">
-              </div>
-            <% end %>
-          </a>
+  <section id="services">
+    <div class="container">
+      <div class="row">
+        <% @neighborhood.businesses.sort{|a,b| a.name <=> b.name}.each do |business| %>
+          <div class="col-sm-6 col-md-4 gallery-item biz">
 
-          <div class="biz-info">
-          
-            <!-- STORE INFO -->
-            <span class="span"><%= link_to business.name.upcase, business %><span>
-
-            <!-- RATING -->
-            <% if business.reviews.length == 0 %>
-              <i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
-            <% else %>
-              <% total_rating = 0 %>
-              <% num_of_ratings = 0 %>
-              <% overall_rating = 0 %>
-              <% business.reviews.each do |review| %>
-                <% total_rating += review.rating %>
-                <% num_of_ratings += 1 %>
+            <!-- BUSINESS PROFILE PHOTO -->
+            <a href="/businesses/<%= business.id %>">
+              <% if !business.profile_photo? %>
+                <div class="thumbnail-gallery" style="background-image:url('https://s3.amazonaws.com/consignnyc/placeholder-business.png'); background-size:cover" height="200">
+                </div>
+              <% else %>
+                <div class="thumbnail-gallery" style="background-image:url('<%= business.profile_photo %>'); background-size:cover" height="200">
+                </div>
               <% end %>
-              <% overall_rating = (total_rating.to_f / num_of_ratings.to_f) %>
-              <% if (overall_rating.to_f >= 1 && overall_rating.to_f <= 1.24)  %>
-                <i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+            </a>
 
-              <% elsif (overall_rating.to_f >= 1.25 && overall_rating.to_f <= 1.74)  %>
-                <i class="fa fa-star"></i><i class="fa fa-star--half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+            <div class="biz-info">
+            
+              <!-- STORE INFO -->
+              <span class="span"><%= link_to business.name.upcase, business %><span>
 
-              <% elsif (overall_rating.to_f >= 1.75 && overall_rating.to_f <= 2.24)  %>
-                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+              <!-- RATING -->
+              <% if business.reviews.length == 0 %>
+                <i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+              <% else %>
+                <% total_rating = 0 %>
+                <% num_of_ratings = 0 %>
+                <% overall_rating = 0 %>
+                <% business.reviews.each do |review| %>
+                  <% total_rating += review.rating %>
+                  <% num_of_ratings += 1 %>
+                <% end %>
+                <% overall_rating = (total_rating.to_f / num_of_ratings.to_f) %>
+                <% if (overall_rating.to_f >= 1 && overall_rating.to_f <= 1.24)  %>
+                  <i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
 
-              <% elsif (overall_rating.to_f >= 2.25 && overall_rating.to_f <= 2.74)  %>
-                 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+                <% elsif (overall_rating.to_f >= 1.25 && overall_rating.to_f <= 1.74)  %>
+                  <i class="fa fa-star"></i><i class="fa fa-star--half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
 
-              <% elsif (overall_rating.to_f >= 2.75 && overall_rating.to_f <= 3.24)  %>
-                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+                <% elsif (overall_rating.to_f >= 1.75 && overall_rating.to_f <= 2.24)  %>
+                  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
 
-              <% elsif (overall_rating.to_f >= 3.25 && overall_rating.to_f <= 3.74)  %>
-                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i>
+                <% elsif (overall_rating.to_f >= 2.25 && overall_rating.to_f <= 2.74)  %>
+                   <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
 
-              <% elsif (overall_rating.to_f >= 3.75 && overall_rating.to_f <= 4.24)  %>
-                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+                <% elsif (overall_rating.to_f >= 2.75 && overall_rating.to_f <= 3.24)  %>
+                  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
 
-              <% elsif (overall_rating.to_f >= 4.25 && overall_rating.to_f <= 4.74)  %>
-                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>
+                <% elsif (overall_rating.to_f >= 3.25 && overall_rating.to_f <= 3.74)  %>
+                  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i>
 
-              <% elsif overall_rating.to_f >= 4.75 %>
-                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                <% elsif (overall_rating.to_f >= 3.75 && overall_rating.to_f <= 4.24)  %>
+                  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
 
+                <% elsif (overall_rating.to_f >= 4.25 && overall_rating.to_f <= 4.74)  %>
+                  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>
+
+                <% elsif overall_rating.to_f >= 4.75 %>
+                  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+
+                <% end %>
+              <% end %><br>
+
+              <!-- REVIEW & PHOTO COUNT -->
+              <% if business.reviews.length == 1 %>
+                <%= business.reviews.length %> REVIEW <i class="fa fa-caret-right"></i>
+              <% else %>
+                <%= business.reviews.length %> REVIEWS <i class="fa fa-caret-right"></i> 
+              <% end %> 
+              <% if business.photos.length == 1 %>
+                <%= business.photos.length %> PHOTO
+              <% else %>
+                <%= business.photos.length %> PHOTOS
               <% end %>
-            <% end %><br>
-
-            <!-- REVIEW & PHOTO COUNT -->
-            <% if business.reviews.length == 1 %>
-              <%= business.reviews.length %> REVIEW <i class="fa fa-caret-right"></i>
-            <% else %>
-              <%= business.reviews.length %> REVIEWS <i class="fa fa-caret-right"></i> 
-            <% end %> 
-            <% if business.photos.length == 1 %>
-              <%= business.photos.length %> PHOTO
-            <% else %>
-              <%= business.photos.length %> PHOTOS
-            <% end %>
+            </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<%#= link_to 'Edit', edit_neighborhood_path(@neighborhood) %> 
-<%#= link_to 'See All Neighborhoods', neighborhoods_path %>
+  <%#= link_to 'Edit', edit_neighborhood_path(@neighborhood) %> 
+  <%#= link_to 'See All Neighborhoods', neighborhoods_path %>
+</div>
