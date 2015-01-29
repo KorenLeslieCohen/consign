@@ -16515,7 +16515,7 @@ console.log("retina.js");
 
 })();
 $(document).ready(function () {
-  $('#biz-index, #business-body, #photos-index, #boroughs-index, #neighborhood-show, #messages-new, #about-fade, .users-page').hide().fadeIn(750);
+  // $('#biz-index, #business-body, #photos-index, #boroughs-index, #neighborhood-show, #messages-new, #about-fade, .users-page').hide().fadeIn(750);
 })
 ;
 /*! skrollr-ie 1.0.2 (2013-11-24) | Alexander Prinzhorn - https://github.com/Prinzhorn/skrollr-ie | Free to use under terms of MIT license */
