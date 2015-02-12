@@ -5,12 +5,10 @@
 
 <div id="designers-index">
 
-  <form>
-    <%= form_tag(designers_path, :method => "get", id: "search-form") do %>
-      <%= text_field_tag :search, params[:search], class: "form-control col-lg-8", id: "autocompete", placeholder: "SEARCH DESIGNERS" %>  
-    <% end %>
-  </form>
-
+  <%= form_tag(designers_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], class: "form-control col-lg-8", id: "autocompete", placeholder: "SEARCH DESIGNERS" %>  
+  <% end %>
+    
   <section id="services">
     <div class="container">
       <div class="row">
