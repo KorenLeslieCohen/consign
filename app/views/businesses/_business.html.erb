@@ -1,7 +1,7 @@
 <div class="col-sm-6 col-md-4 gallery-item biz">
 
   <!-- BUSINESS PHOTO -->
-  <div id="business-photo">
+  <div class="business-photo">
     <a href="/businesses/<%= business.id %>">
       <% if !business.profile_photo? %>
         <div class="thumbnail-gallery" style="background-image:url('https://s3.amazonaws.com/consignnyc/placeholder-business.png'); background-size:cover" height="200">
@@ -10,7 +10,7 @@
         <div class="thumbnail-gallery" style="background-image:url('<%= business.profile_photo %>'); background-size:cover" height="200">
         </div>
       <% end %>
-      <div id="business-overlay">
+      <div class="business-overlay">
         <p>Visit Store!</p>
       </div>
     </a>

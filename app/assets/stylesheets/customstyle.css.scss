@@ -938,12 +938,12 @@ td {
 
 /*--------------BUSINESS OVERLAY--------------*/
 
-#business-photo {
+.business-photo {
   display: block;
   position: relative;
 }
 
-#business-photo #business-overlay {
+.business-photo .business-overlay {
   height: 100%;
   width: 100%;
   opacity: 0;
@@ -954,7 +954,7 @@ td {
   background-color: rgba(253, 134, 152, 0.8);
 }
 
-#business-photo #business-overlay p {
+.business-photo .business-overlay p {
   color: #fff;
   font-family: 'Dancing Script';
   text-align: center;
@@ -962,7 +962,7 @@ td {
   line-height: 200px;
 }
 
-#business-photo:hover #business-overlay {
+.business-photo:hover .business-overlay {
   opacity: 1;
   transition: opacity .5s;
 }
