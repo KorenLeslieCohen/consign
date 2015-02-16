@@ -12764,7 +12764,6 @@ return jQuery;
 
 
 
-console.log("run.js file");
 /*! skrollr 0.6.22 (2014-02-21) | Alexander Prinzhorn - https://github.com/Prinzhorn/skrollr | Free to use under terms of MIT license */
 
 console.log("skrollr.js");
@@ -16515,8 +16514,16 @@ console.log("retina.js");
 
 })();
 $(document).ready(function () {
-  // $('#biz-index, #business-body, #photos-index, #boroughs-index, #neighborhood-show, #messages-new, #about-fade, .users-page').hide().fadeIn(750);
+
+  // preloader
+  $(window).load(function(){
+    $('.preloader').delay(400).fadeOut(500);
+  })
+
 })
+
+
+
 ;
 /*! skrollr-ie 1.0.2 (2013-11-24) | Alexander Prinzhorn - https://github.com/Prinzhorn/skrollr-ie | Free to use under terms of MIT license */
 
@@ -17399,7 +17406,6 @@ $(document).ready(function(){
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-
 
 
 
