@@ -950,30 +950,31 @@ td {
   top: 0;
   left: 0;
   position: absolute;
-  transition: opacity .2s;
-  background-color: rgba(253, 134, 152, 0.8);
+  transition: opacity .4s;
 }
 
 .business-photo .business-overlay p {
   color: #fff;
+  background-color: rgba(253, 134, 152, 0.9);
+  line-height: 60px;
   font-family: 'Dancing Script';
   text-align: center;
   font-size: 40px;
-  line-height: 200px;
-  -webkit-transform: translateY(-100px);
-  transform: translateY(-100px) .2s;
-  -webkit-transition:all 0.2s ease-out;
-  transition:all 0.2s ease-out;
+  opacity: 0;
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px) .4s;
+  -webkit-transition:all .4s ease-out;
+  transition:all .4s ease-out;
 }
 
 .business-photo:hover .business-overlay {
-  transition: opacity .2s;
+  transition: opacity .4s;
   opacity: 1;
 }
 
 .business-photo:hover .business-overlay p {
-  -webkit-transform: translateY(0);
-  transform: translateY(0) .2s;
+  -webkit-transform: translateY(170px);
+  transform: translateY(160px) .4s;
   opacity: 1;
 }
 
