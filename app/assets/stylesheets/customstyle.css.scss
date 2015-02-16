@@ -960,11 +960,21 @@ td {
   text-align: center;
   font-size: 40px;
   line-height: 200px;
+  -webkit-transform: translateY(-100px);
+  transform: translateY(-100px) .2s;
+  -webkit-transition:all 0.2s ease-out;
+  transition:all 0.2s ease-out;
 }
 
 .business-photo:hover .business-overlay {
-  opacity: 1;
   transition: opacity .2s;
+  opacity: 1;
+}
+
+.business-photo:hover .business-overlay p {
+  -webkit-transform: translateY(0);
+  transform: translateY(0) .2s;
+  opacity: 1;
 }
 
 /*--------------BUSINESS DESIGNERS--------------*/
