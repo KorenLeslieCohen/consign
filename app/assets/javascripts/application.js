@@ -13,6 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-//= require run
 //= require skrollr
 //= require_tree .
