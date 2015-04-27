@@ -955,26 +955,20 @@ td {
 
 .business-photo .business-overlay p {
   color: #fff;
-  background-color: rgba(253, 134, 152, 0.9);
-  line-height: 60px;
+  line-height: 240px;
   font-family: 'Dancing Script';
   text-align: center;
   font-size: 40px;
   opacity: 0;
-  -webkit-transform: translateY(0px);
-  transform: translateY(0px) .4s;
-  -webkit-transition:all .4s ease-out;
-  transition:all .4s ease-out;
 }
 
 .business-photo:hover .business-overlay {
   transition: opacity .4s;
   opacity: 1;
+  background-color: rgba(253, 134, 152, 0.9);
 }
 
 .business-photo:hover .business-overlay p {
-  -webkit-transform: translateY(170px);
-  transform: translateY(160px) .4s;
   opacity: 1;
 }
 
