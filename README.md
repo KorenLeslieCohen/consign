@@ -7,7 +7,7 @@
 CONSIGN.NYC is the only platform that provides a curated list of high end consignment shops in New York City with complete information regarding purchase and sale terms.
 CONSIGN.NYC provides a variety of unique benefits to stores, consignors and shoppers.
 
-Built with Ruby on Rails, JavaScript, Bootstrap, Amazon S3, Paperclip. Deployed on Heroku.
+Built with Ruby on Rails, JavaScript, Bootstrap, Devise, Facebook OmniAuth, Amazon S3, Paperclip, SendGrid, Action Mailer. Deployed on Heroku.
 
 ## Screenshots
 
@@ -15,7 +15,7 @@ Built with Ruby on Rails, JavaScript, Bootstrap, Amazon S3, Paperclip. Deployed 
 
 ## Background
 
-CONSIGN.NYC was built by <a href="http://twitter.com/korenlc" target="_blank" alt="koren leslie cohen">Koren Leslie Cohen</a>, a lawyer turned software engineer.
+CONSIGN.NYC was built by <a href="http://korenlc.com" target="_blank" alt="koren leslie cohen">Koren Leslie Cohen</a>.
 
 When Koren moved to New York years ago, she moved from a spacious apartment with multiple closets in the Beacon Hill neighborhood of Boston to a tiny studio in Murray Hill. The one closet in her apartment was overflowing with clothes, and she quickly realized she needed to make some adjustments to her living situation.
 
