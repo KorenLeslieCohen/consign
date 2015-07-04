@@ -23,7 +23,7 @@ Koren inventoried her clothes and began a search for the best stores in the city
 
 Recognizing the obvious thirst for this information and the clear lack of organization and reliability of available material, CONSIGN.NYC was born.
 
-## Features
+## Features 
 
 Shoppers and consignors can upload photos and review stores. Businesses can gain access to a special admin panel where they can easily update store information, including consignment and purchase terms, store hours, product photos and special offers. Businesses with admin access will also receive notification emails whenever a user reviews their store or uploads a photo.
 
